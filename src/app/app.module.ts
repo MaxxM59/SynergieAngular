@@ -11,21 +11,12 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { FooterComponent } from './components/footer/footer.component';
 import { NavComponent } from './components/nav/nav.component';
-import { PlayerFormComponent } from './components/player-form/player-form.component';
-import { PlayersComponent } from './components/players/players.component';
 import { FormsModule } from '@angular/forms';
 import { FlashMessagesModule } from 'flash-messages-angular';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FooterComponent,
-    NavComponent,
-    PlayerFormComponent,
-    PlayersComponent,
-  ],
+  declarations: [AppComponent, NavComponent],
   imports: [
     FlashMessagesModule.forRoot(),
     FormsModule,

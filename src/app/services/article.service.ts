@@ -11,9 +11,6 @@ export class ArticleService {
   constructor(private afs: AngularFirestore) {}
 
   getArticles(): Observable<Article[]> {
-    // RECUPERE LES PLAYERS
-    // return this.afs.collection<Player>('players').valueChanges();
-
     //POUR A VOIR L'ID
     return this.afs
       .collection<Article>('articles')

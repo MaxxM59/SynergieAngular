@@ -2,21 +2,21 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { Player } from '../models/models';
+import { Article } from '../models/models';
 
 @Injectable({
   providedIn: 'root',
 })
-export class PlayerService {
+export class ArticleService {
   constructor(private afs: AngularFirestore) {}
 
-  getPlayers(): Observable<Player[]> {
+  getArticles(): Observable<Article[]> {
     // RECUPERE LES PLAYERS
     // return this.afs.collection<Player>('players').valueChanges();
 
     //POUR A VOIR L'ID
     return this.afs
-      .collection<Player>('players')
+      .collection<Article>('articles')
       .snapshotChanges()
       .pipe(
         map((changes: any) =>
@@ -27,19 +27,17 @@ export class PlayerService {
         )
       );
   }
-  getPlayer(id: string): Observable<Player> {
-    // 2E Methode return this.afs.doc<Player>('players/${id}')
-
+  getArticle(id: string): Observable<Article> {
     return this.afs
-      .collection<Player>('players')
+      .collection<Article>('articles')
       .doc(id)
       .snapshotChanges()
       .pipe(
         map((action: any) => {
           if (action.payload.exists === false) {
-            return new Object() as Player;
+            return new Object() as Article;
           } else {
-            const data = action.payload.data() as Player;
+            const data = action.payload.data() as Article;
             data.id = action.payload.id;
             return data;
           }
@@ -47,14 +45,13 @@ export class PlayerService {
       );
   }
 
-  addPlayers(player: Player): void {
-    this.afs.collection<Player>('players').add(player);
+  addArticle(article: Article): void {
+    this.afs.collection<Article>('articles').add(article);
   }
-  updatePlayer(player: Player, playerId: string): void {
-    this.afs.collection<Player>('players').doc(playerId).update(player);
+  updateArticle(article: Article, articleId: string): void {
+    this.afs.collection<Article>('articles').doc(articleId).update(article);
   }
-  deletePlayer(playerId: string): void {
-    //this.afs.doc<Player>('player/$(playerId)').delete();
-    this.afs.collection<Player>('players').doc(playerId).delete();
+  deletePlayer(articleId: string): void {
+    this.afs.collection<Article>('articles').doc(articleId).delete();
   }
 }

@@ -5,20 +5,22 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: 'AIzaSyBychUv5dTXSf1EO-8w-DzKpg_KjyDM4t8',
+    apiKey: 'AIzaSyCh3u0MP-Vqt2oPTWvaQeS3YVn6YaNyFh0',
 
-    authDomain: 'blog2510.firebaseapp.com',
+    authDomain: 'synergieangular.firebaseapp.com',
 
     databaseURL:
-      'https://blog2510-default-rtdb.europe-west1.firebasedatabase.app',
+      'https://synergieangular-default-rtdb.europe-west1.firebasedatabase.app',
 
-    projectId: 'blog2510',
+    projectId: 'synergieangular',
 
-    storageBucket: 'blog2510.appspot.com',
+    storageBucket: 'synergieangular.appspot.com',
 
-    messagingSenderId: '801412189678',
+    messagingSenderId: '605036097446',
 
-    appId: '1:801412189678:web:3cb4de21e86bfaf24192ff',
+    appId: '1:605036097446:web:dd5280c4c8ebab7dd7a967',
+
+    measurementId: 'G-VYE9TCWW6S',
   },
 };
 

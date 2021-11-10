@@ -1,7 +1,18 @@
-export interface Player {
+export interface Article {
   id: string;
-  firstname: string;
-  lastname: string;
-  country: string;
-  age: number;
+  titre: string;
+  contenu: string;
+  image: string;
+}
+export interface Onglet {
+  id: string;
+  titre: string;
+  type: string;
+  lien: string;
+}
+export interface Page {
+  id: string;
+  titre: string;
+  contenu: string;
+  chemin: string;
 }

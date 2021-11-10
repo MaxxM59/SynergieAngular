@@ -1,0 +1,31 @@
+<div class='container-fluid p-5'>
+    <form #playerForm="ngForm" (ngSubmit)="save(playerForm)">
+        <div class="form-group">
+
+            <label for="firstname">FirstName</label>
+            <input #firstnameInput="ngModel" type="text" name="firstname" id="firstname" [ngClass]="{'is-invalid' : firstnameInput.invalid &&firstnameInput.touched}" class="form-control" [(ngModel)]="player.firstname" required>
+            <div [hidden]="!firstnameInput.errors?.['required']" class="invalid-feeback "> FirstName is required</div>
+        </div>
+        <div class="form-group">
+
+            <label for="lastname">Lastname</label>
+            <input #lastnameInput="ngModel" type="text" name="lastname" id="lastname" [ngClass]="{'is-invalid' : lastnameInput.invalid &&lastnameInput.touched}" class="form-control" [(ngModel)]="player.lastname" required>
+            <div [hidden]="!lastnameInput.errors?.['required']" class="invalid-feeback "> LastName is required</div>
+        </div>
+        <div class="form-group">
+
+            <label for="country">Country</label>
+            <input #countryInput="ngModel" type="text" name="country" id="country" [ngClass]="{'is-invalid' : countryInput.invalid &&countryInput.touched}" class="form-control" [(ngModel)]="player.country" required>
+            <div [hidden]="!countryInput.errors?.['required']" class="invalid-feeback "> Country is required</div>
+        </div>
+        <div class="form-group">
+
+            <label for="age">Age</label>
+            <input #ageInput="ngModel" type="number" name="age" id="age" [ngClass]="{'is-invalid' : ageInput.invalid &&ageInput.touched}" class="form-control" [(ngModel)]="player.age" required>
+            <div [hidden]="!ageInput.errors?.['required']" class="invalid-feeback "> Age is required</div>
+        </div>
+        <button type='submit' class="btn btn-primary m-1">Save</button>
+        <button [hidden]="id === null" (click)="delete()" class="btn btn-danger m-1">Delete</button>
+
+    </form>
+</div>

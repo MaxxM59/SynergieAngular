@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "blog2510": {
+      "hosting": {
+        "projet0711": [
+          "blog2510"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "blog2510"
+  }
+}

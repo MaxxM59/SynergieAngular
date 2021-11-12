@@ -27,6 +27,7 @@
     "@material/fab": "^13.0.0",
     "@material/menu": "^13.0.0",
     "@material/progress-indicator": "^13.0.0",
+    "@material/ripple": "^13.0.0",
     "@material/tab-bar": "^13.0.0",
     "@material/textfield": "^13.0.0",
     "bootstrap": "^5.1.3",

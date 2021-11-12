@@ -16,3 +16,7 @@ export interface Page {
   contenu: string;
   chemin: string;
 }
+export interface Admin {
+  mail: string;
+  password: string;
+}

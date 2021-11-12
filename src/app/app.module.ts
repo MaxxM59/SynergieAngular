@@ -21,31 +21,32 @@ import { ArticlesComponent } from './Admin/Dashboard/articles/articles.component
 import { PagesComponent } from './Admin/Dashboard/pages/pages.component';
 import { AccueilComponent } from './Admin/Dashboard/accueil/accueil.component';
 import { MatCardModule } from '@angular/material/card';
-import { MatCommonModule } from '@angular/material/core';
-import { MDCMenu } from '@material/menu';
-import { MDCTextField } from '@material/textfield';
-import { MDCDrawer } from '@material/drawer';
-import { MDCTabBar } from '@material/tab-bar';
+import { MatCommonModule, MatRipple } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTreeModule } from '@angular/material/tree';
+import { MenuComponent } from './Admin/Dashboard/menu/menu.component';
+import { MatRippleModule } from '@angular/material/core';
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-
     AdminFormComponent,
     OngletsComponent,
     ArticlesComponent,
     PagesComponent,
     AccueilComponent,
+    MenuComponent,
   ],
   imports: [
+    MatTreeModule,
+    MatSnackBarModule,
+    MatSelectModule,
     MatButtonToggleModule,
     MatButtonModule,
-    MDCTabBar,
-    MDCMenu,
-    MDCTextField,
-    MDCDrawer,
+    MatRippleModule,
     MatCommonModule,
     MatCardModule,
     FlashMessagesModule.forRoot(),

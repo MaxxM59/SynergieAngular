@@ -7,10 +7,10 @@ import { Admin } from 'src/app/models/models';
 })
 export class AdminFormComponent implements OnInit {
   constructor() {}
-  admin: any = {
-    mail: '',
-    password: '',
-  };
+
+  mail = '';
+  password = '';
+  wrongCredentials = false;
   // LOG ADMIN
   adminlog() {}
 

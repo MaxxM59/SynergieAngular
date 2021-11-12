@@ -1,19 +1,22 @@
-<mat-card>
-    <mat-card-title>Veuillez vous connecter</mat-card-title>
-
+<!--FORM ADMIN-->
+<mat-card class="card " style="padding: 15px;">
+    <mat-card-title class="text-primary">Veuillez vous connecter</mat-card-title>
     <mat-card-content>
         <div class="form-group">
             <label for="mail">Mail</label>
-            <input type="text" class="form-control" id="mail" required [(ngModel)]="admin.mail" name="mail">
+            <input #mailInput="ngModel" [ngClass]="{'is-invalid' : mailInput.invalid &&mailInput.touched}" type="text" class="form-control" id="mail" required [(ngModel)]="admin.mail" name="mail">
+            <!--ERREUR MAIL-->
+            <div [hidden]="!mailInput.errors?.['required']" class="invalid-feeback "> Veuillez indiquer votre mail</div>
         </div>
-
+        <br>
         <div class="form-group">
-            <label for="password">Password </label>
-            <input type="password" class="form-control" id="password" [(ngModel)]="admin.password" name="password">
+            <label for="password">Mot de passe </label>
+            <input #passwordInput="ngModel" [ngClass]="{'is-invalid' : passwordInput.invalid &&passwordInput.touched}" type="password" class="form-control" id="password" [(ngModel)]="admin.password" name="password">
+            <!--ERREUR PW-->
+            <div [hidden]="!passwordInput.errors?.['required']" class="invalid-feeback "> Veuillez indiquer votre mot de passe</div>
         </div>
     </mat-card-content>
-
-    <mat-card-footer class="md-padding-3">
+    <mat-card-footer style="padding: 15px;">
         <mat-button-toggle class="btn-primary" (click)="adminlog()">Se connecter</mat-button-toggle>
     </mat-card-footer>
 </mat-card>

@@ -16,10 +16,6 @@ import { FormsModule } from '@angular/forms';
 import { FlashMessagesModule } from 'flash-messages-angular';
 import { AdminFormComponent } from './Admin/admin-form/admin-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { OngletsComponent } from './Admin/Dashboard/onglets/onglets.component';
-import { ArticlesComponent } from './Admin/Dashboard/articles/articles.component';
-import { PagesComponent } from './Admin/Dashboard/pages/pages.component';
-import { AccueilComponent } from './Admin/Dashboard/accueil/accueil.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatCommonModule, MatRipple } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -27,19 +23,14 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTreeModule } from '@angular/material/tree';
-import { MenuComponent } from './Admin/Dashboard/menu/menu.component';
 import { MatRippleModule } from '@angular/material/core';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { LayoutModule } from '@angular/cdk/layout';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavComponent,
-    AdminFormComponent,
-    OngletsComponent,
-    ArticlesComponent,
-    PagesComponent,
-    AccueilComponent,
-    MenuComponent,
-  ],
+  declarations: [AppComponent, NavComponent, AdminFormComponent],
   imports: [
     MatTreeModule,
     MatSnackBarModule,
@@ -61,7 +52,11 @@ import { MatRippleModule } from '@angular/material/core';
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
-    BrowserAnimationsModule, // storage
+    BrowserAnimationsModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatIconModule,
+    LayoutModule, // storage
   ],
   providers: [],
   bootstrap: [AppComponent],

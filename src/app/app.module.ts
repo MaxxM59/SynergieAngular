@@ -14,9 +14,11 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { NavComponent } from './components/nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { FlashMessagesModule } from 'flash-messages-angular';
+import { DashboardComponent } from './Admin/dashboard/dashboard.component';
+import { AdminFormComponent } from './Admin/admin-form/admin-form.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent],
+  declarations: [AppComponent, NavComponent, DashboardComponent, AdminFormComponent],
   imports: [
     FlashMessagesModule.forRoot(),
     FormsModule,

@@ -19,7 +19,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { OngletsComponent } from './Admin/Dashboard/onglets/onglets.component';
 import { ArticlesComponent } from './Admin/Dashboard/articles/articles.component';
 import { PagesComponent } from './Admin/Dashboard/pages/pages.component';
-
+import { AccueilComponent } from './Admin/Dashboard/accueil/accueil.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatCommonModule } from '@angular/material/core';
+import { MDCMenu } from '@material/menu';
+import { MDCTextField } from '@material/textfield';
+import { MDCDrawer } from '@material/drawer';
+import { MDCTabBar } from '@material/tab-bar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,8 +37,17 @@ import { PagesComponent } from './Admin/Dashboard/pages/pages.component';
     OngletsComponent,
     ArticlesComponent,
     PagesComponent,
+    AccueilComponent,
   ],
   imports: [
+    MatButtonToggleModule,
+    MatButtonModule,
+    MDCTabBar,
+    MDCMenu,
+    MDCTextField,
+    MDCDrawer,
+    MatCommonModule,
+    MatCardModule,
     FlashMessagesModule.forRoot(),
     FormsModule,
     BrowserModule,

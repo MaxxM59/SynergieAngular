@@ -12,7 +12,8 @@ export class AdminFormComponent implements OnInit {
   password = '';
   wrongCredentials = false;
   // LOG ADMIN
-  adminlog() {}
+  adminLog() {}
+  loginForm = document.querySelector('#adminlogin');
 
   ngOnInit(): void {}
 }

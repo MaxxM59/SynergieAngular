@@ -60,7 +60,7 @@ import { MatInputModule } from '@angular/material/input';
     MatGridListModule,
     MatMenuModule,
     MatIconModule,
-    LayoutModule, // storage
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

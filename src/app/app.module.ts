@@ -14,11 +14,22 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { NavComponent } from './components/nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { FlashMessagesModule } from 'flash-messages-angular';
-import { DashboardComponent } from './Admin/dashboard/dashboard.component';
 import { AdminFormComponent } from './Admin/admin-form/admin-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OngletsComponent } from './Admin/Dashboard/onglets/onglets.component';
+import { ArticlesComponent } from './Admin/Dashboard/articles/articles.component';
+import { PagesComponent } from './Admin/Dashboard/pages/pages.component';
 
 @NgModule({
-  declarations: [AppComponent, NavComponent, DashboardComponent, AdminFormComponent],
+  declarations: [
+    AppComponent,
+    NavComponent,
+
+    AdminFormComponent,
+    OngletsComponent,
+    ArticlesComponent,
+    PagesComponent,
+  ],
   imports: [
     FlashMessagesModule.forRoot(),
     FormsModule,
@@ -31,7 +42,8 @@ import { AdminFormComponent } from './Admin/admin-form/admin-form.component';
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore()), // storage
+    provideFirestore(() => getFirestore()),
+    BrowserAnimationsModule, // storage
   ],
   providers: [],
   bootstrap: [AppComponent],

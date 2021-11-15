@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Auth } from '@angular/fire/auth';
 import {
   AbstractControl,
   FormBuilder,
@@ -47,13 +46,10 @@ export class AdminFormComponent implements OnInit {
       const email = this.loginForm.get('email')?.value;
       const password = this.loginForm.get('password')?.value;
       try {
-        // LOGIN OK
         await this.authService.login(email, password);
 
-        this.router.navigate(['dashboard']);
-        this.authService.showNotification(`Vous êtes connecté(e) !`);
+        this.router.navigate(['admin']);
       } catch (error) {
-        //ERREUR
         this.formValid = false;
         this.authService.showNotification(
           `Une erreur s'est produite, ${error}`

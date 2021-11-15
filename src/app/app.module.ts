@@ -30,8 +30,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { DashboardHomeComponent } from './components/dashboard/dashboard-home/dashboard-home.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 @NgModule({
-  declarations: [AppComponent, NavComponent, AdminFormComponent],
+  declarations: [AppComponent, NavComponent, AdminFormComponent, DashboardHomeComponent],
   imports: [
     ReactiveFormsModule,
     MatInputModule,
@@ -62,6 +66,9 @@ import { MatInputModule } from '@angular/material/input';
     MatMenuModule,
     MatIconModule,
     LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

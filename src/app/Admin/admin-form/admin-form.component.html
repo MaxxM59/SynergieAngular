@@ -10,7 +10,7 @@
             Email invalide
         </mat-error>
         <mat-error *ngIf="email?.hasError('required')">
-            Email est <strong>indispensable pour se connecter</strong>
+            <strong>Votre email est indispensable pour se connecter</strong>
         </mat-error>
     </mat-form-field>
 
@@ -24,7 +24,7 @@
             Le mot de passe erroné
         </mat-error>
         <mat-error *ngIf="password?.hasError('required')">
-            Le mot de passe est <strong>indispensable pour se connecter</strong>
+            <strong> Votre mot de passe est indispensable pour se connecter</strong>
         </mat-error>
     </mat-form-field>
 

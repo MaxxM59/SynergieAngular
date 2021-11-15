@@ -36,12 +36,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
 import { AdminLoginService } from './services/Admin/admin-login.service';
+import { DashboardAcceuilComponent } from './components/dashboard/dashboard-acceuil/dashboard-acceuil.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     AdminFormComponent,
     DashboardHomeComponent,
+    DashboardAcceuilComponent,
   ],
   imports: [
     ReactiveFormsModule,

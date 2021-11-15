@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { Article } from '../models/models';
+import { Article } from '../../models/models';
 
 @Injectable({
   providedIn: 'root',

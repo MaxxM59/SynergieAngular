@@ -14,7 +14,7 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { NavComponent } from './components/nav/nav.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlashMessagesModule } from 'flash-messages-angular';
-import { AdminFormComponent } from './Admin/admin-form/admin-form.component';
+import { AdminFormComponent } from './components/dashboard/admin-form/admin-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatCommonModule, MatRipple } from '@angular/material/core';
@@ -35,7 +35,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 @NgModule({
-  declarations: [AppComponent, NavComponent, AdminFormComponent, DashboardHomeComponent],
+  declarations: [
+    AppComponent,
+    NavComponent,
+    AdminFormComponent,
+    DashboardHomeComponent,
+  ],
   imports: [
     ReactiveFormsModule,
     MatInputModule,

@@ -16,7 +16,6 @@ import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 export class AdminFormComponent implements OnInit {
   isHide = true;
   formValid = false;
-  title!: string;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -24,6 +23,7 @@ export class AdminFormComponent implements OnInit {
     private authService: AdminLoginService
   ) {}
 
+  // FORM DE LOGIN ADMIN
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [
@@ -31,26 +31,30 @@ export class AdminFormComponent implements OnInit {
       Validators.minLength(6),
     ]),
   });
+  // RECUPERE MAIL
   get email(): AbstractControl | null {
     return this.loginForm.get('email');
   }
-
+  // RECUPERE PASSWORD
   get password(): AbstractControl | null {
     return this.loginForm.get('password');
   }
 
   ngOnInit(): void {}
 
+  // FONCTION CONNEXION
   async onSubmit(): Promise<void> {
     if (this.loginForm.valid) {
       this.formValid = true;
       const email = this.loginForm.get('email')?.value;
       const password = this.loginForm.get('password')?.value;
       try {
+        //SUCCES
         await this.authService.login(email, password);
         this.authService.auth = true;
         this.router.navigate(['dashboard']);
       } catch (error) {
+        //ERREUR
         this.formValid = false;
         this.authService.showNotification(
           `Une erreur s'est produite, il y a une erreur dans l'email ou le mot de passe.`

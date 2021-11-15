@@ -7,7 +7,7 @@ import {
   FormControl,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AdminLoginService } from 'src/app/admin-login.service';
+import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 @Component({
   selector: 'app-admin-form',
   templateUrl: './admin-form.component.html',
@@ -23,6 +23,7 @@ export class AdminFormComponent implements OnInit {
     private router: Router,
     private authService: AdminLoginService
   ) {}
+
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [
@@ -47,7 +48,7 @@ export class AdminFormComponent implements OnInit {
       const password = this.loginForm.get('password')?.value;
       try {
         await this.authService.login(email, password);
-
+        this.authService.auth = true;
         this.router.navigate(['dashboard']);
       } catch (error) {
         this.formValid = false;

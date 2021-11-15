@@ -5,7 +5,7 @@ import { DashboardHomeComponent } from './components/dashboard/dashboard-home/da
 
 const routes: Routes = [
   { path: 'admin', component: AdminFormComponent },
-  { path: 'dashboard', component: DashboardHomeComponent },
+  { path: 'dashboard', component: DashboardHomeComponent, outlet: 'loggedin' },
   //{ path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];
 

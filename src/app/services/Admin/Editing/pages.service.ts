@@ -1,0 +1,57 @@
+import { Injectable } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { Page } from '../../../models/models';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class PagesService {
+  constructor(private afs: AngularFirestore) {}
+
+  getPages(): Observable<Page[]> {
+    //POUR A VOIR L'ID
+    return this.afs
+      .collection<Page>('pages')
+      .snapshotChanges()
+      .pipe(
+        map((changes: any) =>
+          changes.map((c: any) => ({
+            id: c.payload.doc.id,
+            ...c.payload.doc.data(),
+          }))
+        )
+      );
+  }
+  //RECUPERE UN ARTICLE
+  getPage(id: string): Observable<Page> {
+    return this.afs
+      .collection<Page>('pagess')
+      .doc(id)
+      .snapshotChanges()
+      .pipe(
+        map((action: any) => {
+          if (action.payload.exists === false) {
+            return new Object() as Page;
+          } else {
+            const data = action.payload.data() as Page;
+            data.id = action.payload.id;
+            return data;
+          }
+        })
+      );
+  }
+  //AJOUTE UN ARTICLE
+  addPage(page: Page): void {
+    this.afs.collection<Page>('articles').add(page);
+  }
+  // MODIFIE L'ARTICLE
+  updatePage(page: Page, pageId: string): void {
+    this.afs.collection<Page>('pages').doc(pageId).update(page);
+  }
+  // SUPPRIME L'ARTICLE
+  deletePage(pageId: string): void {
+    this.afs.collection<Page>('pages').doc(pageId).delete();
+  }
+}

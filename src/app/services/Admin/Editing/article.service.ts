@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { Article } from '../../models/models';
+import { Article } from '../../../models/models';
 
 @Injectable({
   providedIn: 'root',
@@ -24,6 +24,7 @@ export class ArticleService {
         )
       );
   }
+  //RECUPERE UN ARTICLE
   getArticle(id: string): Observable<Article> {
     return this.afs
       .collection<Article>('articles')
@@ -41,14 +42,16 @@ export class ArticleService {
         })
       );
   }
-
+  //AJOUTE UN ARTICLE
   addArticle(article: Article): void {
     this.afs.collection<Article>('articles').add(article);
   }
+  // MODIFIE L'ARTICLE
   updateArticle(article: Article, articleId: string): void {
     this.afs.collection<Article>('articles').doc(articleId).update(article);
   }
-  deletePlayer(articleId: string): void {
+  // SUPPRIME L'ARTICLE
+  deleteArticle(articleId: string): void {
     this.afs.collection<Article>('articles').doc(articleId).delete();
   }
 }

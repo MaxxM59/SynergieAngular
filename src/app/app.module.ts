@@ -34,6 +34,8 @@ import { DashboardHomeComponent } from './components/dashboard/dashboard-home/da
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
+import { AdminLoginService } from './services/Admin/admin-login.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +77,7 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatListModule,
   ],
-  providers: [],
+  providers: [AuthGuardService, AdminLoginService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

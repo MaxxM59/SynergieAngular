@@ -13,7 +13,7 @@ import { AdminLoginService } from '../Admin/admin-login.service';
 })
 export class AuthGuardService implements CanActivate {
   constructor(
-    private adminloginservice: AdminLoginService,
+    public adminloginservice: AdminLoginService,
     private router: Router
   ) {}
 

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -13,7 +13,7 @@ import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
   templateUrl: './admin-form.component.html',
   styleUrls: ['./admin-form.component.scss'],
 })
-export class AdminFormComponent implements OnInit {
+export class AdminFormComponent {
   isHide = true;
   formValid = false;
 
@@ -39,8 +39,6 @@ export class AdminFormComponent implements OnInit {
   get password(): AbstractControl | null {
     return this.loginForm.get('password');
   }
-
-  ngOnInit(): void {}
 
   // FONCTION CONNEXION
   async onSubmit(): Promise<void> {

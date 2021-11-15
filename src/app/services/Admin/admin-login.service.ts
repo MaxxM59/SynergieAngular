@@ -11,7 +11,7 @@ type UserCredential = Promise<firebase.default.auth.UserCredential>;
   providedIn: 'root',
 })
 export class AdminLoginService {
-  auth: any;
+  auth: any = false;
 
   // LOGIN
   login(email: string, password: string): UserCredential {
@@ -21,8 +21,8 @@ export class AdminLoginService {
   //LOGOUT
   logOut(): void {
     this.afAuth.signOut();
-    this.router.navigate(['admin']);
     this.auth = false;
+    this.router.navigate(['admin']);
   }
 
   // NOTIFICATION

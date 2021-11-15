@@ -37,6 +37,12 @@ import { MatListModule } from '@angular/material/list';
 import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
 import { AdminLoginService } from './services/Admin/admin-login.service';
 import { DashboardAcceuilComponent } from './components/dashboard/dashboard-acceuil/dashboard-acceuil.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FooterComponent } from './components/footer/footer.component';
+import { PagesComponent } from './components/dashboard/Editing/pages/pages.component';
+import { OngletsComponent } from './components/dashboard/Editing/onglets/onglets.component';
+import { ArticlesComponent } from './components/dashboard/Editing/articles/articles.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,8 +50,13 @@ import { DashboardAcceuilComponent } from './components/dashboard/dashboard-acce
     AdminFormComponent,
     DashboardHomeComponent,
     DashboardAcceuilComponent,
+    FooterComponent,
+    PagesComponent,
+    OngletsComponent,
+    ArticlesComponent,
   ],
   imports: [
+    MatDialogModule,
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,

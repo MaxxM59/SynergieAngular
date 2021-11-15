@@ -48,11 +48,11 @@ export class AdminFormComponent implements OnInit {
       try {
         await this.authService.login(email, password);
 
-        this.router.navigate(['admin']);
+        this.router.navigate(['dashboard']);
       } catch (error) {
         this.formValid = false;
         this.authService.showNotification(
-          `Une erreur s'est produite, ${error}`
+          `Une erreur s'est produite, il y a une erreur dans l'email ou le mot de passe.`
         );
       }
     }

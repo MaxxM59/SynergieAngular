@@ -12,7 +12,7 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { NavComponent } from './components/nav/nav.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlashMessagesModule } from 'flash-messages-angular';
 import { AdminFormComponent } from './Admin/admin-form/admin-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,6 +33,7 @@ import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [AppComponent, NavComponent, AdminFormComponent],
   imports: [
+    ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
     LayoutModule,

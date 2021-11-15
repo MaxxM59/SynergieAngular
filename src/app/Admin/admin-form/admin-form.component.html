@@ -1,4 +1,4 @@
-<!--FORM ADMIN-->
+<!--FORM ADMIN
 <div class="container">
     <mat-card>
 
@@ -24,3 +24,40 @@
 
     </mat-card>
 </div>
+-->
+<form class="login-form" mat-dialog-content [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h2>
+        Veillez fournir vos logins pour accèder à votre espace {{ title }} en un clin d'oeil.
+    </h2>
+
+    <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email" placeholder="Ex. drcmind@example.com" />
+        <mat-error *ngIf="email?.hasError('email') && !email?.hasError('required')">
+            Email invalide
+        </mat-error>
+        <mat-error *ngIf="email?.hasError('required')">
+            Email est <strong>recommandée</strong>
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Mot de passe</mat-label>
+        <input matInput [type]="isHide ? 'password' : 'text'" formControlName="password" />
+        <button mat-icon-button matSuffix (click)="isHide = !isHide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="isHide">
+      <mat-icon>{{ isHide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+        <mat-error *ngIf="password?.hasError('minlength') && !password?.hasError('required')">
+            Le mot de passe erroné
+        </mat-error>
+        <mat-error *ngIf="password?.hasError('required')">
+            Le mot de passe est <strong>indispensable pour se connecter</strong>
+        </mat-error>
+    </mat-form-field>
+
+    <div fxLayout="column" fxLayoutAlign="space-between center">
+        <button class="full-width" mat-flat-button color="primary" type="submit">
+      Connectez-vous</button>
+
+    </div>
+</form>

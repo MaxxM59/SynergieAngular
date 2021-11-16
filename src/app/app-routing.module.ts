@@ -3,8 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminFormComponent } from './components/dashboard/admin-form/admin-form.component';
 import { DashboardAcceuilComponent } from './components/dashboard/dashboard-acceuil/dashboard-acceuil.component';
 import { DashboardHomeComponent } from './components/dashboard/dashboard-home/dashboard-home.component';
+import { ArticleFormComponent } from './components/dashboard/Editing/articles/article-form/article-form.component';
 import { ArticlesComponent } from './components/dashboard/Editing/articles/articles.component';
+import { OngletsFormComponent } from './components/dashboard/Editing/onglets/onglets-form/onglets-form.component';
 import { OngletsComponent } from './components/dashboard/Editing/onglets/onglets.component';
+import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-form/pages-form.component';
 import { PagesComponent } from './components/dashboard/Editing/pages/pages.component';
 import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
 const routes: Routes = [
@@ -33,13 +36,43 @@ const routes: Routes = [
         canActivate: [AuthGuardService],
       },
       {
+        path: 'onglets-form/:id',
+        component: OngletsFormComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'onglets-form/new',
+        component: OngletsFormComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'articles-form/:id',
+        component: ArticleFormComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
         path: 'articles',
         component: ArticlesComponent,
         canActivate: [AuthGuardService],
       },
       {
+        path: 'articles-form/new',
+        component: ArticleFormComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
         path: 'pages',
         component: PagesComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'pages-form/:id',
+        component: PagesFormComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'pages-form/new',
+        component: PagesFormComponent,
         canActivate: [AuthGuardService],
       },
     ],

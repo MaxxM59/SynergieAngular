@@ -45,6 +45,7 @@ import { ArticlesComponent } from './components/dashboard/Editing/articles/artic
 import { ArticleFormComponent } from './components/dashboard/Editing/articles/article-form/article-form.component';
 import { OngletsFormComponent } from './components/dashboard/Editing/onglets/onglets-form/onglets-form.component';
 import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-form/pages-form.component';
+import { DossierFormComponent } from './components/dashboard/Editing/onglets/dossier-form/dossier-form.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-f
     ArticleFormComponent,
     OngletsFormComponent,
     PagesFormComponent,
+    DossierFormComponent,
   ],
   imports: [
     MatDialogModule,

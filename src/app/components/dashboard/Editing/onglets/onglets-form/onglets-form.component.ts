@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Onglet } from 'src/app/models/models';
 import { OngletsService } from 'src/app/services/Admin/Editing/onglets.service';
-import { FlashMessagesService } from 'flash-messages-angular';
+import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 @Component({
   selector: 'app-onglets-form',
   templateUrl: './onglets-form.component.html',
@@ -22,31 +22,27 @@ export class OngletsFormComponent implements OnInit {
     public ongletservice: OngletsService,
     private router: Router,
     private route: ActivatedRoute,
-    private flash: FlashMessagesService
+    private admin: AdminLoginService
   ) {}
   save(playerForm: NgForm) {
     if (playerForm.valid) {
       if (this.id) {
         this.ongletservice.updateOnglet(playerForm.value, this.id);
-        this.flash.show('Onglet modifié !', {
-          cssClass: 'alert alert-primary',
-          setTimeout: 4000,
-        });
+        this.admin.showNotification('Onglet modifié !');
       } else {
         this.ongletservice.addOnglet(playerForm.value);
-        this.flash.show("L'onglet a été créé", {
-          cssClass: 'alert alert-success',
-          setTimeout: 4000,
-        });
+        this.admin.showNotification("L'onglet a été créé");
       }
 
-      this.router.navigate(['/']);
+      this.router.navigate(['/onglets']);
     } else {
-      this.flash.show('Il y a des erreurs dans le formulaire!', {
-        cssClass: 'alert alert-danger',
-        setTimeout: 4000,
-      });
+      this.admin.showNotification('Il y a des erreurs dans le formulaire!');
     }
+  }
+  delete() {
+    this.ongletservice.deleteOnglet(this.id);
+    this.admin.showNotification('Onglet supprimé !');
+    this.router.navigate(['onglets']);
   }
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') as string;

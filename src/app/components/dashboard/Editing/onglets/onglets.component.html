@@ -1,5 +1,5 @@
-<mat-button-toggle routerLink="/onglets-form/new">Créer un onglet</mat-button-toggle>
-<mat-button-toggle routerLink="">Créer un dossier</mat-button-toggle>
+<mat-button-toggle routerLink="../onglets-form/new">Créer un onglet</mat-button-toggle>
+<mat-button-toggle routerLink="../dossier-form/new">Créer un dossier</mat-button-toggle>
 
 <div class='container-fluid p-5'>
     <table class="table table-stripped">
@@ -18,7 +18,7 @@
                 <td>{{o.titre}}</td>
                 <td>{{o.lien}}</td>
                 <td>{{o.type}}</td>
-                <td><a routerLink="onglets-form/{{o.id}}" class="btn btn-success">Modifier</a></td>
+                <td><a routerLink="../onglets-form/{{o.id}}" class="btn btn-success">Modifier</a></td>
 
             </tr>
         </tbody>

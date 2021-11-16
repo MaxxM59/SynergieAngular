@@ -17,6 +17,7 @@ export class OngletsFormComponent implements OnInit {
     titre: '',
     lien: '',
     type: '',
+    dossier: '',
   };
   constructor(
     public ongletservice: OngletsService,

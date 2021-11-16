@@ -4,21 +4,33 @@
 
             <label for="titre">Titre</label>
             <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid &&titreInput.touched}" class="form-control" [(ngModel)]="onglet.titre" required>
-            <div [hidden]="!ongletInput.errors?.['required']" class="invalid-feeback "> FirstName is required</div>
+            <mat-error *ngIf="titreInput?.hasError('required')">
+                <strong>Le titre est obligatoire</strong>
+            </mat-error>
         </div>
         <div class="form-group">
 
-            <label for="lien">Lastname</label>
-            <input #ongletInput="ngModel" type="text" name="lien" id="lien" [ngClass]="{'is-invalid' : ongletInput.invalid &&ongletInput.touched}" class="form-control" [(ngModel)]="onglet.lien" required>
-            <div [hidden]="!ongletInput.errors?.['required']" class="invalid-feeback "> LastName is required</div>
+            <label for="lien">Lien</label>
+            <input #lienInput="ngModel" type="text" name="lien" id="lien" [ngClass]="{'is-invalid' : lienInput.invalid &&lienInput.touched}" class="form-control" [(ngModel)]="onglet.lien" required>
+            <mat-error *ngIf="lienInput?.hasError('required')">
+                <strong>Le lien est obligatoire</strong>
+            </mat-error>
+        </div>
+        <div class="form-group">
+
+            <label for="dossier">Dossier</label>
+            <input #dossierInput="ngModel" type="text" name="dossier" id="dossier" class="form-control" [(ngModel)]="onglet.dossier">
+
         </div>
         <div class="form-group">
 
             <label for="type">Type</label>
             <input #typeInput="ngModel" type="number" name="type" id="type" [ngClass]="{'is-invalid' : typeInput.invalid &&typeInput.touched}" class="form-control" [(ngModel)]="onglet.type" required>
-            <div [hidden]="!typeInput.errors?.['required']" class="invalid-feeback "> Age is required</div>
+            <mat-error *ngIf="typeInput?.hasError('required')">
+                <strong>Le type est obligatoire</strong>
+            </mat-error>
         </div>
-        <button type='submit' class="btn btn-primary m-1">Save</button>
-
+        <button type='submit' class="btn btn-primary m-1">Enregistrer</button>
+        <button [hidden]="id === null" (click)="delete()" class="btn btn-danger m-1">Supprimer</button>
     </form>
 </div>

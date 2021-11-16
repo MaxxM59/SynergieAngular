@@ -8,6 +8,9 @@ import { Onglet } from '../../../models/models';
   providedIn: 'root',
 })
 export class OngletsService {
+  id(id: any) {
+    throw new Error('Method not implemented.');
+  }
   constructor(private afs: AngularFirestore) {}
 
   getOnglets(): Observable<Onglet[]> {

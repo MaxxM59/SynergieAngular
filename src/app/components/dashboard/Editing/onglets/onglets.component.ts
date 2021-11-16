@@ -10,7 +10,10 @@ import { Onglet } from 'src/app/models/models';
 export class OngletsComponent implements OnInit {
   constructor(public onglet: OngletsService) {}
   onglets: Onglet[] = [];
-  //onglets = this.onglet.getOnglet(this.onglet.id);
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.onglet.getOnglets().subscribe((o: Onglet[]) => {
+      this.onglets = o;
+    });
+  }
 }

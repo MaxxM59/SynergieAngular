@@ -15,7 +15,7 @@ const routes: Routes = [
 
   {
     path: 'dashboard',
-    redirectTo: 'dashboard/dash-acceuil',
+    redirectTo: 'dashboard/dashboard-acceuil',
   },
   {
     path: 'dashboard',
@@ -23,7 +23,7 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
     children: [
       {
-        path: 'dash-acceuil',
+        path: 'dashboard-acceuil',
         component: DashboardAcceuilComponent,
         canActivate: [AuthGuardService],
       },

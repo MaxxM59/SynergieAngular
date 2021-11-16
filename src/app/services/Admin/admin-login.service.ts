@@ -23,6 +23,7 @@ export class AdminLoginService {
     this.afAuth.signOut();
     this.auth = false;
     this.router.navigate(['admin']);
+    this.showNotification(`Vous êtes déconnecté(e)! Bonne journée !`);
   }
 
   // NOTIFICATION

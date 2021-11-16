@@ -2,7 +2,7 @@
     <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
         <mat-toolbar>Menu</mat-toolbar>
         <mat-nav-list>
-            <a mat-list-item routerLink="dashboard/dash-acceuil">Acceuil</a>
+            <a mat-list-item routerLink="dashboard-acceuil">Acceuil</a>
             <a mat-list-item routerLink="onglets">Barre de navigation</a>
             <a mat-list-item routerLink="pages">Pages</a>
             <a mat-list-item routerLink="articles">Articles de l'accueil</a>

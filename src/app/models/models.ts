@@ -8,7 +8,6 @@ export interface Article {
 export interface Onglet {
   id: string;
   titre: string;
-  type: string;
   lien: string;
   dossier: string;
 }

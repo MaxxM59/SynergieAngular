@@ -16,7 +16,6 @@ export class OngletsFormComponent implements OnInit {
     id: '',
     titre: '',
     lien: '',
-    type: '',
     dossier: '',
   };
   constructor(
@@ -25,13 +24,13 @@ export class OngletsFormComponent implements OnInit {
     private route: ActivatedRoute,
     private admin: AdminLoginService
   ) {}
-  save(playerForm: NgForm) {
-    if (playerForm.valid) {
-      if (this.id) {
-        this.ongletservice.updateOnglet(playerForm.value, this.id);
+  save(ongletForm: NgForm) {
+    if (ongletForm.valid) {
+      if (this.id !== null) {
+        this.ongletservice.updateOnglet(ongletForm.value, this.id);
         this.admin.showNotification('Onglet modifié !');
       } else {
-        this.ongletservice.addOnglet(playerForm.value);
+        this.ongletservice.addOnglet(ongletForm.value);
         this.admin.showNotification("L'onglet a été créé");
       }
 

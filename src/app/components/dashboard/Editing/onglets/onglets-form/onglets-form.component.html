@@ -1,7 +1,6 @@
 <div class='container-fluid p-5'>
-    <form #playerForm="ngForm" (ngSubmit)="save(playerForm)">
+    <form #ongletForm="ngForm" (ngSubmit)="save(ongletForm)">
         <div class="form-group">
-
             <label for="titre">Titre</label>
             <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid &&titreInput.touched}" class="form-control" [(ngModel)]="onglet.titre" required>
             <mat-error *ngIf="titreInput?.hasError('required')">
@@ -21,14 +20,6 @@
             <label for="dossier">Dossier</label>
             <input #dossierInput="ngModel" type="text" name="dossier" id="dossier" class="form-control" [(ngModel)]="onglet.dossier">
 
-        </div>
-        <div class="form-group">
-
-            <label for="type">Type</label>
-            <input #typeInput="ngModel" type="number" name="type" id="type" [ngClass]="{'is-invalid' : typeInput.invalid &&typeInput.touched}" class="form-control" [(ngModel)]="onglet.type" required>
-            <mat-error *ngIf="typeInput?.hasError('required')">
-                <strong>Le type est obligatoire</strong>
-            </mat-error>
         </div>
         <button type='submit' class="btn btn-primary m-1">Enregistrer</button>
         <button [hidden]="id === null" (click)="delete()" class="btn btn-danger m-1">Supprimer</button>

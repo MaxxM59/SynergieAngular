@@ -37,10 +37,19 @@ export class ArticleFormComponent implements OnInit {
         this.articleservice.addArticle(articleForm.value);
         this.admin.showNotification("L'article à été créé")
       }
+      this.router.navigate(['/articles']);
+    } else {
+      this.admin.showNotification("Il y a des erreurs dans le formulaire de l'article !");
     }
   }
-
+  delete() {
+    this.articleservice.deleteArticle(this.id);
+    this.admin.showNotification('Article supprimé');
+    this.router.navigate(['articles']);
+  } 
   ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get('id') as string;
+    if (this.id)
+      this.articleservice.getArticle(this.id).subscribe((a) => (this.article = a))
   }
-
 }

@@ -1,0 +1,17 @@
+<div class="container-fluid p-5">
+    <form #articleForm="ngForm" (ngSubmit)="save(articleForm)">
+        <div class="form-group">
+            <label for="titre">Titre</label>
+            <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid && titreInput.touched}"
+            class="form-control" [(ngModel)]="article.titre" required>
+            <mat-error *ngIf="titreInput?.hasError('required')">
+                <strong>Le titre est obligatoire</strong>
+            </mat-error>
+        </div>
+        <div class="form-group">
+
+            <label for="lien">Lien</label>
+
+        </div>
+    </form>
+</div>

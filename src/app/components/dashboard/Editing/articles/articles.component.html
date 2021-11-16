@@ -1,1 +1,21 @@
-<p>articles works!</p>
+<mat-button-toggle>Créé un article</mat-button-toggle>
+
+<div class="container-fluid p-5">
+    <table class="table table-stripped" >
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Image</th>
+                <th>Contenu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let a of articles">
+                <td>{{a.titre}}</td>
+                <td>{{a.image}}</td>
+                <td>{{a.contenu}}</td>
+                <td><a routerLink="../article-form/{{a.id}}" class="btn btn-success">Modifier</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,7 +1,7 @@
-<div class="grid-container">
+<!--<div class="grid-container">
     <h1 class="mat-h1">Dashboard</h1>
     <mat-grid-list cols="2" rowHeight="350px">
-        <mat-grid-tile *ngFor="let onglet of onglets ">
+        <mat-grid-tile *ngFor="let o of onglets ">
             <mat-card class="dashboard-card">
                 <mat-card-header>
                     <mat-card-title>
@@ -23,6 +23,8 @@
                             <div> {{o.titre}}</div>
                             <div>{{o.type}}</div>
                             <div>{{o.lien}}</div>
+                            <td><a routerLink="" class="btn btn-dark">Modifier</a></td>
+                            <td><a (click)=" this.onglet.deleteOnglet(o.id)" class="btn btn-dark">Supprimer</a></td>
                         </mat-list-option>
                     </mat-selection-list>
 
@@ -33,4 +35,38 @@
             </mat-card>
         </mat-grid-tile>
     </mat-grid-list>
+</div>
+-->
+
+
+
+
+<mat-button-toggle>Créer un onglet</mat-button-toggle>
+<mat-button-toggle>Créer un dossier</mat-button-toggle>
+
+<div class='container-fluid p-5'>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Titre
+                </th>
+                <th>Lien
+                </th>
+                <th>Type
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let o of onglets ">
+                <td>{{o.titre}}</td>
+                <td>{{o.lien}}</td>
+                <td>{{o.type}}</td>
+                <td><a routerLink="" class="btn btn-dark">Modifier</a></td>
+                <td><a (click)=" this.onglet.deleteOnglet(o.id)" class="btn btn-dark">Supprimer</a></td>
+
+            </tr>
+        </tbody>
+
+    </table>
 </div>

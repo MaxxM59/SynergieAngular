@@ -15,5 +15,6 @@ export class OngletsComponent implements OnInit {
     this.onglet.getOnglets().subscribe((o: Onglet[]) => {
       this.onglets = o;
     });
+    console.log(this.onglets);
   }
 }

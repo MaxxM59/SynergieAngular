@@ -55,6 +55,8 @@ export class OngletsService {
   }
   // SUPPRIME L'ARTICLE
   deleteOnglet(ongletId: string): void {
-    this.afs.collection<Onglet>('onglets').doc(ongletId).delete();
+    if (confirm('Voulez-vous vraiment supprimer cet élément?')) {
+      this.afs.collection<Onglet>('onglets').doc(ongletId).delete();
+    }
   }
 }

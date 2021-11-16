@@ -52,6 +52,8 @@ export class ArticleService {
   }
   // SUPPRIME L'ARTICLE
   deleteArticle(articleId: string): void {
-    this.afs.collection<Article>('articles').doc(articleId).delete();
+    if (confirm('Voulez-vous vraiment supprimer cet article?')) {
+      this.afs.collection<Article>('articles').doc(articleId).delete();
+    }
   }
 }

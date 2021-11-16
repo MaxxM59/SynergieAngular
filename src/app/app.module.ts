@@ -42,6 +42,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PagesComponent } from './components/dashboard/Editing/pages/pages.component';
 import { OngletsComponent } from './components/dashboard/Editing/onglets/onglets.component';
 import { ArticlesComponent } from './components/dashboard/Editing/articles/articles.component';
+import { ArticleFormComponent } from './components/dashboard/Editing/articles/article-form/article-form.component';
+import { OngletsFormComponent } from './components/dashboard/Editing/onglets/onglets-form/onglets-form.component';
+import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-form/pages-form.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +57,9 @@ import { ArticlesComponent } from './components/dashboard/Editing/articles/artic
     PagesComponent,
     OngletsComponent,
     ArticlesComponent,
+    ArticleFormComponent,
+    OngletsFormComponent,
+    PagesFormComponent,
   ],
   imports: [
     MatDialogModule,

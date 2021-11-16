@@ -52,6 +52,8 @@ export class PagesService {
   }
   // SUPPRIME L'ARTICLE
   deletePage(pageId: string): void {
-    this.afs.collection<Page>('pages').doc(pageId).delete();
+    if (confirm('Voulez-vous vraiment supprimer cette page?')) {
+      this.afs.collection<Page>('pages').doc(pageId).delete();
+    }
   }
 }

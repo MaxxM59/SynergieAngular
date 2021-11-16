@@ -1,4 +1,5 @@
 export interface Article {
+  payload: any;
   id: string;
   titre: string;
   contenu: string;

@@ -89,6 +89,7 @@ import { DossierFormComponent } from './components/dashboard/Editing/onglets/dos
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
+
     BrowserAnimationsModule,
     MatGridListModule,
     MatMenuModule,

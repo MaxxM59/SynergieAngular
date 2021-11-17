@@ -12,7 +12,7 @@ export class OngletsService {
     throw new Error('Method not implemented.');
   }
   constructor(private afs: AngularFirestore) {}
-
+  onglet: any;
   getOnglets(): Observable<Onglet[]> {
     //POUR A VOIR L'ID
     return this.afs
@@ -46,12 +46,18 @@ export class OngletsService {
       );
   }
   //AJOUTE UN ARTICLE
-  addOnglet(onglet: Onglet): void {
+  addOnglet(type: string, onglet: Onglet): void {
+    onglet.type = type;
     this.afs.collection<Onglet>('onglets').add(onglet);
   }
   // MODIFIE L'ARTICLE
   updateOnglet(onglet: Onglet, ongletId: string): void {
     this.afs.collection<Onglet>('onglets').doc(ongletId).update(onglet);
+  }
+  update(type: string, ongletID: string) {
+    this.onglet = this.getOnglet(ongletID);
+    this.onglet.type = type;
+    this.afs.collection<Onglet>('onglets').doc(ongletID).update(this.onglet);
   }
   // SUPPRIME L'ARTICLE
   deleteOnglet(ongletId: string): void {

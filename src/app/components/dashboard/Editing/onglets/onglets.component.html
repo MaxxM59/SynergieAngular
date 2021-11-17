@@ -1,5 +1,6 @@
 <mat-button-toggle routerLink="../onglets-form/new">Créer un onglet</mat-button-toggle>
 <mat-button-toggle routerLink="../dossier-form/new">Créer un dossier</mat-button-toggle>
+<mat-button-toggle routerLink="../../dashboard/dashboard-acceuil">Retour</mat-button-toggle>
 
 <div class='container-fluid p-5'>
     <table class="table table-stripped">
@@ -11,14 +12,20 @@
                 </th>
                 <th>Type
                 </th>
+                <th>Dossier
+                </th>
+
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let o of onglets ">
                 <td>{{o.titre}}</td>
                 <td>{{o.lien}}</td>
+                <td>{{o.type}}</td>
                 <td>{{o.dossier}}</td>
-                <td><a routerLink="../onglets-form/{{o.id}}" class="btn btn-success">Modifier</a></td>
+
+                <td><a routerLink="../onglets-form/{{o.id}}" class="btn btn-primary m-1">Modifier</a></td>
+                <td><a class="btn btn-danger m-1" (click)="delete(o.id)">Supprimer</a></td>
 
             </tr>
         </tbody>

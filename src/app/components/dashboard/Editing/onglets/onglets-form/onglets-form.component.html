@@ -1,5 +1,5 @@
 <div class='container-fluid p-5'>
-    <form #ongletForm="ngForm" (ngSubmit)="save(ongletForm)">
+    <form #ongletForm="ngForm">
         <div class="form-group">
             <label for="titre">Titre</label>
             <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid &&titreInput.touched}" class="form-control" [(ngModel)]="onglet.titre" required>
@@ -18,10 +18,17 @@
         <div class="form-group">
 
             <label for="dossier">Dossier</label>
-            <input #dossierInput="ngModel" type="text" name="dossier" id="dossier" class="form-control" [(ngModel)]="onglet.dossier">
+            <input #lienInput="ngModel" type="text" name="dossier" id="dossier" class="form-control" [(ngModel)]="onglet.dossier">
 
         </div>
-        <button type='submit' class="btn btn-primary m-1">Enregistrer</button>
+
+        <div [hidden]="true" class="form-group">
+            <input [hidden] #typeInput="ngModel" type="type" name="type" id="type" class="form-control" [(ngModel)]="onglet.type" value="Normal">
+
+        </div>
+
+        <button type='submit' class="btn btn-primary m-1" (click)="save(ongletForm)">Enregistrer</button>
         <button [hidden]="id === null" (click)="delete()" class="btn btn-danger m-1">Supprimer</button>
     </form>
 </div>
+<button class="btn btn-success m-1" routerLink="../../onglets">Retour</button>

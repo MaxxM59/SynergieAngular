@@ -5,6 +5,7 @@ import { DashboardAcceuilComponent } from './components/dashboard/dashboard-acce
 import { DashboardHomeComponent } from './components/dashboard/dashboard-home/dashboard-home.component';
 import { ArticleFormComponent } from './components/dashboard/Editing/articles/article-form/article-form.component';
 import { ArticlesComponent } from './components/dashboard/Editing/articles/articles.component';
+import { DossierFormComponent } from './components/dashboard/Editing/onglets/dossier-form/dossier-form.component';
 import { OngletsFormComponent } from './components/dashboard/Editing/onglets/onglets-form/onglets-form.component';
 import { OngletsComponent } from './components/dashboard/Editing/onglets/onglets.component';
 import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-form/pages-form.component';
@@ -38,6 +39,16 @@ const routes: Routes = [
       {
         path: 'onglets-form/:id',
         component: OngletsFormComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'dossier-form/new',
+        component: DossierFormComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'dossier-form/:id',
+        component: DossierFormComponent,
         canActivate: [AuthGuardService],
       },
       {

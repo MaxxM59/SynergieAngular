@@ -1,14 +1,14 @@
 {
-  "targets": {
-    "blog2510": {
-      "hosting": {
-        "projet0711": [
-          "blog2510"
-        ]
-      }
+    "targets": {
+        "SynergieAngular": {
+            "hosting": {
+                "SynergieAngular": [
+                    "SynergieAngular"
+                ]
+            }
+        }
+    },
+    "projects": {
+        "default": "SynergieAngular"
     }
-  },
-  "projects": {
-    "default": "blog2510"
-  }
 }

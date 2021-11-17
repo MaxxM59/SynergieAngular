@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Optional } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Onglet } from 'src/app/models/models';
 import { OngletsService } from 'src/app/services/Admin/Editing/onglets.service';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
+
 @Component({
   selector: 'app-onglets-form',
   templateUrl: './onglets-form.component.html',
@@ -16,8 +17,10 @@ export class OngletsFormComponent implements OnInit {
     id: '',
     titre: '',
     lien: '',
-    dossier: '',
+    dossier: 'Aucun',
+    type: 'normal',
   };
+
   constructor(
     public ongletservice: OngletsService,
     private router: Router,
@@ -26,23 +29,24 @@ export class OngletsFormComponent implements OnInit {
   ) {}
   save(ongletForm: NgForm) {
     if (ongletForm.valid) {
-      if (this.id !== null) {
+      if (this.onglet.id) {
         this.ongletservice.updateOnglet(ongletForm.value, this.id);
         this.admin.showNotification('Onglet modifié !');
       } else {
-        this.ongletservice.addOnglet(ongletForm.value);
+        this.ongletservice.addOnglet('Normal', ongletForm.value);
         this.admin.showNotification("L'onglet a été créé");
       }
 
-      this.router.navigate(['/onglets']);
+      this.router.navigate(['dashboard/onglets']);
     } else {
       this.admin.showNotification('Il y a des erreurs dans le formulaire!');
     }
   }
+
   delete() {
     this.ongletservice.deleteOnglet(this.id);
     this.admin.showNotification('Onglet supprimé !');
-    this.router.navigate(['onglets']);
+    this.router.navigate(['dashboard/onglets']);
   }
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') as string;

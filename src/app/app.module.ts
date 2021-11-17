@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
@@ -46,6 +47,7 @@ import { ArticleFormComponent } from './components/dashboard/Editing/articles/ar
 import { OngletsFormComponent } from './components/dashboard/Editing/onglets/onglets-form/onglets-form.component';
 import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-form/pages-form.component';
 import { DossierFormComponent } from './components/dashboard/Editing/onglets/dossier-form/dossier-form.component';
+
 
 @NgModule({
   declarations: [
@@ -97,6 +99,7 @@ import { DossierFormComponent } from './components/dashboard/Editing/onglets/dos
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    AngularFireDatabaseModule
   ],
   providers: [AuthGuardService, AdminLoginService],
   bootstrap: [AppComponent],

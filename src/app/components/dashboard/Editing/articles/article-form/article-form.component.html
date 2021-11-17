@@ -8,10 +8,22 @@
                 <strong>Le titre est obligatoire</strong>
             </mat-error>
         </div>
-        <div class="form-group">
 
-            <label for="lien">Lien</label>
-
+        <div style="text-align:center">
+            <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+            <div><img [src]="url" *ngIf="url"></div>
+            <p>
+                <input type="file" (change)="selectFile($event)">
+            </p>
         </div>
+
+        <div class="form-group">
+            <label for="contenu">Contenu</label>
+            <input #contenuInput="ngModel" type="textarea" name="contenu" id="contenu" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="article.contenu" required>
+            <mat-error *ngIf="contenuInput?.hasError('required')"><strong>Contenu obligatoire</strong></mat-error>
+        </div>
+
+        <button type="submit" class="btn btn-primary m-1">Enregistrer</button>
+        <button [hidden]="id === null" (click)="delete()" class="btn tbn-danger m-1">Supprimer</button>
     </form>
 </div>

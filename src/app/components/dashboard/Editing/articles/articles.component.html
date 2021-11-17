@@ -1,4 +1,4 @@
-<mat-button-toggle>Créé un article</mat-button-toggle>
+<mat-button-toggle routerLink="../articles-form/new">Créé un article</mat-button-toggle>
 
 <div class="container-fluid p-5">
     <table class="table table-stripped" >
@@ -12,7 +12,6 @@
         <tbody>
             <tr *ngFor="let a of articles">
                 <td>{{a.titre}}</td>
-                <td>{{a.image}}</td>
                 <td>{{a.contenu}}</td>
                 <td><a routerLink="../article-form/{{a.id}}" class="btn btn-success">Modifier</a></td>
             </tr>

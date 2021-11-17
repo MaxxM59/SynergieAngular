@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Article } from 'src/app/models/models';
+import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
 
 
@@ -10,7 +12,12 @@ import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
   styleUrls: ['./articles.component.scss']
 })
 export class ArticlesComponent  implements OnInit {
-  constructor(public article: ArticleService) {}
+  constructor(
+    public article: ArticleService,
+    private admin: AdminLoginService,
+    private router: Router
+  ) {}
+
   articles: Article[] = [];
 
   ngOnInit(): void {

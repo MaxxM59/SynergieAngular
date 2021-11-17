@@ -1,0 +1,29 @@
+<mat-toolbar color="light">
+    <mat-toolbar-row>
+        <!--TITRE ET LOGO SYNERGIE -->
+        <h1>Synergie</h1>
+        <img src="">
+        <span class="menu-spacer"></span>
+        <div *ngFor="let o of onglets">
+            <ul ngIf="o.type='Dossier'; else elseblock" id="o.id" class="dropdown-content">
+                <li><a href="#!">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">three</a></li>
+            </ul>
+            <div #elseblock>
+                <mat-button-toggle-group>ICIIIII</mat-button-toggle-group>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-trigger" href="#!" data-target="o.id">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Logo</a>
+
+            </div>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

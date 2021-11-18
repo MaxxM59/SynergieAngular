@@ -9,14 +9,6 @@
         </div>
         <div class="form-group">
 
-            <label for="lien">Lien</label>
-            <input #lienInput="ngModel" type="text" name="lien" id="lien" [ngClass]="{'is-invalid' : lienInput.invalid &&lienInput.touched}" class="form-control" [(ngModel)]="onglet.lien" required>
-            <mat-error *ngIf="lienInput?.hasError('required')">
-                <strong>Le lien est obligatoire</strong>
-            </mat-error>
-        </div>
-        <div class="form-group">
-
             <label for="dossier">Dossier</label>
             <input #lienInput="ngModel" type="text" name="dossier" id="dossier" class="form-control" [(ngModel)]="onglet.dossier">
 
@@ -26,7 +18,6 @@
             <input [hidden] #typeInput="ngModel" type="type" name="type" id="type" class="form-control" [(ngModel)]="onglet.type" value="Normal">
 
         </div>
-
         <button type='submit' class="btn btn-primary m-1" (click)="save(ongletForm)">Enregistrer</button>
         <button [hidden]="id === null" (click)="delete()" class="btn btn-danger m-1">Supprimer</button>
     </form>

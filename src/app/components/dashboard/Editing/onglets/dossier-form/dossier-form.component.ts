@@ -16,7 +16,6 @@ export class DossierFormComponent implements OnInit {
   onglet: Onglet = {
     id: '',
     titre: '',
-    lien: '',
     dossier: '',
     type: '',
   };

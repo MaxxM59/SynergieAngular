@@ -48,7 +48,6 @@ import { OngletsFormComponent } from './components/dashboard/Editing/onglets/ong
 import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-form/pages-form.component';
 import { DossierFormComponent } from './components/dashboard/Editing/onglets/dossier-form/dossier-form.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -91,7 +90,6 @@ import { DossierFormComponent } from './components/dashboard/Editing/onglets/dos
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
-
     BrowserAnimationsModule,
     MatGridListModule,
     MatMenuModule,
@@ -100,7 +98,7 @@ import { DossierFormComponent } from './components/dashboard/Editing/onglets/dos
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
   ],
   providers: [AuthGuardService, AdminLoginService],
   bootstrap: [AppComponent],

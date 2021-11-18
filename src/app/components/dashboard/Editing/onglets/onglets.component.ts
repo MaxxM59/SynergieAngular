@@ -18,7 +18,6 @@ export class OngletsComponent implements OnInit {
   onglet: Onglet = {
     id: '',
     titre: '',
-    lien: '',
     dossier: '',
     type: '',
   };

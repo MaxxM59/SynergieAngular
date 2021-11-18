@@ -12,39 +12,34 @@ import { OngletsService } from 'src/app/services/Admin/Editing/onglets.service';
 export class NavComponent implements OnInit {
   constructor(
     public ongletservice: OngletsService,
-    private admin: AdminLoginService,
-    private router: Router
+    private admin: AdminLoginService
   ) {}
-  affiche() {
-    console.log(this.onglets);
-  }
-  onglets: Onglet[] = [];
-  dossiers: any = [];
-  dropdowns: any = [];
-  solo: any = [];
 
+  onglets: Onglet[] = [];
+  dossiers: any;
+  dropdowns: any;
+  solo: any;
+  check = 'dd.dossier=== d.titre';
+  auth = this.admin.auth;
   // TRI DES ONGLETS
   tri(tab: Onglet[]) {
     // ONGLETS SOLOS
-    var pushSolo = tab.filter((onglet) => onglet.type === 'Normal');
-    this.solo.push(pushSolo);
+    this.solo = tab.filter(
+      (onglet) => onglet.type === 'Normal' && onglet.dossier === ''
+    );
 
     //ONGLETS DOSSIERS
-    var pushDossiers = tab.filter((onglet) => onglet.type === 'Dossier');
-    this.dossiers.push(pushDossiers);
+    this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
 
     // ONGLETS DROPDOWN => ATTENTION A FIX LES NOMS DE DOSSIERS LORS DE LA CREATION !!!
-    var pushDropdown = tab.filter((onglet) => onglet.dossier !== '');
-    this.dropdowns.push(pushDropdown);
+    this.dropdowns = tab.filter((onglet) => onglet.dossier !== '');
   }
-
-  //
 
   ngOnInit(): void {
     this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
       this.onglets = o;
       this.tri(this.onglets);
-      console.log(this.tri(this.onglets));
+      console.log(this.dropdowns);
     });
   }
 }

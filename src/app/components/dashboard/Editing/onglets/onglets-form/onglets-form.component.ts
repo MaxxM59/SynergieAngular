@@ -44,8 +44,6 @@ export class OngletsFormComponent implements OnInit {
 
   delete() {
     this.ongletservice.deleteOnglet(this.id);
-    this.admin.showNotification('Onglet supprimé !');
-    this.router.navigate(['dashboard/onglets']);
   }
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') as string;

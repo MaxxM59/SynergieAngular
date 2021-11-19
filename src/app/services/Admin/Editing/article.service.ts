@@ -3,12 +3,18 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Article } from '../../../models/models';
+import { AdminLoginService } from '../admin-login.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ArticleService {
-  constructor(private afs: AngularFirestore) {}
+  constructor(
+    private afs: AngularFirestore,
+    private admin: AdminLoginService,
+    private router: Router
+  ) {}
 
   getArticles(): Observable<Article[]> {
     //POUR A VOIR L'ID
@@ -54,6 +60,10 @@ export class ArticleService {
   deleteArticle(articleId: string): void {
     if (confirm('Voulez-vous vraiment supprimer cet article?')) {
       this.afs.collection<Article>('articles').doc(articleId).delete();
+      this.admin.showNotification('Article supprimé !');
+      this.router.navigate(['dashboard/articles']);
+    } else {
+      this.router.navigate(['articles-form/{{o.id}}']);
     }
   }
 }

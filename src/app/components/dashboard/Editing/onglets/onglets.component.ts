@@ -25,7 +25,6 @@ export class OngletsComponent implements OnInit {
 
   delete($id: string) {
     this.ongletservice.deleteOnglet($id);
-    this.admin.showNotification('Onglet supprimé !');
   }
   ngOnInit(): void {
     this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {

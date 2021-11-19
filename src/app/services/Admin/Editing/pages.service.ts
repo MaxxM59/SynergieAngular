@@ -3,12 +3,18 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Page } from '../../../models/models';
+import { AdminLoginService } from '../admin-login.service';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PagesService {
-  constructor(private afs: AngularFirestore) {}
+  constructor(
+    private afs: AngularFirestore,
+    private admin: AdminLoginService,
+    private router: Router
+  ) {}
 
   getPages(): Observable<Page[]> {
     //POUR A VOIR L'ID
@@ -54,6 +60,10 @@ export class PagesService {
   deletePage(pageId: string): void {
     if (confirm('Voulez-vous vraiment supprimer cette page?')) {
       this.afs.collection<Page>('pages').doc(pageId).delete();
+      this.admin.showNotification('Page supprimée !');
+      this.router.navigate(['dashboard/pages']);
+    } else {
+      this.router.navigate(['pages-form/{{o.id}}']);
     }
   }
 }

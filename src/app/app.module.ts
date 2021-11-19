@@ -100,6 +100,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatListModule,
     AngularFireDatabaseModule,
     MatCheckboxModule,
+    MatInputModule,
   ],
   providers: [AuthGuardService, AdminLoginService],
   bootstrap: [AppComponent],

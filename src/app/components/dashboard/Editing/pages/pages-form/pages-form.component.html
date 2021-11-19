@@ -1,5 +1,5 @@
 <div class="container-fluid p-5">
-    <form #pageForm="ngForm" (ngSubmit)="save(pageForm)">
+    <form #pageForm="ngForm">
         <div class="form-group">
             <label for="titre">Titre</label>
             <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid && titreInput.touched}" class="form-control" [(ngModel)]="page.titre" required>
@@ -11,11 +11,15 @@
 
         <div class="form-group">
             <label for="contenu">Contenu</label>
-            <input #contenuInput="ngModel" type="textarea" name="contenu" id="contenu" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="page.contenu" required>
-            <mat-error *ngIf="contenuInput?.hasError('required')"><strong>Contenu obligatoire</strong></mat-error>
+            <textarea #contenuInput="ngModel" type="textarea" name="contenu" id="contenu" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="page.contenu" requiredmatInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+                cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+
+            <mat-error fxFill *ngIf="contenuInput?.hasError('required')"><strong>Contenu obligatoire</strong></mat-error>
         </div>
 
-        <button type="submit" class="btn btn-primary m-1">Enregistrer</button>
+
+
+        <button type="submit" class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>
         <button [hidden]="id === null" (click)="delete()" class="btn tbn-danger m-1">Supprimer</button>
     </form>
 </div>

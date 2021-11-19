@@ -26,13 +26,13 @@ export class PagesFormComponent implements OnInit {
     private route: ActivatedRoute,
     private admin: AdminLoginService
   ) {}
-  save(ongletForm: NgForm) {
-    if (ongletForm.valid) {
+  save(pageForm: NgForm) {
+    if (pageForm.valid) {
       if (this.page.id) {
-        this.pagesservice.updatePage(ongletForm.value, this.id);
+        this.pagesservice.updatePage(pageForm.value, this.id);
         this.admin.showNotification('Page modifiée !');
       } else {
-        this.pagesservice.addPage(ongletForm.value);
+        this.pagesservice.addPage(pageForm.value);
         this.admin.showNotification('La page a été créé');
       }
 
@@ -44,8 +44,6 @@ export class PagesFormComponent implements OnInit {
 
   delete() {
     this.pagesservice.deletePage(this.id);
-    this.admin.showNotification('Page supprimée !');
-    this.router.navigate(['dashboard/pages']);
   }
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') as string;

@@ -33,7 +33,7 @@ export class PagesService {
   //RECUPERE UN ARTICLE
   getPage(id: string): Observable<Page> {
     return this.afs
-      .collection<Page>('pagess')
+      .collection<Page>('pages')
       .doc(id)
       .snapshotChanges()
       .pipe(
@@ -50,7 +50,7 @@ export class PagesService {
   }
   //AJOUTE UN ARTICLE
   addPage(page: Page): void {
-    this.afs.collection<Page>('articles').add(page);
+    this.afs.collection<Page>('pages').add(page);
   }
   // MODIFIE L'ARTICLE
   updatePage(page: Page, pageId: string): void {

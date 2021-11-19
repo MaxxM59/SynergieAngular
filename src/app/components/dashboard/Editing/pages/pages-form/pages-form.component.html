@@ -1,1 +1,21 @@
-<p>pages-form works!</p>
+<div class="container-fluid p-5">
+    <form #pageForm="ngForm" (ngSubmit)="save(pageForm)">
+        <div class="form-group">
+            <label for="titre">Titre</label>
+            <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid && titreInput.touched}" class="form-control" [(ngModel)]="page.titre" required>
+            <mat-error *ngIf="titreInput?.hasError('required')">
+                <strong>Le titre est obligatoire</strong>
+            </mat-error>
+        </div>
+
+
+        <div class="form-group">
+            <label for="contenu">Contenu</label>
+            <input #contenuInput="ngModel" type="textarea" name="contenu" id="contenu" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="page.contenu" required>
+            <mat-error *ngIf="contenuInput?.hasError('required')"><strong>Contenu obligatoire</strong></mat-error>
+        </div>
+
+        <button type="submit" class="btn btn-primary m-1">Enregistrer</button>
+        <button [hidden]="id === null" (click)="delete()" class="btn tbn-danger m-1">Supprimer</button>
+    </form>
+</div>

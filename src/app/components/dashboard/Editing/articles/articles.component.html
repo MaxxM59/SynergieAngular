@@ -1,18 +1,28 @@
 <mat-button-toggle routerLink="../articles-form/new">Créé un article</mat-button-toggle>
 
 <div class="container-fluid p-5">
-    <table class="table table-stripped" >
+    <table class="table table-stripped">
         <thead>
             <tr>
-                <th>Titre</th>
-                <th>Image</th>
-                <th>Contenu</th>
+                <th>
+                    <h2>Titre</h2>
+                </th>
+                <th>
+                    <h2>Image</h2>
+                </th>
+                <th>
+                    <h2>Contenu</h2>
+                </th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let a of articles">
-                <td>{{a.titre}}</td>
-                <td>{{a.contenu}}</td>
+                <td>
+                    <h2>{{a.titre}}</h2>
+                </td>
+                <td>
+                    <h2>{{a.contenu}}</h2>
+                </td>
                 <td><a routerLink="../article-form/{{a.id}}" class="btn btn-success">Modifier</a></td>
             </tr>
         </tbody>

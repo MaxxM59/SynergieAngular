@@ -1,22 +1,37 @@
-<mat-button-toggle routerLink="../pages-form/new">Créer une page</mat-button-toggle>
-<mat-button-toggle routerLink="../../dashboard/dashboard-acceuil">Retour</mat-button-toggle>
+<mat-button-toggle routerLink="../pages-form/new">
+    Créer une page
+</mat-button-toggle>
+<mat-button-toggle routerLink="../../dashboard/dashboard-acceuil">
+    Retour
+</mat-button-toggle>
 
 <div class='container-fluid p-5'>
     <table class="table table-stripped">
         <thead>
             <tr>
-                <th>Titre
+                <th>
+                    <h2>Titre</h2>
                 </th>
 
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let p of pages ">
-                <td>{{p.titre}}</td>
+                <td>
+                    <h2>{{p.titre}}</h2>
+                </td>
 
 
-                <td><a routerLink="../pages-form/{{p.id}}" class="btn btn-primary m-1">Modifier</a></td>
-                <td><a class="btn btn-danger m-1" (click)="delete(p.id)">Supprimer</a></td>
+                <td>
+                    <a routerLink="../pages-form/{{p.id}}" class="btn btn-primary m-1">
+                        Modifier
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger m-1" (click)="delete(p.id)">
+                        Supprimer
+                    </a>
+                </td>
 
             </tr>
         </tbody>

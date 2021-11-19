@@ -1,7 +1,7 @@
 <div class='container-fluid p-5'>
     <form #ongletForm="ngForm">
         <div class="form-group">
-            <label for="titre">Titre</label>
+            <label for="titre"><h2>Titre</h2></label>
             <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid &&titreInput.touched}" class="form-control" [(ngModel)]="onglet.titre" required>
             <mat-error *ngIf="titreInput?.hasError('required')">
                 <strong>Le titre est obligatoire</strong>
@@ -11,9 +11,9 @@
 
         <div class="form-group">
 
-            <label for="dossier">Dossier</label>
+            <label for="dossier"><h2>Dossier</h2></label>
             <input #lienInput="ngModel" type="text" name="dossier" id="dossier" class="form-control" [(ngModel)]="onglet.dossier">
-            <mat-hint>Si l'onglet n'appartient à aucun dossier, veuillez taper : Aucun</mat-hint>
+            <mat-hint> <strong>Si l'onglet n'appartient à aucun dossier, veuillez taper : Aucun</strong></mat-hint>
         </div>
 
         <div [hidden]="true" class="form-group">

@@ -2,7 +2,7 @@
 
     <form #dossierForm="ngForm">
         <div class="form-group">
-            <label for="titre">Titre</label>
+            <label for="titre"><h2>Titre</h2></label>
             <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid &&titreInput.touched}" class="form-control" [(ngModel)]="onglet.titre" required>
             <mat-error *ngIf="titreInput?.hasError('required')">
                 <strong>Le titre est obligatoire</strong>

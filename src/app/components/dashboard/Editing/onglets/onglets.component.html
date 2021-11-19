@@ -1,28 +1,51 @@
-<mat-button-toggle routerLink="../onglets-form/new">Créer un onglet</mat-button-toggle>
-<mat-button-toggle routerLink="../dossier-form/new">Créer un dossier</mat-button-toggle>
-<mat-button-toggle routerLink="../../dashboard/dashboard-acceuil">Retour</mat-button-toggle>
+<mat-button-toggle routerLink="../onglets-form/new">
+    Créer un onglet
+</mat-button-toggle>
+<mat-button-toggle routerLink="../dossier-form/new">
+    Créer un dossier
+</mat-button-toggle>
+<mat-button-toggle routerLink="../../dashboard/dashboard-acceuil">
+    Retour
+</mat-button-toggle>
 
 <div class='container-fluid p-5'>
     <table class="table table-stripped">
         <thead>
             <tr>
-                <th>Titre
+                <th>
+                    <h2>Titre</h2>
                 </th>
-                <th>Type
+                <th>
+                    <h2>Type</h2>
                 </th>
-                <th>Dossier
+                <th>
+                    <h2>Dossier</h2>
                 </th>
 
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let o of onglets ">
-                <td>{{o.titre}}</td>
-                <td>{{o.type}}</td>
-                <td>{{o.dossier}}</td>
+                <td>
+                    <h2>{{o.titre}}</h2>
+                </td>
+                <td>
+                    <h2>{{o.type}}</h2>
+                </td>
+                <td>
+                    <h2>{{o.dossier}}</h2>
+                </td>
 
-                <td><a routerLink="../onglets-form/{{o.id}}" class="btn btn-primary m-1">Modifier</a></td>
-                <td><a class="btn btn-danger m-1" (click)="delete(o.id)">Supprimer</a></td>
+                <td>
+                    <a routerLink="../onglets-form/{{o.id}}" class="btn btn-primary m-1">
+                        Modifier
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger m-1" (click)="delete(o.id)">
+                       Supprimer
+                    </a>
+                </td>
 
             </tr>
         </tbody>

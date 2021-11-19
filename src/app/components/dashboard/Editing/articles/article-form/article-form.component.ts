@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -14,11 +13,13 @@ import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
 export class ArticleFormComponent implements OnInit {
   
   id:string ='';
+  imageSrc: string = '';
 
   article: Article = {
     id: '',
     titre: '',
     contenu: '',
+    image: '',
     payload: undefined,
   }
 
@@ -54,6 +55,4 @@ export class ArticleFormComponent implements OnInit {
     if (this.id)
       this.articleservice.getArticle(this.id).subscribe((a) => (this.article = a))
   }
-  
-  
 }

@@ -7,11 +7,13 @@
                 <strong>Le titre est obligatoire</strong>
             </mat-error>
         </div>
+
+
         <div class="form-group">
 
             <label for="dossier">Dossier</label>
             <input #lienInput="ngModel" type="text" name="dossier" id="dossier" class="form-control" [(ngModel)]="onglet.dossier">
-
+            <mat-hint>Si l'onglet n'appartient à aucun dossier, veuillez taper : Aucun</mat-hint>
         </div>
 
         <div [hidden]="true" class="form-group">

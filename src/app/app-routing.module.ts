@@ -10,11 +10,17 @@ import { OngletsFormComponent } from './components/dashboard/Editing/onglets/ong
 import { OngletsComponent } from './components/dashboard/Editing/onglets/onglets.component';
 import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-form/pages-form.component';
 import { PagesComponent } from './components/dashboard/Editing/pages/pages.component';
+import { PageComponent } from './components/page/page.component';
 import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
 const routes: Routes = [
   {
     path: 'admin',
     component: AdminFormComponent,
+  },
+  {
+    path: 'page/:id',
+    component: PageComponent,
+    canActivate: [AuthGuardService],
   },
 
   {

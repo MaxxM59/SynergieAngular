@@ -41,7 +41,6 @@ export class NavComponent implements OnInit {
     this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
       this.onglets = o;
       this.tri(this.onglets);
-      console.log(this.dropdowns);
     });
   }
 }

@@ -48,6 +48,7 @@ import { OngletsFormComponent } from './components/dashboard/Editing/onglets/ong
 import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-form/pages-form.component';
 import { DossierFormComponent } from './components/dashboard/Editing/onglets/dossier-form/dossier-form.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { PageComponent } from './components/page/page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,6 +64,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     OngletsFormComponent,
     PagesFormComponent,
     DossierFormComponent,
+    PageComponent,
   ],
   imports: [
     MatDialogModule,

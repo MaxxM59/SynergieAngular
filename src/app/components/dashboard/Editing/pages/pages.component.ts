@@ -18,7 +18,7 @@ export class PagesComponent implements OnInit {
   page: Page = {
     id: '',
     titre: '',
-    image: '',
+    //image: '',
     contenu: '',
   };
   pages: Page[] = [];
@@ -30,6 +30,7 @@ export class PagesComponent implements OnInit {
   ngOnInit(): void {
     this.pageservice.getPages().subscribe((p: Page[]) => {
       this.pages = p;
+      console.log(this.pages);
     });
   }
 }

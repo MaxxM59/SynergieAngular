@@ -47,7 +47,7 @@ import { ArticleFormComponent } from './components/dashboard/Editing/articles/ar
 import { OngletsFormComponent } from './components/dashboard/Editing/onglets/onglets-form/onglets-form.component';
 import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-form/pages-form.component';
 import { DossierFormComponent } from './components/dashboard/Editing/onglets/dossier-form/dossier-form.component';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -99,6 +99,8 @@ import { DossierFormComponent } from './components/dashboard/Editing/onglets/dos
     MatSidenavModule,
     MatListModule,
     AngularFireDatabaseModule,
+    MatCheckboxModule,
+    MatInputModule,
   ],
   providers: [AuthGuardService, AdminLoginService],
   bootstrap: [AppComponent],

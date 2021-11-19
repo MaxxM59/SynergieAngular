@@ -1,1 +1,26 @@
-<p>pages-form works!</p>
+<div class="container-fluid p-5">
+    <form #pageForm="ngForm">
+        <div class="form-group">
+            <label for="titre"><h2>Titre</h2></label>
+            <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid && titreInput.touched}" class="form-control" [(ngModel)]="page.titre" required>
+            <mat-error *ngIf="titreInput?.hasError('required')">
+                <strong>Le titre est obligatoire</strong>
+            </mat-error>
+        </div>
+
+
+        <div class="md-form amber-textarea active-amber-textarea-2">
+
+            <label for="contenu"><h2>Contenu</h2></label>
+            <textarea #contenuInput="ngModel" type="textarea" name="contenu" id="contenu" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="page.contenu" requiredmatInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+                cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+
+            <mat-error fxFill *ngIf="contenuInput?.hasError('required')"><strong>Contenu obligatoire</strong></mat-error>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>
+        <button [hidden]="id === null" (click)="delete()" class="btn tbn-danger m-1">Supprimer</button>
+    </form>
+</div>

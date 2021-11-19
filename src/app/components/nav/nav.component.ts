@@ -25,14 +25,16 @@ export class NavComponent implements OnInit {
   tri(tab: Onglet[]) {
     // ONGLETS SOLOS
     this.solo = tab.filter(
-      (onglet) => onglet.type === 'Normal' && onglet.dossier === ''
+      (onglet) => onglet.type === 'Normal' && onglet.dossier === 'Aucun'
     );
 
     //ONGLETS DOSSIERS
     this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
 
     // ONGLETS DROPDOWN => ATTENTION A FIX LES NOMS DE DOSSIERS LORS DE LA CREATION !!!
-    this.dropdowns = tab.filter((onglet) => onglet.dossier !== '');
+    this.dropdowns = tab.filter(
+      (onglet) => onglet.dossier !== 'Aucun' && onglet.dossier !== ''
+    );
   }
 
   ngOnInit(): void {

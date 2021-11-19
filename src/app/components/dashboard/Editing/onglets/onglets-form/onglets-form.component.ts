@@ -1,5 +1,11 @@
 import { Component, OnInit, Optional } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  NgForm,
+  Validators,
+} from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Onglet } from 'src/app/models/models';
 import { OngletsService } from 'src/app/services/Admin/Editing/onglets.service';
@@ -44,8 +50,6 @@ export class OngletsFormComponent implements OnInit {
 
   delete() {
     this.ongletservice.deleteOnglet(this.id);
-    this.admin.showNotification('Onglet supprimé !');
-    this.router.navigate(['dashboard/onglets']);
   }
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') as string;

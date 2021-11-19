@@ -3,6 +3,8 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Onglet } from '../../../models/models';
+import { Router } from '@angular/router';
+import { AdminLoginService } from '../admin-login.service';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +13,11 @@ export class OngletsService {
   id(id: any) {
     throw new Error('Method not implemented.');
   }
-  constructor(private afs: AngularFirestore) {}
+  constructor(
+    private afs: AngularFirestore,
+    private router: Router,
+    private admin: AdminLoginService
+  ) {}
   onglet: any;
   getOnglets(): Observable<Onglet[]> {
     //POUR A VOIR L'ID
@@ -63,6 +69,10 @@ export class OngletsService {
   deleteOnglet(ongletId: string): void {
     if (confirm('Voulez-vous vraiment supprimer cet élément?')) {
       this.afs.collection<Onglet>('onglets').doc(ongletId).delete();
+      this.admin.showNotification('Onglet supprimé !');
+      this.router.navigate(['dashboard/onglets']);
+    } else {
+      this.router.navigate(['onglets-form/{{o.id}}']);
     }
   }
 }

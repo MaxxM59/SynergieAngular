@@ -15,7 +15,7 @@ export interface Page {
   id: string;
   titre: string;
   contenu: string;
-  chemin: string;
+  image: string;
 }
 export interface Admin {
   mail: string;

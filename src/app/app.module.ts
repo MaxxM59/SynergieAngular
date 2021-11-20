@@ -14,7 +14,6 @@ import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { NavComponent } from './components/nav/nav.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FlashMessagesModule } from 'flash-messages-angular';
 import { AdminFormComponent } from './components/dashboard/admin-form/admin-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
@@ -80,7 +79,7 @@ import { PageComponent } from './components/page/page.component';
     MatRippleModule,
     MatCommonModule,
     MatCardModule,
-    FlashMessagesModule.forRoot(),
+
     FormsModule,
     BrowserModule,
     AppRoutingModule,

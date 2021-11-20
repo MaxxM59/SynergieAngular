@@ -11,7 +11,7 @@ import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
 })
 export class PageComponent implements OnInit {
   auth = this.admin.auth;
-  id: string = '';
+
   page: Page = {
     id: '',
     titre: '',
@@ -24,13 +24,12 @@ export class PageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get('id') as string;
-    if (this.id) {
-      this.pagesservice.getPage(this.id).subscribe((p) => {
+    this.page.id = this.route.snapshot.paramMap.get('id') as string;
+    if (this.page.id) {
+      this.pagesservice.getPage(this.page.id).subscribe((p) => {
         this.page = p;
+        console.log(this.page);
       });
     }
-    console.log(this.id);
-    console.log(this.page);
   }
 }

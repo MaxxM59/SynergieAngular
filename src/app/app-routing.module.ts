@@ -22,6 +22,10 @@ const routes: Routes = [
     path: 'page/:id',
     component: PageComponent,
     canActivate: [AuthGuardService],
+    // TEST RENAME URL
+    data: {
+      mytitle: ':titre',
+    },
   },
 
   {
@@ -93,9 +97,9 @@ const routes: Routes = [
         component: PagesFormComponent,
         canActivate: [AuthGuardService],
       },
+      { path: '**', redirectTo: '/home' },
     ],
   },
-  //{ path: '**', component: PageNotFoundComponent }, // Wildcard route for a 404 page
 ];
 
 @NgModule({

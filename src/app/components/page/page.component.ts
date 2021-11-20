@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Page } from 'src/app/models/models';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
@@ -20,7 +21,8 @@ export class PageComponent implements OnInit {
   constructor(
     private pagesservice: PagesService,
     private route: ActivatedRoute,
-    private admin: AdminLoginService
+    private admin: AdminLoginService,
+    private title: Title
   ) {}
 
   ngOnInit(): void {
@@ -28,15 +30,9 @@ export class PageComponent implements OnInit {
     if (this.page.id) {
       this.pagesservice.getPage(this.page.id).subscribe((p) => {
         this.page = p;
-        console.log(this.page);
       });
+      // ESSAI TITRE URL
+      this.title.setTitle(this.route.snapshot.data['mytitle']);
     }
-    /* this.titre = this.route.snapshot.paramMap.get('titre') as string;
-    if (this.titre) {
-      this.pagesservice.getDisplayPage(this.titre).subscribe((p) => {
-        this.page = p;
-        console.log(this.page);
-      });
-    }*/
   }
 }

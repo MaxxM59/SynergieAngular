@@ -19,6 +19,7 @@ export class DossierFormComponent implements OnInit {
     dossier: '',
     type: '',
     lien: '0',
+    position: 0,
   };
   constructor(
     public ongletservice: OngletsService,

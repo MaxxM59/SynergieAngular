@@ -9,40 +9,95 @@
 </mat-button-toggle>
 
 <div class='container-fluid p-5'>
+    <h1>Dossiers :</h1>
     <table class="table table-stripped">
+
         <thead>
             <tr>
                 <th>
                     <h2>Titre</h2>
                 </th>
                 <th>
-                    <h2>Type</h2>
+                    <h2></h2>
                 </th>
                 <th>
+                    <h2>Position</h2>
+                </th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of ongletservice.dossiers ">
+                <td>
+                    <h2>{{d.titre}}</h2>
+                </td>
+
+
+                <td>
+                    <button mat-button [matMenuTriggerFor]="menu">Boutons reliés au dossier</button>
+
+                    <mat-menu #menu="matMenu">
+                        <div *ngfor="let dd of ongletservice.dropdowns">
+                            <button mat-menu-item>{{dd.titre}}</button>
+                        </div>
+                    </mat-menu>
+
+                </td>
+                <td>
+                    <h2>{{d.position}}</h2>
+                </td>
+                <td>
+                    <a routerLink="../dossier-form/{{d.id}}" class="btn btn-primary m-1">
+                        Modifier
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger m-1" (click)="delete(d.id)">
+                       Supprimer
+                    </a>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Boutons dans des dossiers :</h1>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>
+                    <h2>Titre</h2>
+                </th>
+
+                <th>
                     <h2>Dossier</h2>
+                </th>
+                <th>
+                    <h2>Position</h2>
                 </th>
 
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let o of onglets ">
+            <tr *ngFor="let d of ongletservice.dropdowns">
                 <td>
-                    <h2>{{o.titre}}</h2>
+                    <h2>{{d.titre}}</h2>
                 </td>
                 <td>
-                    <h2>{{o.type}}</h2>
+                    <h2>{{d.dossier}}</h2>
                 </td>
                 <td>
-                    <h2>{{o.dossier}}</h2>
+                    <h2>{{d.position}}</h2>
                 </td>
 
                 <td>
-                    <a routerLink="../onglets-form/{{o.id}}" class="btn btn-primary m-1">
+                    <a routerLink="../onglets-form/{{d.id}}" class="btn btn-primary m-1">
                         Modifier
                     </a>
                 </td>
                 <td>
-                    <a class="btn btn-danger m-1" (click)="delete(o.id)">
+                    <a class="btn btn-danger m-1" (click)="delete(d.id)">
                        Supprimer
                     </a>
                 </td>
@@ -50,5 +105,46 @@
             </tr>
         </tbody>
 
+
     </table>
-</div>
+    <h1>Boutons :</h1>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>
+                    <h2>Titre</h2>
+                </th>
+
+                <th>
+                    <h2>Position</h2>
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of ongletservice.solo ">
+                <td>
+                    <h2>{{s.titre}}</h2>
+                </td>
+
+                <td>
+                    <h2>{{s.position}}</h2>
+                </td>
+
+                <td>
+                    <a routerLink="../onglets-form/{{s.id}}" class="btn btn-primary m-1">
+                        Modifier
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger m-1" (click)="delete(s.id)">
+                       Supprimer
+                    </a>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div>

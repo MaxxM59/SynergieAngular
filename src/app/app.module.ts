@@ -48,6 +48,8 @@ import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-f
 import { DossierFormComponent } from './components/dashboard/Editing/onglets/dossier-form/dossier-form.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { PageComponent } from './components/page/page.component';
+import { HomeComponent } from './components/home/home.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +66,7 @@ import { PageComponent } from './components/page/page.component';
     PagesFormComponent,
     DossierFormComponent,
     PageComponent,
+    HomeComponent,
   ],
   imports: [
     MatDialogModule,
@@ -79,7 +82,7 @@ import { PageComponent } from './components/page/page.component';
     MatRippleModule,
     MatCommonModule,
     MatCardModule,
-
+    MatPaginatorModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,

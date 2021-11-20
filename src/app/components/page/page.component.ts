@@ -13,6 +13,7 @@ import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
 export class PageComponent implements OnInit {
   auth = this.admin.auth;
   titre: string = '';
+  mytitle: string = '';
   page: Page = {
     id: '',
     titre: '',
@@ -32,7 +33,8 @@ export class PageComponent implements OnInit {
         this.page = p;
       });
       // ESSAI TITRE URL
-      this.title.setTitle(this.route.snapshot.data['mytitle']);
+      this.titre = this.page.titre;
+      this.title.setTitle(this.route.snapshot.data['this.titre']);
     }
   }
 }

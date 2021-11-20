@@ -11,6 +11,7 @@ export interface Onglet {
   dossier: string;
   type: string;
   lien: string;
+  position: number;
 }
 export interface Page {
   id: string;

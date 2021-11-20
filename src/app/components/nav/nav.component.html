@@ -6,18 +6,18 @@
                 <span>  <h1>Synergie</h1></span>
             </a>
             <img src="">
-            <span class="menu-spacer"></span>
-            <ul class="dossiers" *ngFor="let d of dossiers">
-                <button mat-raised-button [matMenuTriggerFor]="menu"><h2>{{d.titre}}</h2></button>
+
+            <ul class="dossiers" *ngFor="let d of ongletservice.dossiers">
+                <button mat-raised-button [matMenuTriggerFor]="menu">{{d.titre}}</button>
             </ul>
-            <ul *ngFor="let s of solo">
-                <button mat-raised-button routerLink="page/{{s.lien}}"><h2>{{this.s.titre}}</h2></button>
+            <ul *ngFor="let s of ongletservice.solo">
+                <button mat-raised-button routerLink="page/{{s.lien}}">{{this.s.titre}}</button>
             </ul>
         </mat-toolbar-row>
     </mat-toolbar>
     <mat-menu #menu="matMenu">
-        <div *ngFor="let d of dossiers">
-            <ul *ngFor="let dd of dropdowns">
+        <div *ngFor="let d of ongletservice.dossiers">
+            <ul *ngFor="let dd of ongletservice.dropdowns">
                 <li *ngIf="dd.dossier===d.titre">
                     <button mat-button routerLink="page/{{dd.lien}} ">{{dd.titre}}</button>
                 </li>

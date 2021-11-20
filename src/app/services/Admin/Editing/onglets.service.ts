@@ -19,6 +19,29 @@ export class OngletsService {
     private admin: AdminLoginService
   ) {}
   onglet: any;
+  dossiers: any;
+  dropdowns: any;
+  solo: any;
+  // TRI DES ONGLETS
+  tri(tab: Onglet[]) {
+    // ONGLETS SOLOS
+    this.solo = tab.filter(
+      (onglet) =>
+        onglet.type === 'Normal' &&
+        (onglet.dossier === 'Aucun' || onglet.dossier === '')
+    );
+
+    //ONGLETS DOSSIERS
+    this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
+
+    // ONGLETS DROPDOWN => ATTENTION A FIX LES NOMS DE DOSSIERS LORS DE LA CREATION !!!
+    this.dropdowns = tab.filter(
+      (onglet) =>
+        onglet.dossier !== 'Aucun' &&
+        onglet.dossier !== '' &&
+        onglet.type === 'Normal'
+    );
+  }
   getOnglets(): Observable<Onglet[]> {
     //POUR A VOIR L'ID
     return this.afs
@@ -33,7 +56,7 @@ export class OngletsService {
         )
       );
   }
-  //RECUPERE UN ARTICLE
+  //RECUPERE UN ONGLET
   getOnglet(id: string): Observable<Onglet> {
     return this.afs
       .collection<Onglet>('onglets')

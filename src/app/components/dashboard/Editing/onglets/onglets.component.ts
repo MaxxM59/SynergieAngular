@@ -21,6 +21,7 @@ export class OngletsComponent implements OnInit {
     dossier: '',
     type: '',
     lien: '0',
+    position: 0,
   };
   onglets: Onglet[] = [];
 

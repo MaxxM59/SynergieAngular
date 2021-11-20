@@ -10,6 +10,7 @@ import { OngletsFormComponent } from './components/dashboard/Editing/onglets/ong
 import { OngletsComponent } from './components/dashboard/Editing/onglets/onglets.component';
 import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-form/pages-form.component';
 import { PagesComponent } from './components/dashboard/Editing/pages/pages.component';
+import { HomeComponent } from './components/home/home.component';
 import { PageComponent } from './components/page/page.component';
 import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
 const routes: Routes = [
@@ -26,6 +27,11 @@ const routes: Routes = [
     data: {
       mytitle: ':titre',
     },
+  },
+  {
+    path: '',
+    component: HomeComponent,
+    canActivate: [AuthGuardService],
   },
 
   {
@@ -97,7 +103,6 @@ const routes: Routes = [
         component: PagesFormComponent,
         canActivate: [AuthGuardService],
       },
-      { path: '**', redirectTo: '/home' },
     ],
   },
 ];

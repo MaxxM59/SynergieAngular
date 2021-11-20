@@ -8,6 +8,17 @@
                 <strong>Le titre est obligatoire</strong>
             </mat-error>
         </div>
+
+        <div class="form-group">
+            <div class="form-group">
+                <mat-form-field appearance="fill">
+                    <mat-label>Position</mat-label>
+                    <input matInput min="1" max="15" [(ngModel)]="id" type="number">
+                </mat-form-field>
+            </div>
+        </div>
+
+
         <button type='submit' class="btn btn-primary m-1" (click)="save(dossierForm)">Enregistrer</button>
         <button [hidden]="id === null" (click)="delete()" class="btn btn-danger m-1">Supprimer</button>
     </form>

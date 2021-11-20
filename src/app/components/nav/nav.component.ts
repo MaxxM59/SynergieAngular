@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Onglet, Page } from 'src/app/models/models';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { OngletsService } from 'src/app/services/Admin/Editing/onglets.service';
@@ -19,27 +18,9 @@ export class NavComponent implements OnInit {
   ) {}
 
   onglets: Onglet[] = [];
-  dossiers: any;
-  dropdowns: any;
-  solo: any;
-  check = 'dd.dossier=== d.titre';
+
   auth = this.admin.auth;
 
-  // TRI DES ONGLETS
-  tri(tab: Onglet[]) {
-    // ONGLETS SOLOS
-    this.solo = tab.filter(
-      (onglet) => onglet.type === 'Normal' || onglet.dossier === 'Aucun'
-    );
-
-    //ONGLETS DOSSIERS
-    this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
-
-    // ONGLETS DROPDOWN => ATTENTION A FIX LES NOMS DE DOSSIERS LORS DE LA CREATION !!!
-    this.dropdowns = tab.filter(
-      (onglet) => onglet.dossier !== 'Aucun' && onglet.dossier !== ''
-    );
-  }
   //LINK DES PAGES AUX LIENS
 
   link() {
@@ -63,7 +44,7 @@ export class NavComponent implements OnInit {
       //LINK ONGLETS<--->PAGES
       this.link();
       //TRI DES ONGLETS POUR AFFICHAGE NAV
-      this.tri(this.onglets);
+      this.ongletservice.tri(this.onglets);
     });
   }
 }

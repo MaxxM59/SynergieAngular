@@ -60,7 +60,6 @@ export class PagesService {
             return new Object() as Page;
           } else {
             const data = action.payload.data() as Page;
-
             data.titre = action.payload.titre;
 
             return data;

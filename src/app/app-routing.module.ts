@@ -18,7 +18,7 @@ const routes: Routes = [
     component: AdminFormComponent,
   },
   {
-    path: 'page/:titre',
+    path: 'page/:lien',
     component: PageComponent,
     canActivate: [AuthGuardService],
   },

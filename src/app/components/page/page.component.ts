@@ -24,20 +24,19 @@ export class PageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    /*
     this.page.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.page.id) {
       this.pagesservice.getPage(this.page.id).subscribe((p) => {
         this.page = p;
         console.log(this.page);
       });
-    }*/
-    this.titre = this.route.snapshot.paramMap.get('titre') as string;
+    }
+    /* this.titre = this.route.snapshot.paramMap.get('titre') as string;
     if (this.titre) {
       this.pagesservice.getDisplayPage(this.titre).subscribe((p) => {
         this.page = p;
         console.log(this.page);
       });
-    }
+    }*/
   }
 }

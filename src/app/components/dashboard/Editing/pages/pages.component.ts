@@ -30,7 +30,6 @@ export class PagesComponent implements OnInit {
   ngOnInit(): void {
     this.pageservice.getPages().subscribe((p: Page[]) => {
       this.pages = p;
-      console.log(this.pages);
     });
   }
 }

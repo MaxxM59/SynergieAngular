@@ -10,6 +10,7 @@ export interface Onglet {
   titre: string;
   dossier: string;
   type: string;
+  lien: string;
 }
 export interface Page {
   id: string;

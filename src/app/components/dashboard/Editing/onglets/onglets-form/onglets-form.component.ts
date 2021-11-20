@@ -24,6 +24,7 @@ export class OngletsFormComponent implements OnInit {
     titre: '',
     dossier: 'Aucun',
     type: 'normal',
+    lien: '0',
   };
 
   constructor(

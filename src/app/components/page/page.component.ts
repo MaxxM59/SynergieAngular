@@ -30,6 +30,7 @@ export class PageComponent implements OnInit {
         this.page = p;
       });
     }
+    console.log(this.id);
     console.log(this.page);
   }
 }

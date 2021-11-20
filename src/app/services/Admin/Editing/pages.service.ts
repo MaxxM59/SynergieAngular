@@ -48,6 +48,27 @@ export class PagesService {
         })
       );
   }
+  // RECUPERE UN ARTICLE POUR AFFICHAGE
+  getDisplayPage(titre: string): Observable<Page> {
+    return this.afs
+      .collection<Page>('pages')
+      .doc(titre)
+      .snapshotChanges()
+      .pipe(
+        map((action: any) => {
+          if (action.payload.exists === false) {
+            return new Object() as Page;
+          } else {
+            const data = action.payload.data() as Page;
+
+            data.titre = action.payload.titre;
+
+            return data;
+          }
+        })
+      );
+  }
+
   //AJOUTE UN ARTICLE
   addPage(page: Page): void {
     this.afs.collection<Page>('pages').add(page);

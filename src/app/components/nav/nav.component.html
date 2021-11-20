@@ -1,4 +1,4 @@
-<div class="nav-section" *ngIf="auth===false">
+<div class="nav-section" *ngIf="auth===true">
     <mat-toolbar fxFlexFill color="light">
         <mat-toolbar-row class="items">
 
@@ -11,7 +11,7 @@
                 <button mat-raised-button [matMenuTriggerFor]="menu"><h2>{{d.titre}}</h2></button>
             </ul>
             <ul *ngFor="let s of solo">
-                <button mat-raised-button routerLink="components/page/{{s.titre}}"><h2>{{this.s.titre}}</h2></button>
+                <button mat-raised-button routerLink="page/{{s.titre}}"><h2>{{this.s.titre}}</h2></button>
             </ul>
         </mat-toolbar-row>
     </mat-toolbar>
@@ -19,7 +19,7 @@
         <div *ngFor="let d of dossiers">
             <ul *ngFor="let dd of dropdowns">
                 <li *ngIf="dd.dossier===d.titre">
-                    <button mat-button routerLink=" components/page/{{dd.titre}} ">{{dd.titre}}</button>
+                    <button mat-button routerLink="page/{{dd.titre}} ">{{dd.titre}}</button>
                 </li>
             </ul>
         </div>

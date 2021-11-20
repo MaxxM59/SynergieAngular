@@ -25,7 +25,7 @@ export class NavComponent implements OnInit {
   tri(tab: Onglet[]) {
     // ONGLETS SOLOS
     this.solo = tab.filter(
-      (onglet) => onglet.type === 'Normal' && onglet.dossier === 'Aucun'
+      (onglet) => onglet.type === 'Normal' || onglet.dossier === 'Aucun'
     );
 
     //ONGLETS DOSSIERS

@@ -14,6 +14,12 @@
             <mat-error *ngIf="contenuInput?.hasError('required')"><strong>Contenu obligatoire</strong></mat-error>
         </div>
 
+        <div class="form-group">
+            <label for="imageUrl"><h2>URL de votre image</h2></label>
+            <input #imageUrlInput="ngModel" type="text" name="imageUrl" id="imageUrl" [ngClass]="{'is-invalid' : imageUrlInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="article.image" required>
+            <mat-error *ngIf="imageUrlInput?.hasError('required')"><strong>Image obligatoire</strong></mat-error>
+        </div>
+
         <button type="submit" class="btn btn-primary m-1">Enregistrer</button>
         <button [hidden]="id === null" (click)="delete()" class="btn btn-danger m-1">Supprimer</button> </form>
 </div>

@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Onglet } from '../../../models/models';
 import { Router } from '@angular/router';
 import { AdminLoginService } from '../admin-login.service';
-
+import * as _ from 'lodash';
 @Injectable({
   providedIn: 'root',
 })
@@ -22,6 +22,8 @@ export class OngletsService {
   dossiers: any;
   dropdowns: any;
   solo: any;
+  a: any;
+  b: any;
   // TRI DES ONGLETS
   tri(tab: Onglet[]) {
     // ONGLETS SOLOS
@@ -30,9 +32,13 @@ export class OngletsService {
         onglet.type === 'Normal' &&
         (onglet.dossier === 'Aucun' || onglet.dossier === '')
     );
+    //TRI POSITION
+    this.solo = _.sortBy(this.solo, ['position']);
 
     //ONGLETS DOSSIERS
     this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
+    //TRI POSITION
+    this.dossiers = _.sortBy(this.dossiers, ['position']);
 
     // ONGLETS DROPDOWN => ATTENTION A FIX LES NOMS DE DOSSIERS LORS DE LA CREATION !!!
     this.dropdowns = tab.filter(
@@ -41,6 +47,8 @@ export class OngletsService {
         onglet.dossier !== '' &&
         onglet.type === 'Normal'
     );
+    //TRI POSITION
+    this.dropdowns = _.sortBy(this.dropdowns, ['position'], ['dossier']);
   }
   getOnglets(): Observable<Onglet[]> {
     //POUR A VOIR L'ID

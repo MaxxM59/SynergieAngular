@@ -33,6 +33,5 @@ export class OngletsComponent implements OnInit {
       this.onglets = o;
     });
     this.ongletservice.tri(this.onglets);
-    console.log(this.onglets);
   }
 }

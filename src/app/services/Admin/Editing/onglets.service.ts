@@ -38,7 +38,7 @@ export class OngletsService {
     //ONGLETS DOSSIERS
     this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
     /*TRI POSITION
-    if (this.dossiers.length > 2) {
+    if (this.dossiers.length >= 2) {
       this.dossiers = _.sortBy(this.dossiers, ['position']);
     }*/
 

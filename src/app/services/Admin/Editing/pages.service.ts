@@ -16,6 +16,7 @@ export class PagesService {
     private router: Router
   ) {}
 
+  // RECUPERE TOUTES LES PAGES
   getPages(): Observable<Page[]> {
     //POUR A VOIR L'ID
     return this.afs

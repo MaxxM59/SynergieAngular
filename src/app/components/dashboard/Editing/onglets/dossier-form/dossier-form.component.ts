@@ -11,8 +11,8 @@ import { OngletsService } from 'src/app/services/Admin/Editing/onglets.service';
   styleUrls: ['./dossier-form.component.scss'],
 })
 export class DossierFormComponent implements OnInit {
+  // VARIABLES
   id: string = '';
-
   onglet: Onglet = {
     id: '',
     titre: '',
@@ -27,25 +27,30 @@ export class DossierFormComponent implements OnInit {
     private route: ActivatedRoute,
     private admin: AdminLoginService
   ) {}
+  // FONCTION LANCEE QUAND ON CLIQUE SUR ENREGISTRER
   save(dossierForm: NgForm) {
     if (dossierForm.valid) {
       if (this.onglet.id) {
+        // SI LE DOSSIER EXISTE DEJA
         this.ongletservice.updateOnglet(dossierForm.value, this.id);
         this.admin.showNotification('Dossier modifié !');
       } else {
+        // SI C'EST UN NOuVEAU DOSSIER
         this.onglet.type = 'Dossier';
         this.ongletservice.addOnglet('Dossier', dossierForm.value);
         this.admin.showNotification('Le dossier a été créé');
       }
 
       this.router.navigate(['dashboard/onglets']);
-    } else {
+    } // SI ERREUR DANS LE FORM
+    else {
       this.admin.showNotification('Il y a des erreurs dans le formulaire!');
     }
   }
+  // DELETE A PARTIR DE LA PAGE D'EDIT
   delete() {
     this.ongletservice.deleteOnglet(this.id);
-    this.admin.showNotification('Onglet supprimé !');
+    this.admin.showNotification('Dossier supprimé !');
     this.router.navigate(['dashboard/onglets']);
   }
   ngOnInit(): void {

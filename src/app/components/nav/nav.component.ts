@@ -17,8 +17,8 @@ export class NavComponent implements OnInit {
     private pagesservice: PagesService
   ) {}
 
+  // VARIABLES
   onglets: Onglet[] = [];
-
   auth = this.admin.auth;
 
   //LINK DES PAGES AUX LIENS
@@ -43,7 +43,7 @@ export class NavComponent implements OnInit {
       this.onglets = o;
       //LINK ONGLETS<--->PAGES
       this.link();
-      //TRI DES ONGLETS POUR AFFICHAGE NAV
+      //TRI DES ONGLETS PAR POSITION POUR AFFICHAGE NAV
       this.ongletservice.tri(this.onglets);
     });
   }

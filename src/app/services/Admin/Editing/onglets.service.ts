@@ -18,13 +18,14 @@ export class OngletsService {
     private router: Router,
     private admin: AdminLoginService
   ) {}
+  // VARIABLES
   onglet: any;
   dossiers: any;
   dropdowns: any;
   solo: any;
   a: any;
   b: any;
-  // TRI DES ONGLETS
+  // FONCTION DE TRI DES ONGLETS ///
   tri(tab: Onglet[]) {
     // ONGLETS SOLOS
     this.solo = tab.filter(
@@ -32,15 +33,9 @@ export class OngletsService {
         onglet.type === 'Normal' &&
         (onglet.dossier === 'Aucun' || onglet.dossier === '')
     );
-    //TRI POSITION
-    this.solo = _.sortBy(this.solo, ['position']);
 
     //ONGLETS DOSSIERS
     this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
-    /*TRI POSITION
-    if (this.dossiers.length >= 2) {
-      this.dossiers = _.sortBy(this.dossiers, ['position']);
-    }*/
 
     // ONGLETS DROPDOWN => ATTENTION A FIX LES NOMS DE DOSSIERS LORS DE LA CREATION !!!
     this.dropdowns = tab.filter(
@@ -49,10 +44,16 @@ export class OngletsService {
         onglet.dossier !== '' &&
         onglet.type === 'Normal'
     );
-    //TRI POSITION
+    //TRI DES ONGLETS EN FONCTION DE LEUR POSITION
+    this.solo = _.sortBy(this.solo, ['position']);
+    /* NE FONCTIONNE PAS --> ATTENTION SI PLUSIEURS DOSSIERS
+    if (this.dossiers.length >= 2) {
+      this.dossiers = _.sortBy(this.dossiers, ['position']);
+    }*/
     this.dropdowns = _.sortBy(this.dropdowns, ['position'], ['dossier']);
   }
 
+  //RECUPERE TOUS LES ONGLETS
   getOnglets(): Observable<Onglet[]> {
     //POUR A VOIR L'ID
     return this.afs

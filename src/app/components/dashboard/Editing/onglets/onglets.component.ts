@@ -15,6 +15,8 @@ export class OngletsComponent implements OnInit {
     private admin: AdminLoginService,
     private router: Router
   ) {}
+
+  // VARIABLES
   onglet: Onglet = {
     id: '',
     titre: '',
@@ -24,7 +26,7 @@ export class OngletsComponent implements OnInit {
     position: 0,
   };
   onglets: Onglet[] = [];
-
+  // DELETE A PARTIR D LA PAGE DE PRESENTATION
   delete($id: string) {
     this.ongletservice.deleteOnglet($id);
   }

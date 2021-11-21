@@ -17,13 +17,13 @@ import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
   styleUrls: ['./onglets-form.component.scss'],
 })
 export class OngletsFormComponent implements OnInit {
+  // VARIABLES
   id: string = '';
-
   onglet: Onglet = {
     id: '',
     titre: '',
-    dossier: 'Aucun',
-    type: 'normal',
+    dossier: '',
+    type: '',
     lien: '0',
     position: 0,
   };
@@ -34,24 +34,30 @@ export class OngletsFormComponent implements OnInit {
     private route: ActivatedRoute,
     private admin: AdminLoginService
   ) {}
+  // FONCTION LANCEE QUAND ON CLIQUE SUR ENREGISTRER
   save(ongletForm: NgForm) {
     if (ongletForm.valid) {
       if (this.onglet.id) {
+        // SI L'ONGLET EXISTE DEJA
         this.ongletservice.updateOnglet(ongletForm.value, this.id);
         this.admin.showNotification('Onglet modifié !');
       } else {
+        // SI C'EST UN NOUVEL ONGLET
         this.ongletservice.addOnglet('Normal', ongletForm.value);
         this.admin.showNotification("L'onglet a été créé");
       }
 
       this.router.navigate(['dashboard/onglets']);
-    } else {
+    } // SI ERREUR DANS LE FORM
+    else {
       this.admin.showNotification('Il y a des erreurs dans le formulaire!');
     }
   }
-
+  // DELETE A PARTIR DE LA PAGE D'EDIT
   delete() {
     this.ongletservice.deleteOnglet(this.id);
+    this.admin.showNotification('Onglet supprimé !');
+    this.router.navigate(['dashboard/onglets']);
   }
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') as string;

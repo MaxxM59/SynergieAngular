@@ -11,6 +11,7 @@ import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
   styleUrls: ['./page.component.scss'],
 })
 export class PageComponent implements OnInit {
+  //VARIABLES
   auth = this.admin.auth;
   titre: string = '';
   mytitle: string = '';

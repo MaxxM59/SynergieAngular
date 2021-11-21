@@ -37,8 +37,10 @@ export class OngletsService {
 
     //ONGLETS DOSSIERS
     this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
-    //TRI POSITION
-    this.dossiers = _.sortBy(this.dossiers, ['position']);
+    /*TRI POSITION
+    if (this.dossiers.length > 2) {
+      this.dossiers = _.sortBy(this.dossiers, ['position']);
+    }*/
 
     // ONGLETS DROPDOWN => ATTENTION A FIX LES NOMS DE DOSSIERS LORS DE LA CREATION !!!
     this.dropdowns = tab.filter(
@@ -50,6 +52,7 @@ export class OngletsService {
     //TRI POSITION
     this.dropdowns = _.sortBy(this.dropdowns, ['position'], ['dossier']);
   }
+
   getOnglets(): Observable<Onglet[]> {
     //POUR A VOIR L'ID
     return this.afs

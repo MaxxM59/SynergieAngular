@@ -23,10 +23,6 @@ const routes: Routes = [
     path: 'page/:id',
     component: PageComponent,
     canActivate: [AuthGuardService],
-    // TEST RENAME URL
-    data: {
-      mytitle: ':titre',
-    },
   },
   {
     path: '',
@@ -34,8 +30,8 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
-    path:'app-root',
-    redirectTo:'home'
+    path: 'app-root',
+    redirectTo: 'home',
   },
   {
     path: 'dashboard',

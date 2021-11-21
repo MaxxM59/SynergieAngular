@@ -10,12 +10,14 @@
         </div>
 
         <div class="form-group">
-            <div class="form-group">
-                <mat-form-field appearance="fill">
-                    <mat-label>Position</mat-label>
-                    <input matInput min="1" max="15" [(ngModel)]="id" type="number">
-                </mat-form-field>
-            </div>
+            <mat-form-field appearance="fill">
+                <mat-label>Position</mat-label>
+                <input #positionInput="ngModel" matInput min="1" max="15" name="position" id="position" [ngClass]="{'is-invalid' : titreInput.invalid &&titreInput.touched}" class="form-control" required [(ngModel)]="onglet.position" type="number">
+
+            </mat-form-field>
+            <mat-error *ngIf="positionInput?.hasError('required')">
+                <strong>La position est obligatoire</strong>
+            </mat-error>
         </div>
 
 

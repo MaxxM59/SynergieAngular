@@ -38,9 +38,9 @@
                     <button mat-button [matMenuTriggerFor]="menu">Boutons reliés au dossier</button>
 
                     <mat-menu #menu="matMenu">
-                        <div *ngfor="let dd of ongletservice.dropdowns">
-                            <button mat-menu-item>{{dd.titre}}</button>
-                        </div>
+
+                        <button *ngFor="let dd of ongletservice.dropdowns" mat-menu-item>{{dd.titre}}</button>
+
                     </mat-menu>
 
                 </td>

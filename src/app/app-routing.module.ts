@@ -33,7 +33,10 @@ const routes: Routes = [
     component: HomeComponent,
     canActivate: [AuthGuardService],
   },
-
+  {
+    path:'app-root',
+    redirectTo:'home'
+  },
   {
     path: 'dashboard',
     redirectTo: 'dashboard/dashboard-acceuil',

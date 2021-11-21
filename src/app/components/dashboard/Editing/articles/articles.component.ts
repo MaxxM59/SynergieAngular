@@ -26,5 +26,10 @@ export class ArticlesComponent  implements OnInit {
     });
     console.log(this.article);
   }
+
+  delete($id: string) {
+    this.article.deleteArticle($id);
+    this.admin.showNotification('Page supprimée !');
+  }
 }
 

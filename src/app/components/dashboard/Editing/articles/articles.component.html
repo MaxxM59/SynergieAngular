@@ -8,10 +8,10 @@
                     <h2>Titre</h2>
                 </th>
                 <th>
-                    <h2>Image</h2>
+                    <h2>Contenu</h2>
                 </th>
                 <th>
-                    <h2>Contenu</h2>
+                    <h2>Image</h2>
                 </th>
             </tr>
         </thead>
@@ -23,7 +23,15 @@
                 <td>
                     <h2>{{a.contenu}}</h2>
                 </td>
+                <td>
+                    <h2>{{a.image}}</h2>
+                </td>
                 <td><a routerLink="../article-form/{{a.id}}" class="btn btn-success">Modifier</a></td>
+                <td>
+                    <a class="btn btn-danger m-1" (click)="delete(a.id)">
+                        Supprimer
+                    </a>
+                </td>
             </tr>
         </tbody>
     </table>

@@ -32,7 +32,7 @@ export class AdminLoginService {
     btnTxt?: string
   ): MatSnackBarRef<TextOnlySnackBar> {
     return this.snackBar.open(msg, btnTxt, {
-      duration: 10000,
+      duration: 4000,
       horizontalPosition: 'end',
       verticalPosition: 'top',
     });

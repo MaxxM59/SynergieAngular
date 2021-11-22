@@ -10,9 +10,6 @@ import * as _ from 'lodash';
   providedIn: 'root',
 })
 export class OngletsService {
-  id(id: any) {
-    throw new Error('Method not implemented.');
-  }
   constructor(
     private afs: AngularFirestore,
     private router: Router,
@@ -23,7 +20,7 @@ export class OngletsService {
   dossiers: any;
   dropdowns: any;
   solo: any;
-
+  trionglets: any;
   // FONCTION DE TRI DES ONGLETS ///
   tri(tab: Onglet[]) {
     //ONGLETS DOSSIERS
@@ -33,13 +30,13 @@ export class OngletsService {
     this.dropdowns = tab.filter(
       (onglet) => onglet.dossier !== 'Aucun' && onglet.dossier !== ''
     );
-    this.dropdowns = _.sortBy(this.dropdowns, ['position'], ['dossier']);
     // ONGLETS SOLOS
     this.solo = tab.filter(
       (onglet) =>
         onglet.type === 'Normal' &&
         (onglet.dossier === 'Aucun' || onglet.dossier === '')
     );
+    this.dropdowns = _.sortBy(this.dropdowns, ['position']);
     this.solo = _.sortBy(this.solo, ['position']);
     //TRI DES ONGLETS EN FONCTION DE LEUR POSITION
 
@@ -100,7 +97,6 @@ export class OngletsService {
   deleteOnglet(ongletId: string): void {
     if (confirm('Voulez-vous vraiment supprimer cet élément?')) {
       this.afs.collection<Onglet>('onglets').doc(ongletId).delete();
-      this.admin.showNotification('Onglet supprimé !');
       this.router.navigate(['dashboard/onglets']);
     } else {
       this.router.navigate(['onglets-form/{{o.id}}']);

@@ -1,11 +1,5 @@
-import { Component, OnInit, Optional } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  NgForm,
-  Validators,
-} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Onglet } from 'src/app/models/models';
 import { OngletsService } from 'src/app/services/Admin/Editing/onglets.service';

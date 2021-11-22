@@ -24,9 +24,8 @@ $projet0711-theme: mat.define-light-theme(( color: ( primary: $projet0711-primar
 html,
 body {
     height: 100%;
-}
-
-body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+* {
+    font-family: 'Gothic A1';
 }

@@ -32,6 +32,7 @@ export class PageComponent implements OnInit {
     if (this.page.id) {
       this.pagesservice.getPage(this.page.id).subscribe((p) => {
         this.page = p;
+        console.log(this.page);
       });
       // ESSAI TITRE URL
       this.titre = this.page.titre;

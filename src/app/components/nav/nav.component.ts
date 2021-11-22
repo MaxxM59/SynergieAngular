@@ -34,13 +34,17 @@ export class NavComponent implements OnInit {
   //LINK DES PAGES AUX LIENS
 
   link() {
-    this.onglets.forEach((o) =>
+    this.onglets.forEach((o) => {
       this.pages.forEach((p) => {
         if (o.titre === p.titre) {
-          o.lien = p.id;
+          if (this.router.url.startsWith('localhost:4200/page')) {
+            o.lien = p.id;
+          } else {
+            o.lien = `/page/${p.id}`;
+          }
         }
-      })
-    );
+      });
+    });
   }
 
   ngOnInit(): void {
@@ -55,6 +59,7 @@ export class NavComponent implements OnInit {
       this.link();
       //TRI DES ONGLETS PAR POSITION POUR AFFICHAGE NAV
       this.ongletservice.tri(this.onglets);
+      console.log(this.onglets);
     });
   }
 }

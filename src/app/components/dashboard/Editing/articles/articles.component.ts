@@ -29,7 +29,7 @@ export class ArticlesComponent  implements OnInit {
 
   delete($id: string) {
     this.article.deleteArticle($id);
-    this.admin.showNotification('Page supprimée !');
+    this.admin.showNotification('Article supprimée !');
   }
 }
 

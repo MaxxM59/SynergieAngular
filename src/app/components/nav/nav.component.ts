@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Onglet, Page } from 'src/app/models/models';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { OngletsService } from 'src/app/services/Admin/Editing/onglets.service';
 import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
+import { DossierFormComponent } from '../dashboard/Editing/onglets/dossier-form/dossier-form.component';
 
 @Component({
   selector: 'app-nav',
@@ -11,10 +13,18 @@ import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
 })
 export class NavComponent implements OnInit {
   pages: Page[] = [];
+  page: Page = {
+    id: '',
+    titre: '',
+    contenu: '',
+    image: '',
+  };
   constructor(
     public ongletservice: OngletsService,
     private admin: AdminLoginService,
-    private pagesservice: PagesService
+    private pagesservice: PagesService,
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   // VARIABLES
@@ -32,7 +42,19 @@ export class NavComponent implements OnInit {
       })
     );
   }
-
+  update() {
+    if (this.ongletservice.dropdowns.lien) {
+      this.page.id = this.ongletservice.dropdowns.lien;
+      this.pagesservice.getPage(this.page.id).subscribe((p) => {
+        this.page = p;
+      });
+    } else {
+      this.page.id = this.ongletservice.solo.lien;
+      this.pagesservice.getPage(this.page.id).subscribe((p) => {
+        this.page = p;
+      });
+    }
+  }
   ngOnInit(): void {
     //RECUPERE TOUTES LES PAGES
     this.pagesservice.getPages().subscribe((p: Page[]) => {

@@ -38,4 +38,5 @@ export class PageComponent implements OnInit {
       this.title.setTitle(this.route.snapshot.data['this.titre']);
     }
   }
+  ngOndestroy(): void {}
 }

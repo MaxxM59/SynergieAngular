@@ -4,7 +4,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Page } from 'src/app/models/models';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
-import { Editor, Toolbar } from 'ngx-editor';
 @Component({
   selector: 'app-pages-form',
   templateUrl: './pages-form.component.html',
@@ -16,11 +15,10 @@ export class PagesFormComponent implements OnInit {
   page: Page = {
     id: '',
     titre: '',
-    //image: '',
+    image: '',
     contenu: '',
   };
 
-  html!: '';
   constructor(
     public pagesservice: PagesService,
     private router: Router,
@@ -49,8 +47,6 @@ export class PagesFormComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.id)
-      this.pagesservice
-      .getPage(this.id)
-      .subscribe((p) => (this.page = p));
+      this.pagesservice.getPage(this.id).subscribe((p) => (this.page = p));
   }
 }

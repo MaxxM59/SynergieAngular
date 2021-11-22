@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Page } from 'src/app/models/models';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
-
 @Component({
   selector: 'app-page',
   templateUrl: './page.component.html',
@@ -19,6 +18,7 @@ export class PageComponent implements OnInit {
     id: '',
     titre: '',
     contenu: '',
+    image: '',
   };
   constructor(
     private pagesservice: PagesService,
@@ -38,4 +38,5 @@ export class PageComponent implements OnInit {
       this.title.setTitle(this.route.snapshot.data['this.titre']);
     }
   }
+  ngOndestroy(): void {}
 }

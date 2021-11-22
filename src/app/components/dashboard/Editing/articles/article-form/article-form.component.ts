@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Article } from 'src/app/models/models';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
@@ -12,7 +12,6 @@ import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
 })
 export class ArticleFormComponent implements OnInit {
   id: string = '';
-
   article: Article = {
     id: '',
     titre: '',
@@ -44,7 +43,7 @@ export class ArticleFormComponent implements OnInit {
       );
     }
   }
-  
+
   delete() {
     this.articleservice.deleteArticle(this.id);
   }

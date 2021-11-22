@@ -11,7 +11,7 @@
                 <button mat-raised-button [matMenuTriggerFor]="menu">{{d.titre}}</button>
             </ul>
             <ul *ngFor="let s of ongletservice.solo">
-                <button mat-raised-button routerLink="page/{{s.lien}}">{{this.s.titre}}</button>
+                <button mat-raised-button (click)="update()" routerLink="page/{{s.lien}}">{{this.s.titre}}</button>
             </ul>
         </mat-toolbar-row>
     </mat-toolbar>
@@ -20,7 +20,7 @@
 
         <div *ngFor="let d of ongletservice.dossiers">
             <div *ngFor="let dd of ongletservice.dropdowns">
-                <button *ngIf="dd.dossier===d.titre" mat-button routerLink="page/{{dd.lien}} ">{{dd.titre}}</button>
+                <button *ngIf="dd.dossier===d.titre" mat-button (click)="update()" routerLink="page/{{dd.lien}} ">{{dd.titre}}</button>
             </div>
         </div>
     </mat-menu>

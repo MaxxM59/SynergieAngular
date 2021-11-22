@@ -42,19 +42,7 @@ export class NavComponent implements OnInit {
       })
     );
   }
-  update() {
-    if (this.ongletservice.dropdowns.lien) {
-      this.page.id = this.ongletservice.dropdowns.lien;
-      this.pagesservice.getPage(this.page.id).subscribe((p) => {
-        this.page = p;
-      });
-    } else {
-      this.page.id = this.ongletservice.solo.lien;
-      this.pagesservice.getPage(this.page.id).subscribe((p) => {
-        this.page = p;
-      });
-    }
-  }
+
   ngOnInit(): void {
     //RECUPERE TOUTES LES PAGES
     this.pagesservice.getPages().subscribe((p: Page[]) => {

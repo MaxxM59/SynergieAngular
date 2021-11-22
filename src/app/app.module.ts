@@ -50,8 +50,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { PageComponent } from './components/page/page.component';
 import { HomeComponent } from './components/home/home.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { NgxEditorModule } from 'ngx-editor';
-import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -107,8 +106,6 @@ import { HttpClientModule } from '@angular/common/http';
     AngularFireDatabaseModule,
     MatCheckboxModule,
     MatInputModule,
-    NgxEditorModule,
-    HttpClientModule,
   ],
   providers: [AuthGuardService, AdminLoginService],
   bootstrap: [AppComponent],

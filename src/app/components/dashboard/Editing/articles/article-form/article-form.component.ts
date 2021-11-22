@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Editor, Toolbar } from 'ngx-editor';
 import { Article } from 'src/app/models/models';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
@@ -13,19 +12,6 @@ import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
 })
 export class ArticleFormComponent implements OnInit {
   id: string = '';
-  editor!: Editor;
-  toolbar: Toolbar = [
-    ["bold", "italic"],
-    ["underline", "strike"],
-    ["code", "blockquote"],
-    ["ordered_list", "bullet_list"],
-    [{ heading: ["h1", "h2", "h3", "h4", "h5", "h6"] }],
-    ["link", "image"],
-    ["text_color", "background_color"],
-    ["align_left", "align_center", "align_right", "align_justify"]
-  ];
-  html!: '';
-
   article: Article = {
     id: '',
     titre: '',
@@ -57,20 +43,16 @@ export class ArticleFormComponent implements OnInit {
       );
     }
   }
-  
+
   delete() {
     this.articleservice.deleteArticle(this.id);
   }
 
   ngOnInit(): void {
-    this.editor = new Editor();
     this.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.id)
       this.articleservice
         .getArticle(this.id)
         .subscribe((a) => (this.article = a));
-  }
-  ngOnDestroy(): void {
-    this.editor.destroy();
   }
 }

@@ -31,10 +31,6 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
-    path: 'app-root',
-    redirectTo: 'home',
-  },
-  {
     path: 'dashboard',
     redirectTo: 'dashboard/dashboard-acceuil',
   },

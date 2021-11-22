@@ -1,14 +1,19 @@
+*{
+    background-color: #fff;
+}
+
 .nav-section {
     display: flex;
     justify-content: space-between;
-    border: 2px solid lightblue;
-    justify-content: center end;
+    justify-content: center;
     align-content: center;
+    padding: 20px 0 20px 0;
+    width: 100%;
 }
 
 .items {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 button {
@@ -17,6 +22,9 @@ button {
     margin-top: 1rem;
 }
 
-.companyName {
-    font-size: 150%;
+img {
+    max-width: 150px;
+    max-height: 100px;
 }
+
+

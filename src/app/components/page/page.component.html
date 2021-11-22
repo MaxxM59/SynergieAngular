@@ -4,9 +4,9 @@
         <h2>{{page.titre}}</h2>
     </div>
     <section id="contenu">
-        <div>({{page.contenu}})</div>
+        <div [innerText]="page.contenu"></div>
     </section>
 
-    <div id="img" class='img'></div>
+    <div id="img" class='img '></div>
 </div>
 <app-footer></app-footer>

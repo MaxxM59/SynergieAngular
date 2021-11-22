@@ -41,6 +41,7 @@ export class PageComponent implements OnInit {
       this.titre = this.page.titre;
       this.title.setTitle(this.route.snapshot.data['this.titre']);
     }
+    this.page.contenu = this.pagesservice.unEscape(this.page.contenu);
   }
   ngOndestroy(): void {}
 }

@@ -13,22 +13,29 @@ import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
 })
 export class ArticlesComponent  implements OnInit {
   constructor(
-    public article: ArticleService,
+    public articleservice: ArticleService,
     private admin: AdminLoginService,
     private router: Router
   ) {}
 
+  article: Article = {
+    id: '',
+    titre: '',
+    contenu: '',
+    image: '',
+    payload: undefined,
+  };
+
   articles: Article[] = [];
 
   ngOnInit(): void {
-    this.article.getArticles().subscribe((a: Article[]) => {
+    this.articleservice.getArticles().subscribe((a: Article[]) => {
       this.articles = a;
     });
-    console.log(this.article);
   }
 
   delete($id: string) {
-    this.article.deleteArticle($id);
+    this.articleservice.deleteArticle($id);
     this.admin.showNotification('Article supprimée !');
   }
 }

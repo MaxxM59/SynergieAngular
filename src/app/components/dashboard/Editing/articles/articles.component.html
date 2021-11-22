@@ -26,7 +26,11 @@
                 <td>
                     <p>{{a.image}}</p>
                 </td>
-                <td><a routerLink="../article-form/{{a.id}}" class="btn btn-success">Modifier</a></td>
+                <td>
+                    <a routerLink="../articles-form/{{a.id}}" class="btn btn-primary m-1">
+                        Modifier
+                    </a>
+                </td>
                 <td>
                     <a class="btn btn-danger m-1" (click)="delete(a.id)">
                         Supprimer

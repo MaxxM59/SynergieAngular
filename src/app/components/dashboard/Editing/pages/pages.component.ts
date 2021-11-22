@@ -23,13 +23,14 @@ export class PagesComponent implements OnInit {
   };
   pages: Page[] = [];
 
-  delete($id: string) {
-    this.pageservice.deletePage($id);
-    this.admin.showNotification('Page supprimée !');
-  }
   ngOnInit(): void {
     this.pageservice.getPages().subscribe((p: Page[]) => {
       this.pages = p;
     });
+  }
+
+  delete($id: string) {
+    this.pageservice.deletePage($id);
+    this.admin.showNotification('Page supprimée !');
   }
 }

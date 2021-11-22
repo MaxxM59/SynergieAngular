@@ -10,7 +10,7 @@ import { Editor, Toolbar } from 'ngx-editor';
   templateUrl: './pages-form.component.html',
   styleUrls: ['./pages-form.component.scss'],
 })
-export class PagesFormComponent implements OnInit, OnDestroy {
+export class PagesFormComponent implements OnInit {
   id: string = '';
 
   page: Page = {
@@ -19,17 +19,7 @@ export class PagesFormComponent implements OnInit, OnDestroy {
     //image: '',
     contenu: '',
   };
-  editor!: Editor;
-  toolbar: Toolbar = [
-    ['bold', 'italic'],
-    ['underline', 'strike'],
-    ['code', 'blockquote'],
-    ['ordered_list', 'bullet_list'],
-    [{ heading: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] }],
-    ['link', 'image'],
-    ['text_color', 'background_color'],
-    ['align_left', 'align_center', 'align_right', 'align_justify'],
-  ];
+
   html!: '';
   constructor(
     public pagesservice: PagesService,
@@ -59,11 +49,8 @@ export class PagesFormComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.id)
-      this.pagesservice.getPage(this.id).subscribe((p) => (this.page = p));
-    this.editor = new Editor();
-  }
-  // make sure to destory the editor
-  ngOnDestroy(): void {
-    this.editor.destroy();
+      this.pagesservice
+      .getPage(this.id)
+      .subscribe((p) => (this.page = p));
   }
 }

@@ -23,15 +23,5 @@
         <button type="submit" class="btn btn-primary m-1">Enregistrer</button>
         <button [hidden]="id === null" (click)="delete()" class="btn btn-danger m-1">Supprimer</button> </form>
 
-        <div class="NgxEditor__Wrapper">
-            <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
-            <ngx-editor
-              [editor]="editor"
-              [ngModel]="html"
-              [disabled]="false"
-              [placeholder]="'Type here...'"
-            ></ngx-editor>
-          </div>
-
           <button class="btn btn-success m-1" routerLink="../../articles">Retour</button>
 </div>

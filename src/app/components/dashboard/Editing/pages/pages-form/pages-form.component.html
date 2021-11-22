@@ -10,12 +10,12 @@
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Présentation</h2></label>
-            <textarea type="textarea" name="contenu" id="contenu" class="form-control" [(ngModel)]="page.contenu[0]" matInput #autosize="cdkTextareaAutosize" cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+            <textarea type="textarea" name="pres" id="pres" class="form-control" [(ngModel)]="page.pres" matInput #autosize="cdkTextareaAutosize" cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
         </div>
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Sous-titre 1</h2></label>
-            <textarea #contenuInput="ngModel" type="textarea" name="contenu" id="contenu" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="page.contenu[1]" required matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+            <textarea #contenuInput="ngModel" type="textarea" name="st1" id="st1" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="page.st1" required matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
                 cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
 
             <mat-error fxFill *ngIf="contenuInput?.hasError('required')"><strong>Le premier sous-titre est obligatoire</strong></mat-error>
@@ -23,7 +23,7 @@
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Paragraphe 1</h2></label>
-            <textarea #contenuInput="ngModel" type="textarea" name="contenu" id="contenu" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="page.contenu[2]" required matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+            <textarea #contenuInput="ngModel" type="textarea" name="pa1" id="pa1" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="page.pa1" required matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
                 cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
 
             <mat-error fxFill *ngIf="contenuInput?.hasError('required')"><strong>Le premier paragraphe est obligatoire</strong></mat-error>
@@ -31,42 +31,42 @@
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Sous-titre 2</h2></label>
-            <textarea type="textarea" name="contenu" id="contenu" class="form-control" [(ngModel)]="page.contenu[3]" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            <textarea type="textarea" name="st2" id="st2" class="form-control" [(ngModel)]="page.st2" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Paragraphe 2</h2></label>
-            <textarea type="textarea" name="contenu" id="contenu" class="form-control" [(ngModel)]="page.contenu[4]" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
+            <textarea type="textarea" name="pa2" id="pa2" class="form-control" [(ngModel)]="page.pa2" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
         </div>
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Sous-titre 3</h2></label>
-            <textarea type="textarea" name="contenu" id="contenu" class="form-control" [(ngModel)]="page.contenu[5]" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            <textarea type="textarea" name="st3" id="st3" class="form-control" [(ngModel)]="page.st3" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Paragraphe 3</h2></label>
-            <textarea type="textarea" name="contenu" id="contenu" class="form-control" [(ngModel)]="page.contenu[6]" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
+            <textarea type="textarea" name="pa3" id="pa3" class="form-control" [(ngModel)]="page.pa3" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
         </div>
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Sous-titre 4</h2></label>
-            <textarea type="textarea" name="contenu" id="contenu" class="form-control" [(ngModel)]="page.contenu[7]" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            <textarea type="textarea" name="st4" id="st4" class="form-control" [(ngModel)]="page.st4" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Paragraphe 4</h2></label>
-            <textarea type="textarea" name="contenu" id="contenu" class="form-control" [(ngModel)]="page.contenu[8]" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
+            <textarea type="textarea" name="pa4" id="pa4" class="form-control" [(ngModel)]="page.pa4" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
         </div>
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Sous-titre 5</h2></label>
-            <textarea type="textarea" name="contenu" id="contenu" class="form-control" [(ngModel)]="page.contenu[9]" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            <textarea type="textarea" name="st5" id="st5" class="form-control" [(ngModel)]="page.st5" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Paragraphe 5</h2></label>
-            <textarea type="textarea" name="contenu" id="contenu" class="form-control" [(ngModel)]="page.contenu[10]" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
+            <textarea type="textarea" name="pa5" id="pa5" class="form-control" [(ngModel)]="page.pa5" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
         </div>
         <div class="form-group">
             <label for="image"><h2>URL de votre image</h2></label>

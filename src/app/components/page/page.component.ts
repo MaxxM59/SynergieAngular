@@ -17,7 +17,17 @@ export class PageComponent implements OnInit {
   page: Page = {
     id: '',
     titre: '',
-    contenu: [''],
+    pres: '',
+    st1: '',
+    st2: '',
+    st3: '',
+    st4: '',
+    st5: '',
+    pa1: '',
+    pa2: '',
+    pa3: '',
+    pa4: '',
+    pa5: '',
     image: '',
   };
   constructor(

@@ -11,18 +11,23 @@ import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
 })
 export class PagesFormComponent implements OnInit {
   id: string = '';
-
   page: Page = {
     id: '',
     titre: '',
     image: '',
-    contenu: [''],
+    pres: '',
+    st1: '',
+    st2: '',
+    st3: '',
+    st4: '',
+    st5: '',
+    pa1: '',
+    pa2: '',
+    pa3: '',
+    pa4: '',
+    pa5: '',
   };
-  isShown: boolean = false; // hidden by default
 
-  toggleShow() {
-    this.isShown = !this.isShown;
-  }
   constructor(
     public pagesservice: PagesService,
     private router: Router,
@@ -49,7 +54,6 @@ export class PagesFormComponent implements OnInit {
     this.pagesservice.deletePage(this.id);
   }
   ngOnInit(): void {
-    this.page.contenu.length = 10;
     this.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.id)
       this.pagesservice.getPage(this.id).subscribe((p) => (this.page = p));

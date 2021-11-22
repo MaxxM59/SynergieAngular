@@ -15,10 +15,3 @@
                 cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
 
             <mat-error fxFill *ngIf="contenuInput?.hasError('required')"><strong>Contenu obligatoire</strong></mat-error>
-        </div>
-
-        <button type="submit" class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>
-        <button class="btn btn-danger m-1" *ngIf="id !== null" (click)="delete()">Supprimer</button>
-
-    </form>
-</div>

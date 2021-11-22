@@ -16,7 +16,7 @@ export interface Onglet {
 export interface Page {
   id: string;
   titre: string;
-  contenu: string;
+  contenu: Array<string>;
   image: string;
 }
 export interface Admin {

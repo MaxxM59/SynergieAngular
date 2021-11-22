@@ -16,9 +16,13 @@ export class PagesFormComponent implements OnInit {
     id: '',
     titre: '',
     image: '',
-    contenu: '',
+    contenu: [''],
   };
+  isShown: boolean = false; // hidden by default
 
+  toggleShow() {
+    this.isShown = !this.isShown;
+  }
   constructor(
     public pagesservice: PagesService,
     private router: Router,
@@ -45,6 +49,7 @@ export class PagesFormComponent implements OnInit {
     this.pagesservice.deletePage(this.id);
   }
   ngOnInit(): void {
+    this.page.contenu.length = 10;
     this.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.id)
       this.pagesservice.getPage(this.id).subscribe((p) => (this.page = p));

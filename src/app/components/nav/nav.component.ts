@@ -16,7 +16,7 @@ export class NavComponent implements OnInit {
   page: Page = {
     id: '',
     titre: '',
-    contenu: '',
+    contenu: [''],
     image: '',
   };
   constructor(

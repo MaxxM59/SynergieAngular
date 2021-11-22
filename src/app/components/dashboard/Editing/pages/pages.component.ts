@@ -19,7 +19,7 @@ export class PagesComponent implements OnInit {
     id: '',
     titre: '',
     image: '',
-    contenu: '',
+    contenu: [''],
   };
   pages: Page[] = [];
 
@@ -31,6 +31,5 @@ export class PagesComponent implements OnInit {
 
   delete($id: string) {
     this.pageservice.deletePage($id);
-    this.admin.showNotification('Page supprimée !');
   }
 }

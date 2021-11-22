@@ -17,7 +17,7 @@ export class PageComponent implements OnInit {
   page: Page = {
     id: '',
     titre: '',
-    contenu: '',
+    contenu: [''],
     image: '',
   };
   constructor(
@@ -27,7 +27,7 @@ export class PageComponent implements OnInit {
     private title: Title,
     private router: Router
   ) {
-    // POUR POUVOIR NAVIGUER
+    // FORCE LE ngOnInit POUR POUVOIR NAVIGUER
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
 
@@ -41,7 +41,6 @@ export class PageComponent implements OnInit {
       this.titre = this.page.titre;
       this.title.setTitle(this.route.snapshot.data['this.titre']);
     }
-    this.page.contenu = this.pagesservice.unEscape(this.page.contenu);
   }
   ngOndestroy(): void {}
 }

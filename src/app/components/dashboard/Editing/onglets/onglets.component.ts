@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OngletsService } from 'src/app/services/Admin/Editing/onglets.service';
 import { Onglet } from 'src/app/models/models';
-import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dash-onglets',
@@ -10,11 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./onglets.component.scss'],
 })
 export class OngletsComponent implements OnInit {
-  constructor(
-    public ongletservice: OngletsService,
-    private admin: AdminLoginService,
-    private router: Router
-  ) {}
+  constructor(public ongletservice: OngletsService) {}
 
   // VARIABLES
   onglet: Onglet = {
@@ -34,6 +28,8 @@ export class OngletsComponent implements OnInit {
     this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
       this.onglets = o;
     });
+
     this.ongletservice.tri(this.onglets);
+    console.log(this.onglets);
   }
 }

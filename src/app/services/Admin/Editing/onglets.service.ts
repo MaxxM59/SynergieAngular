@@ -23,10 +23,17 @@ export class OngletsService {
   dossiers: any;
   dropdowns: any;
   solo: any;
-  a: any;
-  b: any;
+
   // FONCTION DE TRI DES ONGLETS ///
   tri(tab: Onglet[]) {
+    //ONGLETS DOSSIERS
+    this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
+
+    // ONGLETS DROPDOWN => ATTENTION A FIX LES NOMS DE DOSSIERS LORS DE LA CREATION !!!
+    this.dropdowns = tab.filter(
+      (onglet) => onglet.dossier !== 'Aucun' && onglet.dossier !== ''
+    );
+    this.dropdowns = _.sortBy(this.dropdowns, ['position'], ['dossier']);
     // ONGLETS SOLOS
     this.solo = tab.filter(
       (onglet) =>
@@ -34,18 +41,6 @@ export class OngletsService {
         (onglet.dossier === 'Aucun' || onglet.dossier === '')
     );
     this.solo = _.sortBy(this.solo, ['position']);
-    //ONGLETS DOSSIERS
-    this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
-
-    // ONGLETS DROPDOWN => ATTENTION A FIX LES NOMS DE DOSSIERS LORS DE LA CREATION !!!
-    this.dropdowns = tab.filter(
-      (onglet) =>
-        onglet.dossier !== 'Aucun' &&
-        onglet.dossier !== '' &&
-        onglet.type === 'Normal'
-    );
-    this.dropdowns = _.sortBy(this.dropdowns, ['position'], ['dossier']);
-
     //TRI DES ONGLETS EN FONCTION DE LEUR POSITION
 
     /* NE FONCTIONNE PAS --> ATTENTION SI PLUSIEURS DOSSIERS

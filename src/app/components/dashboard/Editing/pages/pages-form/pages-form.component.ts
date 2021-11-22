@@ -4,7 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Page } from 'src/app/models/models';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
-import { Editor, Toolbar } from 'ngx-editor';
+import { Editor, Toolbar, toHTML } from 'ngx-editor';
 @Component({
   selector: 'app-pages-form',
   templateUrl: './pages-form.component.html',
@@ -16,7 +16,7 @@ export class PagesFormComponent implements OnInit, OnDestroy {
   page: Page = {
     id: '',
     titre: '',
-    //image: '',
+    image: '',
     contenu: '',
   };
   editor!: Editor;

@@ -18,7 +18,7 @@ export class PagesComponent implements OnInit {
   page: Page = {
     id: '',
     titre: '',
-    //image: '',
+    image: '',
     contenu: '',
   };
   pages: Page[] = [];

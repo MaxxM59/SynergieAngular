@@ -51,7 +51,7 @@ import { PageComponent } from './components/page/page.component';
 import { HomeComponent } from './components/home/home.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgxEditorModule } from 'ngx-editor';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -108,6 +108,7 @@ import { NgxEditorModule } from 'ngx-editor';
     MatCheckboxModule,
     MatInputModule,
     NgxEditorModule,
+    HttpClientModule,
   ],
   providers: [AuthGuardService, AdminLoginService],
   bootstrap: [AppComponent],

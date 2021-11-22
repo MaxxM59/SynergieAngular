@@ -15,13 +15,13 @@
             </ul>
         </mat-toolbar-row>
     </mat-toolbar>
+
     <mat-menu #menu="matMenu">
+
         <div *ngFor="let d of ongletservice.dossiers">
-            <ul *ngFor="let dd of ongletservice.dropdowns">
-                <li *ngIf="dd.dossier===d.titre">
-                    <button mat-button routerLink="page/{{dd.lien}} ">{{dd.titre}}</button>
-                </li>
-            </ul>
+            <div *ngFor="let dd of ongletservice.dropdowns">
+                <button *ngIf="dd.dossier===d.titre" mat-button routerLink="page/{{dd.lien}} ">{{dd.titre}}</button>
+            </div>
         </div>
     </mat-menu>
 

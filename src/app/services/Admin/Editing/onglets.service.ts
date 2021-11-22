@@ -33,7 +33,7 @@ export class OngletsService {
         onglet.type === 'Normal' &&
         (onglet.dossier === 'Aucun' || onglet.dossier === '')
     );
-
+    this.solo = _.sortBy(this.solo, ['position']);
     //ONGLETS DOSSIERS
     this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
 
@@ -44,13 +44,14 @@ export class OngletsService {
         onglet.dossier !== '' &&
         onglet.type === 'Normal'
     );
+    this.dropdowns = _.sortBy(this.dropdowns, ['position'], ['dossier']);
+
     //TRI DES ONGLETS EN FONCTION DE LEUR POSITION
-    this.solo = _.sortBy(this.solo, ['position']);
+
     /* NE FONCTIONNE PAS --> ATTENTION SI PLUSIEURS DOSSIERS
     if (this.dossiers.length >= 2) {
       this.dossiers = _.sortBy(this.dossiers, ['position']);
     }*/
-    this.dropdowns = _.sortBy(this.dropdowns, ['position'], ['dossier']);
   }
 
   //RECUPERE TOUS LES ONGLETS

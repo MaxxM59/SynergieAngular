@@ -59,7 +59,6 @@ export class NavComponent implements OnInit {
       this.link();
       //TRI DES ONGLETS PAR POSITION POUR AFFICHAGE NAV
       this.ongletservice.tri(this.onglets);
-      console.log(this.onglets);
     });
   }
 }

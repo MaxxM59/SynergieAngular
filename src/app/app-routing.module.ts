@@ -24,6 +24,7 @@ const routes: Routes = [
     component: PageComponent,
     canActivate: [AuthGuardService],
   },
+
   {
     path: '',
     component: HomeComponent,

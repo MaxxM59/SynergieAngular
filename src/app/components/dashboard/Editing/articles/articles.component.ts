@@ -4,14 +4,12 @@ import { Article } from 'src/app/models/models';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
 
-
-
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.component.html',
-  styleUrls: ['./articles.component.scss']
+  styleUrls: ['./articles.component.scss'],
 })
-export class ArticlesComponent  implements OnInit {
+export class ArticlesComponent implements OnInit {
   constructor(
     public articleservice: ArticleService,
     private admin: AdminLoginService,
@@ -36,7 +34,6 @@ export class ArticlesComponent  implements OnInit {
 
   delete($id: string) {
     this.articleservice.deleteArticle($id);
-    this.admin.showNotification('Article supprimée !');
+    this.admin.showNotification('Article supprimé !');
   }
 }
-

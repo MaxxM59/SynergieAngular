@@ -27,7 +27,10 @@ export class PagesFormComponent implements OnInit {
     pa4: '',
     pa5: '',
   };
-
+  // OUVRE l'HEBERGEUR D'IMAGE DANS UNE NOUVELLE FENETRE
+  goToLink(url: string) {
+    window.open(url, '_blank');
+  }
   constructor(
     public pagesservice: PagesService,
     private router: Router,

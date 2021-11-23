@@ -1,7 +1,12 @@
 <app-nav></app-nav>
+
 <section class="titre">
     <div>{{page.titre}}</div>
 </section>
+<div class='img-section'>
+    <img class='img' src='{{page.image}}'>
+
+</div>
 <div class="container">
     <section class='pres'>
         <div [innerText]="page.pres"></div>
@@ -36,6 +41,5 @@
     <section class="pa">
         <div *ngIf="page.pa5 !== '' && page.pa2!=='0'" [innerText]="page.pa5"></div>
     </section>
-    <div *ngIf="page.image !== '' && page.image!=='0'" id="img" class='img '></div>
-</div>
-<app-footer></app-footer>
+
+    <app-footer></app-footer>

@@ -1,13 +1,41 @@
 <app-nav></app-nav>
-<div class="titre" [innerText]="page.titre">
-</div>
+<section class="titre">
+    <div>{{page.titre}}</div>
+</section>
 <div class="container">
-
-
-    <section id="contenu">
+    <section class='pres'>
         <div [innerText]="page.pres"></div>
     </section>
-
-    <div id="img" class='img '></div>
+    <section class="st">
+        <div>{{page.st1}}</div>
+    </section>
+    <section class="pa">
+        <div [innerText]="page.pa1"></div>
+    </section>
+    <section class="st">
+        <div *ngIf="page.st2 !== '' && page.st2!=='0'">{{page.st2}}</div>
+    </section>
+    <section class="pa">
+        <div *ngIf="page.pa2 !== '' && page.pa2!=='0'" [innerText]="page.pa2"></div>
+    </section>
+    <section class="st">
+        <div *ngIf="page.st3 !== '' && page.st3!=='0'">{{page.st3}}</div>
+    </section>
+    <section class="pa">
+        <div *ngIf="page.pa3 !== '' && page.pa3!=='0'" [innerText]="page.pa3"></div>
+    </section>
+    <section class="st">
+        <div *ngIf="page.st4 !== '' && page.st4!=='0'">{{page.st4}}</div>
+    </section>
+    <section class="pa">
+        <div *ngIf="page.pa4 !== '' && page.pa2!=='0'" [innerText]="page.pa4"></div>
+    </section>
+    <section class="st">
+        <div *ngIf="page.st5 !== '' && page.st2!=='0'">{{page.st5}}</div>
+    </section>
+    <section class="pa">
+        <div *ngIf="page.pa5 !== '' && page.pa2!=='0'" [innerText]="page.pa5"></div>
+    </section>
+    <div *ngIf="page.image !== '' && page.image!=='0'" id="img" class='img '></div>
 </div>
 <app-footer></app-footer>

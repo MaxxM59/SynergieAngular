@@ -48,10 +48,6 @@ export class PageComponent implements OnInit {
       this.pagesservice.getPage(this.page.id).subscribe((p) => {
         this.page = p;
       });
-
-      // ESSAI TITRE URL
-      this.titre = this.page.titre;
-      this.title.setTitle(this.route.snapshot.data['this.titre']);
     }
   }
   ngOndestroy(): void {}

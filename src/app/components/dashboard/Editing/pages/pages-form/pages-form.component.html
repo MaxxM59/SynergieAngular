@@ -76,10 +76,12 @@
         <div class="form-group">
             <label for="image"><h2>URL de votre image</h2></label>
 
-            <mat-hint>
-                <br>
-                <button type="button" class="btn btn-link" (click)="goToLink('https://www.zupimages.net/')">Veuillez héberger votre image sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button> </mat-hint>
             <input type="text" name="image" id="image" class="form-control" [(ngModel)]="page.image">
+            <div>
+                <mat-hint>
+
+                    <button type="button" class="btn btn-link" (click)="goToLink('https://www.zupimages.net/')"> Veuillez héberger votre image sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button> </mat-hint>
+            </div>
         </div>
         <br>
         <button type='submit' class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>

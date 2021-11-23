@@ -18,15 +18,15 @@ export interface Page {
   titre: string;
   pres: string;
   st1: string;
-  st2?: any;
-  st3?: any;
-  st4?: any;
-  st5?: any;
+  st2: string;
+  st3: string;
+  st4: string;
+  st5: string;
   pa1: string;
-  pa2?: any;
-  pa3?: any;
-  pa4?: any;
-  pa5?: any;
+  pa2: string;
+  pa3: string;
+  pa4: string;
+  pa5: string;
   image: string;
 }
 export interface Admin {

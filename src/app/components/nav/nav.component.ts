@@ -26,7 +26,9 @@ export class NavComponent implements OnInit {
     pa3: '',
     pa4: '',
     pa5: '',
-    image: '',
+    image1: '',
+    image2: '',
+    image3: '',
   };
   constructor(
     public ongletservice: OngletsService,

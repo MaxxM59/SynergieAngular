@@ -28,13 +28,19 @@ export class OngletsService {
 
     // ONGLETS DROPDOWN => ATTENTION A FIX LES NOMS DE DOSSIERS LORS DE LA CREATION !!!
     this.dropdowns = tab.filter(
-      (onglet) => onglet.dossier !== 'Aucun' && onglet.dossier !== ''
+      (onglet) =>
+        onglet.dossier !== 'Aucun' &&
+        onglet.dossier !== '' &&
+        onglet.dossier !== '0' &&
+        onglet.type === 'Normal'
     );
     // ONGLETS SOLOS
     this.solo = tab.filter(
       (onglet) =>
         onglet.type === 'Normal' &&
-        (onglet.dossier === 'Aucun' || onglet.dossier === '')
+        (onglet.dossier === 'Aucun' ||
+          onglet.dossier === '' ||
+          onglet.dossier === '0')
     );
     this.dropdowns = _.sortBy(this.dropdowns, ['position']);
     this.solo = _.sortBy(this.solo, ['position']);

@@ -14,14 +14,14 @@
             </ul>
         </mat-toolbar-row>
     </mat-toolbar>
+    <div class='menu'>
+        <mat-menu #menu="matMenu">
 
-    <mat-menu #menu="matMenu">
-
-        <div *ngFor="let d of ongletservice.dossiers" class='menu'>
-            <div *ngFor="let dd of ongletservice.dropdowns">
-                <button id='btn-2' *ngIf="dd.dossier===d.titre" mat-button routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
+            <div *ngFor="let d of ongletservice.dossiers" class='menu'>
+                <div *ngFor="let dd of ongletservice.dropdowns">
+                    <button id='btn-2' *ngIf="dd.dossier===d.titre" mat-button routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
+                </div>
             </div>
-        </div>
-    </mat-menu>
-
+        </mat-menu>
+    </div>
 </div>

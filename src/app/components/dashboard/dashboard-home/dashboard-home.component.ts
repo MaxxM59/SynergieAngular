@@ -19,6 +19,6 @@ export class DashboardHomeComponent {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    public logout: AdminLoginService
+    public admin: AdminLoginService
   ) {}
 }

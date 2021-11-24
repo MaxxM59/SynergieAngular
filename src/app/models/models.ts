@@ -27,7 +27,9 @@ export interface Page {
   pa3: string;
   pa4: string;
   pa5: string;
-  image: string;
+  image1: string;
+  image2: string;
+  image3: string;
 }
 export interface Admin {
   mail: string;

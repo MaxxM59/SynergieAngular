@@ -10,7 +10,7 @@ export class FooterComponent implements OnInit {
   // VARIABLES
   auth = this.admin.auth;
 
-  constructor(private admin: AdminLoginService) {}
+  constructor(public admin: AdminLoginService) {}
 
   ngOnInit(): void {}
 }

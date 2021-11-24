@@ -25,6 +25,10 @@ export class AdminLoginService {
     this.router.navigate(['admin']);
     this.showNotification(`Vous êtes déconnecté(e)! Bonne journée !`);
   }
+  // OUVRE lA PAGE DANS UNE NOUVELLE FENETRE
+  goToLink(url: string) {
+    window.open(url, '_blank');
+  }
 
   // NOTIFICATION
   showNotification(

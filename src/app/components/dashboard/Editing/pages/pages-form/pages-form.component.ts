@@ -14,7 +14,9 @@ export class PagesFormComponent implements OnInit {
   page: Page = {
     id: '',
     titre: '',
-    image: '',
+    image1: '',
+    image2: '',
+    image3: '',
     pres: '',
     st1: '',
     st2: '',
@@ -27,15 +29,12 @@ export class PagesFormComponent implements OnInit {
     pa4: '',
     pa5: '',
   };
-  // OUVRE l'HEBERGEUR D'IMAGE DANS UNE NOUVELLE FENETRE
-  goToLink(url: string) {
-    window.open(url, '_blank');
-  }
+
   constructor(
     public pagesservice: PagesService,
     private router: Router,
     private route: ActivatedRoute,
-    private admin: AdminLoginService
+    public admin: AdminLoginService
   ) {}
   save(pageForm: NgForm) {
     if (pageForm.valid) {

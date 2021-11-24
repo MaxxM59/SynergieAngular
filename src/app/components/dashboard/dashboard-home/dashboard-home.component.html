@@ -6,7 +6,8 @@
             <a mat-list-item routerLink="onglets">Barre de navigation</a>
             <a mat-list-item routerLink="pages">Pages</a>
             <a mat-list-item routerLink="articles">Articles de l'accueil</a>
-            <a mat-list-item (click)="logout.logOut()">Déconnexion</a>
+            <a mat-list-item (click)="admin.goToLink('https://console.firebase.google.com/')">Base de données Google</a>
+            <a mat-list-item (click)="admin.logOut()">Déconnexion</a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

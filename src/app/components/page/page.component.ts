@@ -29,7 +29,9 @@ export class PageComponent implements OnInit {
     pa3: '',
     pa4: '',
     pa5: '',
-    image: '',
+    image1: '',
+    image2: '',
+    image3: '',
   };
   constructor(
     private pagesservice: PagesService,

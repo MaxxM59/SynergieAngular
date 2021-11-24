@@ -7,6 +7,16 @@
                 <strong>Le titre est obligatoire</strong>
             </mat-error>
         </div>
+        <div class="form-group">
+            <label for="image1"><h2>Image haut de page</h2></label>
+
+            <input type="text" name="image1" id="image1" class="form-control" [(ngModel)]="page.image1">
+            <div>
+                <mat-hint>
+
+                    <button type="button" class="btn btn-link" (click)="admin.goToLink('https://www.zupimages.net/')"> Veuillez héberger votre image sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button> </mat-hint>
+            </div>
+        </div>
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Présentation</h2></label>
@@ -43,6 +53,17 @@
             <label for="contenu"><h2>Paragraphe 2</h2></label>
             <textarea type="textarea" name="pa2" id="pa2" class="form-control" [(ngModel)]="page.pa2" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
         </div>
+
+        <div class="form-group">
+            <label for="image2"><h2>Image milieu de page</h2></label>
+
+            <input type="text" name="image2" id="image2" class="form-control" [(ngModel)]="page.image2">
+            <div>
+                <mat-hint>
+
+                    <button type="button" class="btn btn-link" (click)="admin.goToLink('https://www.zupimages.net/')"> Veuillez héberger votre image sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button> </mat-hint>
+            </div>
+        </div>
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Sous-titre 3</h2></label>
@@ -73,10 +94,11 @@
             <label for="contenu"><h2>Paragraphe 5</h2></label>
             <textarea type="textarea" name="pa5" id="pa5" class="form-control" [(ngModel)]="page.pa5" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
         </div>
-        <div class="form-group">
-            <label for="image"><h2>URL de votre image</h2></label>
 
-            <input type="text" name="image" id="image" class="form-control" [(ngModel)]="page.image">
+        <div class="form-group">
+            <label for="image3"><h2>Image bas de page</h2></label>
+
+            <input type="text" name="image3" id="image3" class="form-control" [(ngModel)]="page.image3">
             <div>
                 <mat-hint>
 

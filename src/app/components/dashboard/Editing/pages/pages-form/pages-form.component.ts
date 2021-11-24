@@ -14,7 +14,9 @@ export class PagesFormComponent implements OnInit {
   page: Page = {
     id: '',
     titre: '',
-    image: '',
+    image1: '',
+    image2: '',
+    image3: '',
     pres: '',
     st1: '',
     st2: '',

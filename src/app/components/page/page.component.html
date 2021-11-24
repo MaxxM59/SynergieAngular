@@ -7,7 +7,9 @@
     </section>
 
     <div class='img-section' *ngIf="page.image1 !== '' && page.image1!=='0' ; else elseBlock">
-        <img class='img' src='{{page.image1}}'>
+
+        <img class='img-fluid' src='{{page.image1}}'>
+
     </div>
     <div class="container">
         <section class='pres'>
@@ -27,7 +29,9 @@
             <div *ngIf="page.pa2 !== '' && page.pa2!=='0' ; else elseBlock" [innerText]="page.pa2"></div>
         </section>
         <div class='img-section' *ngIf="page.image2 !== '' && page.image2!=='0' ; else elseBlock">
-            <img class='img' src='{{page.image2}}'>
+
+            <img class='img-fluid' src='{{page.image2}}'>
+
         </div>
         <section class="st">
             <div *ngIf="page.st3 !== '' && page.st3!=='0'; else elseBlock">{{page.st3}}</div>
@@ -48,7 +52,9 @@
             <div *ngIf="page.pa5 !== '' && page.pa5 !=='0' ; else elseBlock" [innerText]="page.pa5"></div>
         </section>
         <div class='img-section' *ngIf="page.image3 !== '' && page.image3!=='0' ; else elseBlock">
-            <img class='img' src='{{page.image3}}'>
+
+            <img class='img-fluid' src='{{page.image3}}'>
+
         </div>
         <ng-template #elseBlock>
         </ng-template>

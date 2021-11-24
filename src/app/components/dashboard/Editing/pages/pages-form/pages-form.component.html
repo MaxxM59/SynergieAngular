@@ -104,7 +104,9 @@
 
                     <button type="button" class="btn btn-link" (click)="admin.goToLink('https://www.zupimages.net/')"> Veuillez héberger votre image sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button> </mat-hint>
             </div>
+
         </div>
+
         <br>
         <button type='submit' class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>
         <button class="btn btn-danger m-1" *ngIf="id !== null" (click)="delete()">Supprimer</button>

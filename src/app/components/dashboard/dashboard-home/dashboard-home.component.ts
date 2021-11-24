@@ -16,12 +16,9 @@ export class DashboardHomeComponent {
       map((result) => result.matches),
       shareReplay()
     );
-  // OUVRE lA PAGE DANS UNE NOUVELLE FENETRE
-  goToLink(url: string) {
-    window.open(url, '_blank');
-  }
+
   constructor(
     private breakpointObserver: BreakpointObserver,
-    public logout: AdminLoginService
+    public admin: AdminLoginService
   ) {}
 }

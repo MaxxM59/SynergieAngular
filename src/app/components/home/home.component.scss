@@ -1,6 +1,6 @@
 hr {
-    width: 50%;
-    margin: 1em 25%;
+    width: 75%;
+    margin: 1em 12.5%;
 }
 
 .page {
@@ -18,15 +18,13 @@ hr {
 }*/
 
 .carousel {
-    width: 70%;
-    height: 80%;
-    margin: 0 10% 0 15%;
+    margin: 0 12.5% 0 12.5%;
 }
 
 #carouselExampleControls .carousel-item img {
-    object-fit: cover;
-    object-position: center;
-    width: 70vw;
-    height: 80vh;
+    //object-fit: cover;
+    //object-position: center;
+    width: 75vw;
+    height: 30vw;
     overflow: hidden;
 }

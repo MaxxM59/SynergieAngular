@@ -2,8 +2,41 @@
     background-color: #ffff;
 }
 
-.img-section {
-    padding: 5em;
+.footer-section,
+h1,
+h2 {
+    font-family: 'Didact Gothic', sans-serif;
+    font-style: italic;
+}
+
+h1 {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#contact1,
+#contact2 {
+    text-align: center;
+}
+
+.soustitre {
+    text-decoration: underline;
+}
+
+.footer-section {
+    font-size: 110%;
+}
+
+#img-section {
+    padding-left: 3em;
+    padding-top: 3em;
+    text-align: center;
+}
+
+#contact1,
+#contact2 {
+    padding: 1em;
+    padding-top: 3em
 }
 
 .img {
@@ -11,5 +44,4 @@
     min-width: 5em;
     min-height: 4em;
     max-height: 8em;
-    border-radius: 15px;
 }

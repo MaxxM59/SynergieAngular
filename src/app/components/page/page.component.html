@@ -6,7 +6,7 @@
         <hr>
     </section>
 
-    <div class='img-section'>
+    <div class='img-section' *ngIf="page.image !== '' && page.image!=='0' ; else elseBlock">
         <img class='img' src='{{page.image}}'>
     </div>
     <div class="container">
@@ -20,30 +20,32 @@
             <div [innerText]="page.pa1"></div>
         </section>
         <section class="st">
-            <div *ngIf="page.st2 !== '' && page.st2!=='0'">{{page.st2}}</div>
-        </section>
-        <section class="pa">
-            <div *ngIf="page.pa2 !== '' && page.pa2!=='0'" [innerText]="page.pa2"></div>
-        </section>
-        <section class="st">
-            <div *ngIf="page.st3 !== '' && page.st3!=='0'">{{page.st3}}</div>
-        </section>
-        <section class="pa">
-            <div *ngIf="page.pa3 !== '' && page.pa3!=='0'" [innerText]="page.pa3"></div>
-        </section>
-        <section class="st">
-            <div *ngIf="page.st4 !== '' && page.st4!=='0'">{{page.st4}}</div>
-        </section>
-        <section class="pa">
-            <div *ngIf="page.pa4 !== '' && page.pa2!=='0'" [innerText]="page.pa4"></div>
-        </section>
-        <section class="st">
-            <div *ngIf="page.st5 !== '' && page.st2!=='0'">{{page.st5}}</div>
-        </section>
-        <section class="pa">
-            <div *ngIf="page.pa5 !== '' && page.pa2!=='0'" [innerText]="page.pa5"></div>
-        </section>
+            <div *ngIf="page.st2 !== '' && page.st2!=='0' ; else elseBlock">{{page.st2}}</div>
 
+        </section>
+        <section class="pa">
+            <div *ngIf="page.pa2 !== '' && page.pa2!=='0' ; else elseBlock" [innerText]="page.pa2"></div>
+        </section>
+        <section class="st">
+            <div *ngIf="page.st3 !== '' && page.st3!=='0'; else elseBlock">{{page.st3}}</div>
+        </section>
+        <section class="pa">
+            <div *ngIf="page.pa3 !== '' && page.pa3!=='0'; else elseBlock" [innerText]="page.pa3"></div>
+        </section>
+        <section class="st">
+            <div *ngIf="page.st4 !== '' && page.st4!=='0'; else elseBlock">{{page.st4}}</div>
+        </section>
+        <section class="pa">
+            <div *ngIf="page.pa4 !== '' && page.pa4!=='0'; else elseBlock" [innerText]="page.pa4"></div>
+        </section>
+        <section class="st">
+            <div *ngIf="page.st5 !== '' && page.st5!=='0' ; else elseBlock">{{page.st5}}</div>
+        </section>
+        <section class="pa">
+            <div *ngIf="page.pa5 !== '' && page.pa5 !=='0' ; else elseBlock" [innerText]="page.pa5"></div>
+        </section>
+        <ng-template #elseBlock>
+        </ng-template>
 
     </div>
     <hr>

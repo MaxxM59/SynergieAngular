@@ -9,7 +9,10 @@ import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 export class FooterComponent implements OnInit {
   // VARIABLES
   auth = this.admin.auth;
-
+  // OUVRE lA PAGE DANS UNE NOUVELLE FENETRE
+  goToLink(url: string) {
+    window.open(url, '_blank');
+  }
   constructor(private admin: AdminLoginService) {}
 
   ngOnInit(): void {}

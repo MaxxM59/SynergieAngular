@@ -1,24 +1,19 @@
-<div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{card.title}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
+<mat-grid-list cols="1" rows="1" rowHeight="2:1" class='main-div'>
+    <mat-grid-tile>
+        <mat-card>
+
+            <mat-card-title class='titre'>
+                <h1>Bienvenue sur l'interface administrateur !</h1>
+            </mat-card-title>
+
+            <mat-card-content class='titre'>
+                <h2>Ici vous pourrez créer, éditer et supprimer : <br><br> - Les onglets de la barre de navigation<br> - Les pages<br> - Les articles de l'accueil<br>
+                </h2><br><br>
+            </mat-card-content>
+            <mat-card-footer class='titre'>
+                <h3> Veuillez utiliser la barre de navigation sur la gauche de votre écran pour commencer à éditer les différents éléments de votre site</h3>
+            </mat-card-footer>
+        </mat-card>
+
     </mat-grid-tile>
-  </mat-grid-list>
-</div>
+</mat-grid-list>

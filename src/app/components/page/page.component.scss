@@ -1,23 +1,17 @@
-.container {
-    font-family: 'Gothic A1'
-}
-
 .pa,
 .pres {
-    padding-right: 6em;
-    padding-left: 6em;
-    font-size: 170%;
+    font-size: 140%;
     text-align: justify;
     margin-top: 1em;
     margin-bottom: 1em;
-    font-style: italic;
+    line-height: 1.5;
 }
 
 .titre {
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 300%;
+    font-size: 400%;
     font-weight: bold;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -27,10 +21,11 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 200%;
+    font-size: 230%;
     font-weight: bold;
     margin-top: 1em;
     margin-bottom: 1em;
+    font-style: italic;
 }
 
 .img-section {

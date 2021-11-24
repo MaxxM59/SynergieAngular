@@ -10,11 +10,7 @@ import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(
-    public article: ArticleService,
-    private admin: AdminLoginService,
-    private router: Router
-  ) {}
+  constructor(public article: ArticleService) {}
 
   articles: Article[] = [];
 

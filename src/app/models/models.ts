@@ -3,7 +3,7 @@ export interface Article {
   id: string;
   titre: string;
   contenu: string;
-  image: string;
+  image: any;
 }
 export interface Onglet {
   id: string;

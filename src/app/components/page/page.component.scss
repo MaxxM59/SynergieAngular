@@ -38,18 +38,18 @@
 }
 
 .img {
-    max-width: 50em;
-    min-width: 25em;
+    max-width: 100em;
+    min-width: 60em;
     min-height: 4em;
     max-height: 15em;
     border-radius: 15px;
 }
 
 .page {
-    background-color: rgb(240, 240, 240);
+    background-color: #fafafa;
 }
 
-.responsive {
-    width: 100%;
-    height: auto;
+hr {
+    width: 50%;
+    margin: 0.5em 25%;
 }

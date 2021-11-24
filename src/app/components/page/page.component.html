@@ -1,8 +1,11 @@
 <div class="page">
     <app-nav></app-nav>
+
     <section class="titre">
-        <div>{{page.titre}}</div>
+        <div>{{page.titre}} :</div>
+        <hr>
     </section>
+
     <div class='img-section'>
         <img class='img' src='{{page.image}}'>
     </div>
@@ -41,5 +44,7 @@
             <div *ngIf="page.pa5 !== '' && page.pa2!=='0'" [innerText]="page.pa5"></div>
         </section>
 
-        <app-footer></app-footer>
+
     </div>
+    <hr>
+    <app-footer></app-footer>

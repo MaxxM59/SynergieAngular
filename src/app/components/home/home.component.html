@@ -1,14 +1,14 @@
 <div class="page">
   <app-nav></app-nav>
   <hr>
-  <div id="carouselExampleControls" class="carousel slide img-fluid" data-bs-ride="carousel">
-    <div class="carousel-inner img-fluid">
-      <div id="carousel-active img-fluid" class="carousel-item active">
-        <img src="{{active.image}}" class="d-block w-100 h-100 img-fluid" alt="...">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div id="carousel-active" class="carousel-item active">
+        <img src={{active.image}}>
       </div>
-      <div class="carousel-item img-fluid" *ngFor="let a of items">
+      <div class="carousel-item" *ngFor="let a of items">
         <div>
-          <img src="{{a.image}}" class="d-block w-100 h-100 img-fluid" alt="...">
+          <img src={{a.image}}>
         </div>
       </div>
     </div>

@@ -1,29 +1,27 @@
 <div class="nav-section" *ngIf="auth===true">
-    <mat-toolbar fxFlexFill color="light">
+    <mat-toolbar fxFlexFill>
         <mat-toolbar-row class="items">
 
             <a mat-button class="companyName" routerLink="/">
                 <span><img src="../../../assets/images/nav/synergielogo.jpg"></span>
             </a>
-            <img src="">
 
             <ul class="dossiers" *ngFor="let d of ongletservice.dossiers">
                 <button mat-raised-button [matMenuTriggerFor]="menu">{{d.titre}}</button>
             </ul>
             <ul *ngFor="let s of ongletservice.solo">
-                <button mat-raised-button routerLink="{{s.lien}}">{{this.s.titre}}</button>
+                <button id='btn-1' mat-raised-button routerLink="/{{s.lien}}">{{s.titre}}</button>
             </ul>
         </mat-toolbar-row>
     </mat-toolbar>
 
     <mat-menu #menu="matMenu">
 
-        <div *ngFor="let d of ongletservice.dossiers">
+        <div *ngFor="let d of ongletservice.dossiers" class='menu'>
             <div *ngFor="let dd of ongletservice.dropdowns">
-                <button *ngIf="dd.dossier===d.titre" mat-button routerLink="{{dd.lien}} ">{{dd.titre}}</button>
+                <button id='btn-2' *ngIf="dd.dossier===d.titre" mat-button routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
             </div>
         </div>
     </mat-menu>
+
 </div>
-
-

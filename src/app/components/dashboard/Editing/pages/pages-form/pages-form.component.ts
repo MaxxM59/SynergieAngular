@@ -11,14 +11,26 @@ import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
 })
 export class PagesFormComponent implements OnInit {
   id: string = '';
-
   page: Page = {
     id: '',
     titre: '',
     image: '',
-    contenu: '',
+    pres: '',
+    st1: '',
+    st2: '',
+    st3: '',
+    st4: '',
+    st5: '',
+    pa1: '',
+    pa2: '',
+    pa3: '',
+    pa4: '',
+    pa5: '',
   };
-
+  // OUVRE l'HEBERGEUR D'IMAGE DANS UNE NOUVELLE FENETRE
+  goToLink(url: string) {
+    window.open(url, '_blank');
+  }
   constructor(
     public pagesservice: PagesService,
     private router: Router,

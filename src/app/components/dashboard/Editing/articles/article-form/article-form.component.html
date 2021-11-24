@@ -14,14 +14,20 @@
             <mat-error *ngIf="contenuInput?.hasError('required')"><strong>Contenu obligatoire</strong></mat-error>
         </div>
 
-        <div class="form-group">
-            <label for="image"><h2>URL de votre image</h2></label>
+        <div class="form-group"><label for="image"><h2>URL de votre image</h2></label>
+
             <input #imageInput="ngModel" type="text" name="image" id="image" [ngClass]="{'is-invalid' : imageInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="article.image" required>
+
             <mat-error *ngIf="imageInput?.hasError('required')"><strong>Image obligatoire</strong></mat-error>
+            <div>
+                <mat-hint>
+
+                    <button type="button" class="btn btn-link" (click)="goToLink('https://www.zupimages.net/')"> Veuillez héberger votre image sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button> </mat-hint>
+            </div>
         </div>
 
         <button type="submit" class="btn btn-primary m-1">Enregistrer</button>
         <button [hidden]="id === null" (click)="delete()" class="btn btn-danger m-1">Supprimer</button> </form>
 
-          <button class="btn btn-success m-1" routerLink="../../articles">Retour</button>
+    <button class="btn btn-success m-1" routerLink="../../articles">Retour</button>
 </div>

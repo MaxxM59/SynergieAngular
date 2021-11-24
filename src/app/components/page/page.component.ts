@@ -14,10 +14,21 @@ export class PageComponent implements OnInit {
   auth = this.admin.auth;
   titre: string = '';
   mytitle: string = '';
+
   page: Page = {
     id: '',
     titre: '',
-    contenu: '',
+    pres: '',
+    st1: '',
+    st2: '',
+    st3: '',
+    st4: '',
+    st5: '',
+    pa1: '',
+    pa2: '',
+    pa3: '',
+    pa4: '',
+    pa5: '',
     image: '',
   };
   constructor(
@@ -27,7 +38,7 @@ export class PageComponent implements OnInit {
     private title: Title,
     private router: Router
   ) {
-    // POUR POUVOIR NAVIGUER
+    // FORCE LE ngOnInit POUR POUVOIR NAVIGUER
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
 
@@ -37,11 +48,7 @@ export class PageComponent implements OnInit {
       this.pagesservice.getPage(this.page.id).subscribe((p) => {
         this.page = p;
       });
-      // ESSAI TITRE URL
-      this.titre = this.page.titre;
-      this.title.setTitle(this.route.snapshot.data['this.titre']);
     }
-    this.page.contenu = this.pagesservice.unEscape(this.page.contenu);
   }
   ngOndestroy(): void {}
 }

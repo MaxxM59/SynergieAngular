@@ -7,22 +7,86 @@
                 <strong>Le titre est obligatoire</strong>
             </mat-error>
         </div>
+        <div class="md-form amber-textarea active-amber-textarea-2">
+
+            <label for="contenu"><h2>Présentation</h2></label>
+            <textarea type="textarea" name="pres" id="pres" class="form-control" [(ngModel)]="page.pres" matInput #autosize="cdkTextareaAutosize" cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
+        </div>
+        <div class="md-form amber-textarea active-amber-textarea-2">
+
+            <label for="contenu"><h2>Sous-titre 1</h2></label>
+            <textarea #contenuInput="ngModel" type="textarea" name="st1" id="st1" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="page.st1" required matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+                cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+
+            <mat-error fxFill *ngIf="contenuInput?.hasError('required')"><strong>Le premier sous-titre est obligatoire</strong></mat-error>
+        </div>
+        <div class="md-form amber-textarea active-amber-textarea-2">
+
+            <label for="contenu"><h2>Paragraphe 1</h2></label>
+            <textarea #contenuInput="ngModel" type="textarea" name="pa1" id="pa1" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="page.pa1" required matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+                cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
+
+            <mat-error fxFill *ngIf="contenuInput?.hasError('required')"><strong>Le premier paragraphe est obligatoire</strong></mat-error>
+        </div>
+        <mat-hint>
+            <br>
+            <h2>Si vous souhaitez que l'un des champs suivant sois vide, tapez écrivez 0 dans le champ choisi </h2>
+        </mat-hint>
 
         <div class="md-form amber-textarea active-amber-textarea-2">
 
-            <label for="contenu"><h2>Contenu</h2></label>
-            <textarea #contenuInput="ngModel" type="textarea" name="contenu" id="contenu" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="page.contenu" required matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
-                cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            <label for="contenu"><h2>Sous-titre 2</h2></label>
+            <textarea type="textarea" name="st2" id="st2" class="form-control" [(ngModel)]="page.st2" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+        </div>
+        <div class="md-form amber-textarea active-amber-textarea-2">
 
-            <mat-error fxFill *ngIf="contenuInput?.hasError('required')"><strong>Contenu obligatoire</strong></mat-error>
+            <label for="contenu"><h2>Paragraphe 2</h2></label>
+            <textarea type="textarea" name="pa2" id="pa2" class="form-control" [(ngModel)]="page.pa2" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
+        </div>
+        <div class="md-form amber-textarea active-amber-textarea-2">
+
+            <label for="contenu"><h2>Sous-titre 3</h2></label>
+            <textarea type="textarea" name="st3" id="st3" class="form-control" [(ngModel)]="page.st3" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+        </div>
+        <div class="md-form amber-textarea active-amber-textarea-2">
+
+            <label for="contenu"><h2>Paragraphe 3</h2></label>
+            <textarea type="textarea" name="pa3" id="pa3" class="form-control" [(ngModel)]="page.pa3" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
+        </div>
+        <div class="md-form amber-textarea active-amber-textarea-2">
+
+            <label for="contenu"><h2>Sous-titre 4</h2></label>
+            <textarea type="textarea" name="st4" id="st4" class="form-control" [(ngModel)]="page.st4" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+        </div>
+        <div class="md-form amber-textarea active-amber-textarea-2">
+
+            <label for="contenu"><h2>Paragraphe 4</h2></label>
+            <textarea type="textarea" name="pa4" id="pa4" class="form-control" [(ngModel)]="page.pa4" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
+        </div>
+        <div class="md-form amber-textarea active-amber-textarea-2">
+
+            <label for="contenu"><h2>Sous-titre 5</h2></label>
+            <textarea type="textarea" name="st5" id="st5" class="form-control" [(ngModel)]="page.st5" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+        </div>
+        <div class="md-form amber-textarea active-amber-textarea-2">
+
+            <label for="contenu"><h2>Paragraphe 5</h2></label>
+            <textarea type="textarea" name="pa5" id="pa5" class="form-control" [(ngModel)]="page.pa5" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
         </div>
         <div class="form-group">
             <label for="image"><h2>URL de votre image</h2></label>
-            <input type="text" name="image" id="image" class="form-control" [(ngModel)]="page.image">
 
+            <input type="text" name="image" id="image" class="form-control" [(ngModel)]="page.image">
+            <div>
+                <mat-hint>
+
+                    <button type="button" class="btn btn-link" (click)="goToLink('https://www.zupimages.net/')"> Veuillez héberger votre image sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button> </mat-hint>
+            </div>
         </div>
+        <br>
         <button type='submit' class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>
         <button class="btn btn-danger m-1" *ngIf="id !== null" (click)="delete()">Supprimer</button>
     </form>
+
 </div>
 <button class="btn btn-success m-1" routerLink="../../onglets">Retour</button>

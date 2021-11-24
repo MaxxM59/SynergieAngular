@@ -16,7 +16,17 @@ export interface Onglet {
 export interface Page {
   id: string;
   titre: string;
-  contenu: string;
+  pres: string;
+  st1: string;
+  st2: string;
+  st3: string;
+  st4: string;
+  st5: string;
+  pa1: string;
+  pa2: string;
+  pa3: string;
+  pa4: string;
+  pa5: string;
   image: string;
 }
 export interface Admin {

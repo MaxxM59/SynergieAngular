@@ -26,7 +26,10 @@ export class ArticleFormComponent implements OnInit {
     private route: ActivatedRoute,
     private admin: AdminLoginService
   ) {}
-
+  // OUVRE l'HEBERGEUR D'IMAGE DANS UNE NOUVELLE FENETRE
+  goToLink(url: string) {
+    window.open(url, '_blank');
+  }
   save(articleForm: NgForm) {
     if (articleForm.valid) {
       if (this.article.id) {

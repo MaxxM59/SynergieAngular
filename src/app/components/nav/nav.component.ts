@@ -4,7 +4,6 @@ import { Onglet, Page } from 'src/app/models/models';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { OngletsService } from 'src/app/services/Admin/Editing/onglets.service';
 import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
-import { DossierFormComponent } from '../dashboard/Editing/onglets/dossier-form/dossier-form.component';
 
 @Component({
   selector: 'app-nav',
@@ -16,7 +15,17 @@ export class NavComponent implements OnInit {
   page: Page = {
     id: '',
     titre: '',
-    contenu: '',
+    pres: '',
+    st1: '',
+    st2: '',
+    st3: '',
+    st4: '',
+    st5: '',
+    pa1: '',
+    pa2: '',
+    pa3: '',
+    pa4: '',
+    pa5: '',
     image: '',
   };
   constructor(
@@ -37,8 +46,8 @@ export class NavComponent implements OnInit {
     this.onglets.forEach((o) => {
       this.pages.forEach((p) => {
         if (o.titre === p.titre) {
-          if (this.router.url.startsWith('localhost:4200/page')) {
-            o.lien = p.id;
+          if (this.router.url.startsWith('localhost:4200/page/')) {
+            o.lien = `/${p.id}`;
           } else {
             o.lien = `/page/${p.id}`;
           }
@@ -59,6 +68,7 @@ export class NavComponent implements OnInit {
       this.link();
       //TRI DES ONGLETS PAR POSITION POUR AFFICHAGE NAV
       this.ongletservice.tri(this.onglets);
+      console.log(this.onglets);
     });
   }
 }

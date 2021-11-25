@@ -56,7 +56,7 @@
         </section>
         <section class="pa">
             <div>
-                <a *ngIf="page.lien !== '' && page.lien!=='0' ; else elseBlock" mat-raised-button href="{{page.lien}}" target="_blank">
+                <a *ngIf="page.lien !== '' && page.lien!=='0' ; else elseBlock" mat-raised-button rel="noopener noreferrer" href="{{page.lien}}" target="_blank">
                     <h2>{{page.nomlien}}</h2>
                 </a>
             </div>

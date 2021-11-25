@@ -7,6 +7,9 @@
                 <strong>Le titre est obligatoire</strong>
             </mat-error>
         </div>
+        <mat-hint>
+            <h2 id="hint1"><strong>Si vous souhaitez que l'un des champs suivant sois vide, tapez 0 dans le champ choisi</strong></h2>
+        </mat-hint>
         <div class="form-group">
             <label for="image1"><h2>Image haut de page</h2></label>
 
@@ -25,24 +28,12 @@
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Sous-titre 1</h2></label>
-            <textarea #contenuInput="ngModel" type="textarea" name="st1" id="st1" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="page.st1" required matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
-                cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
-
-            <mat-error fxFill *ngIf="contenuInput?.hasError('required')"><strong>Le premier sous-titre est obligatoire</strong></mat-error>
+            <textarea type="textarea" name="st1" id="st1" class="form-control" [(ngModel)]="page.st1" required matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Paragraphe 1</h2></label>
-            <textarea #contenuInput="ngModel" type="textarea" name="pa1" id="pa1" [ngClass]="{'is-invalid' : contenuInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="page.pa1" required matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
-                cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
-
-            <mat-error fxFill *ngIf="contenuInput?.hasError('required')"><strong>Le premier paragraphe est obligatoire</strong></mat-error>
-        </div>
-        <mat-hint>
-            <br>
-            <h2>Si vous souhaitez que l'un des champs suivant sois vide, tapez écrivez 0 dans le champ choisi </h2>
-        </mat-hint>
-
+            <textarea type="textarea" name="pa1" id="pa1" class="form-control" [(ngModel)]="page.pa1" required matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea></div>
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Sous-titre 2</h2></label>
@@ -107,12 +98,12 @@
         </div>
         <div class="form-group">
             <label for="titre"><h2>Texte du bouton qui sera affiché en fin de page</h2></label>
-            <input type="text" name="nomlien" id="nomlien" [ngClass]="{'is-invalid' : titreInput.invalid && titreInput.touched}" class="form-control" [(ngModel)]="page.nomlien">
+            <input type="text" name="nomlien" id="nomlien" class="form-control" [(ngModel)]="page.nomlien">
 
         </div>
         <div class="form-group">
             <label for="titre"><h2>URL du lien</h2></label>
-            <input type="text" name="lien" id="lien" [ngClass]="{'is-invalid' : titreInput.invalid && titreInput.touched}" class="form-control" [(ngModel)]="page.lien">
+            <input type="text" name="lien" id="lien" class="form-control" [(ngModel)]="page.lien">
 
         </div>
 

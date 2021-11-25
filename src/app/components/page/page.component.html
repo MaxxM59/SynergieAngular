@@ -5,14 +5,10 @@
         <div class="titre">
             <h1>{{page.titre}}</h1>
         </div>
-
         <hr>
     </section>
-
     <div class='img-section' *ngIf="page.image1 !== '' && page.image1!=='0' ; else elseBlock">
-
         <img class='img-fluid' src='{{page.image1}}'>
-
     </div>
     <div class="container">
         <section class='pres'>
@@ -32,9 +28,7 @@
             <div *ngIf="page.pa2 !== '' && page.pa2!=='0' ; else elseBlock" [innerText]="page.pa2"></div>
         </section>
         <div class='img-section' *ngIf="page.image2 !== '' && page.image2!=='0' ; else elseBlock">
-
             <img class='img-fluid' src='{{page.image2}}'>
-
         </div>
         <section class="st">
             <div *ngIf="page.st3 !== '' && page.st3!=='0'; else elseBlock">{{page.st3}}</div>
@@ -55,9 +49,9 @@
             <div *ngIf="page.pa5 !== '' && page.pa5 !=='0' ; else elseBlock" [innerText]="page.pa5"></div>
         </section>
         <br>
-        <section class="pa">
+        <section class="pa" *ngIf="page.lien !== '' && page.lien!=='0' ; else elseBlock">
             <div>
-                <a *ngIf="page.lien !== '' && page.lien!=='0' ; else elseBlock" mat-raised-button rel="noopener noreferrer" href="{{page.lien}}" target="_blank">
+                <a mat-raised-button rel="noopener noreferrer" href="{{page.lien}}" target="_blank">
                     <h2>{{page.nomlien}}</h2>
                 </a>
             </div>

@@ -50,17 +50,6 @@ export class PageComponent implements OnInit {
     // FORCE LE ngOnInit POUR POUVOIR NAVIGUER
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
-  // OUVRE LIEN BAS DE PAGE DANS UN NOUVEL ONGLET
-  openCityInNewWindow(lien: string) {
-    // Converts the route into a string that can be used
-    // with the window.open() function
-    const url = this.router.serializeUrl(
-      this.router.createUrlTree([`${lien}`])
-    );
-
-    window.open(url, '_blank');
-  }
-
   ngOnInit(): void {
     this.page.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.page.id) {

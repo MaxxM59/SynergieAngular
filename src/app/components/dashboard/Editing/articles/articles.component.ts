@@ -21,7 +21,7 @@ export class ArticlesComponent implements OnInit {
     titre: '',
     contenu: '',
     image: '',
-    position: 0,
+
     payload: undefined,
   };
 
@@ -31,7 +31,6 @@ export class ArticlesComponent implements OnInit {
     this.articleservice.getArticles().subscribe((a: Article[]) => {
       this.articles = a;
     });
-    this.articleservice.triArticles(this.articles);
   }
 
   delete($id: string) {

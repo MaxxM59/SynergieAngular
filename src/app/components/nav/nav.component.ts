@@ -11,6 +11,7 @@ import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
+  mobile: boolean = false;
   pages: Page[] = [];
   page: Page = {
     id: '',

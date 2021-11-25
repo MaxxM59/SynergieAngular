@@ -49,9 +49,13 @@ export class DossierFormComponent implements OnInit {
   }
   // DELETE A PARTIR DE LA PAGE D'EDIT
   delete() {
-    this.ongletservice.deleteOnglet(this.id);
-    this.admin.showNotification('Dossier supprimé !');
-    this.router.navigate(['dashboard/onglets']);
+    if (confirm('Voulez-vous vraiment supprimer cet élément?')) {
+      this.ongletservice.deleteOnglet(this.id);
+      this.admin.showNotification('Dossier supprimé !');
+      this.router.navigate(['dashboard/onglets']);
+    } else {
+      this.router.navigate(['dossier-form/{{o.id}}']);
+    }
   }
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') as string;

@@ -1,17 +1,19 @@
 <div class="nav-section" *ngIf="auth===true">
     <mat-toolbar fxFlexFill>
         <mat-toolbar-row class="items">
+            <ng-container>
+                <a mat-button class="companyName" routerLink="/">
+                    <span><img src="../../../assets/images/nav/synergielogo.jpg"></span>
+                </a>
 
-            <a mat-button class="companyName" routerLink="/">
-                <span><img src="../../../assets/images/nav/synergielogo.jpg"></span>
-            </a>
-
-            <ul class="dossiers" *ngFor="let d of ongletservice.dossiers">
-                <button mat-raised-button [matMenuTriggerFor]="menu">{{d.titre}}</button>
-            </ul>
-            <ul *ngFor="let s of ongletservice.solo">
-                <button id='btn-1' mat-raised-button routerLink="/{{s.lien}}">{{s.titre}}</button>
-            </ul>
+                <ul class="dossiers" *ngFor="let d of ongletservice.dossiers">
+                    <button mat-raised-button [matMenuTriggerFor]="menu">{{d.titre}}</button>
+                </ul>
+                <ul *ngFor="let s of ongletservice.solo">
+                    <button id='btn-1' mat-raised-button routerLink="/{{s.lien}}">{{s.titre}}</button>
+                </ul>
+                <button mat-raised-button (click)="this.admin.goToLink('https://fr-fr.facebook.com/Synergie.Association/')">Page Facebook</button>
+            </ng-container>
         </mat-toolbar-row>
     </mat-toolbar>
     <div class='menu'>

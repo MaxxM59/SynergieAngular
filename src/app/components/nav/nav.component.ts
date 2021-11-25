@@ -29,10 +29,15 @@ export class NavComponent implements OnInit {
     image1: '',
     image2: '',
     image3: '',
+    emplacementpa1: '',
+    emplacementpa2: '',
+    emplacementpa3: '',
+    emplacementpa4: '',
+    emplacementpa5: '',
   };
   constructor(
     public ongletservice: OngletsService,
-    private admin: AdminLoginService,
+    public admin: AdminLoginService,
     private pagesservice: PagesService,
     private route: ActivatedRoute,
     private router: Router

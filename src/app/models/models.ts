@@ -30,6 +30,11 @@ export interface Page {
   image1: string;
   image2: string;
   image3: string;
+  emplacementpa1: string;
+  emplacementpa2: string;
+  emplacementpa3: string;
+  emplacementpa4: string;
+  emplacementpa5: string;
 }
 export interface Admin {
   mail: string;

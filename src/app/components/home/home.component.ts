@@ -11,7 +11,6 @@ import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
   constructor(
     public articleService: ArticleService,
     private admin: AdminLoginService,
@@ -19,13 +18,11 @@ export class HomeComponent implements OnInit {
   ) {}
 
   articles: Article[] = [];
-  active: any;
-  items: any;
+
   ngOnInit(): void {
     this.articleService.getArticles().subscribe((a: Article[]) => {
       this.articles = a;
-      this.active = this.articles[0];
-      this.items = this.articles.slice(1);
+      this.articleService.triArticles(this.articles);
     });
 
     console.log(this.articles);

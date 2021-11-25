@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Article } from '../../../models/models';
 import { AdminLoginService } from '../admin-login.service';
 import { Router } from '@angular/router';
-
+import * as _ from 'lodash';
 @Injectable({
   providedIn: 'root',
 })
@@ -29,6 +29,15 @@ export class ArticleService {
           }))
         )
       );
+  }
+  // TRI
+  active: any;
+  items: any;
+  description: any;
+  triArticles(tab: Article[]) {
+    tab = _.sortBy(tab, ['position']);
+    this.description = tab[1];
+    this.items = tab.slice(1, 2);
   }
   //RECUPERE UN ARTICLE
   getArticle(id: string): Observable<Article> {

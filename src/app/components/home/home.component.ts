@@ -27,7 +27,5 @@ export class HomeComponent implements OnInit {
       this.active = this.articles[0];
       this.items = this.articles.slice(1);
     });
-
-    console.log(this.articles);
   }
 }

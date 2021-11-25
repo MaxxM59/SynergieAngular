@@ -1,28 +1,57 @@
 <div class="page">
-
     <app-nav></app-nav>
     <hr>
     <!-- Début carousel-->
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src={{active.image}} alt="...">
+            <div class="carousel-item active rounded">
+                <img src={{active.image}} class="rounded" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>{{active.titre}}</h5>
+                    <p>{{active.contenu}}</p>
+                </div>
             </div>
             <div class="carousel-item" *ngFor="let a of items">
-                <img src={{a.image}} alt="...">
+                <img src={{a.image}} class="rounded" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>{{a.titre}}</h5>
+                    <p>{{a.contenu}}.</p>
+                </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
     </div>
     <!-- Fin carousel-->
+    <hr>
     <!-- Début Qui sommes nous ?-->
     <article>
+<<<<<<< Updated upstream
 
+=======
+        <h1 class="titre">Qui sommes-nous ?</h1>
+        <p class="contenu">
+            <img src="https://zupimages.net/up/21/47/47xd.jpg" class="image">
+            L’association <strong>Synergie</strong> a été créée en 1996 suite à une volonté des élus de mettre en place
+            des actions d’insertions sur la commune d’Aulnoye-Aymeries.
+            <br><br>
+            Les chantiers d’insertions espaces-verts et bâtiment sont les activités historiques de l’association. Au fil
+            des années et en réponse aux besoins des territoires, Synergie a développé de nombreuses autres actions sur
+            le territoire de la Sambre Avesnois.
+            <br><br>
+            A chaque fois que <strong>Synergie</strong> a porté un nouveau projet, cela a été fait avec la double
+            préoccupation d’accompagner vers l’emploi des personnes en situation d’exclusion et de développer des
+            services d’utilité sociale pour les territoires.
+            <br>
+            <button class="savoirplus" mat-raised-button>En savoir plus ?</button>
+        </p>
+>>>>>>> Stashed changes
     </article>
+    <hr>
     <app-footer></app-footer>

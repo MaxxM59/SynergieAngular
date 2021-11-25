@@ -1,30 +1,31 @@
-<div class="nav-section" *ngIf="auth===true">
-    <mat-toolbar fxFlexFill>
-        <mat-toolbar-row class="items">
-            <ng-container>
-                <a mat-button class="companyName" routerLink="/">
-                    <span><img src="../../../assets/images/nav/synergielogo.jpg"></span>
-                </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <a mat-button class="companyName" routerLink="/">
+            <span><img src="../../../assets/images/nav/synergielogo.jpg"></span>
+        </a>
 
-                <ul class="dossiers" *ngFor="let d of ongletservice.dossiers">
-                    <button mat-raised-button [matMenuTriggerFor]="menu">{{d.titre}}</button>
-                </ul>
-                <ul *ngFor="let s of ongletservice.solo">
-                    <button id='btn-1' mat-raised-button routerLink="/{{s.lien}}">{{s.titre}}</button>
-                </ul>
-                <!--                <button mat-raised-button (click)="this.admin.goToLink('https://fr-fr.facebook.com/Synergie.Association/')">Page Facebook</button>
--->
-            </ng-container>
-        </mat-toolbar-row>
-    </mat-toolbar>
-    <div class='menu'>
-        <mat-menu #menu="matMenu">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <div *ngFor="let d of ongletservice.dossiers" class='menu'>
-                <div *ngFor="let dd of ongletservice.dropdowns">
-                    <button id='btn-2' *ngIf="dd.dossier===d.titre" mat-button routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
+            <ul class="dossiers" *ngFor="let d of ongletservice.dossiers">
+                <button mat-raised-button [matMenuTriggerFor]="menu1">{{d.titre}}</button>
+            </ul>
+            <ul *ngFor="let s of ongletservice.solo">
+                <button id='btn-1' mat-raised-button routerLink="/{{s.lien}}">{{s.titre}}</button>
+            </ul>
+        </div>
+        <div class='menu'>
+            <mat-menu #menu1="matMenu">
+
+                <div *ngFor="let d of ongletservice.dossiers" class='menu'>
+                    <div *ngFor="let dd of ongletservice.dropdowns">
+                        <div> <button *ngIf="dd.dossier===d.titre && dd.type==='Normal'" id='btn-2' mat-button routerLink="../../{{dd.lien}}">{{dd.titre}}</button></div>
+
+                    </div>
                 </div>
-            </div>
-        </mat-menu>
+            </mat-menu>
+        </div>
     </div>
-</div>
+</nav>

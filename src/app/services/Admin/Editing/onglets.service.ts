@@ -46,12 +46,6 @@ export class OngletsService {
     );
     this.dropdowns = _.sortBy(this.dropdowns, ['position']);
     this.solo = _.sortBy(this.solo, ['position']);
-    //TRI DES ONGLETS EN FONCTION DE LEUR POSITION
-
-    /* NE FONCTIONNE PAS --> ATTENTION SI PLUSIEURS DOSSIERS
-    if (this.dossiers.length >= 2) {
-      this.dossiers = _.sortBy(this.dossiers, ['position']);
-    }*/
   }
 
   //RECUPERE TOUS LES ONGLETS
@@ -103,11 +97,6 @@ export class OngletsService {
   }
   // SUPPRIME L'ARTICLE
   deleteOnglet(ongletId: string): void {
-    if (confirm('Voulez-vous vraiment supprimer cet élément?')) {
-      this.afs.collection<Onglet>('onglets').doc(ongletId).delete();
-      this.router.navigate(['dashboard/onglets']);
-    } else {
-      this.router.navigate(['onglets-form/{{o.id}}']);
-    }
+    this.afs.collection<Onglet>('onglets').doc(ongletId).delete();
   }
 }

@@ -47,11 +47,16 @@ export class OngletsFormComponent implements OnInit {
       this.admin.showNotification('Il y a des erreurs dans le formulaire!');
     }
   }
+
   // DELETE A PARTIR DE LA PAGE D'EDIT
   delete() {
-    this.ongletservice.deleteOnglet(this.id);
-    this.admin.showNotification('Onglet supprimé !');
-    this.router.navigate(['dashboard/onglets']);
+    if (confirm('Voulez-vous vraiment supprimer cet élément?')) {
+      this.ongletservice.deleteOnglet(this.id);
+      this.admin.showNotification('Onglet supprimé !');
+      this.router.navigate(['dashboard/onglets']);
+    } else {
+      this.router.navigate(['onglets-form/{{o.id}}']);
+    }
   }
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id') as string;

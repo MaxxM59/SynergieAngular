@@ -57,7 +57,6 @@ export class PageComponent implements OnInit {
         this.page = p;
       });
     }
-    console.log(this.page.lien);
   }
   ngOndestroy(): void {}
 }

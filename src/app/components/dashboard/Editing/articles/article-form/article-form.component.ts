@@ -17,6 +17,7 @@ export class ArticleFormComponent implements OnInit {
     titre: '',
     contenu: '',
     image: '',
+    position: 0,
     payload: undefined,
   };
 

@@ -36,6 +36,7 @@ export class ArticleService {
   description: any;
   triArticles(tab: Article[]) {
     tab = _.sortBy(tab, ['position']);
+    this.active = tab[0];
     this.description = tab[1];
     this.items = tab.slice(1, 2);
   }

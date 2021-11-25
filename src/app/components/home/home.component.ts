@@ -18,11 +18,21 @@ export class HomeComponent implements OnInit {
   ) {}
 
   articles: Article[] = [];
+<<<<<<< HEAD
 
   ngOnInit(): void {
     this.articleService.getArticles().subscribe((a: Article[]) => {
       this.articles = a;
       this.articleService.triArticles(this.articles);
+=======
+  active: any;
+  items: any;
+  ngOnInit(): void {
+    this.articleService.getArticles().subscribe((a: Article[]) => {
+      this.articles = a;
+      this.active = this.articles[0];
+      this.items = this.articles.slice(1);
+>>>>>>> parent of 85165b0b (8h56 25/11/2021)
     });
 
     console.log(this.articles);

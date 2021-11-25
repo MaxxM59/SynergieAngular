@@ -1,4 +1,5 @@
 <div class="page">
+<<<<<<< HEAD
     <app-nav></app-nav>
     <hr>
     <!-- Début carousel-->
@@ -12,6 +13,21 @@
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+=======
+  <app-nav></app-nav>
+  <hr>
+  <!-- Début carousel-->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src={{active.image}} alt="...">
+      </div>
+      <div class="carousel-item" *ngFor="let a of items">
+        <img src={{a.image}}  alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+>>>>>>> parent of 85165b0b (8h56 25/11/2021)
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">

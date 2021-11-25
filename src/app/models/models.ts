@@ -4,7 +4,6 @@ export interface Article {
   titre: string;
   contenu: string;
   image: any;
-  position:number;
 }
 export interface Onglet {
   id: string;

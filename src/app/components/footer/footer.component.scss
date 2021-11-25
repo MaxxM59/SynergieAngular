@@ -1,10 +1,11 @@
 * {
     background-color: #ffff;
+    font-size: 1em;
 }
 
-.footer-section {
-    font-size: 50%;
-    height: 5vh;
+.footer-section{
+    width: 100vw;
+    height: 10vh;
 }
 
 .footer-section,
@@ -22,6 +23,11 @@ h1 {
 #contact1,
 #contact2 {
     text-align: center;
+    padding: 1em 0 0 0;
+}
+
+#contact2 {
+    padding-top: 3em;
 }
 
 .soustitre {
@@ -29,20 +35,23 @@ h1 {
 }
 
 #img-section {
-    padding-left: 3em;
-    padding-top: 3em;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
 }
 
-#contact1,
-#contact2 {
-    padding: 1em;
-    padding-top: 3em
+.divtitreh1 {
+    width: 25%;
+}
+
+#titrepartenaires {
+    margin-left: 20%;
+    padding: 2%;
 }
 
 .img {
-    max-width: 4em;
-    min-width: 2em;
-    min-height: 1em;
-    max-height: 2em;
+    object-fit: contain;
+    object-position: center;
+    width: 8em;
+    height: 4em;
 }

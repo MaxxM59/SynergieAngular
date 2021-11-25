@@ -6,6 +6,7 @@ import { Onglet } from '../../../models/models';
 import { Router } from '@angular/router';
 import { AdminLoginService } from '../admin-login.service';
 import * as _ from 'lodash';
+import * as firebase from 'firebase/compat';
 @Injectable({
   providedIn: 'root',
 })
@@ -21,6 +22,7 @@ export class OngletsService {
   dropdowns: any;
   solo: any;
   trionglets: any;
+
   // FONCTION DE TRI DES ONGLETS ///
   tri(tab: Onglet[]) {
     //ONGLETS DOSSIERS

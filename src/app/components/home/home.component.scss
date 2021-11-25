@@ -3,6 +3,9 @@ hr {
     margin: 1em 12.5%;
 }
 
+.hrbasdepage {
+    margin-top: 50px;
+}
 .page {
     background-color: rgb(240, 240, 240);
 }
@@ -21,12 +24,12 @@ hr {
     //object-position: center;
     margin: 0 5% 0 10%;;
     width: 80vw;
-    height: 30vw;
+    height: 40vw;
     overflow: hidden;
 }
 
 .carousel-caption {
-    margin-top: 1000px;
+    margin-top: 100px;
 }
 .carousel-caption h5, p {
     margin-left: 25px;

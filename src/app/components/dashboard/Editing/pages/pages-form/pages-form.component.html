@@ -94,15 +94,15 @@
             <label for="contenu"><h2>Paragraphe 5</h2></label>
             <textarea type="textarea" name="pa5" id="pa5" class="form-control" [(ngModel)]="page.pa5" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
         </div>
-
-        <select ng-model="page.emplacementpa1" class='form-control'>
+        <div class="form-group">
+            <select class='form-control' name='positon5' id='position5' [(ngModel)]="page.emplacementpa5" [ngModelOptions]="{standalone: true}" matInput>
             <option value='0'>Normal</option>
             <option value='center'>Centré</option>
             <option value='justify'>Justifié</option>
 
           </select>
 
-
+        </div>
         <div class="form-group">
             <label for="image3"><h2>Image bas de page</h2></label>
 

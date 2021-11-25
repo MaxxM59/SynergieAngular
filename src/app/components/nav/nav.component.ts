@@ -34,6 +34,8 @@ export class NavComponent implements OnInit {
     emplacementpa3: '',
     emplacementpa4: '',
     emplacementpa5: '',
+    lien: '',
+    nomlien: '',
   };
   constructor(
     public ongletservice: OngletsService,
@@ -75,7 +77,6 @@ export class NavComponent implements OnInit {
       this.link();
       //TRI DES ONGLETS PAR POSITION POUR AFFICHAGE NAV
       this.ongletservice.tri(this.onglets);
-      console.log(this.onglets);
     });
   }
 }

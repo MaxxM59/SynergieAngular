@@ -35,6 +35,8 @@ export interface Page {
   emplacementpa3: string;
   emplacementpa4: string;
   emplacementpa5: string;
+  lien: string;
+  nomlien: string;
 }
 export interface Admin {
   mail: string;

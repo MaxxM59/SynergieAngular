@@ -33,6 +33,8 @@ export class PagesFormComponent implements OnInit {
     emplacementpa3: '',
     emplacementpa4: '',
     emplacementpa5: '',
+    lien: '',
+    nomlien: '',
   };
 
   constructor(

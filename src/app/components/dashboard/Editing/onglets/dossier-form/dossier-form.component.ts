@@ -15,11 +15,11 @@ export class DossierFormComponent implements OnInit {
   id: string = '';
   onglet: Onglet = {
     id: '',
-    titre: '',
-    dossier: '',
+    titre: 0,
+    dossier: 0,
     type: '',
     lien: '0',
-    position: 0,
+    position: 1,
   };
   constructor(
     public ongletservice: OngletsService,

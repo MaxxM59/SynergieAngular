@@ -19,12 +19,12 @@
         <div class='menu'>
             <mat-menu #menu1="matMenu">
 
-                <div *ngFor="let d of ongletservice.dossiers" class='menu'>
-                    <div *ngFor="let dd of ongletservice.dropdowns">
-                        <div> <button *ngIf="dd.dossier===d.titre" id='btn-2' mat-button routerLink="../../{{dd.lien}}">{{dd.titre}}</button></div>
+                <ng-container *ngFor="let d of ongletservice.dossiers" class='menu'>
+                    <ng-container *ngFor="let dd of ongletservice.dropdowns">
+                        <button *ngIf="dd.dossier===d.titre" id='btn-2' mat-button routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
 
-                    </div>
-                </div>
+                    </ng-container>
+                </ng-container>
             </mat-menu>
         </div>
     </div>

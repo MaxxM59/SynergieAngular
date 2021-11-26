@@ -21,7 +21,7 @@
 
                 <ng-container *ngFor="let d of ongletservice.dossiers" class='menu'>
                     <ng-container *ngFor="let dd of ongletservice.dropdowns">
-                        <button *ngIf="dd.dossier===d.titre" id='btn-2' mat-button routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
+                        <button *ngIf="dd.dossier===d.titre" id='btn-2' mat-menu-item routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
 
                     </ng-container>
                 </ng-container>

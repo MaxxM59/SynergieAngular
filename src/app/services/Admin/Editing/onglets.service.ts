@@ -22,6 +22,7 @@ export class OngletsService {
   dropdowns: any;
   solo: any;
   trionglets: any;
+  onglets: any;
 
   // FONCTION DE TRI DES ONGLETS ///
   tri(tab: Onglet[]) {
@@ -46,6 +47,7 @@ export class OngletsService {
     );
     this.dropdowns = _.sortBy(this.dropdowns, ['position']);
     this.solo = _.sortBy(this.solo, ['position']);
+    this.onglets = this.onglets.push(this.solo, this.dossiers, this.dropdowns);
   }
 
   //RECUPERE TOUS LES ONGLETS

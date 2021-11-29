@@ -20,6 +20,12 @@ h1 {
     font-weight: bold;
 }
 
+#facebook {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vh;
+}
+
 #contact1,
 #contact2 {
     text-align: center;
@@ -27,7 +33,7 @@ h1 {
 }
 
 #contact2 {
-    padding-top: 3em;
+    padding-top: 1em;
 }
 
 .soustitre {

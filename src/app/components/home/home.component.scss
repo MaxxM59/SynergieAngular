@@ -63,5 +63,17 @@ img {
     font-size: 1em;
 }
 
+@media (max-width: 780px) {
+    article {
+        p {
+            font-size: 1em;
+        }
+    }
 
+    .savoirplus {
+        margin-top: 20px;
+        font-size: 0.9em;
+        width: 40%;
+    }
+}
 

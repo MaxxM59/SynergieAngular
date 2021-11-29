@@ -83,4 +83,18 @@ img {
         font-size: 0.9em;
         width: 40%;
     }
+    img {
+        width: 10%;
+    }
+}
+
+@media (max-width: 375px) {
+    article {
+        p {
+            font-size: 0.8em;
+        }
+    }
+    .hrbasdepage {
+        margin-top: -20px;
+    }
 }

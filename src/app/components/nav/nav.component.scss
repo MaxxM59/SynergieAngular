@@ -1,44 +1,53 @@
-* {
-    background-color: #ffff;
-}
-
-@media screen and (min-width: 760px) {
-    #menuToggle {
-        display: none;
+    * {
+        background-color: #ffff;
     }
-}
 
-@media screen and (max-width: 759px) {
-    #toolbar {
-        display: none;
+    .nav-section {
+        display: flex;
+        justify-content: space-between;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
     }
-}
 
-.nav-section {
-    display: flex;
-    justify-content: space-between;
-    justify-content: center;
-    align-content: center;
-    padding: 20px 0 20px 0;
-    width: 100%;
-}
+    button {
+        margin-top: 1vw;
+        background-color: #ffff;
+        font-size: 110%;
+        align-content: center;
+    }
 
-.items {
-    display: flex;
-    justify-content: center;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
+    .button2 {
+        margin-left: 2vw;
+        margin-top: 1vw;
+        background-color: #ffff;
+        font-size: 110%;
+        align-content: center;
+    }
 
-button {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    margin-top: 1rem;
-    background-color: #ffff;
-    font-size: 110%
-}
+    @media (min-width:641px) {
+        ul {
+            display: flex;
+            list-style-type: none;
+        }
+    }
 
-img {
-    max-width: 150px;
-    max-height: 100px;
-}
+    @media (max-width: 640px) {
+        ul {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+        }
+        .button2 {
+            margin-top: 3.7vw;
+        }
+    }
+
+    img {
+        max-width: 150px;
+        max-height: 100px;
+    }
+
+    #companyName {
+        margin-right: 2vw;
+    }

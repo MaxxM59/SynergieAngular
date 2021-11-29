@@ -32,11 +32,6 @@ export class PagesComponent implements OnInit {
     pa3: '',
     pa4: '',
     pa5: '',
-    emplacementpa1: '',
-    emplacementpa2: '',
-    emplacementpa3: '',
-    emplacementpa4: '',
-    emplacementpa5: '',
     lien: '',
     nomlien: '',
   };

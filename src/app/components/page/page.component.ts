@@ -32,11 +32,7 @@ export class PageComponent implements OnInit {
     image1: '',
     image2: '',
     image3: '',
-    emplacementpa1: '',
-    emplacementpa2: '',
-    emplacementpa3: '',
-    emplacementpa4: '',
-    emplacementpa5: '',
+
     lien: '',
     nomlien: '',
   };

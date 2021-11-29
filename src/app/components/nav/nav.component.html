@@ -3,16 +3,16 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-        <a mat-button class="companyName" routerLink="/">
+        <a mat-button id="companyName" routerLink="/">
             <span><img src="../../../assets/images/nav/synergielogo.jpg"></span>
         </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <ul>
-                <button class='button' *ngIf="ongletservice.dossiers[0].position === 1 ;else elseblock;" mat-raised-button [matMenuTriggerFor]="menu1">{{ongletservice.dossiers[0].titre}}</button>
-                <button class='button' *ngIf="ongletservice.dossiers[1].position === 2 ;else elseblock;" mat-raised-button [matMenuTriggerFor]="menu2">{{ongletservice.dossiers[1].titre}}</button>
-                <button class='button' *ngIf="ongletservice.dossiers[0].position === 3 ;else elseblock;" mat-raised-button [matMenuTriggerFor]="menu3">{{ongletservice.dossiers[2].titre}}</button>
+                <button class='button2' *ngIf="ongletservice.dossiers[0].position === 1 ;else elseblock;" mat-raised-button [matMenuTriggerFor]="menu1">{{ongletservice.dossiers[0].titre}}</button>
+                <button class='button2' *ngIf="ongletservice.dossiers[1].position === 2 ;else elseblock;" mat-raised-button [matMenuTriggerFor]="menu2">{{ongletservice.dossiers[1].titre}}</button>
+                <button class='button2' *ngIf="ongletservice.dossiers[0].position === 3 ;else elseblock;" mat-raised-button [matMenuTriggerFor]="menu3">{{ongletservice.dossiers[2].titre}}</button>
                 <ng-template #elseblock></ng-template>
 
             </ul>

@@ -48,7 +48,6 @@ export class OngletsService {
     this.dropdowns = _.sortBy(this.dropdowns, ['position']);
     this.solo = _.sortBy(this.solo, ['position']);
     this.dossiers = _.sortBy(this.dossiers, ['position']);
-    this.onglets = this.onglets.push(this.solo, this.dossiers, this.dropdowns);
   }
 
   //RECUPERE TOUS LES ONGLETS

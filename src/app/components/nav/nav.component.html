@@ -10,10 +10,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
             <ul>
-                <button class='button2' *ngIf="ongletservice.dossiers[0].position === 1 ;else elseblock;" mat-raised-button [matMenuTriggerFor]="menu1">{{ongletservice.dossiers[0].titre}}</button>
-                <button class='button2' *ngIf="ongletservice.dossiers[1].position === 2 ;else elseblock;" mat-raised-button [matMenuTriggerFor]="menu2">{{ongletservice.dossiers[1].titre}}</button>
-                <button class='button2' *ngIf="ongletservice.dossiers[0].position === 3 ;else elseblock;" mat-raised-button [matMenuTriggerFor]="menu3">{{ongletservice.dossiers[2].titre}}</button>
-                <ng-template #elseblock></ng-template>
+                <button class='button2' *ngIf="ongletservice.dossiers[0]!==undefined" mat-raised-button [matMenuTriggerFor]="menu1">{{ongletservice.dossiers[0].titre}}</button>
+                <button class='button2' *ngIf="ongletservice.dossiers[1]!==undefined" mat-raised-button [matMenuTriggerFor]="menu2">{{ongletservice.dossiers[1].titre}}</button>
+                <button class='button2' *ngIf="ongletservice.dossiers[2]!==undefined" mat-raised-button [matMenuTriggerFor]="menu3">{{ongletservice.dossiers[2].titre}}</button>
+
 
             </ul>
             <ul *ngFor="let s of ongletservice.solo">
@@ -22,19 +22,27 @@
         </div>
         <div class='menu'>
             <mat-menu #menu1="matMenu">
-                <ng-container *ngFor="let dd of ongletservice.dropdowns">
-                    <button *ngIf="dd.dossier===ongletservice.dossiers[0].titre" id='btn-2' mat-menu-item routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
-                </ng-container>
+                <div *ngIf='ongletservice.dossiers[0]!==undefined'>
+                    <ng-container *ngFor="let dd of ongletservice.dropdowns">
+
+                        <button *ngIf="dd.dossier===ongletservice.dossiers[0].titre" id='btn-2' mat-menu-item routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
+
+                    </ng-container>
+                </div>
             </mat-menu>
             <mat-menu #menu2="matMenu">
-                <ng-container *ngFor="let dd of ongletservice.dropdowns">
-                    <button *ngIf="dd.dossier===ongletservice.dossiers[1].titre" id='btn-2' mat-menu-item routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
-                </ng-container>
+                <div *ngIf='ongletservice.dossiers[1]!==undefined'>
+                    <ng-container *ngFor="let dd of ongletservice.dropdowns">
+                        <button *ngIf="dd.dossier===ongletservice.dossiers[1].titre" id='btn-2' mat-menu-item routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
+                    </ng-container>
+                </div>
             </mat-menu>
             <mat-menu #menu3="matMenu">
-                <ng-container *ngFor="let dd of ongletservice.dropdowns">
-                    <button *ngIf="dd.dossier===ongletservice.dossiers[1].titre" id='btn-2' mat-menu-item routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
-                </ng-container>
+                <div *ngIf='ongletservice.dossiers[2]!==undefined'>
+                    <ng-container *ngFor="let dd of ongletservice.dropdowns">
+                        <button *ngIf="dd.dossier===ongletservice.dossiers[2].titre" id='btn-2' mat-menu-item routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
+                    </ng-container>
+                </div>
             </mat-menu>
         </div>
     </div>

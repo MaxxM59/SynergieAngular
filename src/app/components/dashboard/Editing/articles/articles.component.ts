@@ -15,26 +15,23 @@ export class ArticlesComponent implements OnInit {
     private admin: AdminLoginService,
     private router: Router
   ) {}
-
+  // VARIABLES
   article: Article = {
     id: '',
     titre: '',
     contenu: '',
     image: '',
-
-    payload: undefined,
   };
-
   articles: Article[] = [];
-
-  ngOnInit(): void {
-    this.articleservice.getArticles().subscribe((a: Article[]) => {
-      this.articles = a;
-    });
-  }
-
+  // DELETE
   delete($id: string) {
     this.articleservice.deleteArticle($id);
     this.admin.showNotification('Article supprimé !');
+  }
+  ngOnInit(): void {
+    // RECUPERE TOUS LES ARTICLES
+    this.articleservice.getArticles().subscribe((a: Article[]) => {
+      this.articles = a;
+    });
   }
 }

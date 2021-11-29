@@ -24,11 +24,10 @@ export class OngletsService {
   trionglets: any;
   onglets: any;
 
-  // FONCTION DE TRI DES ONGLETS ///
+  //TRI DES ONGLETS
   tri(tab: Onglet[]) {
     //ONGLETS DOSSIERS
     this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
-
     // ONGLETS DROPDOWN => ATTENTION A FIX LES NOMS DE DOSSIERS LORS DE LA CREATION !!!
     this.dropdowns = tab.filter(
       (onglet) =>
@@ -45,6 +44,7 @@ export class OngletsService {
           onglet.dossier === '' ||
           onglet.dossier === '0')
     );
+    // TRI EN FONCTION DE LA PROPRIETE 'POSITION'
     this.dropdowns = _.sortBy(this.dropdowns, ['position']);
     this.solo = _.sortBy(this.solo, ['position']);
     this.dossiers = _.sortBy(this.dossiers, ['position']);

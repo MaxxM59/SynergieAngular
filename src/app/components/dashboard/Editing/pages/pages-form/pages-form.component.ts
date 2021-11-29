@@ -10,6 +10,7 @@ import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
   styleUrls: ['./pages-form.component.scss'],
 })
 export class PagesFormComponent implements OnInit {
+  // VARIABLES
   id: string = '';
   page: Page = {
     id: '',
@@ -28,11 +29,6 @@ export class PagesFormComponent implements OnInit {
     pa3: '',
     pa4: '',
     pa5: '',
-    emplacementpa1: '',
-    emplacementpa2: '',
-    emplacementpa3: '',
-    emplacementpa4: '',
-    emplacementpa5: '',
     lien: '',
     nomlien: '',
   };
@@ -43,26 +39,31 @@ export class PagesFormComponent implements OnInit {
     private route: ActivatedRoute,
     public admin: AdminLoginService
   ) {}
+  // SAUVEGARDE LES DONNEES SI LE FORMULAIRE EST VALIDE
   save(pageForm: NgForm) {
     if (pageForm.valid) {
       if (this.page.id) {
+        // SI LA PAGE EXISTE
         this.pagesservice.updatePage(pageForm.value, this.id);
         this.admin.showNotification('Page modifiée !');
       } else {
+        // SI C'EST UNE NOUVELLE PAGE
         this.pagesservice.addPage(pageForm.value);
         this.admin.showNotification('La page a été créé');
       }
-
+      // REDIRECTION VERS L'ACCEUIL
       this.router.navigate(['dashboard/pages']);
     } else {
+      // SI LE FORMULAIRE N'EST PAS VALIDE
       this.admin.showNotification('Il y a des erreurs dans le formulaire!');
     }
   }
-
+  // DELETE
   delete() {
     this.pagesservice.deletePage(this.id);
   }
   ngOnInit(): void {
+    // REMPLIS LE FORMULAIRE AVEC LES DONNEES DE LA PAGE SI ELLE EXISTE
     this.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.id)
       this.pagesservice.getPage(this.id).subscribe((p) => (this.page = p));

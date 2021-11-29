@@ -14,7 +14,6 @@ export class PageComponent implements OnInit {
   auth = this.admin.auth;
   titre: string = '';
   mytitle: string = '';
-
   page: Page = {
     id: '',
     titre: '',
@@ -32,11 +31,6 @@ export class PageComponent implements OnInit {
     image1: '',
     image2: '',
     image3: '',
-    emplacementpa1: '',
-    emplacementpa2: '',
-    emplacementpa3: '',
-    emplacementpa4: '',
-    emplacementpa5: '',
     lien: '',
     nomlien: '',
   };
@@ -44,13 +38,13 @@ export class PageComponent implements OnInit {
     private pagesservice: PagesService,
     private route: ActivatedRoute,
     public admin: AdminLoginService,
-    private title: Title,
     private router: Router
   ) {
-    // FORCE LE ngOnInit POUR POUVOIR NAVIGUER
+    // FORCE LE ngOnInit POUR POUVOIR CHANGER LE CONTENU DE LA PAGE
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
   ngOnInit(): void {
+    // RECUPERE LA PAGE CORRESPONDANT A l'ID
     this.page.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.page.id) {
       this.pagesservice.getPage(this.page.id).subscribe((p) => {
@@ -58,5 +52,4 @@ export class PageComponent implements OnInit {
       });
     }
   }
-  ngOndestroy(): void {}
 }

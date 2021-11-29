@@ -58,6 +58,7 @@ export class DossierFormComponent implements OnInit {
     }
   }
   ngOnInit(): void {
+    // REMPLIS LE FORMULAIRE AVEC LES DONNES DU DOSSIER S'IL EXISTE
     this.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.id)
       this.ongletservice.getOnglet(this.id).subscribe((o) => (this.onglet = o));

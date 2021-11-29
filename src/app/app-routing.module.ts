@@ -22,13 +22,11 @@ const routes: Routes = [
   {
     path: 'page/:id',
     component: PageComponent,
-    canActivate: [AuthGuardService],
   },
 
   {
     path: '',
     component: HomeComponent,
-    canActivate: [AuthGuardService],
   },
   {
     path: 'dashboard',

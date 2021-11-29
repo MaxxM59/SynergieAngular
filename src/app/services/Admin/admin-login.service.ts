@@ -11,7 +11,7 @@ type UserCredential = Promise<firebase.default.auth.UserCredential>;
   providedIn: 'root',
 })
 export class AdminLoginService {
-  auth: any = true;
+  auth: any = false;
 
   // LOGIN
   login(email: string, password: string): UserCredential {

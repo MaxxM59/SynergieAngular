@@ -16,12 +16,11 @@ export class AuthGuardService implements CanActivate {
     public adminloginservice: AdminLoginService,
     private router: Router
   ) {}
-
+  // VERIFIE SI L'UTILISATEUR EST CONNECTE, ET SI PAS REDIRIGE VERS LA PAGE DE CO ADMIN
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
-    // VERIFIE SI L'UTILISATEUR EST CONNECTE, ET SI PAS REDIRIGE VERS LA PAGE DE CO ADMIN
     if (this.adminloginservice.auth) {
       return true;
     } else {

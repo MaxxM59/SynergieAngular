@@ -11,14 +11,13 @@ import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
   styleUrls: ['./article-form.component.scss'],
 })
 export class ArticleFormComponent implements OnInit {
+  // VARIABLES
   id: string = '';
   article: Article = {
     id: '',
     titre: '',
     contenu: '',
     image: '',
-
-    payload: undefined,
   };
 
   constructor(
@@ -31,6 +30,7 @@ export class ArticleFormComponent implements OnInit {
   goToLink(url: string) {
     window.open(url, '_blank');
   }
+  // SAUVEGARDE DES DONNES SI LE FORMULAIRE EST VALIDE
   save(articleForm: NgForm) {
     if (articleForm.valid) {
       if (this.article.id) {
@@ -47,12 +47,13 @@ export class ArticleFormComponent implements OnInit {
       );
     }
   }
-
+  // DELETE
   delete() {
     this.articleservice.deleteArticle(this.id);
   }
 
   ngOnInit(): void {
+    // RMPLIS LE FORMULAIRE AVEC LES DONNEES DE L'ARTICLE
     this.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.id)
       this.articleservice

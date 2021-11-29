@@ -36,14 +36,14 @@ export class PagesComponent implements OnInit {
     nomlien: '',
   };
   pages: Page[] = [];
-
+  // DELETE
+  delete($id: string) {
+    this.pageservice.deletePage($id);
+  }
   ngOnInit(): void {
+    // RECUPERE TOUTES LES PAGES
     this.pageservice.getPages().subscribe((p: Page[]) => {
       this.pages = p;
     });
-  }
-
-  delete($id: string) {
-    this.pageservice.deletePage($id);
   }
 }

@@ -46,8 +46,7 @@ export class NavComponent implements OnInit {
   onglets: Onglet[] = [];
   auth = this.admin.auth;
 
-  //LINK DES PAGES AUX LIENS
-
+  //LIAISON DES PAGES AUX ONGLETS
   link() {
     this.onglets.forEach((o) => {
       this.pages.forEach((p) => {
@@ -70,7 +69,7 @@ export class NavComponent implements OnInit {
     //RECUPERE TOUS LES ONGLETS
     this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
       this.onglets = o;
-      //LINK ONGLETS<--->PAGES
+      //LIAISON ONGLETS<--->PAGES
       this.link();
       //TRI DES ONGLETS PAR POSITION POUR AFFICHAGE NAV
       this.ongletservice.tri(this.onglets);

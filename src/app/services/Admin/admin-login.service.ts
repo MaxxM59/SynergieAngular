@@ -11,6 +11,7 @@ type UserCredential = Promise<firebase.default.auth.UserCredential>;
   providedIn: 'root',
 })
 export class AdminLoginService {
+  // EMPECHE L'ACCESS A LA PARTIE ADMIN SI NON CONNECTE
   auth: any = false;
 
   // LOGIN

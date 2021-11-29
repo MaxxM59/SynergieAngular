@@ -14,11 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PageComponent } from './components/page/page.component';
 import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
 const routes: Routes = [
-  {
-    path: 'admin',
-    component: AdminFormComponent,
-  },
-
+  // PARTIE UTILISATEUR
   {
     path: 'page/:id',
     component: PageComponent,
@@ -27,6 +23,11 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+  },
+  // PARTIE ADMIN
+  {
+    path: 'admin',
+    component: AdminFormComponent,
   },
   {
     path: 'dashboard',

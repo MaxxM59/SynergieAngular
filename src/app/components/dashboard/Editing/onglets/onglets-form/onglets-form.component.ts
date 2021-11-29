@@ -59,6 +59,7 @@ export class OngletsFormComponent implements OnInit {
     }
   }
   ngOnInit(): void {
+    // REMPLIS LE FORMULAIRE AVEC LES DONNES DE L'ONGLET S'IL EXISTE
     this.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.id)
       this.ongletservice.getOnglet(this.id).subscribe((o) => (this.onglet = o));

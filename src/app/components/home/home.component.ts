@@ -16,12 +16,13 @@ export class HomeComponent implements OnInit {
     private admin: AdminLoginService,
     private router: Router
   ) {}
-
+  // VARIABLES
   articles: Article[] = [];
-
   active: any;
   items: any;
+
   ngOnInit(): void {
+    // RECUPERE TOUS LES ARTICLES
     this.articleService.getArticles().subscribe((a: Article[]) => {
       this.articles = a;
       this.active = this.articles[0];

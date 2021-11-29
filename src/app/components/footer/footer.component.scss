@@ -3,7 +3,7 @@
     font-size: 1em;
 }
 
-.footer-section{
+.footer-section {
     width: 100vw;
     height: 10vh;
 }
@@ -40,6 +40,10 @@ h1 {
     width: 50vw;
 }
 
+#img13 {
+    margin-left: 2vw;
+}
+
 .divtitreh1 {
     width: 25%;
 }
@@ -52,6 +56,13 @@ h1 {
 .img {
     object-fit: contain;
     object-position: center;
-    width: 8em;
-    height: 4em;
+    width: 8vw;
+    height: 4vw;
+}
+
+@media (max-width:480px) {
+    .img {
+        width: 15vw;
+        height: 10vw;
+    }
 }

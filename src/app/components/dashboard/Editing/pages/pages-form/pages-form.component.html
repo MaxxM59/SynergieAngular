@@ -2,7 +2,9 @@
 <div class="container-fluid p-5">
 
     <form #pageForm="ngForm">
+        <!-- TITRE -->
         <div class="form-group">
+
             <label for="titre"><h2>Titre</h2></label>
             <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid && titreInput.touched}" class="form-control" [(ngModel)]="page.titre" required>
             <mat-error *ngIf="titreInput?.hasError('required')">
@@ -12,7 +14,9 @@
         <mat-hint>
             <h2 id="hint1"><strong>Si vous souhaitez que l'un des champs suivant sois vide, tapez 0 dans le champ choisi</strong></h2>
         </mat-hint>
+        <!-- IMAGE HAUT DE PAGE -->
         <div class="form-group">
+
             <label for="image1"><h2>Image haut de page</h2></label>
 
             <input type="text" name="image1" id="image1" class="form-control" [(ngModel)]="page.image1">
@@ -22,31 +26,36 @@
                     <button type="button" class="btn btn-link" (click)="admin.goToLink('https://www.zupimages.net/')"> Veuillez héberger votre image sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button> </mat-hint>
             </div>
         </div>
+        <!-- PRESENTATION -->
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Présentation</h2></label>
             <textarea type="textarea" name="pres" id="pres" class="form-control" [(ngModel)]="page.pres" matInput #autosize="cdkTextareaAutosize" cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5"></textarea>
         </div>
+        <!-- SOUSTITRE 1 -->
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Sous-titre 1</h2></label>
             <textarea type="textarea" name="st1" id="st1" class="form-control" [(ngModel)]="page.st1" required matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
+        <!-- PARAGRAPHE 1 -->
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Paragraphe 1</h2></label>
             <textarea type="textarea" name="pa1" id="pa1" class="form-control" [(ngModel)]="page.pa1" required matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea></div>
+        <!-- SOUSTITRE 2 -->
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Sous-titre 2</h2></label>
             <textarea type="textarea" name="st2" id="st2" class="form-control" [(ngModel)]="page.st2" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
+        <!-- PARAGRAPHE 2 -->
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Paragraphe 2</h2></label>
             <textarea type="textarea" name="pa2" id="pa2" class="form-control" [(ngModel)]="page.pa2" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
         </div>
-
+        <!-- IMAGE MILIEU DE PAGE -->
         <div class="form-group">
             <label for="image2"><h2>Image milieu de page</h2></label>
 
@@ -57,36 +66,43 @@
                     <button type="button" class="btn btn-link" (click)="admin.goToLink('https://www.zupimages.net/')"> Veuillez héberger votre image sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button> </mat-hint>
             </div>
         </div>
+        <!-- SOUSTITRE 3 -->
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Sous-titre 3</h2></label>
             <textarea type="textarea" name="st3" id="st3" class="form-control" [(ngModel)]="page.st3" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
+        <!-- PARAGRAPHE 3 -->
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Paragraphe 3</h2></label>
             <textarea type="textarea" name="pa3" id="pa3" class="form-control" [(ngModel)]="page.pa3" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
         </div>
+        <!-- SOUSTITRE 4 -->
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Sous-titre 4</h2></label>
             <textarea type="textarea" name="st4" id="st4" class="form-control" [(ngModel)]="page.st4" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
+        <!-- PARAGRAPHE 4 -->
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Paragraphe 4</h2></label>
             <textarea type="textarea" name="pa4" id="pa4" class="form-control" [(ngModel)]="page.pa4" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
         </div>
+        <!-- SOUSTITRE 5 -->
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Sous-titre 5</h2></label>
             <textarea type="textarea" name="st5" id="st5" class="form-control" [(ngModel)]="page.st5" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
+        <!-- PARAGRAPHE 5 -->
         <div class="md-form amber-textarea active-amber-textarea-2">
 
             <label for="contenu"><h2>Paragraphe 5</h2></label>
             <textarea type="textarea" name="pa5" id="pa5" class="form-control" [(ngModel)]="page.pa5" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
         </div>
+        <!-- IMAGE BAS DE PAGE -->
         <div class="form-group">
             <label for="image3"><h2>Image bas de page</h2></label>
 
@@ -98,11 +114,13 @@
             </div>
 
         </div>
+        <!-- TEXTE BOUTON  LIEN -->
         <div class="form-group">
             <label for="titre"><h2>Texte du bouton qui sera affiché en fin de page</h2></label>
             <input type="text" name="nomlien" id="nomlien" class="form-control" [(ngModel)]="page.nomlien">
 
         </div>
+        <!-- URL DU LIEN-->
         <div class="form-group">
             <label for="titre"><h2>URL du lien</h2></label>
             <input type="text" name="lien" id="lien" class="form-control" [(ngModel)]="page.lien">

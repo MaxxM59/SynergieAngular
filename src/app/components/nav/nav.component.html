@@ -8,7 +8,7 @@
         </a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
+            <!-- Onglets Dropdowns : Maximum 3-->
             <ul>
                 <button class='button2' *ngIf="ongletservice.dossiers[0]!==undefined" mat-raised-button [matMenuTriggerFor]="menu1">{{ongletservice.dossiers[0].titre}}</button>
                 <button class='button2' *ngIf="ongletservice.dossiers[1]!==undefined" mat-raised-button [matMenuTriggerFor]="menu2">{{ongletservice.dossiers[1].titre}}</button>
@@ -16,11 +16,15 @@
 
 
             </ul>
+            <!-- Fin  Onglets Dropdowns-->
+            <!--Onglets Normaux-->
             <ul *ngFor="let s of ongletservice.solo">
                 <button id='btn-1' mat-raised-button routerLink="/{{s.lien}}">{{s.titre}}</button>
             </ul>
+            <!-- Fin  Onglets Normaux-->
         </div>
         <div class='menu'>
+            <!-- Menus Dropdowns Maximum 3-->
             <mat-menu #menu1="matMenu">
                 <div *ngIf='ongletservice.dossiers[0]!==undefined'>
                     <ng-container *ngFor="let dd of ongletservice.dropdowns">
@@ -44,6 +48,7 @@
                     </ng-container>
                 </div>
             </mat-menu>
+            <!-- Fin Menus Dropdowns-->
         </div>
     </div>
 </nav>

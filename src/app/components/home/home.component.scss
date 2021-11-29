@@ -6,15 +6,16 @@ hr {
 .hrbasdepage {
     margin-top: 20px;
 }
+
 .page {
     background-color: rgb(240, 240, 240);
 }
 
 //Début Carousel
-
 .carousel-control-prev {
     margin-left: 100px;
 }
+
 .carousel-control-next {
     margin-right: 100px;
 }
@@ -22,7 +23,8 @@ hr {
 #carouselExampleControls .carousel-item img {
     //object-fit: cover;
     //object-position: center;
-    margin: 0 5% 0 10%;;
+    margin: 0 5% 0 10%;
+    ;
     width: 80vw;
     height: 40vw;
     overflow: hidden;
@@ -31,15 +33,19 @@ hr {
 .carousel-caption {
     margin-top: 100px;
 }
-.carousel-caption h5, p {
+
+.carousel-caption h5,
+p {
     margin-left: 25px;
 }
+
 //Fin Carousel
 // Qui sommes-nous ?
 .titre {
     padding: 40px 0 20px 0;
     font-weight: bold;
 }
+
 article {
     width: 100vw;
     height: 75vh;
@@ -48,15 +54,18 @@ article {
         vertical-align: middle;
     }
 }
+
 img {
     width: 40%;
     object-position: right;
     vertical-align: middle;
     border-radius: 5px;
 }
+
 .image {
     float: right;
 }
+
 .savoirplus {
     margin: 2% 0 0 20%;
     width: 20%;
@@ -69,11 +78,9 @@ img {
             font-size: 1em;
         }
     }
-
     .savoirplus {
         margin-top: 20px;
         font-size: 0.9em;
         width: 40%;
     }
 }
-

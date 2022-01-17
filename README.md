@@ -5,5 +5,7 @@ ng s -o
 
 Partie admin utilisateur :
 http://localhost:4200/admin
+\n
 mail : synergie1synergie@gmail.com
+\n
 pw : Synergie59#

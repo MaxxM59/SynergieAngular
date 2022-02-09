@@ -8,7 +8,7 @@
     Retour à l'accueil
 </mat-button-toggle>
 <div class='container-fluid p-5'>
-    <h1>Dossiers :</h1>
+    <h1>Dossiers (Dropdowns) :</h1>
     <table class="table table-stripped">
 
         <thead>
@@ -34,7 +34,7 @@
 
 
                 <td>
-                    <button mat-button [matMenuTriggerFor]="menu"><h2>Boutons liés au dossier</h2></button>
+                    <button mat-button [matMenuTriggerFor]="menu" id='dropdowntrigger'><h2>Voir les onglets liés au dossier</h2></button>
 
                     <mat-menu #menu="matMenu">
 

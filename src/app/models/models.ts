@@ -40,3 +40,8 @@ export interface Admin {
   mail: string;
   password: string;
 }
+export interface Contact {
+  name: string;
+  mail: string;
+  content: string;
+}

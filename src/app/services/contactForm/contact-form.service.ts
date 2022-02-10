@@ -16,6 +16,6 @@ export class ContactFormService {
 
   //AJOUTE UN MESSAGE
   addContact(contact: Contact): void {
-    this.afs.collection<Contact>('pages').add(contact);
+    this.afs.collection<Contact>('contact').add(contact);
   }
 }

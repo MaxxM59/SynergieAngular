@@ -1,13 +1,41 @@
 <app-nav></app-nav>
 <div class="container-fluid p-5">
+
     <mat-card>
         <form #pageForm="ngForm">
+            <!-- Nom -->
+            <div class="form-group">
+
+                <label for="titre"><h2>Nom :</h2></label>
+                <input #nameInput="ngModel" type="text" name="name" id="name" [ngClass]="{'is-invalid' : nameInput.invalid && nameInput.touched}" class="form-control" [(ngModel)]="contact.name" required>
+                <mat-error *ngIf="nameInput?.hasError('required')">
+                    <strong>Le nom est obligatoire</strong>
+                </mat-error>
+            </div>
+            <!-- Prénom -->
+            <div class="form-group">
+
+                <label for="titre"><h2>Prénom :</h2></label>
+                <input #surnameInput="ngModel" type="text" name="surname" id="surname" [ngClass]="{'is-invalid' : surnameInput.invalid && surnameInput.touched}" class="form-control" [(ngModel)]="contact.surname" required>
+                <mat-error *ngIf="nameInput?.hasError('required')">
+                    <strong>Le prénom est obligatoire</strong>
+                </mat-error>
+            </div>
+            <!-- Sujet -->
+            <div class="form-group">
+
+                <label for="titre"><h2>Sujet :</h2></label>
+                <input #subjectInput="ngModel" type="text" name="subject" id="subject" [ngClass]="{'is-invalid' : subjectInput.invalid && subjectInput.touched}" class="form-control" [(ngModel)]="contact.subject" required>
+                <mat-error *ngIf="subjectInput?.hasError('required')">
+                    <strong>Le sujet est obligatoire</strong>
+                </mat-error>
+            </div>
             <!-- MAIL -->
             <div class="form-group">
 
                 <label for="titre"><h2>Email :</h2></label>
-                <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid && titreInput.touched}" class="form-control" [(ngModel)]="contact.mail" required>
-                <mat-error *ngIf="titreInput?.hasError('required')">
+                <input #mailInput="ngModel" type="text" name="mail" id="mail" [ngClass]="{'is-invalid' : mailInput.invalid && mailInput.touched}" class="form-control" [(ngModel)]="contact.mail" required>
+                <mat-error *ngIf="mailInput?.hasError('required')">
                     <strong>L'email est obligatoire</strong>
                 </mat-error>
             </div>
@@ -15,7 +43,7 @@
             <div class="form-group">
 
                 <label for="contenu"><h2>Télephone :</h2></label>
-                <input #phoneInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid && titreInput.touched}" class="form-control" [(ngModel)]="contact.phone" required>
+                <input #phoneInput="ngModel" type="text" name="phone" id="phone" [ngClass]="{'is-invalid' : phoneInput.invalid && phoneInput.touched}" class="form-control" [(ngModel)]="contact.phone" required>
                 <mat-error *ngIf="phoneInput?.hasError('required')">
                     <strong>Le numéro de téléphone est obligatoire</strong>
                 </mat-error>
@@ -24,7 +52,7 @@
             <div class="form-group">
 
                 <label for="contenu"><h2>Votre message :</h2></label>
-                <textarea #contentInput="ngModel" type="textarea" name="pa1" id="pa1" class="form-control" [(ngModel)]="contact.content" required cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="5" cdkAutosizeMaxRows="10"></textarea></div>
+                <textarea #contentInput="ngModel" type="textarea" name="content" id="content" class="form-control" [(ngModel)]="contact.content" required cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="5" cdkAutosizeMaxRows="10"></textarea></div>
             <mat-error *ngIf="contentInput?.hasError('required')">
                 <strong>Le message est obligatoire</strong>
             </mat-error>
@@ -32,8 +60,10 @@
 
             <br>
             <button type='submit' class="btn-lg btn-primary m-1" (click)="save(pageForm)">Envoyer</button>
+            <button class="btn btn-success m-1" id='return' routerLink="../../home">Retour</button>
+
         </form>
 
-        <button class="btn btn-success m-1" routerLink="../../home">Retour</button>
     </mat-card>
+
 </div>

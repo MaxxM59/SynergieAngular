@@ -13,9 +13,11 @@ import { ContactFormService } from '../services/contactForm/contact-form.service
 export class ContactFormComponent implements OnInit {
   contact: Contact = {
     name: '',
+    surname: '',
     mail: '',
     phone: '',
     content: '',
+    subject: '',
   };
   constructor(
     public contactform: ContactFormService,

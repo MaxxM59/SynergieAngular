@@ -5,6 +5,9 @@
 mat-card {
     width: 70%;
     text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 mat-card-title {

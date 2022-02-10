@@ -42,7 +42,9 @@ export interface Admin {
 }
 export interface Contact {
   name: string;
+  surname: string;
   mail: string;
   phone: string;
   content: string;
+  subject: string;
 }

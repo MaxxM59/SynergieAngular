@@ -52,10 +52,10 @@ export class NavComponent implements OnInit {
       this.pages.forEach((p) => {
         if (o.titre === p.titre) {
           if (this.router.url.startsWith('localhost:4200/page/')) {
-            o.lien = `/${p.titre}`;
+            o.lien = `/${p.id}`;
             this.contact = '../contactform';
           } else {
-            o.lien = `/page/${p.titre}`;
+            o.lien = `/page/${p.id}`;
             this.contact = '/contactform';
           }
         }

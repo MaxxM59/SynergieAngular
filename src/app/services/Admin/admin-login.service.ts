@@ -12,7 +12,7 @@ type UserCredential = Promise<firebase.default.auth.UserCredential>;
 })
 export class AdminLoginService {
   // EMPECHE L'ACCESS A LA PARTIE ADMIN SI NON CONNECTE
-  auth: any = true;
+  auth: any = false;
 
   // LOGIN
   login(email: string, password: string): UserCredential {
@@ -41,6 +41,14 @@ export class AdminLoginService {
       horizontalPosition: 'end',
       verticalPosition: 'top',
     });
+  }
+  escapeHtml(text: string) {
+    return text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
   }
   constructor(
     private afAuth: AngularFireAuth,

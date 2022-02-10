@@ -2,7 +2,7 @@ export interface Article {
   id: string;
   titre: string;
   contenu: string;
-  image: any;
+  image: string;
 }
 export interface Onglet {
   id: string;
@@ -21,8 +21,8 @@ export interface Page {
   st2: string;
   st3: string;
   st4: string;
-  // PARAGRAPHES
   st5: string;
+  // PARAGRAPHES
   pa1: string;
   pa2: string;
   pa3: string;
@@ -43,5 +43,6 @@ export interface Admin {
 export interface Contact {
   name: string;
   mail: string;
+  phone: string;
   content: string;
 }

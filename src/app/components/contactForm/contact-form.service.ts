@@ -3,7 +3,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 import { Observable, map } from 'rxjs';
 import { Page } from 'src/app/models/models';
-import { AdminLoginService } from '../admin-login.service';
+import { AdminLoginService } from '../../services/Admin/admin-login.service';
 
 @Injectable({
   providedIn: 'root',

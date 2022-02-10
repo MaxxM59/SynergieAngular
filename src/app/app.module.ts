@@ -89,6 +89,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
+
     BrowserAnimationsModule,
     MatMenuModule,
     MatIconModule,

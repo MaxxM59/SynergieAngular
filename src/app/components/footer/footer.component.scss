@@ -4,7 +4,7 @@
 }
 
 .footer-section {
-    width: 100vw;
+    max-width: 98vw;
     height: 10vh;
 }
 
@@ -47,7 +47,8 @@ h1 {
 #img-section {
     display: flex;
     flex-wrap: wrap;
-    width: 50vw;
+    width: 45vw;
+    padding-bottom: 2vh;
 }
 
 #img13 {
@@ -59,7 +60,7 @@ h1 {
 }
 
 #titrepartenaires {
-    margin-left: 20%;
+    margin-left: 35%;
     padding: 2%;
 }
 

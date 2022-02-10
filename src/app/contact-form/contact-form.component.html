@@ -1,1 +1,39 @@
-<p>contact-form works!</p>
+<app-nav></app-nav>
+<div class="container-fluid p-5">
+    <mat-card>
+        <form #pageForm="ngForm">
+            <!-- MAIL -->
+            <div class="form-group">
+
+                <label for="titre"><h2>Email :</h2></label>
+                <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid && titreInput.touched}" class="form-control" [(ngModel)]="contact.mail" required>
+                <mat-error *ngIf="titreInput?.hasError('required')">
+                    <strong>L'email est obligatoire</strong>
+                </mat-error>
+            </div>
+            <!-- PHONE -->
+            <div class="form-group">
+
+                <label for="contenu"><h2>Télephone :</h2></label>
+                <input #phoneInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid && titreInput.touched}" class="form-control" [(ngModel)]="contact.phone" required>
+                <mat-error *ngIf="phoneInput?.hasError('required')">
+                    <strong>Le numéro de téléphone est obligatoire</strong>
+                </mat-error>
+            </div>
+            <!-- CONTENT -->
+            <div class="form-group">
+
+                <label for="contenu"><h2>Votre message :</h2></label>
+                <textarea #contentInput="ngModel" type="textarea" name="pa1" id="pa1" class="form-control" [(ngModel)]="contact.content" required cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="5" cdkAutosizeMaxRows="10"></textarea></div>
+            <mat-error *ngIf="contentInput?.hasError('required')">
+                <strong>Le message est obligatoire</strong>
+            </mat-error>
+
+
+            <br>
+            <button type='submit' class="btn-lg btn-primary m-1" (click)="save(pageForm)">Envoyer</button>
+        </form>
+
+        <button class="btn btn-success m-1" routerLink="../../home">Retour</button>
+    </mat-card>
+</div>

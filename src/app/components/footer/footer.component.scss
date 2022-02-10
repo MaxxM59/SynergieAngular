@@ -73,9 +73,13 @@ h1 {
     height: 4vw;
 }
 
-@media (max-width:480px) {
+@media (max-width:840px) {
     .img {
         width: 15vw;
         height: 10vw;
+    }
+    #facebook {
+        min-width: 20vw;
+        font-size: 0.5em;
     }
 }

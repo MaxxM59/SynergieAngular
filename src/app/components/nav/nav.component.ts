@@ -45,7 +45,7 @@ export class NavComponent implements OnInit {
   // VARIABLES
   onglets: Onglet[] = [];
   auth = this.admin.auth;
-
+  contact: string | undefined;
   //LIAISON DES PAGES AUX ONGLETS
   link() {
     this.onglets.forEach((o) => {
@@ -53,8 +53,10 @@ export class NavComponent implements OnInit {
         if (o.titre === p.titre) {
           if (this.router.url.startsWith('localhost:4200/page/')) {
             o.lien = `/${p.id}`;
+            this.contact = '../contactform';
           } else {
             o.lien = `/page/${p.id}`;
+            this.contact = '/contactform';
           }
         }
       });

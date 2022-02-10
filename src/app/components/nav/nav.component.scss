@@ -1,53 +1,59 @@
-    * {
-        background-color: #ffff;
-    }
+* {
+    background-color: #ffff;
+}
 
-    .nav-section {
+.nav-section {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+button {
+    margin-top: 1vw;
+    background-color: #ffff;
+    font-size: 110%;
+    align-content: center;
+}
+
+.button2 {
+    margin-left: 2vw;
+    margin-top: 1vw;
+    background-color: #ffff;
+    font-size: 110%;
+    align-content: center;
+}
+
+@media (min-width:641px) {
+    ul,
+    #contact {
         display: flex;
-        justify-content: space-between;
-        justify-content: center;
-        align-content: center;
-        width: 100%;
+        list-style-type: none;
     }
+}
 
-    button {
-        margin-top: 1vw;
-        background-color: #ffff;
-        font-size: 110%;
-        align-content: center;
-    }
-
-    .button2 {
+@media (max-width: 640px) {
+    .collapsebutton {
+        width: 75%;
         margin-left: 2vw;
-        margin-top: 1vw;
-        background-color: #ffff;
-        font-size: 110%;
+        display: flex;
+        flex-direction: column;
         align-content: center;
     }
-
-    @media (min-width:641px) {
-        ul {
-            display: flex;
-            list-style-type: none;
-        }
+    .button2 {
+        margin-top: 3.7vw;
     }
-
-    @media (max-width: 640px) {
-        ul {
-            width: 75%;
-            display: flex;
-            flex-direction: column;
-        }
-        .button2 {
-            margin-top: 3.7vw;
-        }
+    mat-raised-button {
+        max-width: 90%;
     }
+}
 
-    img {
-        max-width: 150px;
-        max-height: 100px;
-    }
+img {
+    max-width: 150px;
+    max-height: 100px;
+}
 
-    #companyName {
-        margin-right: 2vw;
-    }
+#companyName {
+    margin-right: 2vw;
+}

@@ -41,6 +41,7 @@ export interface Admin {
   password: string;
 }
 export interface Contact {
+  id: string;
   name: string;
   surname: string;
   mail: string;

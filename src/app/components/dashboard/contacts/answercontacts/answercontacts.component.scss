@@ -1,0 +1,25 @@
+.content,
+h1 {
+    width: 85%;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: blue;
+}
+
+.msg {
+    font-size: 120%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#return,
+#deleter {
+    float: right;
+}

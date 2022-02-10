@@ -10,11 +10,7 @@ import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
   styleUrls: ['./pages.component.scss'],
 })
 export class PagesComponent implements OnInit {
-  constructor(
-    public pageservice: PagesService,
-    private admin: AdminLoginService,
-    private router: Router
-  ) {}
+  constructor(public pageservice: PagesService) {}
   page: Page = {
     id: '',
     titre: '',

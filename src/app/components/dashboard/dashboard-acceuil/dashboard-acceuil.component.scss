@@ -6,6 +6,7 @@ mat-card {
     width: 70%;
     text-align: justify;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

@@ -1,0 +1,25 @@
+<div class="container-fluid p-5">
+    <h1>Voici le contenu du message : </h1>
+    <mat-card>
+        <div class='content'>
+            <h2>Nom :</h2>
+            <div class='msg'>{{contact.name}}</div>
+            <h2>Prénom</h2>
+            <div class='msg'>{{contact.surname}}</div>
+            <h2>Sujet</h2>
+            <div class='msg'>{{contact.subject}}</div>
+            <h2>Mail</h2>
+            <div class='msg'>{{contact.mail}}</div>
+            <h2>Téléphone</h2>
+            <div class='msg'> {{contact.phone}}</div>
+            <h2>Message</h2>
+            <div class='msg'>{{contact.content}}</div>
+        </div>
+        <hr>
+        <button mat-raised-button id='sender' (click)="admin.goToLink (mailto(this.contact.mail,this.contact.subject ) ) " color="primary">Envoyer un mail</button>
+
+        <button (click)="delete()" class="btn btn-danger m-1" id='deleter'>Supprimer</button>
+        <button class="btn btn-success m-1 " id='return' routerLink="../../contacts ">Retour</button>
+    </mat-card>
+
+</div>

@@ -1,0 +1,46 @@
+<div class='container-fluid p-5'>
+    <h1>Voici les messages envoyés par les visiteurs</h1>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>
+                    <h2>Sujet</h2>
+                </th>
+                <th>
+                    <h2>Nom</h2>
+                </th>
+                <th>
+                    <h2>Prénom</h2>
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of contacts ">
+                <td>
+                    <h2>{{c.subject}}</h2>
+                </td>
+                <td>
+                    <h2>{{c.name}}</h2>
+                </td>
+                <td>
+                    <h2>{{c.surname}}</h2>
+                </td>
+
+
+                <td>
+                    <a routerLink="../answercontacts/{{c.id}}" class="btn btn-success m-1">
+                     Voir
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger m-1" (click)="delete(c.id)">
+                        Supprimer
+                    </a>
+                </td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>

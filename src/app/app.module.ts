@@ -46,6 +46,8 @@ import { DossierFormComponent } from './components/dashboard/Editing/onglets/dos
 import { PageComponent } from './components/page/page.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ContactsComponent } from './components/dashboard/contacts/contacts.component';
+import { AnswercontactsComponent } from './components/dashboard/contacts/answercontacts/answercontacts.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +67,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     PageComponent,
     HomeComponent,
     ContactFormComponent,
+    ContactsComponent,
+    AnswercontactsComponent,
   ],
   imports: [
     MatDialogModule,

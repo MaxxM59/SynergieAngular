@@ -1,9 +1,11 @@
 <app-nav></app-nav>
-<div class="container-fluid p-5">
-
+<hr>
+<div class="container-fluid p-5" id='formcontainer'>
     <mat-card>
-        <h3>Tous les renseignements sont disponibles sur la page Infos & Horaires ! Cependant n'hésitez pas à nous écrire !</h3>
-        <form #pageForm="ngForm">
+        <div id='formtitle'>
+            <h3>Tous les renseignements sont disponibles sur la page Infos & Horaires ! <br> Cependant n'hésitez pas à nous écrire !</h3>
+        </div>
+        <form #pageForm="ngForm" id='contactform'>
             <!-- Nom -->
             <div class="form-group">
 
@@ -68,3 +70,5 @@
     </mat-card>
 
 </div>
+<hr>
+<app-footer></app-footer>

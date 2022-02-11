@@ -22,6 +22,7 @@
 
 mat-nav-list {
     padding-top: 3vh;
+    font-weight: bold;
 }
 
 mat-list-item {
@@ -36,4 +37,8 @@ mat-list-item {
     max-width: 7vw;
     height: auto;
     margin-top: 5vh;
+}
+
+.maintitle {
+    font-size: 150%;
 }

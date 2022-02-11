@@ -1,4 +1,4 @@
-<button class="btn btn-success m-1" routerLink="../../onglets">Retour</button>
+<button class="btn btn-success m-1" routerLink="../../onglets" id='return'>Retour</button>
 <div class="container-fluid p-5">
 
     <form #pageForm="ngForm">
@@ -130,8 +130,8 @@
 
         <br>
         <button type='submit' class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>
+        <button class="btn btn-success m-1" routerLink="../../pages">Retour</button>
         <button class="btn btn-danger m-1" *ngIf="id !== null" (click)="delete()">Supprimer</button>
     </form>
 
 </div>
-<button class="btn btn-success m-1" routerLink="../../pages">Retour</button>

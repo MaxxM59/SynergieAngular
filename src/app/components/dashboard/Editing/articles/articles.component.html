@@ -34,14 +34,12 @@
                 </td>
                 <div class='buttonsgroup'>
                     <td>
-                        <a routerLink="../articles-form/{{a.id}}" class="btn btn-primary m-1">
+                        <a mat-raised-button routerLink="../articles-form/{{a.id}}" color='primary'>
                         Modifier
                     </a>
                     </td>
                     <td>
-                        <a class="btn btn-danger m-1" (click)="delete(a.id)">
-                        Supprimer
-                    </a>
+                        <a mat-raised-button (click)="delete(a.id)" class='deletebutton'> Supprimer</a>
                     </td>
                 </div>
             </tr>

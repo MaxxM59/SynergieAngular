@@ -1,16 +1,16 @@
 <div class='container-fluid p-5'>
-    <h1>Voici les messages envoyés par les visiteurs</h1>
+    <h1 class='headtitle'>Voici les messages envoyés par les visiteurs</h1>
     <table class="table table-stripped">
         <thead>
             <tr>
                 <th>
-                    <h2>Sujet</h2>
+                    <h2 class='title'>Sujet</h2>
                 </th>
                 <th>
-                    <h2>Nom</h2>
+                    <h2 class='title'>Nom</h2>
                 </th>
                 <th>
-                    <h2>Prénom</h2>
+                    <h2 class='title'>Prénom</h2>
                 </th>
 
             </tr>
@@ -26,19 +26,16 @@
                 <td>
                     <h2>{{c.surname}}</h2>
                 </td>
-
-
-                <td>
-                    <a routerLink="../answercontacts/{{c.id}}" class="btn btn-success m-1">
-                     Voir
+                <div class='buttonsgroup'>
+                    <td>
+                        <a mat-raised-button routerLink="../answercontacts/{{c.id}}" color='primary'>
+                        Modifier
                     </a>
-                </td>
-                <td>
-                    <a class="btn btn-danger m-1" (click)="delete(c.id)">
-                        Supprimer
-                    </a>
-                </td>
-
+                    </td>
+                    <td>
+                        <a mat-raised-button (click)="delete(c.id)" class='deletebutton'> Supprimer</a>
+                    </td>
+                </div>
             </tr>
         </tbody>
 

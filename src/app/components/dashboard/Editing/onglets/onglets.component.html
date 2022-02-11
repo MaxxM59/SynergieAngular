@@ -1,5 +1,5 @@
 <div class='buttoncontainer'>
-    <a mat-raised-button routerLink="../onglets-form/new" class='newOnglet headbutton'>Créer une page</a>
+    <a mat-raised-button routerLink="../onglets-form/new" class='newOnglet headbutton'>Créer un onglet</a>
     <a mat-raised-button routerLink="../dossier-form/new" class='newOnglet headbutton'>Créer un dossier</a>
 
     <a mat-raised-button routerLink="../../dashboard/dashboard-acceuil" class=' headbutton'>Retour à l'accueil</a>
@@ -45,14 +45,12 @@
                 </td>
                 <div class='buttonsgroup'>
                     <td>
-                        <a routerLink="../dossier-form/{{d.id}}" class="btn btn-primary m-1">
+                        <a mat-raised-button routerLink="../onglets-form/{{d.id}}" color='primary'>
                         Modifier
                     </a>
                     </td>
                     <td>
-                        <a class="btn btn-danger m-1" (click)="delete(d.id)">
-                       Supprimer
-                    </a>
+                        <a mat-raised-button (click)="delete(d.id)" class='deletebutton'> Supprimer</a>
                     </td>
                 </div>
             </tr>
@@ -77,27 +75,26 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let d of ongletservice.dropdowns">
+            <tr *ngFor="let dd of ongletservice.dropdowns">
                 <td>
-                    <h2>{{d.titre}}</h2>
+                    <h2>{{dd.titre}}</h2>
                 </td>
                 <td>
-                    <h2>{{d.dossier}}</h2>
+                    <h2>{{dd.dossier}}</h2>
                 </td>
                 <td>
-                    <h2>{{d.position}}</h2>
+                    <h2>{{dd.position}}</h2>
                 </td>
                 <div class='buttonsgroup'>
                     <td>
-                        <a routerLink="../onglets-form/{{d.id}}" class="btn btn-primary m-1">
+                        <a mat-raised-button routerLink="../onglets-form/{{dd.id}}" color='primary'>
                         Modifier
                     </a>
                     </td>
                     <td>
-                        <a class="btn btn-danger m-1" (click)="delete(d.id)">
-                       Supprimer
-                    </a>
+                        <a mat-raised-button (click)="delete(dd.id)" class='deletebutton'> Supprimer</a>
                     </td>
+
                 </div>
             </tr>
         </tbody>
@@ -111,7 +108,9 @@
                 <th>
                     <h2 class='tabletitle'>Titre</h2>
                 </th>
-
+                <th>
+                    <h2></h2>
+                </th>
                 <th>
                     <h2 class='tabletitle'>Position</h2>
                 </th>
@@ -129,14 +128,12 @@
                 </td>
                 <div class='buttonsgroup'>
                     <td>
-                        <a routerLink="../onglets-form/{{s.id}}" class="btn btn-primary m-1">
+                        <a mat-raised-button routerLink="../onglets-form/{{s.id}}" color='primary'>
                         Modifier
                     </a>
                     </td>
                     <td>
-                        <a class="btn btn-danger m-1" (click)="delete(s.id)">
-                       Supprimer
-                    </a>
+                        <a mat-raised-button (click)="delete(s.id)" class='deletebutton'> Supprimer</a>
                     </td>
                 </div>
             </tr>

@@ -9,7 +9,12 @@
                 <th>
                     <h2 class='tabletitle'>Titre</h2>
                 </th>
-
+                <th>
+                    <h2></h2>
+                </th>
+                <th>
+                    <h2> </h2>
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -20,14 +25,12 @@
 
                 <div class='buttonsgroup'>
                     <td>
-                        <a routerLink="../pages-form/{{p.id}}" class="btn btn-primary m-1">
+                        <a mat-raised-button routerLink="../pages-form/{{p.id}}" color='primary'>
                         Modifier
                     </a>
                     </td>
                     <td>
-                        <a *ngIf="p.titre!=='A propos'" class="btn btn-danger m-1" (click)="delete(p.id)">
-                        Supprimer
-                    </a>
+                        <a mat-raised-button (click)="delete(p.id)" class='deletebutton'> Supprimer</a>
                     </td>
                 </div>
             </tr>

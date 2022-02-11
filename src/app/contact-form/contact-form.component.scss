@@ -3,12 +3,16 @@
 }
 
 mat-card {
-    width: 70%;
+    width: 80%;
+    background-color: #fafafa;
+    max-height: 30%;
 }
 
 #formcontainer {
-    padding: 2vw;
-    background-image: url('https://i.postimg.cc/XqQwzR6Q/contactform-background.webp');
+    max-height: 30%;
+    border-radius: 20px;
+    width: 80%;
+    background-image: url('https://i.postimg.cc/k5vszxp5/EDsx2f-GW4-AAGEBv.jpg');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -19,6 +23,7 @@ mat-card {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 10vw;
 }
 
 #formtitle {
@@ -31,4 +36,8 @@ mat-card {
 hr {
     width: 75%;
     margin: 1em 12.5%;
+}
+
+.maincontainer {
+    background-color: #fafafa;
 }

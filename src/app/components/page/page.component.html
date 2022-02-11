@@ -9,7 +9,7 @@
     </section>
     <!-- IMAGE HAUT DE PAGE -->
     <div class='img-section' *ngIf="page.image1 !== '' && page.image1!=='0'">
-        <img class='img-fluid' src='{{page.image1}}' alt='photo {{page.titre}}'>
+        <img class='img-fluid' src='{{page.image1}}' alt='photo-{{page.titre}}'>
     </div>
     <div class="container">
         <!-- PRESENTATION -->
@@ -27,7 +27,6 @@
         <section class="st">
             <!-- SOUSTITRE 2 -->
             <div *ngIf="page.st2 !== '' && page.st2!=='0'">{{page.st2}}</div>
-
         </section>
         <section class="pa">
             <!-- PARAGRAPHE 2 -->
@@ -35,7 +34,7 @@
         </section>
         <div class='img-section' *ngIf="page.image2 !== '' && page.image2!=='0'">
             <!-- IMAGE MILIEU DE PAGE -->
-            <img class='img-fluid' src='{{page.image2}}' alt='photo {{page.titre}}'>
+            <img class='img-fluid' src='{{page.image2}}' alt='photo-{{page.titre}}'>
         </div>
         <section class="st">
             <!-- SOUSTITRE 3 -->
@@ -64,7 +63,7 @@
         <br>
         <div class='img-section' *ngIf="page.image3 !== '' && page.image3!=='0'">
             <!-- IMAGE BAS DE PAGE -->
-            <img class='img-fluid' src='{{page.image3}}' alt='photo {{page.titre}}'>
+            <img class='img-fluid' src='{{page.image3}}' alt='photo-{{page.titre}}'>
         </div>
         <section class="pa" *ngIf="page.lien !== '' && page.lien!=='0'">
             <div>

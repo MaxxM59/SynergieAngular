@@ -10,3 +10,24 @@ img {
 .contenu {
     font-size: 1em;
 }
+
+.buttonsgroup {
+    float: right;
+    margin-right: 3vw;
+}
+
+.buttoncontainer {
+    margin: 3px;
+    float: right;
+    justify-content: space-between;
+}
+
+.newOnglet {
+    margin-right: 5px;
+}
+
+.headbutton {
+    background-color: #607d8b;
+    color: white;
+    font-weight: bold;
+}

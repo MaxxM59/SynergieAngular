@@ -1,8 +1,18 @@
 .titre {
     text-align: center;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+h1,
+h2,
+h3 {
+    font-size: 150%;
 }
 
 mat-card {
+    margin-top: 1vh;
+    border-radius: 20px;
     width: 70%;
     text-align: justify;
     display: flex;
@@ -11,6 +21,49 @@ mat-card {
     align-items: center;
 }
 
-mat-card-title {
-    text-decoration: underline;
+h1 {
+    padding-top: 3vh;
+}
+
+mat-grid-tile {
+    min-height: 80vh;
+    font-size: 0.9em;
+}
+
+mat-grid-list {
+    padding-top: 3vh;
+}
+
+.maincontainer {
+    background-image: url('https://i.postimg.cc/k5vszxp5/EDsx2f-GW4-AAGEBv.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 90vh;
+}
+
+@media (max-width: 900px) {
+    h1,
+    h2,
+    h3 {
+        font-size: 130%;
+        ;
+    }
+    mat-grid-list {
+        padding-top: 5vh;
+    }
+}
+
+@media (max-width: 480px) {
+    h1,
+    h2,
+    h3 {
+        font-size: 110%;
+        ;
+    }
+    mat-grid-list {
+        padding-top: 8vh;
+    }
 }

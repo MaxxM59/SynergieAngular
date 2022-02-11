@@ -86,11 +86,9 @@ mat-raised-button {
     font-weight: bold;
 }
 
-@media (max-width: 780px) {
-    article {
-        p {
-            font-size: 1em;
-        }
+@media (max-width: 900px) {
+    .page {
+        font-size: 0.8em;
     }
     .savoirplus {
         margin-top: 20px;
@@ -102,11 +100,9 @@ mat-raised-button {
     }
 }
 
-@media (max-width: 375px) {
-    article {
-        p {
-            font-size: 0.8em;
-        }
+@media (max-width: 480px) {
+    .page {
+        font-size: 0.6em;
     }
     .hrbasdepage {
         margin-top: -20px;

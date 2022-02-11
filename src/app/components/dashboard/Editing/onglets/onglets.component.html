@@ -1,12 +1,9 @@
-<mat-button-toggle routerLink="../onglets-form/new">
-    Créer un onglet
-</mat-button-toggle>
-<mat-button-toggle routerLink="../dossier-form/new">
-    Créer un dossier
-</mat-button-toggle>
-<mat-button-toggle routerLink="../../dashboard/dashboard-acceuil">
-    Retour à l'accueil
-</mat-button-toggle>
+<div class='buttoncontainer'>
+    <a mat-raised-button routerLink="../onglets-form/new" class='newOnglet headbutton'>Créer une page</a>
+    <a mat-raised-button routerLink="../dossier-form/new" class='newOnglet headbutton'>Créer un dossier</a>
+
+    <a mat-raised-button routerLink="../../dashboard/dashboard-acceuil" class=' headbutton'>Retour à l'accueil</a>
+</div>
 <div class='container-fluid p-5 ' id='onglettable'>
     <h1>Dossiers (Dropdowns) :</h1>
     <table class="table table-stripped">

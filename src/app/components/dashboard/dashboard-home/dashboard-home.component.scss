@@ -10,8 +10,30 @@
     background: inherit;
 }
 
+.mat-toolbar {
+    justify-content: center;
+}
+
 .mat-toolbar.mat-primary {
     position: sticky;
     top: 0;
     z-index: 1;
+}
+
+mat-nav-list {
+    padding-top: 3vh;
+}
+
+mat-list-item {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    ;
+}
+
+#logo {
+    min-width: 6vw;
+    max-width: 7vw;
+    height: auto;
+    margin-top: 5vh;
 }

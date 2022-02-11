@@ -31,11 +31,12 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
   },
-  // PARTIE ADMIN
+  // LOGIN ADMIN
   {
     path: 'admin',
     component: AdminFormComponent,
   },
+  // PARTIE ADMIN
   {
     path: 'dashboard',
     redirectTo: 'dashboard/dashboard-acceuil',

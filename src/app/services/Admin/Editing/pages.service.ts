@@ -32,7 +32,7 @@ export class PagesService {
       );
   }
 
-  //RECUPERE UN ARTICLE
+  //RECUPERE UNE PAGE
   getPage(id: string): Observable<Page> {
     return this.afs
       .collection<Page>('pages')
@@ -50,35 +50,16 @@ export class PagesService {
         })
       );
   }
-  // RECUPERE UN ARTICLE POUR AFFICHAGE
-  getDisplayPage(titre: string): Observable<Page> {
-    return this.afs
-      .collection<Page>('pages')
-      .doc(titre)
-      .snapshotChanges()
-      .pipe(
-        map((action: any) => {
-          if (action.payload.exists === false) {
-            return new Object() as Page;
-          } else {
-            const data = action.payload.data() as Page;
-            data.titre = action.payload.titre;
 
-            return data;
-          }
-        })
-      );
-  }
-
-  //AJOUTE UN ARTICLE
+  //AJOUTE UNE PAGE
   addPage(page: Page): void {
     this.afs.collection<Page>('pages').add(page);
   }
-  // MODIFIE L'ARTICLE
+  // MODIFIE LA PAGE
   updatePage(page: Page, pageId: string): void {
     this.afs.collection<Page>('pages').doc(pageId).update(page);
   }
-  // SUPPRIME L'ARTICLE
+  // SUPPRIME LA PAGE
   deletePage(pageId: string): void {
     if (confirm('Voulez-vous vraiment supprimer cette page?')) {
       this.afs.collection<Page>('pages').doc(pageId).delete();

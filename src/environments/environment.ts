@@ -22,5 +22,6 @@ export const environment = {
     appId: '1:605036097446:web:dd5280c4c8ebab7dd7a967',
 
     measurementId: 'G-VYE9TCWW6S',
+    setUndefinedProperties: true,
   },
 };

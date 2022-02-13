@@ -31,18 +31,15 @@ export class OngletsService {
     // ONGLETS DROPDOWN => ATTENTION A FIX LES NOMS DE DOSSIERS LORS DE LA CREATION !!!
     this.dropdowns = tab.filter(
       (onglet) =>
-        onglet.dossier !== 'Aucun' &&
         onglet.dossier !== '' &&
-        onglet.dossier !== '0' &&
+        onglet.dossier !== null &&
         onglet.type === 'Normal'
     );
     // ONGLETS SOLOS
     this.solo = tab.filter(
       (onglet) =>
         onglet.type === 'Normal' &&
-        (onglet.dossier === 'Aucun' ||
-          onglet.dossier === '' ||
-          onglet.dossier === '0')
+        (onglet.dossier === '' || onglet.dossier === null)
     );
     // TRI EN FONCTION DE LA PROPRIETE 'POSITION'
     this.dropdowns = _.sortBy(this.dropdowns, ['position']);
@@ -52,7 +49,6 @@ export class OngletsService {
 
   //RECUPERE TOUS LES ONGLETS
   getOnglets(): Observable<Onglet[]> {
-    //POUR A VOIR L'ID
     return this.afs
       .collection<Onglet>('onglets')
       .snapshotChanges()
@@ -83,12 +79,15 @@ export class OngletsService {
         })
       );
   }
-  //AJOUTE UN ARTICLE
+  //AJOUTE UN ONGLET
   addOnglet(type: string, onglet: Onglet): void {
     onglet.type = type;
+    if (onglet.dossier === '' || onglet.dossier === undefined) {
+      onglet.dossier = null;
+    }
     this.afs.collection<Onglet>('onglets').add(onglet);
   }
-  // MODIFIE L'ARTICLE
+  // MODIFIE UN ONGLET
   updateOnglet(onglet: Onglet, ongletId: string): void {
     this.afs.collection<Onglet>('onglets').doc(ongletId).update(onglet);
   }
@@ -97,7 +96,7 @@ export class OngletsService {
     this.onglet.type = type;
     this.afs.collection<Onglet>('onglets').doc(ongletID).update(this.onglet);
   }
-  // SUPPRIME L'ARTICLE
+  // SUPPRIME UN ONGLET
   deleteOnglet(ongletId: string): void {
     this.afs.collection<Onglet>('onglets').doc(ongletId).delete();
   }

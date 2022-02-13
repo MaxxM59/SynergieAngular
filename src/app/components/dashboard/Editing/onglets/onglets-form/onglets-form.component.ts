@@ -16,7 +16,7 @@ export class OngletsFormComponent implements OnInit {
   onglet: Onglet = {
     id: '',
     titre: '',
-    dossier: '',
+    dossier: null,
     type: '',
     lien: '0',
     position: 0,

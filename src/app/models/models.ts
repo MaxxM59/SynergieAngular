@@ -7,7 +7,7 @@ export interface Article {
 export interface Onglet {
   id: string;
   titre: string;
-  dossier: string;
+  dossier: null;
   type: string;
   lien: string;
   position: number;
@@ -18,23 +18,23 @@ export interface Page {
   pres: string;
   // SOUS TITRES
   st1: string;
-  st2: string;
-  st3: string;
-  st4: string;
-  st5: string;
+  st2: null;
+  st3: null;
+  st4: null;
+  st5: null;
   // PARAGRAPHES
   pa1: string;
-  pa2: string;
-  pa3: string;
-  pa4: string;
-  pa5: string;
+  pa2: null;
+  pa3: null;
+  pa4: null;
+  pa5: null;
   //IMAGES
-  image1: string;
-  image2: string;
-  image3: string;
+  image1: null;
+  image2: null;
+  image3: null;
   // LIEN BAS DE PAGE
-  lien: string;
-  nomlien: string;
+  lien: null;
+  nomlien: null;
 }
 export interface Admin {
   mail: string;

@@ -53,6 +53,46 @@ export class PagesService {
 
   //AJOUTE UNE PAGE
   addPage(page: Page): void {
+    if (page.st2 === undefined || page.st2 === '') {
+      page.st2 = null;
+    }
+    if (page.st3 === undefined || page.st3 === '') {
+      page.st3 = null;
+    }
+    if (page.st4 === undefined || page.st4 === '') {
+      page.st4 = null;
+    }
+
+    if (page.st5 === undefined || page.st5 === '') {
+      page.st5 = null;
+    }
+    if (page.pa2 === undefined || page.pa2 === '') {
+      page.pa2 = null;
+    }
+    if (page.pa3 === undefined || page.pa3 === '') {
+      page.pa3 = null;
+    }
+    if (page.pa4 === undefined || page.pa4 === '') {
+      page.pa4 = null;
+    }
+    if (page.pa5 === undefined || page.pa5 === '') {
+      page.pa5 = null;
+    }
+    if (page.image1 === undefined || page.image1 === '') {
+      page.image1 = null;
+    }
+    if (page.image2 === undefined || page.image2 === '') {
+      page.image2 = null;
+    }
+    if (page.image3 === undefined || page.image3 === '') {
+      page.image3 = null;
+    }
+    if (page.lien === undefined || page.lien === '') {
+      page.lien = null;
+    }
+    if (page.nomlien === undefined || page.nomlien === '') {
+      page.nomlien = null;
+    }
     this.afs.collection<Page>('pages').add(page);
   }
   // MODIFIE LA PAGE

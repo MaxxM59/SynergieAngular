@@ -18,7 +18,7 @@ export class DossierFormComponent implements OnInit {
     titre: '',
     dossier: null,
     type: '',
-    lien: '0',
+    lien: '',
     position: 1,
   };
   constructor(

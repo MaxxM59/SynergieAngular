@@ -53,6 +53,9 @@ export class PagesService {
 
   //AJOUTE UNE PAGE
   addPage(page: Page): void {
+    if (page.st1 === undefined || page.st1 === '') {
+      page.st1 = null;
+    }
     if (page.st2 === undefined || page.st2 === '') {
       page.st2 = null;
     }

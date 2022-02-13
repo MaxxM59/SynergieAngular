@@ -2,6 +2,9 @@
 <div class="container-fluid p-5">
 
     <form #pageForm="ngForm">
+        <mat-hint>
+            <h2 id="hint1"><strong> Les champs de du titre, la présentation ainsi que le premier  paragraphe sont obligatoires </strong></h2>
+        </mat-hint>
         <!-- TITRE -->
         <div class="form-group">
             <label for="titre"><h2>Titre</h2></label>
@@ -11,17 +14,14 @@
             </mat-error>
         </div>
         <mat-hint>
-            <h2 id="hint1"><strong> Les champs de du titre, la présentaion ainsi que le premier sous-tire et paragraphe sont obligatoires <br> Si vous souhaitez que l'un des champs suivant sois vide, laissez simplement ce champ vide</strong></h2>
+            <h2 id="hint1"><strong>Si vous souhaitez que l'un des champs sois vide sur la page d'affichage, laissez simplement ce champ vide.</strong></h2>
         </mat-hint>
         <!-- IMAGE HAUT DE PAGE -->
         <div class="form-group">
-
             <label for="image1"><h2>Image haut de page</h2></label>
-
             <input type="text" name="image1" id="image1" class="form-control" [(ngModel)]="page.image1">
             <div>
                 <mat-hint>
-
                     <button type="button" class="btn btn-link" (click)="admin.goToLink('https://postimages.org/')"> Veuillez héberger votre image (de préference au format WebP) sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button>                    </mat-hint>
             </div>
         </div>
@@ -36,13 +36,8 @@
         </div>
         <!-- SOUSTITRE 1 -->
         <div class="form-group">
-
             <label for="contenu"><h2>Sous-titre 1</h2></label>
-            <textarea #soustitreInput="ngModel" type="textarea" name="st1" id="st1" class="form-control" [ngClass]="{'is-invalid' : soustitreInput.invalid && soustitreInput.touched}" [(ngModel)]="page.st1" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
-                cdkAutosizeMaxRows="5"></textarea>
-            <mat-error *ngIf="soustitreInput?.hasError('required')">
-                <strong>Le premier sous-titre est obligatoire</strong>
-            </mat-error>
+            <textarea type="textarea" name="st1" id="st1" class="form-control" [(ngModel)]="page.st1" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
         <!-- PARAGRAPHE 1 -->
         <div class="form-group">
@@ -55,93 +50,74 @@
         </div>
         <!-- SOUSTITRE 2 -->
         <div class="form-group">
-
             <label for="contenu"><h2>Sous-titre 2</h2></label>
             <textarea type="textarea" name="st2" id="st2" class="form-control" [(ngModel)]="page.st2" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
         <!-- PARAGRAPHE 2 -->
         <div class="form-group">
-
             <label for="contenu"><h2>Paragraphe 2</h2></label>
             <textarea type="textarea" name="pa2" id="pa2" class="form-control" [(ngModel)]="page.pa2" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
         </div>
         <!-- IMAGE MILIEU DE PAGE -->
         <div class="form-group">
             <label for="image2"><h2>Image milieu de page</h2></label>
-
             <input type="text" name="image2" id="image2" class="form-control" [(ngModel)]="page.image2">
             <div>
                 <mat-hint>
-
                     <button type="button" class="btn btn-link" (click)="admin.goToLink('https://postimages.org/')"> Veuillez héberger votre image (de préference au format WebP) sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button>                    </mat-hint>
             </div>
         </div>
         <!-- SOUSTITRE 3 -->
         <div class="form-group">
-
             <label for="contenu"><h2>Sous-titre 3</h2></label>
             <textarea type="textarea" name="st3" id="st3" class="form-control" [(ngModel)]="page.st3" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
         <!-- PARAGRAPHE 3 -->
         <div class="form-group">
-
             <label for="contenu"><h2>Paragraphe 3</h2></label>
             <textarea type="textarea" name="pa3" id="pa3" class="form-control" [(ngModel)]="page.pa3" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea></div>
 
         <!-- SOUSTITRE 4 -->
         <div class="form-group">
-
             <label for="contenu"><h2>Sous-titre 4</h2></label>
             <textarea type="textarea" name="st4" id="st4" class="form-control" [(ngModel)]="page.st4" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
         <!-- PARAGRAPHE 4 -->
         <div class="form-group">
-
             <label for="contenu"><h2>Paragraphe 4</h2></label>
             <textarea type="textarea" name="pa4" id="pa4" class="form-control" [(ngModel)]="page.pa4" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea></div>
 
         <!-- SOUSTITRE 5 -->
         <div class="form-group">
-
             <label for="contenu"><h2>Sous-titre 5</h2></label>
             <textarea type="textarea" name="st5" id="st5" class="form-control" [(ngModel)]="page.st5" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
         </div>
         <!-- PARAGRAPHE 5 -->
         <div class="form-group">
-
             <label for="contenu"><h2>Paragraphe 5</h2></label>
             <textarea type="textarea" name="pa5" id="pa5" class="form-control" [(ngModel)]="page.pa5" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea></div>
-
         <!-- IMAGE BAS DE PAGE -->
         <div class="form-group">
             <label for="image3"><h2>Image bas de page</h2></label>
-
             <input type="text" name="image3" id="image3" class="form-control" [(ngModel)]="page.image3">
             <div>
                 <mat-hint>
-
                     <button type="button" class="btn btn-link" (click)="admin.goToLink('https://postimages.org/')"> Veuillez héberger votre image (de préference au format WebP) sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button>                    </mat-hint>
             </div>
-
         </div>
         <!-- TEXTE BOUTON  LIEN -->
         <div class="form-group">
             <label for="titre"><h2>Texte du bouton qui sera affiché en fin de page</h2></label>
             <input type="text" name="nomlien" id="nomlien" class="form-control" [(ngModel)]="page.nomlien">
-
         </div>
         <!-- URL DU LIEN-->
         <div class="form-group">
             <label for="titre"><h2>URL du lien</h2></label>
             <input type="text" name="lien" id="lien" class="form-control" [(ngModel)]="page.lien">
-
         </div>
-
-
         <br>
         <button type='submit' class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>
         <button class="btn btn-success m-1" routerLink="../../pages">Retour</button>
         <button class="btn btn-danger m-1" *ngIf="id !== null" (click)="delete()">Supprimer</button>
     </form>
-
 </div>

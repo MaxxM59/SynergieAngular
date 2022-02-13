@@ -18,7 +18,7 @@ export class PageComponent implements OnInit {
     id: '',
     titre: '',
     pres: '',
-    st1: '',
+    st1: null,
     pa1: '',
     st2: null,
     st3: null,

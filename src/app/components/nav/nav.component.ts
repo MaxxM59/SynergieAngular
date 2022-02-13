@@ -17,7 +17,7 @@ export class NavComponent implements OnInit {
     id: '',
     titre: '',
     pres: '',
-    st1: '',
+    st1: null,
     pa1: '',
     image1: null,
     image2: null,

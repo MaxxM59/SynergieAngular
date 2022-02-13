@@ -118,6 +118,8 @@ const routes: Routes = [
       },
     ],
   },
+  // REDIRECTION VERS L'ACCUEIL SI LA ROUTE N'EXISTE PAS
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

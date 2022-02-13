@@ -17,7 +17,7 @@ export interface Page {
   titre: string;
   pres: string;
   // SOUS TITRES
-  st1: string;
+  st1: null;
   st2: null;
   st3: null;
   st4: null;

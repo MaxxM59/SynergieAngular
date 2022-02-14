@@ -5,8 +5,6 @@ import { Observable } from 'rxjs';
 import { Page } from '../../../models/models';
 import { AdminLoginService } from '../admin-login.service';
 import { Router } from '@angular/router';
-import { count } from 'console';
-import { object } from 'rxfire/database';
 
 @Injectable({
   providedIn: 'root',
@@ -27,7 +25,6 @@ export class PagesService {
     st3: null,
     st4: null,
     st5: null,
-
     pa2: null,
     pa3: null,
     pa4: null,
@@ -39,7 +36,6 @@ export class PagesService {
     nomlien: null,
   };
 
-  p: null = null;
   // RECUPERE TOUTES LES PAGES
   getPages(): Observable<Page[]> {
     //POUR A VOIR L'ID
@@ -77,8 +73,6 @@ export class PagesService {
 
   //AJOUTE UNE PAGE
   addPage(page: Page): void {
-    /*for (var i = 4; i < Object.keys(page).length; i++)
-      {if (page.i)}*/
     if (page.st1 === undefined || page.st1 === '') {
       page.st1 = null;
     }
@@ -121,7 +115,6 @@ export class PagesService {
     if (page.nomlien === undefined || page.nomlien === '') {
       page.nomlien = null;
     }
-
     this.afs.collection<Page>('pages').add(page);
   }
   // MODIFIE LA PAGE

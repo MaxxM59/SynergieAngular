@@ -13,9 +13,11 @@ export interface Onglet {
   position: number;
 }
 export interface Page {
+  // CHAMPS OBLIGATOIRES
   id: string;
   titre: string;
   pres: string;
+  pa1: string;
   // SOUS TITRES
   st1: null;
   st2: null;
@@ -23,7 +25,7 @@ export interface Page {
   st4: null;
   st5: null;
   // PARAGRAPHES
-  pa1: string;
+
   pa2: null;
   pa3: null;
   pa4: null;

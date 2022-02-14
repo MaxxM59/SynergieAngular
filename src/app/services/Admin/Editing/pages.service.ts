@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import { Page } from '../../../models/models';
 import { AdminLoginService } from '../admin-login.service';
 import { Router } from '@angular/router';
+import { count } from 'console';
+import { object } from 'rxfire/database';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +17,29 @@ export class PagesService {
     private admin: AdminLoginService,
     private router: Router
   ) {}
+  page: Page = {
+    id: '',
+    titre: '',
+    pres: '',
+    st1: null,
+    pa1: '',
+    st2: null,
+    st3: null,
+    st4: null,
+    st5: null,
 
+    pa2: null,
+    pa3: null,
+    pa4: null,
+    pa5: null,
+    image1: null,
+    image2: null,
+    image3: null,
+    lien: null,
+    nomlien: null,
+  };
+
+  p: null = null;
   // RECUPERE TOUTES LES PAGES
   getPages(): Observable<Page[]> {
     //POUR A VOIR L'ID
@@ -53,6 +77,8 @@ export class PagesService {
 
   //AJOUTE UNE PAGE
   addPage(page: Page): void {
+    /*for (var i = 4; i < Object.keys(page).length; i++)
+      {if (page.i)}*/
     if (page.st1 === undefined || page.st1 === '') {
       page.st1 = null;
     }
@@ -65,7 +91,6 @@ export class PagesService {
     if (page.st4 === undefined || page.st4 === '') {
       page.st4 = null;
     }
-
     if (page.st5 === undefined || page.st5 === '') {
       page.st5 = null;
     }
@@ -96,6 +121,7 @@ export class PagesService {
     if (page.nomlien === undefined || page.nomlien === '') {
       page.nomlien = null;
     }
+
     this.afs.collection<Page>('pages').add(page);
   }
   // MODIFIE LA PAGE

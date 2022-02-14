@@ -85,6 +85,7 @@ export class PagesService {
     if (page.st4 === undefined || page.st4 === '') {
       page.st4 = null;
     }
+
     if (page.st5 === undefined || page.st5 === '') {
       page.st5 = null;
     }

@@ -1,54 +1,58 @@
-* {
-    background-color: #ffff;
-}
+            * {
+                background-color: #ffff;
+            }
 
-.nav-section {
-    display: flex;
-    justify-content: space-between;
-    justify-content: center;
-    align-content: center;
-}
+            .nav-section {
+                display: flex;
+                justify-content: space-between;
+                justify-content: center;
+                align-content: center;
+            }
 
-button {
-    margin-top: 1vw;
-    background-color: #ffff;
-    font-size: 110%;
-    align-content: center;
-}
+            button {
+                margin-top: 1vw;
+                background-color: #ffff;
+                font-size: 110%;
+                align-content: center;
+            }
 
-.button2 {
-    margin-left: 2vw;
-    margin-top: 1vw;
-    background-color: #ffff;
-    font-size: 110%;
-    align-content: center;
-}
+            .button2 {
+                margin-left: 2vw;
+                margin-top: 1vw;
+                background-color: #ffff;
+                font-size: 110%;
+                align-content: center;
+            }
 
-@media (min-width:800px) {
-    ul,
-    #contact {
-        display: flex;
-        list-style-type: none;
-    }
-}
+            @media (min-width:800px) {
+                ul,
+                #contact {
+                    display: flex;
+                    list-style-type: none;
+                }
+            }
 
-@media (max-width: 799px) {
-    .collapsebutton {
-        width: 75%;
-        margin-left: 2vw;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-    }
-    .button2 {
-        margin-top: 3.7vw;
-    }
-    mat-raised-button {
-        max-width: 90%;
-    }
-}
+            @media (max-width: 799px) {
+                .collapsebutton {
+                    width: 75%;
+                    margin-left: 2vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-content: center;
+                }
+                .button2 {
+                    margin-top: 3.7vw;
+                }
+                mat-raised-button {
+                    max-width: 90%;
+                }
+            }
 
-img {
-    max-width: 150px;
-    max-height: 100px;
-}
+            img {
+                max-width: 150px;
+                max-height: 100px;
+            }
+
+            #companyName {
+                margin-right: 2vw;
+            }

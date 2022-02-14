@@ -1,7 +1,8 @@
-<button class="btn btn-success m-1" routerLink="../../onglets" id='return'>Retour</button>
 <div class="container-fluid p-5">
 
     <form #pageForm="ngForm">
+        <button type='submit' class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>
+        <button class="btn btn-success m-1" routerLink="../../pages">Retour</button>
         <mat-hint>
             <h2 id="hint1"><strong> Les champs de du titre, la présentation ainsi que le premier  paragraphe sont obligatoires </strong></h2>
         </mat-hint>
@@ -118,6 +119,6 @@
         <br>
         <button type='submit' class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>
         <button class="btn btn-success m-1" routerLink="../../pages">Retour</button>
-        <button class="btn btn-danger m-1" *ngIf="id !== null" (click)="delete()">Supprimer</button>
+        <button class="btn btn-danger m-1" *ngIf="page.id !== undefined" (click)="delete()">Supprimer</button>
     </form>
 </div>

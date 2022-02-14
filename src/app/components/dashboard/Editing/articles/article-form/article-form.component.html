@@ -30,7 +30,7 @@
 
         <button type="submit" class="btn btn-primary m-1">Enregistrer</button>
         <button class="btn btn-success m-1" routerLink="../../articles">Retour</button>
-        <button [hidden]="id === null" (click)="delete()" class="btn btn-danger m-1">Supprimer</button> </form>
+        <button *ngIf="article.id !== undefined" (click)="delete()" class="btn btn-danger m-1">Supprimer</button> </form>
 
 
 </div>

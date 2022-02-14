@@ -8,13 +8,16 @@
 
         <mat-nav-list>
             <hr>
-            <a mat-list-item routerLink="onglets">Barre de navigation</a>
-            <a mat-list-item routerLink="pages">Pages</a>
-            <a mat-list-item routerLink="articles">Articles de l'accueil</a>
-            <a mat-list-item routerLink="contacts">Messages</a>
-            <a mat-list-item (click)="admin.goToLink('https://console.firebase.google.com/')">Base de données</a>
-            <a mat-list-item routerLink="">Retourner sur le site</a>
-            <a mat-list-item (click)="admin.logOut()">Déconnexion</a>
+            <a mat-list-item routerLink="onglets" class='nav-button'>Barre de navigation</a>
+            <a mat-list-item routerLink="pages" class='nav-button'>Pages</a>
+            <a mat-list-item routerLink="articles" class='nav-button'>Articles de l'accueil</a>
+            <a mat-list-item routerLink="contacts" class='nav-button'>Messages</a>
+            <hr>
+            <a mat-list-item (click)="admin.goToLink('https://console.firebase.google.com/')" class='nav-button'>Base de données</a>
+            <hr>
+            <a mat-list-item routerLink="" class='nav-button'>Retourner sur le site</a>
+
+            <a mat-list-item (click)="admin.logOut()" class='nav-button'>Déconnexion</a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

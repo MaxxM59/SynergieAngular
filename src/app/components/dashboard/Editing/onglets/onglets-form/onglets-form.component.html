@@ -1,5 +1,8 @@
 <div class='container-fluid p-5'>
     <form #ongletForm="ngForm">
+        <mat-hint>
+            <h2 id='warning'>Attention, le titre de l'onglet doit être exactement identique à celui de la page !</h2>
+        </mat-hint>
         <div class="form-group">
             <label for="titre"><h2>Titre</h2></label>
             <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid &&titreInput.touched}" class="form-control" [(ngModel)]="onglet.titre" required>

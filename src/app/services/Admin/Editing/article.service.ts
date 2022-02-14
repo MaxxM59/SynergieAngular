@@ -63,8 +63,6 @@ export class ArticleService {
       this.afs.collection<Article>('articles').doc(articleId).delete();
       this.admin.showNotification('Article supprimé !');
       this.router.navigate(['dashboard/articles']);
-    } else {
-      this.router.navigate(['articles-form/{{o.id}}']);
     }
   }
 }

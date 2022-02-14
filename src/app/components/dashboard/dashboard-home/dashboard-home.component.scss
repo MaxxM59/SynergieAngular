@@ -20,6 +20,10 @@
     z-index: 1;
 }
 
+hr {
+    margin: 0.8vw 0;
+}
+
 mat-nav-list {
     padding-top: 3vh;
     font-weight: bold;
@@ -46,4 +50,12 @@ mat-list-item {
 
 .nav-button {
     color: #283593;
+}
+
+.backsite {
+    color: #fbc02d;
+}
+
+.logout {
+    color: #d84315;
 }

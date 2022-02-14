@@ -26,7 +26,6 @@ export class ArticlesComponent implements OnInit {
   // DELETE
   delete($id: string) {
     this.articleservice.deleteArticle($id);
-    this.admin.showNotification('Article supprimé !');
   }
   ngOnInit(): void {
     // RECUPERE TOUS LES ARTICLES

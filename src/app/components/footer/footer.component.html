@@ -32,10 +32,14 @@
                 <h2>03.27.62.83.41</h2>
             </div>
             <div class='row>'>
-                <h1>Mail</h1>
+                <h1>Nous envoyer un mail</h1>
             </div>
             <div class='row>'>
-                <h2>contact@associationsynergie.fr</h2>
+
+
+                <button mat-raised-button (click)="admin.goToLink ('https://www.facebook.com/Synergie.Association/') ">
+                    <h2 (click)="admin.goToLink ('mailto:contact@associationsynergie.fr') " class='text text-primary'>contact@associationsynergie.fr </h2>
+                </button>
             </div>
 
         </div>

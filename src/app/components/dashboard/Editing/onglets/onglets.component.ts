@@ -37,8 +37,6 @@ export class OngletsComponent implements OnInit {
         this.admin.showNotification('Dossier supprimé !');
       }
       this.router.navigate(['dashboard/onglets']);
-    } else {
-      this.router.navigate(['onglets-form/{{o.id}}']);
     }
   }
   ngOnInit(): void {

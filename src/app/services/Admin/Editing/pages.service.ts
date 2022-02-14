@@ -70,52 +70,18 @@ export class PagesService {
         })
       );
   }
+  // REMPLACE LES CHAMPS UNDEFINED PAR NULL
+  setNulls(page: any) {
+    for (let [key, value] of Object.entries(page)) {
+      if (value === undefined || String(value).length === 0) {
+        page[key] = null;
+      }
+    }
+  }
 
   //AJOUTE UNE PAGE
   addPage(page: Page): void {
-    if (page.st1 === undefined || page.st1 === '') {
-      page.st1 = null;
-    }
-    if (page.st2 === undefined || page.st2 === '') {
-      page.st2 = null;
-    }
-    if (page.st3 === undefined || page.st3 === '') {
-      page.st3 = null;
-    }
-    if (page.st4 === undefined || page.st4 === '') {
-      page.st4 = null;
-    }
-
-    if (page.st5 === undefined || page.st5 === '') {
-      page.st5 = null;
-    }
-    if (page.pa2 === undefined || page.pa2 === '') {
-      page.pa2 = null;
-    }
-    if (page.pa3 === undefined || page.pa3 === '') {
-      page.pa3 = null;
-    }
-    if (page.pa4 === undefined || page.pa4 === '') {
-      page.pa4 = null;
-    }
-    if (page.pa5 === undefined || page.pa5 === '') {
-      page.pa5 = null;
-    }
-    if (page.image1 === undefined || page.image1 === '') {
-      page.image1 = null;
-    }
-    if (page.image2 === undefined || page.image2 === '') {
-      page.image2 = null;
-    }
-    if (page.image3 === undefined || page.image3 === '') {
-      page.image3 = null;
-    }
-    if (page.lien === undefined || page.lien === '') {
-      page.lien = null;
-    }
-    if (page.nomlien === undefined || page.nomlien === '') {
-      page.nomlien = null;
-    }
+    this.setNulls(page);
     this.afs.collection<Page>('pages').add(page);
   }
   // MODIFIE LA PAGE
@@ -128,8 +94,6 @@ export class PagesService {
       this.afs.collection<Page>('pages').doc(pageId).delete();
       this.admin.showNotification('Page supprimée !');
       this.router.navigate(['dashboard/pages']);
-    } else {
-      this.router.navigate(['pages-form/{{o.id}}']);
     }
   }
 }

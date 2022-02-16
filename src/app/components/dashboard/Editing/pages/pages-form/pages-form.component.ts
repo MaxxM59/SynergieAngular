@@ -31,8 +31,6 @@ export class PagesFormComponent implements OnInit {
     pa5: null,
     lien: null,
     nomlien: null,
-    couleurtitre: null,
-    policetitre: null,
   };
 
   constructor(

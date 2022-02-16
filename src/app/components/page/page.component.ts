@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Page } from 'src/app/models/models';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';

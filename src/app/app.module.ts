@@ -48,6 +48,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactsComponent } from './components/dashboard/contacts/contacts.component';
 import { AnswercontactsComponent } from './components/dashboard/contacts/answercontacts/answercontacts.component';
+import { MiseEnPageComponent } from './components/dashboard/Editing/mise-en-page/mise-en-page.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +70,7 @@ import { AnswercontactsComponent } from './components/dashboard/contacts/answerc
     ContactFormComponent,
     ContactsComponent,
     AnswercontactsComponent,
+    MiseEnPageComponent,
   ],
   imports: [
     MatDialogModule,

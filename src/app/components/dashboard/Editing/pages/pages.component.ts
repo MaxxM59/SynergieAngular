@@ -34,6 +34,7 @@ export class PagesComponent implements OnInit {
     lien: null,
     nomlien: null,
   };
+
   pages: Page[] = [];
   // DELETE
   delete($id: string) {

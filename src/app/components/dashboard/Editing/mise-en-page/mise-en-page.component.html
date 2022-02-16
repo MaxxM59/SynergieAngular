@@ -1,0 +1,551 @@
+<div class="container-fluid p-5" id="maincontainer">
+    <div class='buttoncontainer'><button type='submit' class="btn btn-primary m-1" (click)="save(miseenpageForm)">Enregistrer</button>
+        <button class="btn btn-success m-1" routerLink="../../pages">Retour</button>
+    </div>
+    <div class="hint">
+        <mat-hint>
+            <h4 class="hint1"><strong> Ici vous pourrez modifier l'apparence de chaque élément d'une page.
+               </strong></h4>
+            <h5> Cette mise en page sera appliquée à l'ensemble des pages editables.</h5>
+        </mat-hint>
+    </div>
+    <form #miseenpageForm="ngForm">
+
+
+        <hr>
+        <br>
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th>
+                        <h2 class="tabletitle">Element</h2>
+                    </th>
+                    <th>
+                        <h2 class="tabletitle">Police </h2>
+                    </th>
+                    <th>
+                        <h2 class="tabletitle">Couleur </h2>
+                    </th>
+                    <th>
+                        <h2 class="tabletitle">Décoration</h2>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--TITRE -->
+                <tr>
+                    <td>
+                        <h4>Titre</h4>
+                    </td>
+                    <td>
+
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.titrepolice" id="titrepolice" name="titrepolice">
+<option value="0">Par défaut</option>
+  <option value="arial">Arial</option>
+  <option value="franklin">Franklin Gothic</option>
+  <option value="lucida">Lucida</option>
+    <option value="courier">Franklin Gothic</option>
+  <option value="segoe">Segoe</option>
+</select></td>
+                    <td>
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.titrecouleur" id="titrecouleur" name="titrecouleur">
+  <option value="0">Par défaut</option>
+  <option value="red">Rouge</option>
+  <option value="blue">Bleu</option>
+  <option value="purple">Violet</option>
+  <option value="grey">Gris</option>
+  <option value="yellow">Jaune</option>
+  <option value="lightgrey">Gris Clair</option>
+  <option value="lightblue">Bleu Clair</option>
+</select></td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.titredecoration" id="titredecoration" name="titredecoration">
+  <option value="0">Par défaut</option>
+  <option value="underline">Souligné</option>
+  <option value="italic">Italique</option>
+  <option value="bold">Gras</option>
+  <option value="bolditalic">Gras et italique</option>
+  <option value="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+
+
+</select>
+                    </td> <br>
+
+                </tr>
+                <tr>
+                    <div class="{{miseenpage.titrepolice}} {{miseenpage.titrecouleur}} {{miseenpage.titredecoration}}">Exemple : Voici le rendu pour le titre avec ces réglages !</div>
+                </tr>
+                <br>
+                <!--PRESENTATION-->
+                <tr>
+                    <td>
+                        <h4>Présentation</h4>
+                    </td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.prespolice" id="prespolice" name="prespolice">
+ <option value="0">Par défaut</option>
+  <option value="arial">Arial</option>
+  <option value="franklin">Franklin Gothic</option>
+  <option value="lucida">Lucida</option>
+    <option value="courier">Franklin Gothic</option>
+  <option value="segoe">Segoe</option>
+</select></td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.prescouleur" id="prescouleur" name="prescouleur">
+    <option value="0">Par défaut</option>
+  <option value="red">Rouge</option>
+  <option value="blue">Bleu</option>
+  <option value="purple">Violet</option>
+  <option value="grey">Gris</option>
+  <option value="yellow">Jaune</option>
+  <option value="lightgrey">Gris Clair</option>
+  <option value="lightblue">Bleu Clair</option>
+</select></td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.presdecoration" id="presdecoration" name="presdecoration">
+  <option value="0">Par défaut</option>
+  <option value="underline">Souligné</option>
+  <option value="italic">Italique</option>
+  <option value="bold">Gras</option>
+  <option value="bolditalic">Gras et italique</option>
+  <option value="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+
+</select>
+                    </td>
+                </tr>
+                <tr>
+                    <div class="{{miseenpage.prespolice}} {{miseenpage.prescouleur}} {{miseenpage.presdecoration}}">Exemple : Voici le rendu pour la présentation avec ces réglages !</div>
+                </tr><br>
+                <!--SOUS TITRE 1-->
+                <tr>
+                    <td>
+                        <h4>Sous Titre 1</h4>
+                    </td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st1police" id="st1police" name="st1police">
+<option value="0">Par défaut</option>
+  <option value="arial">Arial</option>
+  <option value="franklin">Franklin Gothic</option>
+  <option value="lucida">Lucida</option>
+    <option value="courier">Franklin Gothic</option>
+  <option value="segoe">Segoe</option>
+</select></td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st1couleur" id="st1couleur" name="st1couleur">
+  <option value="0">Par défaut</option>
+  <option value="red">Rouge</option>
+  <option value="blue">Bleu</option>
+  <option value="purple">Violet</option>
+  <option value="grey">Gris</option>
+  <option value="yellow">Jaune</option>
+  <option value="lightgrey">Gris Clair</option>
+  <option value="lightblue">Bleu Clair</option>
+</select></td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st1decoration" id="st1decoration" name="st1decoration">
+
+  <option value="0">Par défaut</option>
+  <option value="underline">Souligné</option>
+  <option value="italic">Italique</option>
+  <option value="bold">Gras</option>
+  <option value="bolditalic">Gras et italique</option>
+  <option value="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+
+</select>
+                    </td>
+                </tr>
+                <tr>
+                    <div class="{{miseenpage.st1police}} {{miseenpage.st1couleur}} {{miseenpage.st1decoration}}">Exemple : Voici le rendu pour ce sous titre avec ces réglages !</div>
+                </tr> <br>
+                <!--PARAGRAPHE 1-->
+                <tr>
+                    <td>
+                        <h4>Paragraphe 1</h4>
+                    </td>
+
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa1police" id="pa1police" name="pa1police">
+ <option value="0">Par défaut</option>
+  <option value="arial">Arial</option>
+  <option value="franklin">Franklin Gothic</option>
+  <option value="lucida">Lucida</option>
+    <option value="courier">Franklin Gothic</option>
+  <option value="segoe">Segoe</option>
+</select>
+                    </td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa1couleur" id="pa1couleur" name="pa1couleur">
+  <option value="0">Par défaut</option>
+  <option value="red">Rouge</option>
+  <option value="blue">Bleu</option>
+  <option value="purple">Violet</option>
+  <option value="grey">Gris</option>
+  <option value="yellow">Jaune</option>
+  <option value="lightgrey">Gris Clair</option>
+  <option value="lightblue">Bleu Clair</option>
+</select>
+                    </td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa1decoration" id="pa1decoration" name="pa1decoration">
+
+  <option value="0">Par défaut</option>
+  <option value="underline">Souligné</option>
+  <option value="italic">Italique</option>
+  <option value="bold">Gras</option>
+  <option value="bolditalic">Gras et italique</option>
+  <option value="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+
+</select>
+                    </td>
+                </tr>
+                <tr>
+                    <div class="{{miseenpage.pa1police}} {{miseenpage.pa1couleur}} {{miseenpage.pa1decoration}}">Exemple : Voici le rendu pour ce paragraphe avec ces réglages !</div>
+                </tr><br>
+                <!--SOUS TITRE 2-->
+                <tr>
+                    <td>
+                        <h4>Sous Titre 2</h4>
+                    </td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st2police" id="st2police" name="st2police">
+ <option value="0">Par défaut</option>
+  <option value="arial">Arial</option>
+  <option value="franklin">Franklin Gothic</option>
+  <option value="lucida">Lucida</option>
+    <option value="courier">Franklin Gothic</option>
+  <option value="segoe">Segoe</option>
+</select>
+                    </td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st2couleur" id="st2couleur" name="st2couleur">
+  <option value="0">Par défaut</option>
+  <option value="red">Rouge</option>
+  <option value="blue">Bleu</option>
+  <option value="purple">Violet</option>
+  <option value="grey">Gris</option>
+  <option value="yellow">Jaune</option>
+  <option value="lightgrey">Gris Clair</option>
+  <option value="lightblue">Bleu Clair</option>
+</select></td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st2decoration" id="st2decoration" name="st2decoration">
+
+  <option value="0">Par défaut</option>
+  <option value="underline">Souligné</option>
+  <option value="italic">Italique</option>
+  <option value="bold">Gras</option>
+  <option value="bolditalic">Gras et italique</option>
+  <option value="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+
+</select>
+                    </td>
+                </tr>
+                <tr>
+                    <div class="{{miseenpage.st2police}} {{miseenpage.st2couleur}} {{miseenpage.st2decoration}}">Exemple : Voici le rendu pour ce sous titre avec ces réglages !</div>
+                </tr> <br>
+                <!--PARAGRAPHE 2-->
+                <tr>
+                    <td>
+                        <h4>Paragraphe 2</h4>
+                    </td>
+                    <td>
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa2police" id="pa2police" name="pa2police">
+<option value="0">Par défaut</option>
+  <option value="arial">Arial</option>
+  <option value="franklin">Franklin Gothic</option>
+  <option value="lucida">Lucida</option>
+    <option value="courier">Franklin Gothic</option>
+  <option value="segoe">Segoe</option>
+</select></td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa2couleur" id="pa2couleur" name="pa2couleur">
+  <option value="0">Par défaut</option>
+  <option value="red">Rouge</option>
+  <option value="blue">Bleu</option>
+  <option value="purple">Violet</option>
+  <option value="grey">Gris</option>
+  <option value="yellow">Jaune</option>
+  <option value="lightgrey">Gris Clair</option>
+  <option value="lightblue">Bleu Clair</option>
+</select></td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa2decoration" id="pa2decoration" name="pa2decoration">
+
+   <option value="0">Par défaut</option>
+  <option value="underline">Souligné</option>
+  <option value="italic">Italique</option>
+  <option value="bold">Gras</option>
+  <option value="bolditalic">Gras et italique</option>
+  <option value="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+
+</select>
+                    </td>
+                </tr>
+                <tr>
+                    <div class="{{miseenpage.pa2police}} {{miseenpage.pa2couleur}} {{miseenpage.pa2decoration}}">Exemple : Voici le rendu pour ce paragraphe avec ces réglages !</div>
+                </tr><br>
+                <!--SOUS TITRE 3-->
+                <tr>
+                    <td>
+                        <h4>Sous Titre 3</h4>
+                    </td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st3police" id="st3police" name="st3police">
+ <option value="0">Par défaut</option>
+  <option value="arial">Arial</option>
+  <option value="franklin">Franklin Gothic</option>
+  <option value="lucida">Lucida</option>
+    <option value="courier">Franklin Gothic</option>
+  <option value="segoe">Segoe</option>
+</select></td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st3couleur" id="st3couleur" name="st3couleur">
+   <option value="0">Par défaut</option>
+  <option value="red">Rouge</option>
+  <option value="blue">Bleu</option>
+  <option value="purple">Violet</option>
+  <option value="grey">Gris</option>
+  <option value="yellow">Jaune</option>
+  <option value="lightgrey">Gris Clair</option>
+  <option value="lightblue">Bleu Clair</option>
+</select></td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st3decoration" id="st3decoration" name="st3decoration">
+
+   <option value="0">Par défaut</option>
+  <option value="underline">Souligné</option>
+  <option value="italic">Italique</option>
+  <option value="bold">Gras</option>
+  <option value="bolditalic">Gras et italique</option>
+  <option value="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+
+</select>
+                    </td>
+                </tr>
+                <tr>
+                    <div class="{{miseenpage.st3police}} {{miseenpage.st3couleur}} {{miseenpage.st3decoration}}">Exemple : Voici le rendu pour ce sous titre avec ces réglages !</div>
+                </tr><br>
+                <!--PARAGRAPHE 3-->
+                <tr>
+                    <td>
+                        <h4>Paragraphe 3</h4>
+                    </td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa1police" id="pa1police" name="pa1police">
+<option value="0">Par défaut</option>
+  <option value="arial">Arial</option>
+  <option value="franklin">Franklin Gothic</option>
+  <option value="lucida">Lucida</option>
+    <option value="courier">Franklin Gothic</option>
+  <option value="segoe">Segoe</option>
+</select>
+                    </td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa3couleur" id="pa3couleur" name="pa3couleur">
+  <option value="0">Par défaut</option>
+  <option value="red">Rouge</option>
+  <option value="blue">Bleu</option>
+  <option value="purple">Violet</option>
+  <option value="grey">Gris</option>
+  <option value="yellow">Jaune</option>
+  <option value="lightgrey">Gris Clair</option>
+  <option value="lightblue">Bleu Clair</option>
+</select>
+                    </td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa3decoration" id="pa3decoration" name="pa3decoration">
+
+  <option value="0">Par défaut</option>
+  <option value="underline">Souligné</option>
+  <option value="italic">Italique</option>
+  <option value="bold">Gras</option>
+  <option value="bolditalic">Gras et italique</option>
+  <option value="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+</select>
+                    </td>
+                </tr>
+                <tr>
+                    <div class="{{miseenpage.pa3police}} {{miseenpage.pa3couleur}} {{miseenpage.pa3decoration}}">Exemple : Voici le rendu pour ce paragraphe avec ces réglages !</div>
+                </tr> <br>
+                <!--SOUS TITRE 4-->
+                <tr>
+                    <td>
+                        <h4>Sous Titre 4</h4>
+                    </td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st4police" id="st4police" name="st4police">
+<option value="0">Par défaut</option>
+  <option value="arial">Arial</option>
+  <option value="franklin">Franklin Gothic</option>
+  <option value="lucida">Lucida</option>
+    <option value="courier">Franklin Gothic</option>
+  <option value="segoe">Segoe</option>
+</select></td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st4couleur" id="st4couleur" name="st4couleur">
+  <option value="0">Par défaut</option>
+  <option value="red">Rouge</option>
+  <option value="blue">Bleu</option>
+  <option value="purple">Violet</option>
+  <option value="grey">Gris</option>
+  <option value="yellow">Jaune</option>
+  <option value="lightgrey">Gris Clair</option>
+  <option value="lightblue">Bleu Clair</option>
+</select></td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st4decoration" id="st4decoration" name="st4decoration">
+
+  <option value="0">Par défaut</option>
+  <option value="underline">Souligné</option>
+  <option value="italic">Italique</option>
+  <option value="bold">Gras</option>
+  <option value="bolditalic">Gras et italique</option>
+  <option value="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+
+</select>
+                    </td>
+                </tr>
+                <tr>
+                    <div class="{{miseenpage.st4police}} {{miseenpage.st4couleur}} {{miseenpage.st4decoration}}">Exemple : Voici le rendu pour ce sous titre avec ces réglages !</div>
+                </tr> <br>
+                <!--PARAGRAPHE 4-->
+                <tr>
+                    <td>
+                        <h4>Paragraphe 4</h4>
+                    </td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa4police" id="pa4police" name="pa4police">
+ <option value="0">Par défaut</option>
+  <option value="arial">Arial</option>
+  <option value="franklin">Franklin Gothic</option>
+  <option value="lucida">Lucida</option>
+    <option value="courier">Franklin Gothic</option>
+  <option value="segoe">Segoe</option>
+</select></td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa4couleur" id="pa4couleur" name="pa4couleur">
+  <option value="0">Par défaut</option>
+  <option value="red">Rouge</option>
+  <option value="blue">Bleu</option>
+  <option value="purple">Violet</option>
+  <option value="grey">Gris</option>
+  <option value="yellow">Jaune</option>
+  <option value="lightgrey">Gris Clair</option>
+  <option value="lightblue">Bleu Clair</option>
+</select></td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa4decoration" id="pa4decoration" name="pa4decoration">
+
+  <option value="0">Par défaut</option>
+  <option value="underline">Souligné</option>
+  <option value="italic">Italique</option>
+  <option value="bold">Gras</option>
+  <option value="bolditalic">Gras et italique</option>
+  <option value="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+
+</select>
+                    </td>
+                </tr>
+                <tr>
+                    <div class="{{miseenpage.pa4police}} {{miseenpage.pa4couleur}} {{miseenpage.pa4decoration}}">Exemple : Voici le rendu pour ce paragraphe avec ces réglages !</div>
+                </tr><br>
+                <!--SOUS TITRE 5-->
+                <tr>
+                    <td>
+                        <h4>Sous Titre 5</h4>
+                    </td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st5police" id="st5police" name="st5police">
+<option value="0">Par défaut</option>
+  <option value="arial">Arial</option>
+  <option value="franklin">Franklin Gothic</option>
+  <option value="lucida">Lucida</option>
+    <option value="courier">Franklin Gothic</option>
+  <option value="segoe">Segoe</option>
+</select></td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st5couleur" id="st5couleur" name="st5couleur">
+  <option value="0">Par défaut</option>
+  <option value="red">Rouge</option>
+  <option value="blue">Bleu</option>
+  <option value="purple">Violet</option>
+  <option value="grey">Gris</option>
+  <option value="yellow">Jaune</option>
+  <option value="lightgrey">Gris Clair</option>
+  <option value="lightblue">Bleu Clair</option>
+</select></td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st5decoration" id="st5decoration" name="st5decoration">
+
+  <option value="0">Par défaut</option>
+  <option value="underline">Souligné</option>
+  <option value="italic">Italique</option>
+  <option value="bold">Gras</option>
+  <option value="bolditalic">Gras et italique</option>
+  <option value="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+
+</select>
+                    </td>
+                </tr>
+                <tr>
+                    <div class="{{miseenpage.st5police}} {{miseenpage.st5couleur}} {{miseenpage.st5decoration}}">Exemple : Voici le rendu pour ce sous titre avec ces réglages !</div>
+                </tr><br>
+                <!--PARAGRAPHE 5-->
+
+                <tr>
+                    <td>
+                        <h4>Paragraphe 5</h4>
+                    </td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa5police" id="pa5police" name="pa5police">
+<option value="0">Par défaut</option>
+  <option value="arial">Arial</option>
+  <option value="franklin">Franklin Gothic</option>
+  <option value="lucida">Lucida</option>
+    <option value="courier">Franklin Gothic</option>
+  <option value="segoe">Segoe</option>
+</select></td>
+
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa5couleur" id="pa5couleur" name="pa5couleur">
+  <option value="0">Par défaut</option>
+  <option value="red">Rouge</option>
+  <option value="blue">Bleu</option>
+  <option value="purple">Violet</option>
+  <option value="grey">Gris</option>
+  <option value="yellow">Jaune</option>
+  <option value="lightgrey">Gris Clair</option>
+  <option value="lightblue">Bleu Clair</option>
+</select></td>
+                    <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa5decoration" id="pa5decoration" name="pa5decoration">
+
+  <option value="0">Par défaut</option>
+  <option value="underline">Souligné</option>
+  <option value="italic">Italique</option>
+  <option value="bold">Gras</option>
+  <option value="bolditalic">Gras et italique</option>
+  <option value="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+
+</select>
+                    </td>
+                </tr>
+                <tr>
+                    <div class="{{miseenpage.pa5police}} {{miseenpage.pa5couleur}} {{miseenpage.pa5decoration}}">Exemple : Voici le rendu pour ce paragraphe avec ces réglages !</div>
+                </tr>
+            </tbody>
+        </table>
+        <!-- FIN DU FORM-->
+        <div class='buttoncontainer'><button type='submit' class="btn btn-primary m-1" (click)="save(miseenpageForm)">Enregistrer</button>
+            <button class="btn btn-success m-1" routerLink="../../pages">Retour</button>
+        </div>
+    </form>
+</div>

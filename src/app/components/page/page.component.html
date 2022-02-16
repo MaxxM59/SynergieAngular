@@ -3,67 +3,67 @@
     <!-- TITRE -->
     <section>
         <div class="titre">
-            <h1>{{page.titre}}</h1>
+            <h1 class="{{miseenpage.titrecouleur}} {{miseenpage.titrepolice}} {{miseenpage.titredecoration}}">{{page.titre}}</h1>
         </div>
         <hr>
     </section>
     <!-- IMAGE HAUT DE PAGE -->
     <div class='img-section' *ngIf="page.image1 !== '' && page.image1!==null">
-        <img class='img-fluid' src='{{page.image1}}' alt='photo-{{page.titre}}'>
+        <img class='img-fluid' src='{{page.image1}}' alt='{{page.titre}}-1-photo'>
     </div>
     <div class="container">
         <!-- PRESENTATION -->
         <section class='pres'>
-            <div [innerText]="page.pres"></div>
+            <div [innerText]="page.pres" class="{{miseenpage.prescouleur}} {{miseenpage.prespolice}} {{miseenpage.titredecoration}}"></div>
         </section>
         <section class="st">
             <!-- SOUSTITRE 1 -->
-            <div *ngIf="page.st1 !== '' && page.st1!==null">{{page.st1}}</div>
+            <div *ngIf="page.st1 !== '' && page.st1!==null" class="{{miseenpage.st1couleur}} {{miseenpage.st2police}} {{miseenpage.st1decoration}}">{{page.st1}}</div>
         </section>
         <section class="pa">
             <!-- PARAGRAPHE 1 -->
-            <div [innerText]="page.pa1"></div>
+            <div [innerText]="page.pa1" class="{{miseenpage.pa1couleur}} {{miseenpage.pa1police}} {{miseenpage.pa1decoration}}"></div>
         </section>
         <section class="st">
             <!-- SOUSTITRE 2 -->
-            <div *ngIf="page.st2 !== '' && page.st2!==null">{{page.st2}}</div>
+            <div *ngIf="page.st2 !== '' && page.st2!==null" class="{{miseenpage.st2couleur}} {{miseenpage.st2police}} {{miseenpage.st2decoration}}">{{page.st2}}</div>
         </section>
         <section class="pa">
             <!-- PARAGRAPHE 2 -->
-            <div *ngIf="page.pa2 !== '' && page.pa2!==null" [innerText]="page.pa2"></div>
+            <div *ngIf="page.pa2 !== '' && page.pa2!==null" [innerText]="page.pa2" class="{{miseenpage.pa2couleur}} {{miseenpage.pa2police}} {{miseenpage.pa2decoration}}"></div>
         </section>
         <div class='img-section' *ngIf="page.image2 !== '' && page.image2!==null">
             <!-- IMAGE MILIEU DE PAGE -->
-            <img class='img-fluid' src='{{page.image2}}' alt='photo-{{page.titre}}'>
+            <img class='img-fluid' src='{{page.image2}}' alt='{{page.titre}}-2-photo'>
         </div>
         <section class="st">
             <!-- SOUSTITRE 3 -->
-            <div *ngIf="page.st3 !== '' && page.st3!==null">{{page.st3}}</div>
+            <div *ngIf="page.st3 !== '' && page.st3!==null" class="{{miseenpage.st3couleur}} {{miseenpage.st3police}} {{miseenpage.st3decoration}}">{{page.st3}}</div>
         </section>
         <section class="pa">
             <!-- PARAGRAPHE 3 -->
-            <div *ngIf="page.pa3 !== '' && page.pa3!==null" [innerText]="page.pa3"></div>
+            <div *ngIf="page.pa3 !== '' && page.pa3!==null" [innerText]="page.pa3" class="{{miseenpage.pa3couleur}} {{miseenpage.pa3police}} {{miseenpage.pa3decoration}}"></div>
         </section>
         <section class="st">
             <!-- SOUSTITRE 4 -->
-            <div *ngIf="page.st4 !== '' && page.st4!==null">{{page.st4}}</div>
+            <div *ngIf="page.st4 !== '' && page.st4!==null" class="{{miseenpage.st4couleur}} {{miseenpage.st4police}} {{miseenpage.st4decoration}}">{{page.st4}}</div>
         </section>
         <section class="pa">
             <!-- PARAGRAPHE 4 -->
-            <div *ngIf="page.pa4 !== '' && page.pa4!==null" [innerText]="page.pa4"></div>
+            <div *ngIf="page.pa4 !== '' && page.pa4!==null" [innerText]="page.pa4" class="{{miseenpage.pa4couleur}} {{miseenpage.pa4police}} {{miseenpage.pa4decoration}}"></div>
         </section>
         <section class="st">
             <!-- SOUSTITRE 5 -->
-            <div *ngIf="page.st5 !== '' && page.st5!==null">{{page.st5}}</div>
+            <div *ngIf="page.st5 !== '' && page.st5!==null" class="{{miseenpage.st5couleur}} {{miseenpage.st5police}} {{miseenpage.st5decoration}}">{{page.st5}}</div>
         </section>
         <section class="pa">
             <!-- PARAGRAPHE 5 -->
-            <div *ngIf="page.pa5 !== '' && page.pa5 !==null" [innerText]="page.pa5"></div>
+            <div *ngIf="page.pa5 !== '' && page.pa5 !==null" [innerText]="page.pa5" class="{{miseenpage.pa5couleur}} {{miseenpage.pa5police}} {{miseenpage.pa5decoration}}"></div>
         </section>
         <br>
         <div class='img-section' *ngIf="page.image3 !== '' && page.image3!==null">
             <!-- IMAGE BAS DE PAGE -->
-            <img class='img-fluid' src='{{page.image3}}' alt='photo-{{page.titre}}'>
+            <img class='img-fluid' src='{{page.image3}}' alt='{{page.titre}}-3-photo'>
         </div>
         <section class="pa" *ngIf="page.lien !== '' && page.lien!==null">
             <div>

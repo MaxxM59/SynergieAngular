@@ -7,6 +7,7 @@ import { DashboardAcceuilComponent } from './components/dashboard/dashboard-acce
 import { DashboardHomeComponent } from './components/dashboard/dashboard-home/dashboard-home.component';
 import { ArticleFormComponent } from './components/dashboard/Editing/articles/article-form/article-form.component';
 import { ArticlesComponent } from './components/dashboard/Editing/articles/articles.component';
+import { MiseEnPageComponent } from './components/dashboard/Editing/mise-en-page/mise-en-page.component';
 import { DossierFormComponent } from './components/dashboard/Editing/onglets/dossier-form/dossier-form.component';
 import { OngletsFormComponent } from './components/dashboard/Editing/onglets/onglets-form/onglets-form.component';
 import { OngletsComponent } from './components/dashboard/Editing/onglets/onglets.component';
@@ -114,6 +115,11 @@ const routes: Routes = [
       {
         path: 'answercontacts/:id',
         component: AnswercontactsComponent,
+        canActivate: [AuthGuardService],
+      },
+      {
+        path: 'miseenpage',
+        component: MiseEnPageComponent,
         canActivate: [AuthGuardService],
       },
     ],

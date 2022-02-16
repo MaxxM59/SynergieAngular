@@ -30,7 +30,7 @@
                     </a>
                     </td>
                     <td>
-                        <a mat-raised-button (click)="delete(p.id)" class='deletebutton'> Supprimer</a>
+                        <a *ngIf="p.titre!=='A propos'" mat-raised-button (click)="delete(p.id)" class='deletebutton'> Supprimer</a>
                     </td>
                 </div>
             </tr>

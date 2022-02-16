@@ -31,6 +31,8 @@ export class PagesFormComponent implements OnInit {
     pa5: null,
     lien: null,
     nomlien: null,
+    couleurtitre: null,
+    policetitre: null,
   };
 
   constructor(
@@ -49,7 +51,7 @@ export class PagesFormComponent implements OnInit {
       } else {
         // SI C'EST UNE NOUVELLE PAGE
         this.pagesservice.addPage(pageForm.value);
-        this.admin.showNotification('La page a été créé');
+        this.admin.showNotification('La page a été créée');
       }
       // REDIRECTION VERS L'ACCEUIL
       this.router.navigate(['dashboard/pages']);

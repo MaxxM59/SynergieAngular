@@ -45,7 +45,7 @@ import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-f
 import { DossierFormComponent } from './components/dashboard/Editing/onglets/dossier-form/dossier-form.component';
 import { PageComponent } from './components/page/page.component';
 import { HomeComponent } from './components/home/home.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { ContactsComponent } from './components/dashboard/contacts/contacts.component';
 import { AnswercontactsComponent } from './components/dashboard/contacts/answercontacts/answercontacts.component';
 

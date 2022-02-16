@@ -1,12 +1,12 @@
 <div class="container-fluid p-5" id="maincontainer">
     <div class='buttoncontainer'><button type='submit' class="btn btn-primary m-1" (click)="save(miseenpageForm)">Enregistrer</button>
-        <button class="btn btn-success m-1" routerLink="../../pages">Retour</button>
+        <button class="btn btn-success m-1" routerLink="../dashboard-acceuil">Retour</button>
     </div>
     <div class="hint">
         <mat-hint>
             <h4 class="hint1"><strong> Ici vous pourrez modifier l'apparence de chaque élément d'une page.
                </strong></h4>
-            <h5> Cette mise en page sera appliquée à l'ensemble des pages editables.</h5>
+            <h5> Cette mise en page sera appliquée à l'ensemble des pages éditables.</h5>
         </mat-hint>
     </div>
     <form #miseenpageForm="ngForm">
@@ -545,7 +545,7 @@
         </table>
         <!-- FIN DU FORM-->
         <div class='buttoncontainer'><button type='submit' class="btn btn-primary m-1" (click)="save(miseenpageForm)">Enregistrer</button>
-            <button class="btn btn-success m-1" routerLink="../../pages">Retour</button>
+            <button class="btn btn-success m-1" routerLink="../dashboard-acceuil">Retour</button>
         </div>
     </form>
 </div>

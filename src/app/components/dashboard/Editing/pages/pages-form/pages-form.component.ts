@@ -49,13 +49,13 @@ export class PagesFormComponent implements OnInit {
       } else {
         // SI C'EST UNE NOUVELLE PAGE
         this.pagesservice.addPage(pageForm.value);
-        this.admin.showNotification('La page a été créée');
+        this.admin.showNotification('La page a été créée !');
       }
       // REDIRECTION VERS L'ACCEUIL
       this.router.navigate(['dashboard/pages']);
     } else {
       // SI LE FORMULAIRE N'EST PAS VALIDE
-      this.admin.showNotification('Il y a des erreurs dans le formulaire!');
+      this.admin.showNotification('Il y a des erreurs dans le formulaire !');
     }
   }
   // DELETE

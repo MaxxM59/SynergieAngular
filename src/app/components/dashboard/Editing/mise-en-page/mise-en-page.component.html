@@ -10,8 +10,6 @@
         </mat-hint>
     </div>
     <form #miseenpageForm="ngForm">
-
-
         <hr>
         <br>
         <table class="table table-stripped">
@@ -41,32 +39,32 @@
 
                         <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.titrepolice" id="titrepolice" name="titrepolice">
 <option value="0">Par défaut</option>
-  <option value="arial">Arial</option>
-  <option value="franklin">Franklin Gothic</option>
-  <option value="lucida">Lucida</option>
-    <option value="courier">Franklin Gothic</option>
-  <option value="segoe">Segoe</option>
+  <option value="arial" class="arial" >Arial</option>
+  <option value="franklin" class="franklin">Franklin Gothic</option>
+  <option value="lucida" class="lucida">Lucida</option>
+    <option value="courier" class="courier">Courier</option>
+  <option value="segoe" class="segoe">Segoe</option>
 </select></td>
                     <td>
                         <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.titrecouleur" id="titrecouleur" name="titrecouleur">
   <option value="0">Par défaut</option>
-  <option value="red">Rouge</option>
-  <option value="blue">Bleu</option>
-  <option value="purple">Violet</option>
-  <option value="grey">Gris</option>
-  <option value="yellow">Jaune</option>
-  <option value="lightgrey">Gris Clair</option>
-  <option value="lightblue">Bleu Clair</option>
+  <option value="red" class="red">Rouge</option>
+  <option value="blue" class="blue">Bleu</option>
+  <option value="purple" class="purple">Violet</option>
+  <option value="grey" class="grey">Gris</option>
+  <option value="orange" class="orange">Orange</option>
+  <option value="lightgrey" class="lightgrey">Gris Clair</option>
+  <option value="lightblue" class="lightblue">Bleu Clair</option>
 </select></td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.titredecoration" id="titredecoration" name="titredecoration">
   <option value="0">Par défaut</option>
-  <option value="underline">Souligné</option>
-  <option value="italic">Italique</option>
-  <option value="bold">Gras</option>
-  <option value="bolditalic">Gras et italique</option>
-  <option value="underlineitalic">Souligné et italique</option>
-  <option value="boldunderline">Gras et souligné</option>
-    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+  <option value="underline" class="underline">Souligné</option>
+  <option value="italic" class="italic">Italique</option>
+  <option value="bold" class="bold">Gras</option>
+  <option value="bolditalic" class="bolditalic">Gras et italique</option>
+  <option value="underlineitalic" class="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline" class="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic" class="boldunderlineitalic" >Gras, italique et souligné</option>
 
 
 </select>
@@ -84,33 +82,33 @@
                     </td>
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.prespolice" id="prespolice" name="prespolice">
- <option value="0">Par défaut</option>
-  <option value="arial">Arial</option>
-  <option value="franklin">Franklin Gothic</option>
-  <option value="lucida">Lucida</option>
-    <option value="courier">Franklin Gothic</option>
-  <option value="segoe">Segoe</option>
+<option value="0">Par défaut</option>
+  <option value="arial" class="arial">Arial</option>
+  <option value="franklin" class="franklin">Franklin Gothic</option>
+  <option value="lucida" class="'lucida">Lucida</option>
+    <option value="courier" class="'courier">Courier</option>
+  <option value="segoe" class="segoe">Segoe</option>
 </select></td>
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.prescouleur" id="prescouleur" name="prescouleur">
-    <option value="0">Par défaut</option>
-  <option value="red">Rouge</option>
-  <option value="blue">Bleu</option>
-  <option value="purple">Violet</option>
-  <option value="grey">Gris</option>
-  <option value="yellow">Jaune</option>
-  <option value="lightgrey">Gris Clair</option>
-  <option value="lightblue">Bleu Clair</option>
+  <option value="0">Par défaut</option>
+  <option value="red" class="red">Rouge</option>
+  <option value="blue" class="blue">Bleu</option>
+  <option value="purple" class="purple">Violet</option>
+  <option value="grey" class="grey">Gris</option>
+  <option value="orange" class="orange">Orange</option>
+  <option value="lightgrey" class="lightgrey">Gris Clair</option>
+  <option value="lightblue" class="lightblue">Bleu Clair</option>
 </select></td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.presdecoration" id="presdecoration" name="presdecoration">
-  <option value="0">Par défaut</option>
-  <option value="underline">Souligné</option>
-  <option value="italic">Italique</option>
-  <option value="bold">Gras</option>
-  <option value="bolditalic">Gras et italique</option>
-  <option value="underlineitalic">Souligné et italique</option>
-  <option value="boldunderline">Gras et souligné</option>
-    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+ <option value="0">Par défaut</option>
+  <option value="underline" class="underline">Souligné</option>
+  <option value="italic" class="italic">Italique</option>
+  <option value="bold" class="bold">Gras</option>
+  <option value="bolditalic" class="bolditalic">Gras et italique</option>
+  <option value="underlineitalic" class="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline" class="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic" class="boldunderlineitalic" >Gras, italique et souligné</option>
 
 </select>
                     </td>
@@ -126,33 +124,32 @@
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st1police" id="st1police" name="st1police">
 <option value="0">Par défaut</option>
-  <option value="arial">Arial</option>
-  <option value="franklin">Franklin Gothic</option>
-  <option value="lucida">Lucida</option>
-    <option value="courier">Franklin Gothic</option>
-  <option value="segoe">Segoe</option>
+  <option value="arial" class="arial">Arial</option>
+  <option value="franklin" class="franklin">Franklin Gothic</option>
+  <option value="lucida" class="'lucida">Lucida</option>
+    <option value="courier" class="'courier">Courier</option>
+  <option value="segoe" class="segoe">Segoe</option>
 </select></td>
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st1couleur" id="st1couleur" name="st1couleur">
   <option value="0">Par défaut</option>
-  <option value="red">Rouge</option>
-  <option value="blue">Bleu</option>
-  <option value="purple">Violet</option>
-  <option value="grey">Gris</option>
-  <option value="yellow">Jaune</option>
-  <option value="lightgrey">Gris Clair</option>
-  <option value="lightblue">Bleu Clair</option>
+  <option value="red" class="red">Rouge</option>
+  <option value="blue" class="blue">Bleu</option>
+  <option value="purple" class="purple">Violet</option>
+  <option value="grey" class="grey">Gris</option>
+  <option value="orange" class="orange">Orange</option>
+  <option value="lightgrey" class="lightgrey">Gris Clair</option>
+  <option value="lightblue" class="lightblue">Bleu Clair</option>
 </select></td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st1decoration" id="st1decoration" name="st1decoration">
-
-  <option value="0">Par défaut</option>
-  <option value="underline">Souligné</option>
-  <option value="italic">Italique</option>
-  <option value="bold">Gras</option>
-  <option value="bolditalic">Gras et italique</option>
-  <option value="underlineitalic">Souligné et italique</option>
-  <option value="boldunderline">Gras et souligné</option>
-    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+ <option value="0">Par défaut</option>
+  <option value="underline" class="underline">Souligné</option>
+  <option value="italic" class="italic">Italique</option>
+  <option value="bold" class="bold">Gras</option>
+  <option value="bolditalic" class="bolditalic">Gras et italique</option>
+  <option value="underlineitalic" class="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline" class="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic" class="boldunderlineitalic" >Gras, italique et souligné</option>
 
 </select>
                     </td>
@@ -168,35 +165,34 @@
 
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa1police" id="pa1police" name="pa1police">
- <option value="0">Par défaut</option>
-  <option value="arial">Arial</option>
-  <option value="franklin">Franklin Gothic</option>
-  <option value="lucida">Lucida</option>
-    <option value="courier">Franklin Gothic</option>
-  <option value="segoe">Segoe</option>
+<option value="0">Par défaut</option>
+  <option value="arial" class="arial">Arial</option>
+  <option value="franklin" class="franklin">Franklin Gothic</option>
+  <option value="lucida" class="'lucida">Lucida</option>
+    <option value="courier" class="'courier">Courier</option>
+  <option value="segoe" class="segoe">Segoe</option>
 </select>
                     </td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa1couleur" id="pa1couleur" name="pa1couleur">
   <option value="0">Par défaut</option>
-  <option value="red">Rouge</option>
-  <option value="blue">Bleu</option>
-  <option value="purple">Violet</option>
-  <option value="grey">Gris</option>
-  <option value="yellow">Jaune</option>
-  <option value="lightgrey">Gris Clair</option>
-  <option value="lightblue">Bleu Clair</option>
+  <option value="red" class="red">Rouge</option>
+  <option value="blue" class="blue">Bleu</option>
+  <option value="purple" class="purple">Violet</option>
+  <option value="grey" class="grey">Gris</option>
+  <option value="orange" class="orange">Orange</option>
+  <option value="lightgrey" class="lightgrey">Gris Clair</option>
+  <option value="lightblue" class="lightblue">Bleu Clair</option>
 </select>
                     </td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa1decoration" id="pa1decoration" name="pa1decoration">
-
-  <option value="0">Par défaut</option>
-  <option value="underline">Souligné</option>
-  <option value="italic">Italique</option>
-  <option value="bold">Gras</option>
-  <option value="bolditalic">Gras et italique</option>
-  <option value="underlineitalic">Souligné et italique</option>
-  <option value="boldunderline">Gras et souligné</option>
-    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+ <option value="0">Par défaut</option>
+  <option value="underline" class="underline">Souligné</option>
+  <option value="italic" class="italic">Italique</option>
+  <option value="bold" class="bold">Gras</option>
+  <option value="bolditalic" class="bolditalic">Gras et italique</option>
+  <option value="underlineitalic" class="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline" class="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic" class="boldunderlineitalic" >Gras, italique et souligné</option>
 
 </select>
                     </td>
@@ -211,34 +207,33 @@
                     </td>
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st2police" id="st2police" name="st2police">
- <option value="0">Par défaut</option>
-  <option value="arial">Arial</option>
-  <option value="franklin">Franklin Gothic</option>
-  <option value="lucida">Lucida</option>
-    <option value="courier">Franklin Gothic</option>
-  <option value="segoe">Segoe</option>
+<option value="0">Par défaut</option>
+  <option value="arial" class="arial">Arial</option>
+  <option value="franklin" class="franklin">Franklin Gothic</option>
+  <option value="lucida" class="'lucida">Lucida</option>
+    <option value="courier" class="'courier">Courier</option>
+  <option value="segoe" class="segoe">Segoe</option>
 </select>
                     </td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st2couleur" id="st2couleur" name="st2couleur">
   <option value="0">Par défaut</option>
-  <option value="red">Rouge</option>
-  <option value="blue">Bleu</option>
-  <option value="purple">Violet</option>
-  <option value="grey">Gris</option>
-  <option value="yellow">Jaune</option>
-  <option value="lightgrey">Gris Clair</option>
-  <option value="lightblue">Bleu Clair</option>
+  <option value="red" class="red">Rouge</option>
+  <option value="blue" class="blue">Bleu</option>
+  <option value="purple" class="purple">Violet</option>
+  <option value="grey" class="grey">Gris</option>
+  <option value="orange" class="orange">Orange</option>
+  <option value="lightgrey" class="lightgrey">Gris Clair</option>
+  <option value="lightblue" class="lightblue">Bleu Clair</option>
 </select></td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st2decoration" id="st2decoration" name="st2decoration">
-
-  <option value="0">Par défaut</option>
-  <option value="underline">Souligné</option>
-  <option value="italic">Italique</option>
-  <option value="bold">Gras</option>
-  <option value="bolditalic">Gras et italique</option>
-  <option value="underlineitalic">Souligné et italique</option>
-  <option value="boldunderline">Gras et souligné</option>
-    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+ <option value="0">Par défaut</option>
+  <option value="underline" class="underline">Souligné</option>
+  <option value="italic" class="italic">Italique</option>
+  <option value="bold" class="bold">Gras</option>
+  <option value="bolditalic" class="bolditalic">Gras et italique</option>
+  <option value="underlineitalic" class="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline" class="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic" class="boldunderlineitalic" >Gras, italique et souligné</option>
 
 </select>
                     </td>
@@ -254,33 +249,32 @@
                     <td>
                         <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa2police" id="pa2police" name="pa2police">
 <option value="0">Par défaut</option>
-  <option value="arial">Arial</option>
-  <option value="franklin">Franklin Gothic</option>
-  <option value="lucida">Lucida</option>
-    <option value="courier">Franklin Gothic</option>
-  <option value="segoe">Segoe</option>
+  <option value="arial" class="arial">Arial</option>
+  <option value="franklin" class="franklin">Franklin Gothic</option>
+  <option value="lucida" class="'lucida">Lucida</option>
+    <option value="courier" class="'courier">Courier</option>
+  <option value="segoe" class="segoe">Segoe</option>
 </select></td>
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa2couleur" id="pa2couleur" name="pa2couleur">
   <option value="0">Par défaut</option>
-  <option value="red">Rouge</option>
-  <option value="blue">Bleu</option>
-  <option value="purple">Violet</option>
-  <option value="grey">Gris</option>
-  <option value="yellow">Jaune</option>
-  <option value="lightgrey">Gris Clair</option>
-  <option value="lightblue">Bleu Clair</option>
+  <option value="red" class="red">Rouge</option>
+  <option value="blue" class="blue">Bleu</option>
+  <option value="purple" class="purple">Violet</option>
+  <option value="grey" class="grey">Gris</option>
+  <option value="orange" class="orange">Orange</option>
+  <option value="lightgrey" class="lightgrey">Gris Clair</option>
+  <option value="lightblue" class="lightblue">Bleu Clair</option>
 </select></td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa2decoration" id="pa2decoration" name="pa2decoration">
-
-   <option value="0">Par défaut</option>
-  <option value="underline">Souligné</option>
-  <option value="italic">Italique</option>
-  <option value="bold">Gras</option>
-  <option value="bolditalic">Gras et italique</option>
-  <option value="underlineitalic">Souligné et italique</option>
-  <option value="boldunderline">Gras et souligné</option>
-    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+ <option value="0">Par défaut</option>
+  <option value="underline" class="underline">Souligné</option>
+  <option value="italic" class="italic">Italique</option>
+  <option value="bold" class="bold">Gras</option>
+  <option value="bolditalic" class="bolditalic">Gras et italique</option>
+  <option value="underlineitalic" class="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline" class="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic" class="boldunderlineitalic" >Gras, italique et souligné</option>
 
 </select>
                     </td>
@@ -295,34 +289,33 @@
                     </td>
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st3police" id="st3police" name="st3police">
- <option value="0">Par défaut</option>
-  <option value="arial">Arial</option>
-  <option value="franklin">Franklin Gothic</option>
-  <option value="lucida">Lucida</option>
-    <option value="courier">Franklin Gothic</option>
-  <option value="segoe">Segoe</option>
+<option value="0">Par défaut</option>
+  <option value="arial" class="arial">Arial</option>
+  <option value="franklin" class="franklin">Franklin Gothic</option>
+  <option value="lucida" class="'lucida">Lucida</option>
+    <option value="courier" class="'courier">Courier</option>
+  <option value="segoe" class="segoe">Segoe</option>
 </select></td>
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st3couleur" id="st3couleur" name="st3couleur">
-   <option value="0">Par défaut</option>
-  <option value="red">Rouge</option>
-  <option value="blue">Bleu</option>
-  <option value="purple">Violet</option>
-  <option value="grey">Gris</option>
-  <option value="yellow">Jaune</option>
-  <option value="lightgrey">Gris Clair</option>
-  <option value="lightblue">Bleu Clair</option>
+  <option value="0">Par défaut</option>
+  <option value="red" class="red">Rouge</option>
+  <option value="blue" class="blue">Bleu</option>
+  <option value="purple" class="purple">Violet</option>
+  <option value="grey" class="grey">Gris</option>
+  <option value="orange" class="orange">Orange</option>
+  <option value="lightgrey" class="lightgrey">Gris Clair</option>
+  <option value="lightblue" class="lightblue">Bleu Clair</option>
 </select></td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st3decoration" id="st3decoration" name="st3decoration">
-
-   <option value="0">Par défaut</option>
-  <option value="underline">Souligné</option>
-  <option value="italic">Italique</option>
-  <option value="bold">Gras</option>
-  <option value="bolditalic">Gras et italique</option>
-  <option value="underlineitalic">Souligné et italique</option>
-  <option value="boldunderline">Gras et souligné</option>
-    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+ <option value="0">Par défaut</option>
+  <option value="underline" class="underline">Souligné</option>
+  <option value="italic" class="italic">Italique</option>
+  <option value="bold" class="bold">Gras</option>
+  <option value="bolditalic" class="bolditalic">Gras et italique</option>
+  <option value="underlineitalic" class="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline" class="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic" class="boldunderlineitalic" >Gras, italique et souligné</option>
 
 </select>
                     </td>
@@ -338,34 +331,33 @@
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa1police" id="pa1police" name="pa1police">
 <option value="0">Par défaut</option>
-  <option value="arial">Arial</option>
-  <option value="franklin">Franklin Gothic</option>
-  <option value="lucida">Lucida</option>
-    <option value="courier">Franklin Gothic</option>
-  <option value="segoe">Segoe</option>
+  <option value="arial" class="arial">Arial</option>
+  <option value="franklin" class="franklin">Franklin Gothic</option>
+  <option value="lucida" class="'lucida">Lucida</option>
+    <option value="courier" class="'courier">Courier</option>
+  <option value="segoe" class="segoe">Segoe</option>
 </select>
                     </td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa3couleur" id="pa3couleur" name="pa3couleur">
   <option value="0">Par défaut</option>
-  <option value="red">Rouge</option>
-  <option value="blue">Bleu</option>
-  <option value="purple">Violet</option>
-  <option value="grey">Gris</option>
-  <option value="yellow">Jaune</option>
-  <option value="lightgrey">Gris Clair</option>
-  <option value="lightblue">Bleu Clair</option>
+  <option value="red" class="red">Rouge</option>
+  <option value="blue" class="blue">Bleu</option>
+  <option value="purple" class="purple">Violet</option>
+  <option value="grey" class="grey">Gris</option>
+  <option value="orange" class="orange">Orange</option>
+  <option value="lightgrey" class="lightgrey">Gris Clair</option>
+  <option value="lightblue" class="lightblue">Bleu Clair</option>
 </select>
                     </td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa3decoration" id="pa3decoration" name="pa3decoration">
-
-  <option value="0">Par défaut</option>
-  <option value="underline">Souligné</option>
-  <option value="italic">Italique</option>
-  <option value="bold">Gras</option>
-  <option value="bolditalic">Gras et italique</option>
-  <option value="underlineitalic">Souligné et italique</option>
-  <option value="boldunderline">Gras et souligné</option>
-    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+ <option value="0">Par défaut</option>
+  <option value="underline" class="underline">Souligné</option>
+  <option value="italic" class="italic">Italique</option>
+  <option value="bold" class="bold">Gras</option>
+  <option value="bolditalic" class="bolditalic">Gras et italique</option>
+  <option value="underlineitalic" class="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline" class="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic" class="boldunderlineitalic" >Gras, italique et souligné</option>
 </select>
                     </td>
                 </tr>
@@ -380,33 +372,32 @@
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st4police" id="st4police" name="st4police">
 <option value="0">Par défaut</option>
-  <option value="arial">Arial</option>
-  <option value="franklin">Franklin Gothic</option>
-  <option value="lucida">Lucida</option>
-    <option value="courier">Franklin Gothic</option>
-  <option value="segoe">Segoe</option>
+  <option value="arial" class="arial">Arial</option>
+  <option value="franklin" class="franklin">Franklin Gothic</option>
+  <option value="lucida" class="'lucida">Lucida</option>
+    <option value="courier" class="'courier">Courier</option>
+  <option value="segoe" class="segoe">Segoe</option>
 </select></td>
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st4couleur" id="st4couleur" name="st4couleur">
   <option value="0">Par défaut</option>
-  <option value="red">Rouge</option>
-  <option value="blue">Bleu</option>
-  <option value="purple">Violet</option>
-  <option value="grey">Gris</option>
-  <option value="yellow">Jaune</option>
-  <option value="lightgrey">Gris Clair</option>
-  <option value="lightblue">Bleu Clair</option>
+  <option value="red" class="red">Rouge</option>
+  <option value="blue" class="blue">Bleu</option>
+  <option value="purple" class="purple">Violet</option>
+  <option value="grey" class="grey">Gris</option>
+  <option value="orange" class="orange">Orange</option>
+  <option value="lightgrey" class="lightgrey">Gris Clair</option>
+  <option value="lightblue" class="lightblue">Bleu Clair</option>
 </select></td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st4decoration" id="st4decoration" name="st4decoration">
-
   <option value="0">Par défaut</option>
-  <option value="underline">Souligné</option>
-  <option value="italic">Italique</option>
-  <option value="bold">Gras</option>
-  <option value="bolditalic">Gras et italique</option>
-  <option value="underlineitalic">Souligné et italique</option>
-  <option value="boldunderline">Gras et souligné</option>
-    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+  <option value="underline" class="underline">Souligné</option>
+  <option value="italic" class="italic">Italique</option>
+  <option value="bold" class="bold">Gras</option>
+  <option value="bolditalic" class="bolditalic">Gras et italique</option>
+  <option value="underlineitalic" class="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline" class="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic" class="boldunderlineitalic" >Gras, italique et souligné</option>
 
 </select>
                     </td>
@@ -421,34 +412,33 @@
                     </td>
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa4police" id="pa4police" name="pa4police">
- <option value="0">Par défaut</option>
-  <option value="arial">Arial</option>
-  <option value="franklin">Franklin Gothic</option>
-  <option value="lucida">Lucida</option>
-    <option value="courier">Franklin Gothic</option>
-  <option value="segoe">Segoe</option>
+<option value="0">Par défaut</option>
+  <option value="arial" class="arial">Arial</option>
+  <option value="franklin" class="franklin">Franklin Gothic</option>
+  <option value="lucida" class="'lucida">Lucida</option>
+    <option value="courier" class="'courier">Courier</option>
+  <option value="segoe" class="segoe">Segoe</option>
 </select></td>
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa4couleur" id="pa4couleur" name="pa4couleur">
   <option value="0">Par défaut</option>
-  <option value="red">Rouge</option>
-  <option value="blue">Bleu</option>
-  <option value="purple">Violet</option>
-  <option value="grey">Gris</option>
-  <option value="yellow">Jaune</option>
-  <option value="lightgrey">Gris Clair</option>
-  <option value="lightblue">Bleu Clair</option>
+  <option value="red" class="red">Rouge</option>
+  <option value="blue" class="blue">Bleu</option>
+  <option value="purple" class="purple">Violet</option>
+  <option value="grey" class="grey">Gris</option>
+  <option value="orange" class="orange">Orange</option>
+  <option value="lightgrey" class="lightgrey">Gris Clair</option>
+  <option value="lightblue" class="lightblue">Bleu Clair</option>
 </select></td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa4decoration" id="pa4decoration" name="pa4decoration">
-
-  <option value="0">Par défaut</option>
-  <option value="underline">Souligné</option>
-  <option value="italic">Italique</option>
-  <option value="bold">Gras</option>
-  <option value="bolditalic">Gras et italique</option>
-  <option value="underlineitalic">Souligné et italique</option>
-  <option value="boldunderline">Gras et souligné</option>
-    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+ <option value="0">Par défaut</option>
+  <option value="underline" class="underline">Souligné</option>
+  <option value="italic" class="italic">Italique</option>
+  <option value="bold" class="bold">Gras</option>
+  <option value="bolditalic" class="bolditalic">Gras et italique</option>
+  <option value="underlineitalic" class="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline" class="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic" class="boldunderlineitalic" >Gras, italique et souligné</option>
 
 </select>
                     </td>
@@ -464,33 +454,33 @@
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st5police" id="st5police" name="st5police">
 <option value="0">Par défaut</option>
-  <option value="arial">Arial</option>
-  <option value="franklin">Franklin Gothic</option>
-  <option value="lucida">Lucida</option>
-    <option value="courier">Franklin Gothic</option>
-  <option value="segoe">Segoe</option>
+  <option value="arial" class="arial">Arial</option>
+  <option value="franklin" class="franklin">Franklin Gothic</option>
+  <option value="lucida" class="'lucida">Lucida</option>
+    <option value="courier" class="'courier">Courier</option>
+  <option value="segoe" class="segoe">Segoe</option>
 </select></td>
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st5couleur" id="st5couleur" name="st5couleur">
   <option value="0">Par défaut</option>
-  <option value="red">Rouge</option>
-  <option value="blue">Bleu</option>
-  <option value="purple">Violet</option>
-  <option value="grey">Gris</option>
-  <option value="yellow">Jaune</option>
-  <option value="lightgrey">Gris Clair</option>
-  <option value="lightblue">Bleu Clair</option>
+  <option value="red" class="red">Rouge</option>
+  <option value="blue" class="blue">Bleu</option>
+  <option value="purple" class="purple">Violet</option>
+  <option value="grey" class="grey">Gris</option>
+  <option value="orange" class="orange">Orange</option>
+  <option value="lightgrey" class="lightgrey">Gris Clair</option>
+  <option value="lightblue" class="lightblue">Bleu Clair</option>
 </select></td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.st5decoration" id="st5decoration" name="st5decoration">
 
-  <option value="0">Par défaut</option>
-  <option value="underline">Souligné</option>
-  <option value="italic">Italique</option>
-  <option value="bold">Gras</option>
-  <option value="bolditalic">Gras et italique</option>
-  <option value="underlineitalic">Souligné et italique</option>
-  <option value="boldunderline">Gras et souligné</option>
-    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+ <option value="0">Par défaut</option>
+  <option value="underline" class="underline">Souligné</option>
+  <option value="italic" class="italic">Italique</option>
+  <option value="bold" class="bold">Gras</option>
+  <option value="bolditalic" class="bolditalic">Gras et italique</option>
+  <option value="underlineitalic" class="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline" class="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic" class="boldunderlineitalic" >Gras, italique et souligné</option>
 
 </select>
                     </td>
@@ -507,33 +497,32 @@
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa5police" id="pa5police" name="pa5police">
 <option value="0">Par défaut</option>
-  <option value="arial">Arial</option>
-  <option value="franklin">Franklin Gothic</option>
-  <option value="lucida">Lucida</option>
-    <option value="courier">Franklin Gothic</option>
-  <option value="segoe">Segoe</option>
+  <option value="arial" class="arial">Arial</option>
+  <option value="franklin" class="franklin">Franklin Gothic</option>
+  <option value="lucida" class="'lucida">Lucida</option>
+    <option value="courier" class="'courier">Courier</option>
+  <option value="segoe" class="segoe">Segoe</option>
 </select></td>
 
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa5couleur" id="pa5couleur" name="pa5couleur">
   <option value="0">Par défaut</option>
-  <option value="red">Rouge</option>
-  <option value="blue">Bleu</option>
-  <option value="purple">Violet</option>
-  <option value="grey">Gris</option>
-  <option value="yellow">Jaune</option>
-  <option value="lightgrey">Gris Clair</option>
-  <option value="lightblue">Bleu Clair</option>
+  <option value="red" class="red">Rouge</option>
+  <option value="blue" class="blue">Bleu</option>
+  <option value="purple" class="purple">Violet</option>
+  <option value="grey" class="grey">Gris</option>
+  <option value="orange" class="orange">Orange</option>
+  <option value="lightgrey" class="lightgrey">Gris Clair</option>
+  <option value="lightblue" class="lightblue">Bleu Clair</option>
 </select></td>
                     <td> <select class="form-select form-select-sm" aria-label=".form-select-sm" [(ngModel)]="miseenpage.pa5decoration" id="pa5decoration" name="pa5decoration">
-
-  <option value="0">Par défaut</option>
-  <option value="underline">Souligné</option>
-  <option value="italic">Italique</option>
-  <option value="bold">Gras</option>
-  <option value="bolditalic">Gras et italique</option>
-  <option value="underlineitalic">Souligné et italique</option>
-  <option value="boldunderline">Gras et souligné</option>
-    <option value="boldunderlineitalic">Gras, italique et souligné</option>
+ <option value="0">Par défaut</option>
+  <option value="underline" class="underline">Souligné</option>
+  <option value="italic" class="italic">Italique</option>
+  <option value="bold" class="bold">Gras</option>
+  <option value="bolditalic" class="bolditalic">Gras et italique</option>
+  <option value="underlineitalic" class="underlineitalic">Souligné et italique</option>
+  <option value="boldunderline" class="boldunderline">Gras et souligné</option>
+    <option value="boldunderlineitalic" class="boldunderlineitalic" >Gras, italique et souligné</option>
 
 </select>
                     </td>

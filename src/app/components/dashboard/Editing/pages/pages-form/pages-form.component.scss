@@ -10,3 +10,17 @@ mat-select {
     color: blue;
     font-family: 'Times New Roman', Times, serif
 }
+
+input {
+    width: 45%;
+}
+
+textarea {
+    width: 80%;
+}
+
+.buttoncontainer {
+    float: left;
+    margin-right: 5vw;
+    justify-content: space-between;
+}

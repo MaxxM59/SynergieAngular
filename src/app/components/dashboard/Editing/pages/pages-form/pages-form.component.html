@@ -1,11 +1,11 @@
 <div class="container-fluid p-5">
 
     <form #pageForm="ngForm">
-        <button type='submit' class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>
-        <button class="btn btn-success m-1" routerLink="../../pages">Retour</button>
         <mat-hint>
-            <h3 id="hint1"><strong> Les champs de du titre, la présentation ainsi que le premier  paragraphe sont obligatoires </strong></h3>
+            <h3 id="hint1"><strong> Les champs du titre, de la présentation ainsi que du premier  paragraphe sont obligatoires. </strong></h3>
+            <h3><strong>Si vous souhaitez que l'un des champs  optionels soit invisible sur la page d'affichage, laissez simplement ce champ vide.</strong></h3>
         </mat-hint>
+        <hr>
         <!-- TITRE -->
         <div class="form-group">
             <label for="titre"><h2>Titre</h2></label>
@@ -14,16 +14,14 @@
                 <strong>Le titre est obligatoire</strong>
             </mat-error>
         </div>
-        <mat-hint>
-            <h3 id="hint1"><strong>Si vous souhaitez que l'un des champs sois vide sur la page d'affichage, laissez simplement ce champ vide.</strong></h3>
-        </mat-hint>
+
         <!-- IMAGE HAUT DE PAGE -->
         <div class="form-group">
             <label for="image1"><h2>Image haut de page</h2></label>
             <input type="text" name="image1" id="image1" class="form-control" [(ngModel)]="page.image1">
             <div>
                 <mat-hint>
-                    <button type="button" class="btn btn-link" (click)="admin.goToLink('https://postimages.org/')"> Veuillez héberger votre image (de préference au format WebP) sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button>                    </mat-hint>
+                    <button type="button" class="btn btn-link" (click)="admin.goToLink('https://postimages.org/')"> Veuillez héberger votre image (de préference au format WebP) sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessus</button>                    </mat-hint>
             </div>
         </div>
         <!-- PRESENTATION -->
@@ -65,7 +63,7 @@
             <input type="text" name="image2" id="image2" class="form-control" [(ngModel)]="page.image2">
             <div>
                 <mat-hint>
-                    <button type="button" class="btn btn-link" (click)="admin.goToLink('https://postimages.org/')"> Veuillez héberger votre image (de préference au format WebP) sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button>                    </mat-hint>
+                    <button type="button" class="btn btn-link" (click)="admin.goToLink('https://postimages.org/')"> Veuillez héberger votre image (de préference au format WebP) sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessus</button>                    </mat-hint>
             </div>
         </div>
         <!-- SOUSTITRE 3 -->
@@ -103,7 +101,7 @@
             <input type="text" name="image3" id="image3" class="form-control" [(ngModel)]="page.image3">
             <div>
                 <mat-hint>
-                    <button type="button" class="btn btn-link" (click)="admin.goToLink('https://postimages.org/')"> Veuillez héberger votre image (de préference au format WebP) sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button>                    </mat-hint>
+                    <button type="button" class="btn btn-link" (click)="admin.goToLink('https://postimages.org/')"> Veuillez héberger votre image (de préference au format WebP) sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessus</button>                    </mat-hint>
             </div>
         </div>
         <!-- TEXTE BOUTON  LIEN -->
@@ -113,12 +111,14 @@
         </div>
         <!-- URL DU LIEN-->
         <div class="form-group">
-            <label for="titre"><h2>URL du lien</h2></label>
+            <label for="titre"><h2>Adresse URL du lien</h2></label>
             <input type="text" name="lien" id="lien" class="form-control" [(ngModel)]="page.lien">
         </div>
-        <br>
-        <button type='submit' class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>
-        <button class="btn btn-success m-1" routerLink="../../pages">Retour</button>
-        <button class="btn btn-danger m-1" *ngIf="page.id !== undefined" (click)="delete()">Supprimer</button>
+        <hr>
+        <div class="buttoncontainer">
+            <button type='submit' class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>
+            <button class="btn btn-success m-1" routerLink="../../pages">Retour</button>
+            <button class="btn btn-danger m-1" *ngIf="page.id !== undefined" (click)="delete()">Supprimer</button>
+        </div>
     </form>
 </div>

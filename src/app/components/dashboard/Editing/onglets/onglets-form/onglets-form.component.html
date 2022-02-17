@@ -1,11 +1,11 @@
 <div class='container-fluid p-5'>
     <form #ongletForm="ngForm">
         <mat-hint>
-            <h2 id='warning'>Attention, le titre de l'onglet doit être exactement identique à celui de la page !</h2>
+            <h2 id='warning'>Attention, le titre de l'onglet doit être <strong id="strong">exactement identique</strong> au titre de la page associée ! <br> Il en va de même pour les titres de dossiers.</h2>
         </mat-hint>
         <div class="form-group">
             <label for="titre"><h2>Titre</h2></label>
-            <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid &&titreInput.touched}" class="form-control" [(ngModel)]="onglet.titre" required>
+            <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid &&titreInput.touched}" class="form-control textinput" [(ngModel)]="onglet.titre" required>
             <mat-error *ngIf="titreInput?.hasError('required')">
                 <strong>Le titre est obligatoire</strong>
             </mat-error>
@@ -14,24 +14,22 @@
         <div class="form-group">
 
             <label for="dossier"><h2>Dossier</h2></label>
-            <input #lienInput="ngModel" type="text" name="dossier" id="dossier" class="form-control" [(ngModel)]="onglet.dossier">
+            <input #lienInput="ngModel" type="text" name="dossier" id="dossier" class="form-control textinput" [(ngModel)]="onglet.dossier">
             <mat-hint> <strong>Si l'onglet n'appartient à aucun dossier, veuillez laisser le champ vide</strong></mat-hint>
-        </div>
+        </div><br>
         <div class="form-group">
             <mat-form-field appearance="fill">
                 <mat-label>Position</mat-label>
                 <input #positionInput="ngModel" matInput min="1" max="15" name="position" id="position" [ngClass]="{'is-invalid' : titreInput.invalid &&titreInput.touched}" class="form-control" required [(ngModel)]="onglet.position" type="number">
-
             </mat-form-field>
             <mat-error *ngIf="positionInput?.hasError('required')">
                 <strong>La position est obligatoire</strong>
             </mat-error>
         </div>
-
         <div [hidden]="true" class="form-group">
             <input [hidden] #typeInput="ngModel" type="type" name="type" id="type" class="form-control" [(ngModel)]="onglet.type" value="Normal">
-
         </div>
+        <br>
         <button type='submit' class="btn btn-primary m-1" (click)="save(ongletForm)">Enregistrer</button>
         <button class="btn btn-success m-1" routerLink="../../onglets">Retour</button>
         <button class="btn btn-danger m-1" *ngIf="onglet.id !== undefined" (click)="delete()">Supprimer</button>

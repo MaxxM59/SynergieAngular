@@ -1,9 +1,9 @@
 <div class='container-fluid p-5'>
-    <mat-hint><strong><h1>Trois dossiers maximum !</h1></strong></mat-hint>
+    <mat-hint><strong><h3>Trois dossiers maximum !</h3></strong></mat-hint>
     <form #dossierForm="ngForm">
         <div class="form-group">
             <label for="titre"><h2>Titre</h2></label>
-            <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid &&titreInput.touched}" class="form-control" [(ngModel)]="onglet.titre" required>
+            <input #titreInput="ngModel" type="text" name="titre" id="titre" [ngClass]="{'is-invalid' : titreInput.invalid &&titreInput.touched}" class="form-control textinput" [(ngModel)]="onglet.titre" required>
             <mat-error *ngIf="titreInput?.hasError('required')">
                 <strong>Le titre est obligatoire</strong>
             </mat-error>
@@ -20,7 +20,7 @@
             </mat-error>
         </div>
 
-
+        <br>
         <button type='submit' class="btn btn-primary m-1" (click)="save(dossierForm)">Enregistrer</button>
         <button class="btn btn-success m-1" routerLink="../../onglets">Retour</button>
 

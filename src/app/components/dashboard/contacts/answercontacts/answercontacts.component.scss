@@ -4,32 +4,33 @@ h1 {
     color: #005cb2;
 }
 
-h3 {
+h5 {
     padding-top: 2vh;
     padding-bottom: 2vh;
     color: #005cb2;
-    text-align: left;
-    margin-left: 0.5vw;
+    text-align: start;
 }
 
 .msg {
     margin-top: 3vh;
     text-align: center;
-    font-size: 120%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 mat-card {
     border-radius: 20px;
+    width: 100%;
+    margin-left: 2vw;
 }
 
 #contenu {
     text-align: justify;
     margin-left: 4vw;
+    max-width: 60vw;
 }
 
-tr {
-    min-width: 20vw;
+.row {
+    margin-left: 0.5vw;
 }
 
 .buttoncontainer {

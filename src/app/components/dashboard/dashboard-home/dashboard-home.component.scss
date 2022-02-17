@@ -63,3 +63,10 @@ mat-list-item {
 .logout {
     color: #d84315;
 }
+
+@media (max-width: 760px) {
+    #logo {
+        width: 200px;
+        height: 75px;
+    }
+}

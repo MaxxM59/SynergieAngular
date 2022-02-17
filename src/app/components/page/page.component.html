@@ -68,12 +68,13 @@
         <section class="pa" *ngIf="page.lien !== '' && page.lien!==null">
             <div>
                 <!-- BOUTON LIEN -->
-                <a *ngIf="page.lien!==null && page.lien!== ''" mat-raised-button rel="noopener noreferrer" href="{{page.lien}}" target="_blank">
-                    <h2>{{page.nomlien}}</h2>
+                <a *ngIf="page.lien!==null && page.lien!== ''" mat-raised-button rel="noopener noreferrer" id='pagebtn' href="{{page.lien}}" target="_blank">
+                    <h2 color="dark">{{page.nomlien}}</h2>
                 </a>
             </div>
         </section>
         <br>
+        <hr>
     </div>
-    <hr>
+
     <app-footer></app-footer>

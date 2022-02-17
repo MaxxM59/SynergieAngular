@@ -7,10 +7,15 @@ hr {
     margin-top: 20px;
 }
 
+.carousel-item {
+    border-radius: 40px;
+}
+
 .page {
-    background-color: #e5ffff;
+    background-color: rgba(238, 230, 234, 0.8);
     font-size: 1.1em;
     width: 98.9vw;
+    padding-top: 0;
 }
 
 //Début Carousel
@@ -29,6 +34,11 @@ hr {
     ;
     width: 80vw;
     height: 40vw;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    border-radius: 55px;
     overflow: hidden;
 }
 

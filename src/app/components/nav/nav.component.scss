@@ -1,5 +1,7 @@
             * {
-                background-color: #e6ffff
+                background-color: rgba(211, 230, 255, 0.8);
+                padding-top: 0;
+                padding-bottom: 0;
             }
 
             .nav-section {
@@ -11,15 +13,6 @@
             }
 
             button {
-                margin-top: 1vw;
-                background-color: #ffff;
-                align-content: center;
-                font-weight: bold;
-                color: #0288d1;
-            }
-
-            .button2 {
-                margin-left: 2vw;
                 margin-top: 1vw;
                 background-color: #ffff;
                 align-content: center;
@@ -66,6 +59,10 @@
 
             .maincontainer {
                 background-color: #e3f2fd
+            }
+
+            #navcontainer {
+                margin-top: 5px;
             }
 
             .btn-2 {

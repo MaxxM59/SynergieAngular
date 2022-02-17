@@ -1,17 +1,19 @@
 <div class="page">
     <app-nav></app-nav>
+    <hr>
     <!-- Début carousel-->
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
         <div class="carousel-inner">
             <div class="carousel-item active rounded rounded-lg">
-                <img src={{active.image}} class="rounded" alt="...">
+                <img src={{active.image}} class="rounded" alt="photo-{{active.titre}}">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>{{active.titre}}</h5>
                     <p>{{active.contenu}}</p>
                 </div>
             </div>
             <div class="carousel-item" *ngFor="let a of items">
-                <img src={{a.image}} class="rounded" alt="...">
+                <img src={{a.image}} class="rounded" alt="photo-{{a.titre}}">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>{{a.titre}}</h5>
                     <p>{{a.contenu}}.</p>

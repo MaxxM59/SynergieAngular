@@ -1,25 +1,85 @@
 <div class="container-fluid p-5">
     <h1>Voici le contenu du message : </h1>
+    <br>
     <mat-card>
-        <div class='content'>
-            <h2>Nom :</h2>
-            <div class='msg'>{{contact.name}}</div>
-            <h2>Prénom</h2>
-            <div class='msg'>{{contact.surname}}</div>
-            <h2>Sujet</h2>
-            <div class='msg'>{{contact.subject}}</div>
-            <h2>Mail</h2>
-            <div class='msg'>{{contact.mail}}</div>
-            <h2>Téléphone</h2>
-            <div class='msg'> {{contact.phone}}</div>
-            <h2>Message</h2>
-            <div class='msg'>{{contact.content}}</div>
-        </div>
-        <hr>
-        <button mat-raised-button id='sender' (click)="admin.goToLink (mailto(this.contact.mail,this.contact.subject ) ) " color="primary">Envoyer un mail</button>
+        <table class="table table-stripped">
 
-        <button (click)="delete()" class="btn btn-danger m-1" id='deleter'>Supprimer</button>
-        <button class="btn btn-success m-1 " id='return' routerLink="../../contacts ">Retour</button>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <h3>Nom :</h3>
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class='msg'>{{contact.name}}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <h3>Prénom :</h3>
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class='msg'>{{contact.surname}}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <h3>Sujet :</h3>
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class='msg'>{{contact.subject}}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <h3>Email :</h3>
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class='msg'>{{contact.mail}}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>
+                            <div class="row">Téléphone :</div>
+                        </h3>
+
+                    </td>
+                    <td>
+                        <div class='msg'> {{contact.phone}}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="row">
+                            <h3>Message :</h3>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='msg' id="contenu">{{contact.content}}</div>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+        <hr>
+        <div class="buttoncontainer">
+            <button mat-raised-button id='sender' (click)="admin.goToLink (mailto(this.contact.mail,this.contact.subject ) ) " color="primary">Envoyer un mail</button>
+
+            <button (click)="delete()" class="btn btn-danger m-1" id='deleter'>Supprimer</button>
+            <button class="btn btn-success m-1 " id='return' routerLink="../../contacts ">Retour</button>
+        </div>
     </mat-card>
 
 </div>

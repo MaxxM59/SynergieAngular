@@ -1,25 +1,52 @@
-.content,
 h1 {
     width: 85%;
-    text-align: justify;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
+    color: #005cb2;
 }
 
-h2 {
+h3 {
     padding-top: 2vh;
     padding-bottom: 2vh;
-    color: blue;
+    color: #005cb2;
+    text-align: left;
+    margin-left: 0.5vw;
 }
 
 .msg {
+    margin-top: 3vh;
+    text-align: center;
     font-size: 120%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+mat-card {
+    border-radius: 20px;
+}
+
+#contenu {
+    text-align: justify;
+    margin-left: 4vw;
+}
+
+tr {
+    min-width: 20vw;
+}
+
+.buttoncontainer {
+    vertical-align: center;
 }
 
 #return,
 #deleter {
     float: right;
+}
+
+.maincontainer {
+    background-image: url('https://i.postimg.cc/k5vszxp5/EDsx2f-GW4-AAGEBv.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 90vh;
 }

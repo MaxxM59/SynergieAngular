@@ -24,6 +24,10 @@ hr {
     margin: 0.8vw 0;
 }
 
+mat-card {
+    border-radius: 20px;
+}
+
 mat-nav-list {
     padding-top: 3vh;
     font-weight: bold;
@@ -59,5 +63,3 @@ mat-list-item {
 .logout {
     color: #d84315;
 }
-
-@media screen {}

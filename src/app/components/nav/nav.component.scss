@@ -18,31 +18,7 @@
         background-color: #ffff;
         align-content: center;
         font-weight: bold;
-        color: rgba(8, 20, 236, 0.8);
-    }
-
-    @media (min-width:800px) {
-        ul,
-        #contact {
-            display: flex;
-            list-style-type: none;
-        }
-    }
-
-    @media (max-width: 799px) {
-        .collapsebutton {
-            width: 75%;
-            margin-left: 2vw;
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-        }
-        .button2 {
-            margin-top: 3.7vw;
-        }
-        mat-raised-button {
-            max-width: 90%;
-        }
+        color: #0032d6;
     }
 
     img {
@@ -60,10 +36,6 @@
 
     #companyName {
         border-radius: 500px;
-    }
-
-    .maincontainer {
-        background-color: rgba(193, 193, 193, 0.8);
     }
 
     #navcontainer {
@@ -94,7 +66,29 @@
 
     #maintitle {
         font-size: 200%;
-        color: blue;
+        color: #0032d6;
+        margin-left: 2vw;
+    }
+
+    @media (min-width:800px) {
+        ul,
+        #contact {
+            display: flex;
+            list-style-type: none;
+        }
+    }
+
+    @media (max-width: 999px) {
+        .collapsebutton {
+            width: 75%;
+            margin-left: 2vw;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
+        .button2 {
+            margin-top: 3.7vw;
+        }
     }
 
     @media (min-width :1360px) {

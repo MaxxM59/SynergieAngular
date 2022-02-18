@@ -1,5 +1,5 @@
 * {
-    background-color: #fafafa;
+    background-color: rgba(211, 230, 255, 0.8);
     font-size: 1em;
 }
 
@@ -71,11 +71,12 @@ h1 {
     object-position: center;
     width: 8vw;
     height: 4vw;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 .button1 {
-    background-color: #e3f2fd;
+    background-color: rgba(193, 193, 193, 0.8);
+    color: rgba(8, 20, 236, 0.8);
 }
 
 mat-raised-button {

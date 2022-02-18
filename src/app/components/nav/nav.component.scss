@@ -1,71 +1,135 @@
-            * {
-                background-color: rgba(211, 230, 255, 0.8);
-                padding-top: 0;
-                padding-bottom: 0;
-            }
+    * {
+        background-color: rgba(211, 230, 255, 0.8);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 
-            .nav-section {
-                display: flex;
-                justify-content: space-between;
-                justify-content: center;
-                align-content: center;
-                width: 98vw;
-            }
+    .nav-section {
+        display: flex;
+        justify-content: space-between;
+        justify-content: center;
+        align-content: center;
+        width: 98vw;
+    }
 
-            button {
-                margin-top: 1vw;
-                background-color: #ffff;
-                align-content: center;
-                font-weight: bold;
-                color: rgba(8, 20, 236, 0.8);
-            }
+    button {
+        text-align: center;
+        margin-top: 1vw;
+        background-color: #ffff;
+        align-content: center;
+        font-weight: bold;
+        color: rgba(8, 20, 236, 0.8);
+    }
 
-            @media (min-width:800px) {
-                ul,
-                #contact {
-                    display: flex;
-                    list-style-type: none;
-                }
-            }
+    @media (min-width:800px) {
+        ul,
+        #contact {
+            display: flex;
+            list-style-type: none;
+        }
+    }
 
-            @media (max-width: 799px) {
-                .collapsebutton {
-                    width: 75%;
-                    margin-left: 2vw;
-                    display: flex;
-                    flex-direction: column;
-                    align-content: center;
-                }
-                .button2 {
-                    margin-top: 3.7vw;
-                }
-                mat-raised-button {
-                    max-width: 90%;
-                }
-            }
+    @media (max-width: 799px) {
+        .collapsebutton {
+            width: 75%;
+            margin-left: 2vw;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
+        .button2 {
+            margin-top: 3.7vw;
+        }
+        mat-raised-button {
+            max-width: 90%;
+        }
+    }
 
-            img {
-                max-width: 150px;
-                max-height: 100px;
-            }
+    img {
+        max-width: 150px;
+        max-height: 100px;
+    }
 
-            #logo {
-                border-radius: 60px;
-            }
+    #logo {
+        min-width: 100px;
+        max-width: 8vw;
+        height: auto;
+        border-radius: 60px;
+        margin-bottom: 1vw;
+    }
 
-            #companyName {
-                border-radius: 500px;
-            }
+    #companyName {
+        border-radius: 500px;
+    }
 
-            .maincontainer {
-                background-color: rgba(193, 193, 193, 0.8);
-            }
+    .maincontainer {
+        background-color: rgba(193, 193, 193, 0.8);
+    }
 
-            #navcontainer {
-                margin-top: 5px;
-            }
+    #navcontainer {
+        margin-top: 5px;
+    }
 
-            .btn-2 {
-                margin-top: 0;
-                margin-bottom: 0;
-            }
+    .btn-2 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #logotoggle {
+        max-width: 80px;
+        height: auto;
+        border-radius: 10px;
+        margin-left: 0;
+        border-radius: 50px;
+    }
+
+    .navbar-toggler {
+        min-width: 150px;
+        height: auto;
+        border-radius: 50px;
+        margin-bottom: 2vw;
+        display: block;
+        margin-left: 5vw;
+    }
+
+    @media (min-width :1360px) {
+        #dd1 {
+            margin-left: 1vw;
+        }
+    }
+
+    @media (min-width: 991px) {
+        #dd1 {
+            margin-left: 3vw;
+        }
+        #logotoggle {
+            display: none
+        }
+        .navbar-toggler {
+            display: none;
+        }
+    }
+
+    @media (min-width:799px) and (max-width:990px) {
+        button {
+            width: 40%;
+        }
+        .navbar-toggler {
+            width: 7%;
+        }
+        #logo {
+            display: none
+        }
+        #contact {
+            text-align: justify;
+        }
+    }
+
+    @media (max-width:800px) {
+        button {
+            max-width: 170px;
+        }
+        #logo {
+            display: none
+        }
+    }

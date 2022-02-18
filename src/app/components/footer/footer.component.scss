@@ -5,93 +5,60 @@
 
 .footer-section {
     max-width: 98vw;
-    height: 10vh;
-}
-
-.footer-section,
-h1,
-h2 {
-    font-family: 'Didact Gothic', sans-serif;
-    font-style: italic;
-}
-
-h1 {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-#facebook,
-#mailcontact {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0.5vh;
-}
-
-.titrefb {
-    padding-top: 0.7vh;
-    font-size: 0.8em;
-    font-weight: bold;
-}
-
-#contact1,
-#contact2 {
-    text-align: center;
-    padding: 1em 0 0 0;
-}
-
-#contact2 {
-    padding-top: 1em;
-}
-
-.soustitre {
-    text-decoration: underline;
+    height: 15vh;
+    padding-top: 2vh;
 }
 
 #img-section {
-    display: flex;
-    flex-wrap: wrap;
-    width: 45vw;
-    padding-bottom: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#img13 {
-    margin-left: 2vw;
+.row {
+    padding-left: 1vw;
 }
 
-.divtitreh1 {
-    width: 25%;
-}
-
-#titrepartenaires {
-    margin-left: 35%;
-    padding: 2%;
+.col-12 {
+    text-align: center;
 }
 
 .img {
     object-fit: contain;
     object-position: center;
-    width: 8vw;
+    width: 5.8vw;
     height: 4vw;
+    min-width: 50px;
+    min-height: 50px;
     border-radius: 20px;
 }
 
 .button1 {
-    background-color: rgba(193, 193, 193, 0.8);
-    color: rgba(8, 20, 236, 0.8);
+    background-color: rgba(8, 20, 236, 0.8);
+    color: white;
+    font-weight: bold;
+    min-width: 50px;
+    font-size: 2vw;
 }
 
-mat-raised-button {
-    margin-top: 2vh;
+h1 {
+    font-size: 150%;
 }
 
-@media (max-width:840px) {
-    .img {
-        width: 15vw;
-        height: 10vw;
-    }
-    #facebook,
-    #mailcontact {
-        min-width: 20vw;
-        font-size: 0.8em;
-    }
+#buttoncontainer {
+    padding-left: 5vw;
+}
+
+#horaires,
+#mail,
+#phone,
+#buttoncontainer {
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+
+.textsection {
+    font-size: 110%;
 }

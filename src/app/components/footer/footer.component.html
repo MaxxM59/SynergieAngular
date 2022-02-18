@@ -1,67 +1,54 @@
+<!-- NOUVEAU FOOTER -->
 <div class="footer-section">
-    <div class="row">
-        <div class="col-7" id="img-section">
-            <div class="forbg">
-                <h1 id="titrepartenaires">Nos partenaires</h1>
-                <span><img id='img1' class="img"src="../../../assets/images/footer/logo1.jpg" ></span>
-                <span><img id='img2' class="img" src="../../../assets/images/footer/logo2.jpg"></span>
-                <span><img id='img3' class="img" src="../../../assets/images/footer/logo3.png"></span>
-                <span><img id='img4' class="img" src="../../../assets/images/footer/logo4.png"></span>
-                <span><img id='img5' class="img" src="../../../assets/images/footer/logo5.png "></span>
-                <span><img id='img6' class="img" src="../../../assets/images/footer/logo6.png "></span>
-                <span><img id='img7' class="img" src="../../../assets/images/footer/logo7.jpg"></span>
-                <span><img id='img8' class="img" src="../../../assets/images/footer/logo8.jpg"></span>
-                <span><img id='img9' class="img" src="../../../assets/images/footer/logo9.jpg"></span>
-                <span><img id='img10' class="img" src="../../../assets/images/footer/logo10.jpg"></span>
-                <span><img id='img11' class="img" src="../../../assets/images/footer/logo11.jpg"></span>
-                <span><img id='img12' class="img" src="../../../assets/images/footer/logo12.jpg"></span>
-                <span><img id ='img13'class="img" src="../../../assets/images/footer/logo13.jpg"></span>
-            </div>
+    <div class="textsection">
+        <div class="row" id="horaires">
+            <div class="col-12" id="horaires"><u>Horaires</u> : Du lundi au vendredi De 9h00 à 12h00 et de 13h00 à 17h00</div>
         </div>
-        <div class='col-3' id="contact1">
-            <div class='row>'>
-                <h1 class=>Horaires</h1>
-            </div>
-            <div class="row">
-                <h2>Du Lundi au vendredi <br>De 9h00 à 12h00 et de 13h00 à 17h00</h2>
-            </div>
-            <div class='row>'>
-                <h1>Téléphone</h1>
-            </div>
-            <div class='row>'>
-                <h2>03.27.62.83.41</h2>
-            </div>
-            <div class='row>'>
-                <h2>Mail : contact@associationsynergie.fr'</h2>
-                <br>
-            </div>
-            <div class='d-block mb-1>' id="mailcontact">
-                <button class='button1' mat-raised-button (click)="admin.goToLink ('mailto:contact@associationsynergie.fr') ">
-                    <h2   class='text titrefb button1'>Nous envoyer un mail </h2>
-                </button>
-            </div>
 
+        <div class="row" id="phone">
+            <div class="col-12"><u>Téléphone</u> : 03.27.62.83.41</div>
         </div>
-        <div class='col-3' id="contact2">
 
-            <div class='row>'>
-                <h1 class='soustitre'>Siège</h1>
-                <h2>15 place de la gare <br> 59620 Aulnoye-Aymeries</h2>
-            </div>
-            <div class='row>'>
 
-                <h1 class='soustitre'>Pôle administratif</h1>
-                <h2>Zae La Florentine <br> 59620 Leval</h2>
-                <br>
-            </div>
-            <div class="mx-auto d-block" id='facebook'>
-
-                <button class='button1' mat-raised-button (click)="admin.goToLink ('https://www.facebook.com/Synergie.Association/') ">
-                    <h2   class='text button1 titrefb'>Page Facebook</h2>
-                </button>
-
-            </div>
-
+        <div class="row" id="mail">
+            <div class="col-12"><u>Mail</u> : contact@associationsynergie.fr</div>
         </div>
     </div>
+    <div class="row" id="buttoncontainer">
+
+        <div class="col-4" id="goFB"> <button class='button1' mat-raised-button (click)="admin.goToLink ('https://www.facebook.com/Synergie.Association/') ">
+                    <h3   class='text button1 titrefb'>Notre page Facebook</h3>
+                </button></div>
+
+        <div class="col-4"> <button class='button1' mat-raised-button (click)="admin.goToLink ('mailto:contact@associationsynergie.fr') ">
+                    <h3   class='text titrefb button1'>Nous envoyer un mail </h3>
+                </button></div>
+        <div class="col-4"> <button class='button1' mat-raised-button (click)="admin.goToLink ('https://www.google.com/maps/dir/50.1230529,3.9265889/16+Rue+Gabriel+P%C3%A9ri,+59620+Aulnoye-Aymeries/@50.160485,3.8186492,12z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x47c2641ec0e5bbb3:0xd1a8973688647890!2m2!1d3.8406638!2d50.1982418!3e0') ">
+                    <h3   class='text titrefb button1'>Venez à notre showroom </h3>
+                </button></div>
+    </div>
+    <div class="row" id="partnertitle">
+        <div class="col-12">
+            <h1><strong><u>Nos partenaires</u></strong></h1>
+        </div>
+
+    </div>
+    <div class="row" id="img-section">
+
+        <span><img id='img1' class="img"src="../../../assets/images/footer/logo1.jpg" ></span>
+        <span><img id='img2' class="img" src="../../../assets/images/footer/logo2.jpg"></span>
+        <span><img id='img3' class="img" src="../../../assets/images/footer/logo3.png"></span>
+        <span><img id='img4' class="img" src="../../../assets/images/footer/logo4.png"></span>
+        <span><img id='img5' class="img" src="../../../assets/images/footer/logo5.png "></span>
+        <span><img id='img6' class="img" src="../../../assets/images/footer/logo6.png "></span>
+        <span><img id='img7' class="img" src="../../../assets/images/footer/logo7.jpg"></span>
+        <span><img id='img8' class="img" src="../../../assets/images/footer/logo8.jpg"></span>
+        <span><img id='img9' class="img" src="../../../assets/images/footer/logo9.jpg"></span>
+        <span><img id='img10' class="img" src="../../../assets/images/footer/logo10.jpg"></span>
+        <span><img id='img11' class="img" src="../../../assets/images/footer/logo11.jpg"></span>
+        <span><img id='img12' class="img" src="../../../assets/images/footer/logo12.jpg"></span>
+        <span><img id ='img13'class="img" src="../../../assets/images/footer/logo13.jpg"></span>
+
+    </div>
+
 </div>

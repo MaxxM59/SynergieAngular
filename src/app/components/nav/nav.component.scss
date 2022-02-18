@@ -92,6 +92,11 @@
         border-radius: 500px;
     }
 
+    #maintitle {
+        font-size: 200%;
+        color: blue;
+    }
+
     @media (min-width :1360px) {
         #dd1 {
             margin-left: 1vw;
@@ -105,7 +110,8 @@
         #logotoggle {
             display: none
         }
-        .navbar-toggler {
+        .navbar-toggler,
+        #maintitle {
             display: none;
         }
     }

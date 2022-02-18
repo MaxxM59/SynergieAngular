@@ -42,6 +42,7 @@ mat-list-item {
 
 #logo {
     max-width: 7vw;
+    min-width: 60px;
     height: auto;
     margin-top: 5vh;
     border-radius: 60px;
@@ -62,11 +63,4 @@ mat-list-item {
 
 .logout {
     color: #d84315;
-}
-
-@media (max-width: 760px) {
-    #logo {
-        width: 200px;
-        height: 75px;
-    }
 }

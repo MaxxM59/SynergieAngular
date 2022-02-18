@@ -42,7 +42,7 @@ export class AnswercontactsComponent implements OnInit {
     window.open(url, '_blank');
   }
   mailto(emailAddress: string, emailSubject: any) {
-    return 'mailto:' + emailAddress + '?subject=RE:' + emailSubject;
+    return 'mailto:' + emailAddress + '?subject=RE: ' + emailSubject;
   }
   ngOnInit(): void {
     // RMPLIS LE FORMULAIRE AVEC LES DONNEES DE L'ARTICLE

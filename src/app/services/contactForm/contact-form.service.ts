@@ -60,8 +60,6 @@ export class ContactFormService {
       this.afs.collection<Contact>('contact').doc(contactId).delete();
       this.admin.showNotification('Message supprimé !');
       this.router.navigate(['dashboard/contacts']);
-    } else {
-      this.router.navigate(['answercontacts/{{o.id}}']);
     }
   }
 }

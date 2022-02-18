@@ -37,10 +37,10 @@ export class DossierFormComponent implements OnInit {
         this.ongletservice.updateOnglet(dossierForm.value, this.id);
         this.admin.showNotification('Dossier modifié !');
         this.router.navigate(['dashboard/onglets']);
-      } else {
-        // SI C'EST UN NOuVEAU DOSSIER
+      } // SI C'EST UN NOuVEAU DOSSIER
+      else {
         this.onglet.type = 'Dossier';
-
+        // VERIFICATION SI LE TITRE EXISTE DEJA
         this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
           this.onglets = o;
           for (var i = 0; i < Object.keys(this.onglets).length; i++) {
@@ -49,13 +49,14 @@ export class DossierFormComponent implements OnInit {
             }
           }
           if (this.checktitre === true) {
-            // SI C'EST UN NOUVEL ONGLET
             this.ongletservice.addOnglet('Dossier', dossierForm.value);
             this.admin.showNotification('Le dossier a été créé');
             this.router.navigate(['dashboard/onglets']);
-            this.router.navigate(['dashboard/onglets']);
           } else {
-            this.admin.showNotification("Ce titre d'onglet est déja utilisé !");
+            // SI LE TITRE EXISTE
+            this.admin.showNotification(
+              'Ce titre de dossier est déja utilisé !'
+            );
           }
         });
       }

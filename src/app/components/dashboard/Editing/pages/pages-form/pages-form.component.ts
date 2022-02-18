@@ -32,7 +32,8 @@ export class PagesFormComponent implements OnInit {
     lien: null,
     nomlien: null,
   };
-
+  pages: any;
+  checktitre: boolean = false;
   constructor(
     public pagesservice: PagesService,
     private router: Router,
@@ -46,13 +47,27 @@ export class PagesFormComponent implements OnInit {
         // SI LA PAGE EXISTE
         this.pagesservice.updatePage(pageForm.value, this.id);
         this.admin.showNotification('Page modifiée !');
-      } else {
-        // SI C'EST UNE NOUVELLE PAGE
-        this.pagesservice.addPage(pageForm.value);
-        this.admin.showNotification('La page a été créée !');
+        this.router.navigate(['dashboard/pages']);
+      } // SI C'EST UNE NOUVELLE PAGE
+      else {
+        // VERIFICATION SI LE TITRE EXISTE DEJA
+        this.pagesservice.getPages().subscribe((p: Page[]) => {
+          this.pages = p;
+          for (var i = 0; i < Object.keys(this.pages).length; i++) {
+            if (this.pages.includes(String(this.page.titre))) {
+              this.checktitre = false;
+            }
+          }
+          if (this.checktitre === true) {
+            this.pagesservice.addPage(pageForm.value);
+            this.admin.showNotification('La page a été créée !');
+            this.router.navigate(['dashboard/pages']);
+          } //SI LE TITRE EXISTE
+          else {
+            this.admin.showNotification('Ce titre de page est déja utilisé !');
+          }
+        });
       }
-      // REDIRECTION VERS L'ACCEUIL
-      this.router.navigate(['dashboard/pages']);
     } else {
       // SI LE FORMULAIRE N'EST PAS VALIDE
       this.admin.showNotification('Il y a des erreurs dans le formulaire !');

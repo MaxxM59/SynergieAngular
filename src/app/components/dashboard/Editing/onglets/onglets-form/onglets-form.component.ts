@@ -37,7 +37,9 @@ export class OngletsFormComponent implements OnInit {
         this.ongletservice.updateOnglet(ongletForm.value, this.id);
         this.admin.showNotification('Onglet modifié !');
         this.router.navigate(['dashboard/onglets']);
-      } else {
+      } // SI C'EST UN NOUVEL ONGLET
+      else {
+        // VERIFICATION SI LE TITRE EXISTE DEJA
         this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
           this.onglets = o;
           for (var i = 0; i < Object.keys(this.onglets).length; i++) {
@@ -46,7 +48,6 @@ export class OngletsFormComponent implements OnInit {
             }
           }
           if (this.checktitre === true) {
-            // SI C'EST UN NOUVEL ONGLET
             this.ongletservice.addOnglet('Normal', ongletForm.value);
             this.admin.showNotification("L'onglet a été créé");
             this.router.navigate(['dashboard/onglets']);

@@ -21,7 +21,8 @@ export class OngletsFormComponent implements OnInit {
     lien: '',
     position: 0,
   };
-
+  onglets: any;
+  checktitre: boolean = false;
   constructor(
     public ongletservice: OngletsService,
     private router: Router,
@@ -35,13 +36,25 @@ export class OngletsFormComponent implements OnInit {
         // SI L'ONGLET EXISTE DEJA
         this.ongletservice.updateOnglet(ongletForm.value, this.id);
         this.admin.showNotification('Onglet modifié !');
+        this.router.navigate(['dashboard/onglets']);
       } else {
-        // SI C'EST UN NOUVEL ONGLET
-        this.ongletservice.addOnglet('Normal', ongletForm.value);
-        this.admin.showNotification("L'onglet a été créé");
+        this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
+          this.onglets = o;
+          for (var i = 0; i < Object.keys(this.onglets).length; i++) {
+            if (this.onglets.includes(String(this.onglet.titre))) {
+              this.checktitre = false;
+            }
+          }
+          if (this.checktitre === true) {
+            // SI C'EST UN NOUVEL ONGLET
+            this.ongletservice.addOnglet('Normal', ongletForm.value);
+            this.admin.showNotification("L'onglet a été créé");
+            this.router.navigate(['dashboard/onglets']);
+          } else {
+            this.admin.showNotification("Ce titre d'onglet est déja utilisé !");
+          }
+        });
       }
-
-      this.router.navigate(['dashboard/onglets']);
     } // SI ERREUR DANS LE FORM
     else {
       this.admin.showNotification('Il y a des erreurs dans le formulaire!');

@@ -21,6 +21,8 @@ export class DossierFormComponent implements OnInit {
     lien: '',
     position: 1,
   };
+  onglets: any;
+  checktitre: boolean = false;
   constructor(
     public ongletservice: OngletsService,
     private router: Router,
@@ -34,14 +36,29 @@ export class DossierFormComponent implements OnInit {
         // SI LE DOSSIER EXISTE DEJA
         this.ongletservice.updateOnglet(dossierForm.value, this.id);
         this.admin.showNotification('Dossier modifié !');
+        this.router.navigate(['dashboard/onglets']);
       } else {
         // SI C'EST UN NOuVEAU DOSSIER
         this.onglet.type = 'Dossier';
-        this.ongletservice.addOnglet('Dossier', dossierForm.value);
-        this.admin.showNotification('Le dossier a été créé');
-      }
 
-      this.router.navigate(['dashboard/onglets']);
+        this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
+          this.onglets = o;
+          for (var i = 0; i < Object.keys(this.onglets).length; i++) {
+            if (this.onglets.includes(String(this.onglet.titre))) {
+              this.checktitre = false;
+            }
+          }
+          if (this.checktitre === true) {
+            // SI C'EST UN NOUVEL ONGLET
+            this.ongletservice.addOnglet('Dossier', dossierForm.value);
+            this.admin.showNotification('Le dossier a été créé');
+            this.router.navigate(['dashboard/onglets']);
+            this.router.navigate(['dashboard/onglets']);
+          } else {
+            this.admin.showNotification("Ce titre d'onglet est déja utilisé !");
+          }
+        });
+      }
     } // SI ERREUR DANS LE FORM
     else {
       this.admin.showNotification('Il y a des erreurs dans le formulaire!');

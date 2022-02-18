@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { AdminLoginService } from '../admin-login.service';
 import * as _ from 'lodash';
 import * as firebase from 'firebase/compat';
+import { count } from 'console';
 @Injectable({
   providedIn: 'root',
 })
@@ -23,19 +24,19 @@ export class OngletsService {
   solo: any;
   trionglets: any;
   onglets: any;
+  checktitre: boolean | undefined; //TRI DES ONGLETS
 
-  //TRI DES ONGLETS
   tri(tab: Onglet[]) {
     //ONGLETS DOSSIERS
     this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
-    // ONGLETS DROPDOWN => ATTENTION A FIX LES NOMS DE DOSSIERS LORS DE LA CREATION !!!
+    // ONGLETS DROPDOWN
     this.dropdowns = tab.filter(
       (onglet) =>
         onglet.dossier !== '' &&
         onglet.dossier !== null &&
         onglet.type === 'Normal'
     );
-    // ONGLETS SOLOS
+    // ONGLETS SIMPLES
     this.solo = tab.filter(
       (onglet) =>
         onglet.type === 'Normal' &&
@@ -90,11 +91,6 @@ export class OngletsService {
   // MODIFIE UN ONGLET
   updateOnglet(onglet: Onglet, ongletId: string): void {
     this.afs.collection<Onglet>('onglets').doc(ongletId).update(onglet);
-  }
-  update(type: string, ongletID: string) {
-    this.onglet = this.getOnglet(ongletID);
-    this.onglet.type = type;
-    this.afs.collection<Onglet>('onglets').doc(ongletID).update(this.onglet);
   }
   // SUPPRIME UN ONGLET
   deleteOnglet(ongletId: string): void {

@@ -55,7 +55,7 @@
         max-width: 8vw;
         height: auto;
         border-radius: 60px;
-        margin-bottom: 1vw;
+        margin-bottom: 0.5vw;
     }
 
     #companyName {
@@ -80,16 +80,16 @@
         height: auto;
         border-radius: 10px;
         margin-left: 0;
-        border-radius: 50px;
+        border-radius: 500px;
     }
 
     .navbar-toggler {
-        min-width: 150px;
+        min-width: 60px;
         height: auto;
-        border-radius: 50px;
         margin-bottom: 2vw;
         display: block;
         margin-left: 5vw;
+        border-radius: 500px;
     }
 
     @media (min-width :1360px) {

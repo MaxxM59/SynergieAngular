@@ -48,7 +48,7 @@
     }
 
     #logotoggle {
-        max-width: 80px;
+        max-width: 70px;
         height: auto;
         border-radius: 10px;
         margin-left: 0;
@@ -113,9 +113,6 @@
     @media (min-width:799px) and (max-width:990px) {
         button {
             width: 40%;
-        }
-        .navbar-toggler {
-            width: 7%;
         }
         #logo {
             display: none

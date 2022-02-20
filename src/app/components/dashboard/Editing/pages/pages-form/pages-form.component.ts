@@ -40,39 +40,40 @@ export class PagesFormComponent implements OnInit {
     private route: ActivatedRoute,
     public admin: AdminLoginService
   ) {}
-  // SAUVEGARDE LES DONNEES SI LE FORMULAIRE EST VALIDE
+
+  // FONCTION LANCEE QUAND ON CLIQUE SUR ENREGISTRER
   save(pageForm: NgForm) {
     if (pageForm.valid) {
-      if (this.page.id) {
-        // SI LA PAGE EXISTE
-        this.pagesservice.updatePage(pageForm.value, this.id);
-        this.admin.showNotification('Page modifiée !');
-        this.router.navigate(['dashboard/pages']);
-      } // SI C'EST UNE NOUVELLE PAGE
-      else {
-        // VERIFICATION SI LE TITRE EXISTE DEJA
-        this.pagesservice.getPages().subscribe((p: Page[]) => {
-          this.pages = p;
-          for (var i = 0; i < Object.keys(this.pages).length; i++) {
-            if (this.pages.includes(String(this.page.titre))) {
-              this.checktitre = false;
-            }
-          }
-          if (this.checktitre === true) {
-            this.pagesservice.addPage(pageForm.value);
-            this.admin.showNotification('La page a été créée !');
-            this.router.navigate(['dashboard/pages']);
-          } //SI LE TITRE EXISTE
-          else {
-            this.admin.showNotification('Ce titre de page est déja utilisé !');
-          }
-        });
+      // VERIFICATION SI LE TITRE EXISTE DEJA
+      this.pagesservice.getPages().subscribe((p: Page[]) => {
+        this.pages = p;
+        if (this.pages.includes(pageForm.value.titre) === true) {
+          this.checktitre = false;
+        } else {
+          this.checktitre = true;
+        }
+      });
+      if (this.checktitre === true) {
+        if (this.page.id) {
+          // SI L'ONGLET EXISTE DEJA
+          this.pagesservice.updatePage(pageForm.value, this.id);
+          this.admin.showNotification('Dossier modifié !');
+          this.router.navigate(['dashboard/pages']);
+        } else {
+          // SI C'EST UN NOUVEL ONGLET
+          this.pagesservice.addPage(pageForm.value);
+          this.admin.showNotification('Le dossier a été créé');
+          this.router.navigate(['dashboard/pages']);
+        }
+      } else {
+        this.admin.showNotification('Ce titre de dossier est déja utilisé !');
       }
-    } else {
-      // SI LE FORMULAIRE N'EST PAS VALIDE
-      this.admin.showNotification('Il y a des erreurs dans le formulaire !');
+    } // SI ERREUR DANS LE FORM
+    else {
+      this.admin.showNotification('Il y a des erreurs dans le formulaire!');
     }
   }
+
   // DELETE
   delete() {
     this.pagesservice.deletePage(this.id);

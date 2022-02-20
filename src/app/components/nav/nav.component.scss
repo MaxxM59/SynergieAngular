@@ -58,6 +58,7 @@
         border-radius: 10px;
         margin-left: 0;
         border-radius: 500px;
+        margin-top: 1vh;
     }
 
     .navbar-toggler {
@@ -92,11 +93,14 @@
         #maintitle {
             display: none;
         }
+        .button2 {
+            max-width: 180px;
+        }
     }
 
     @media (max-width:991px) {
         button {
-            max-width: 220px;
+            max-width: 240px;
         }
         #logo {
             display: none
@@ -106,9 +110,6 @@
             display: flex;
             flex-direction: column;
             align-content: center;
-        }
-        .button2 {
-            margin-top: 3.7vw;
         }
     }
 

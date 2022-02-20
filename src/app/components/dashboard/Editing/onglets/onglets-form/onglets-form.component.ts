@@ -22,7 +22,7 @@ export class OngletsFormComponent implements OnInit {
     position: 0,
   };
   onglets: any;
-  checktitre: boolean = false;
+  checktitre: boolean | undefined;
   constructor(
     public ongletservice: OngletsService,
     private router: Router,
@@ -32,29 +32,29 @@ export class OngletsFormComponent implements OnInit {
   // FONCTION LANCEE QUAND ON CLIQUE SUR ENREGISTRER
   save(ongletForm: NgForm) {
     if (ongletForm.valid) {
-      if (this.onglet.id) {
-        // SI L'ONGLET EXISTE DEJA
-        this.ongletservice.updateOnglet(ongletForm.value, this.id);
-        this.admin.showNotification('Onglet modifié !');
-        this.router.navigate(['dashboard/onglets']);
-      } // SI C'EST UN NOUVEL ONGLET
-      else {
-        // VERIFICATION SI LE TITRE EXISTE DEJA
-        this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
-          this.onglets = o;
-          for (var i = 0; i < Object.keys(this.onglets).length; i++) {
-            if (this.onglets.includes(String(this.onglet.titre))) {
-              this.checktitre = false;
-            }
-          }
-          if (this.checktitre === true) {
-            this.ongletservice.addOnglet('Normal', ongletForm.value);
-            this.admin.showNotification("L'onglet a été créé");
-            this.router.navigate(['dashboard/onglets']);
-          } else {
-            this.admin.showNotification("Ce titre d'onglet est déja utilisé !");
-          }
-        });
+      // VERIFICATION SI LE TITRE EXISTE DEJA
+      this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
+        this.onglets = o;
+        if (this.onglets.includes(ongletForm.value.titre) === true) {
+          this.checktitre = false;
+        } else {
+          this.checktitre = true;
+        }
+      });
+      if (this.checktitre === true) {
+        if (this.onglet.id) {
+          // SI L'ONGLET EXISTE DEJA
+          this.ongletservice.updateOnglet(ongletForm.value, this.id);
+          this.admin.showNotification('Onglet modifié !');
+          this.router.navigate(['dashboard/onglets']);
+        } else {
+          // SI C'EST UN NOUVEL ONGLET
+          this.ongletservice.addOnglet('Normal', ongletForm.value);
+          this.admin.showNotification("L'onglet a été créé");
+          this.router.navigate(['dashboard/onglets']);
+        }
+      } else {
+        this.admin.showNotification("Ce titre d'onglet est déja utilisé !");
       }
     } // SI ERREUR DANS LE FORM
     else {

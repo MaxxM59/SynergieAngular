@@ -31,43 +31,40 @@ export class ArticleFormComponent implements OnInit {
   goToLink(url: string) {
     window.open(url, '_blank');
   }
-  // SAUVEGARDE DES DONNES SI LE FORMULAIRE EST VALIDE
+
+  // FONCTION LANCEE QUAND ON CLIQUE SUR ENREGISTRER
   save(articleForm: NgForm) {
     if (articleForm.valid) {
-      // SI L'ARTICLE EXISTE
-      if (this.article.id) {
-        this.articleservice.updateArticle(articleForm.value, this.id);
-        this.admin.showNotification('Article modifié !');
-        this.router.navigate(['dashboard/articles']);
+      // VERIFICATION SI LE TITRE EXISTE DEJA
+      this.articleservice.getArticles().subscribe((a: Article[]) => {
+        this.articles = a;
+        if (this.articles.includes(articleForm.value.titre) === true) {
+          this.checktitre = false;
+        } else {
+          this.checktitre = true;
+        }
+      });
+      if (this.checktitre === true) {
+        if (this.article.id) {
+          // SI L'ONGLET EXISTE DEJA
+          this.articleservice.updateArticle(articleForm.value, this.id);
+          this.admin.showNotification('Article modifié !');
+          this.router.navigate(['dashboard/articles']);
+        } else {
+          // SI C'EST UN NOUVEL ONGLET
+          this.articleservice.addArticle(articleForm.value);
+          this.admin.showNotification("L'article' a été créé");
+          this.router.navigate(['dashboard/articles']);
+        }
+      } else {
+        this.admin.showNotification("Ce titre d'article' est déja utilisé !");
       }
-      // SI C'EST UN NOUVEL ARTICLE
-      else {
-        // VERIFICATION SI LE TITRE EXISTE DEJA
-        this.articleservice.getArticles().subscribe((a: Article[]) => {
-          this.articles = a;
-          for (var i = 0; i < Object.keys(this.articles).length; i++) {
-            if (this.articles.includes(String(this.article.titre))) {
-              this.checktitre = false;
-            }
-          }
-          if (this.checktitre === true) {
-            this.articleservice.addArticle(articleForm.value);
-            this.admin.showNotification("L'article à été créé");
-            this.router.navigate(['dashboard/articles']);
-          } // SI LE TITRE EXISTE
-          else {
-            this.admin.showNotification(
-              "Ce titre d'article est déja utilisé !"
-            );
-          }
-        });
-      }
-    } else {
-      this.admin.showNotification(
-        "Il y a des erreurs dans le formulaire de l'article !"
-      );
+    } // SI ERREUR DANS LE FORM
+    else {
+      this.admin.showNotification('Il y a des erreurs dans le formulaire!');
     }
   }
+
   // DELETE
   delete() {
     this.articleservice.deleteArticle(this.id);

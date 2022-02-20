@@ -22,49 +22,47 @@ export class DossierFormComponent implements OnInit {
     position: 1,
   };
   onglets: any;
-  checktitre: boolean = false;
+  checktitre: boolean | undefined;
   constructor(
     public ongletservice: OngletsService,
     private router: Router,
     private route: ActivatedRoute,
     private admin: AdminLoginService
   ) {}
+
   // FONCTION LANCEE QUAND ON CLIQUE SUR ENREGISTRER
   save(dossierForm: NgForm) {
     if (dossierForm.valid) {
-      if (this.onglet.id) {
-        // SI LE DOSSIER EXISTE DEJA
-        this.ongletservice.updateOnglet(dossierForm.value, this.id);
-        this.admin.showNotification('Dossier modifié !');
-        this.router.navigate(['dashboard/onglets']);
-      } // SI C'EST UN NOuVEAU DOSSIER
-      else {
-        this.onglet.type = 'Dossier';
-        // VERIFICATION SI LE TITRE EXISTE DEJA
-        this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
-          this.onglets = o;
-          for (var i = 0; i < Object.keys(this.onglets).length; i++) {
-            if (this.onglets.includes(String(this.onglet.titre))) {
-              this.checktitre = false;
-            }
-          }
-          if (this.checktitre === true) {
-            this.ongletservice.addOnglet('Dossier', dossierForm.value);
-            this.admin.showNotification('Le dossier a été créé');
-            this.router.navigate(['dashboard/onglets']);
-          } else {
-            // SI LE TITRE EXISTE
-            this.admin.showNotification(
-              'Ce titre de dossier est déja utilisé !'
-            );
-          }
-        });
+      // VERIFICATION SI LE TITRE EXISTE DEJA
+      this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
+        this.onglets = o;
+        if (this.onglets.includes(dossierForm.value.titre) === true) {
+          this.checktitre = false;
+        } else {
+          this.checktitre = true;
+        }
+      });
+      if (this.checktitre === true) {
+        if (this.onglet.id) {
+          // SI L'ONGLET EXISTE DEJA
+          this.ongletservice.updateOnglet(dossierForm.value, this.id);
+          this.admin.showNotification('Dossier modifié !');
+          this.router.navigate(['dashboard/onglets']);
+        } else {
+          // SI C'EST UN NOUVEL ONGLET
+          this.ongletservice.addOnglet('Dossier', dossierForm.value);
+          this.admin.showNotification('Le dossier a été créé');
+          this.router.navigate(['dashboard/onglets']);
+        }
+      } else {
+        this.admin.showNotification('Ce titre de dossier est déja utilisé !');
       }
     } // SI ERREUR DANS LE FORM
     else {
       this.admin.showNotification('Il y a des erreurs dans le formulaire!');
     }
   }
+
   // DELETE A PARTIR DE LA PAGE D'EDIT
   delete() {
     if (confirm('Voulez-vous vraiment supprimer cet élément?')) {

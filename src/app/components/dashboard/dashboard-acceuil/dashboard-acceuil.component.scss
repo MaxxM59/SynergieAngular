@@ -26,6 +26,11 @@ h1 {
     padding-top: 3vh;
 }
 
+button,
+a {
+    border-radius: 20px;
+}
+
 mat-grid-tile {
     min-height: 80vh;
 }

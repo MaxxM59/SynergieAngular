@@ -23,6 +23,14 @@ mat-card {
     margin-left: 2vw;
 }
 
+button,
+a {
+    border-radius: 20px;
+    margin: 3px;
+    width: 10vw;
+    min-width: 130px;
+}
+
 #contenu {
     text-align: justify;
     margin-left: 4vw;

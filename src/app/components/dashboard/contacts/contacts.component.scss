@@ -18,6 +18,14 @@ mat-card {
     border-radius: 20px;
 }
 
+button,
+a {
+    border-radius: 20px;
+    margin: 3px;
+    width: 10vw;
+    min-width: 130px;
+}
+
 .maincontainer {
     background-image: url('https://i.postimg.cc/k5vszxp5/EDsx2f-GW4-AAGEBv.jpg');
     background-repeat: no-repeat;
@@ -26,4 +34,8 @@ mat-card {
     -o-background-size: cover;
     background-size: cover;
     min-height: 90vh;
+}
+
+.buttonscontainer {
+    margin-right: 2vw;
 }

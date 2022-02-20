@@ -70,30 +70,9 @@
     }
 
     #maintitle {
-        font-size: 200%;
+        font-size: 130%;
         color: #0032d6;
-        margin-left: 2vw;
-    }
-
-    @media (min-width:800px) {
-        ul,
-        #contact {
-            display: flex;
-            list-style-type: none;
-        }
-    }
-
-    @media (max-width: 999px) {
-        .collapsebutton {
-            width: 75%;
-            margin-left: 2vw;
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-        }
-        .button2 {
-            margin-top: 3.7vw;
-        }
+        margin-left: 1%;
     }
 
     @media (min-width :1360px) {
@@ -115,23 +94,31 @@
         }
     }
 
-    @media (min-width:799px) and (max-width:990px) {
+    @media (max-width:991px) {
         button {
-            width: 40%;
+            max-width: 220px;
         }
         #logo {
             display: none
         }
-        #contact {
-            text-align: justify;
+        .collapsebutton {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
+        .button2 {
+            margin-top: 3.7vw;
         }
     }
 
-    @media (max-width:800px) {
-        button {
-            max-width: 170px;
-        }
-        #logo {
+    @media(max-width:341px) {
+        #maintitle {
             display: none
+        }
+        button {
+            font-size: 65%;
+            min-width: 120px;
+            max-width: 140px;
         }
     }

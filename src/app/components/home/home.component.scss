@@ -12,10 +12,24 @@ hr {
 }
 
 .page {
-    background-color: rgba(238, 230, 234, 0.8);
     font-size: 1.1em;
     width: 98.9vw;
-    padding-top: 0;
+}
+
+#bg-img {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%
+}
+
+mat-card {
+    background-color: rgba(238, 230, 234, 0.8);
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+    border-radius: 35px;
+    margin-bottom: 0.5%;
 }
 
 //Début Carousel
@@ -28,17 +42,15 @@ hr {
 }
 
 #carouselExampleControls .carousel-item img {
-    //object-fit: cover;
-    //object-position: center;
-    margin: 1% 5% 0 10%;
-    ;
     width: 80vw;
     height: 40vw;
     overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .carousel-inner {
-    border-radius: 55px;
     overflow: hidden;
 }
 
@@ -87,6 +99,10 @@ img {
     float: right;
 }
 
+#bg-img {
+    margin-left: 0;
+}
+
 mat-raised-button {
     width: 10%;
 }
@@ -94,8 +110,9 @@ mat-raised-button {
 .savoirplus {
     margin: 2% 0 0 20%;
     min-width: 70px;
-    font-size: 0.8em;
+    font-size: 1.8vw;
     font-weight: bold;
+    border-radius: 20px;
 }
 
 @media (max-width: 900px) {

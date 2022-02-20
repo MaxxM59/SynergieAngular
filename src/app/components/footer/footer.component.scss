@@ -39,7 +39,8 @@
     font-weight: bold;
     min-width: 45px;
     min-height: 10px;
-    font-size: 1.6vw;
+    font-size: 1.8vw;
+    border-radius: 20px;
 }
 
 .text {
@@ -58,6 +59,8 @@ h1 {
 
 #buttoncontainer {
     padding-left: 5vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #mail,
@@ -69,4 +72,10 @@ h1 {
 
 .textsection {
     font-size: 130%;
+}
+
+@media (max-widht:800px) {
+    .button1 {
+        font-size: 1.8vw;
+    }
 }

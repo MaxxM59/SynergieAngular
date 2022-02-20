@@ -41,6 +41,7 @@
 
     #companyName {
         border-radius: 500px;
+        margin-right: 1%;
     }
 
     #navcontainer {
@@ -76,9 +77,9 @@
         margin-left: 1%;
     }
 
-    @media (min-width :1360px) {
+    @media (min-width :1260px) {
         #dd1 {
-            margin-left: 1vw;
+            margin-left: 2vw;
         }
     }
 

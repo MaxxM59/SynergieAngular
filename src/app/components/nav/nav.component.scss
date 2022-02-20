@@ -9,7 +9,8 @@
         justify-content: space-between;
         justify-content: center;
         align-content: center;
-        width: 98vw;
+        width: 96vw;
+        padding-left: 0.5vw;
     }
 
     button {
@@ -41,7 +42,7 @@
 
     #companyName {
         border-radius: 500px;
-        margin-right: 1%;
+        padding-right: 0.5%;
     }
 
     #navcontainer {

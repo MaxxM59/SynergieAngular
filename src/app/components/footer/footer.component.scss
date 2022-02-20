@@ -5,20 +5,18 @@
 
 .footer-section {
     max-width: 98vw;
-    height: 15vh;
-    padding-top: 2vh;
+    height: 13vh;
+    padding-top: 1vh;
 }
 
 #img-section {
     padding-top: 1vh;
     padding-bottom: 1vh;
+    padding-left: 0.5vw;
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.row {
-    padding-left: 1vw;
+    max-width: 98vw;
 }
 
 .col-12 {
@@ -39,8 +37,19 @@
     background-color: white;
     color: #0032d6;
     font-weight: bold;
-    min-width: 50px;
+    min-width: 45px;
+    min-height: 10px;
     font-size: 2vw;
+}
+
+.text {
+    margin-top: 1vh;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+u {
+    font-size: 120%;
 }
 
 h1 {
@@ -51,7 +60,6 @@ h1 {
     padding-left: 5vw;
 }
 
-#horaires,
 #mail,
 #phone,
 #buttoncontainer {

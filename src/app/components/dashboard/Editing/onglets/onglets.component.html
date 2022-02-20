@@ -5,10 +5,6 @@
     <a mat-raised-button routerLink="../../dashboard/dashboard-acceuil" class=' headbutton'>Retour à l'accueil</a>
 </div>
 <div class='container-fluid p-5 ' id='onglettable'>
-    <mat-hint>
-        <h3 id="hint1"><strong> Pour voir les onglets associés à un dossier, cliquez simplement sur ce dossier. </strong></h3>
-        >
-    </mat-hint>
     <h1>Dossiers (Dropdowns) :</h1>
     <table class="table table-stripped">
         <thead>
@@ -40,7 +36,7 @@
                 </td>
                 <mat-menu #menu="matMenu">
                     <div *ngFor="let dd of ongletservice.dropdowns">
-                        <button *ngIf="dd.dossier===ongletservice.dossiers[i].titre" mat-menu-item>{{dd.titre}}</button></div>
+                        <button *ngIf="dd.dossier===ongletservice.dossiers[i].titre" mat-menu-item class="dropdownlinked">{{dd.titre}}</button></div>
 
 
                 </mat-menu>

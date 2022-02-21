@@ -13,9 +13,9 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <!-- Onglets Dropdowns : Maximum 3-->
 
-                <button class='button collapsebutton maincontainer' id='dd1' *ngIf="ongletservice.dossiers[0]!==undefined" mat-raised-button [matMenuTriggerFor]="menu1">{{ongletservice.dossiers[0].titre}}</button>
-                <button class='button collapsebutton maincontainer' id='dd2' *ngIf="ongletservice.dossiers[1]!==undefined" mat-raised-button [matMenuTriggerFor]="menu2">{{ongletservice.dossiers[1].titre}}</button>
-                <button class='button collapsebutton maincontainer' id='dd3' *ngIf="ongletservice.dossiers[2]!==undefined" mat-raised-button [matMenuTriggerFor]="menu3">{{ongletservice.dossiers[2].titre}}</button>
+                <button class='button collapsebutton maincontainer' id='dd1' *ngIf="ongletservice.dossiers[0]!==undefined" mat-raised-button [matMenuTriggerFor]="menu1"><div class="dropdowntitle">{{ongletservice.dossiers[0].titre}}</div></button>
+                <button class='button collapsebutton maincontainer' id='dd2' *ngIf="ongletservice.dossiers[1]!==undefined" mat-raised-button [matMenuTriggerFor]="menu2"><div class="dropdowntitle">{{ongletservice.dossiers[1].titre}}</div></button>
+                <button class='button collapsebutton maincontainer' id='dd3' *ngIf="ongletservice.dossiers[2]!==undefined" mat-raised-button [matMenuTriggerFor]="menu3"><div class="dropdowntitle">{{ongletservice.dossiers[2].titre}}</div></button>
 
 
                 <!-- Fin  Onglets Dropdowns-->

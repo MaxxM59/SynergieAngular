@@ -6,8 +6,9 @@
                 margin-right: auto;
                 margin-left: auto;
                 display: inline;
+                text-align: center,
             }
-            
+
             button {
                 text-align: center;
                 background-color: #ffff;
@@ -16,22 +17,23 @@
                 border-radius: 20px;
                 margin-right: 0.7vw;
                 margin-left: 0.7vw;
+                min-width: 8vw;
             }
-            
+
             #dd1 {
                 padding-left: 2vw;
             }
-            
+
             .btn-2 {
                 border-radius: 0;
                 margin-left: 0;
             }
-            
+
             img {
                 max-width: 150px;
                 max-height: 100px;
             }
-            
+
             #logo {
                 min-width: 100px;
                 max-width: 8vw;
@@ -39,30 +41,25 @@
                 border-radius: 60px;
                 margin-bottom: 0.5vw;
             }
-            
+
             #companyName {
                 border-radius: 500px;
                 padding-right: 0.5%;
+                margin-top: 0.5%;
             }
-            
+
             #navcontainer {
                 margin-top: 5px;
             }
-            
-            .btn-2 {
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-            
+
             #logotoggle {
                 max-width: 70px;
                 height: auto;
                 border-radius: 10px;
                 margin-left: 0;
                 border-radius: 500px;
-                margin-top: 1vh;
             }
-            
+
             .navbar-toggler {
                 max-width: 100px;
                 height: auto;
@@ -71,19 +68,25 @@
                 margin-left: 5vw;
                 border-radius: 500px;
             }
-            
+
+            .dropdowntitle {
+                margin-right: 0.5vw;
+                margin-left: -0.5vw;
+                background-color: #ffff;
+            }
+
             #maintitle {
                 font-size: 130%;
                 color: #0032d6;
                 margin-left: 1%;
             }
-            
+
             @media (min-width: 1380px) {
                 #dd1 {
                     margin-left: 1vw !important;
                 }
             }
-            
+
             @media (min-width: 991px) {
                 #dd1 {
                     margin-left: 5.5vw;
@@ -98,11 +101,19 @@
                 .button2 {
                     max-width: 180px;
                 }
+                .btn-2 {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
             }
-            
+
             @media (max-width:991px) {
                 button {
                     max-width: 240px;
+                    margin-top: 0.5vh;
+                    margin-bottom: 0.5vh;
+                    margin-left: 3vw;
+                    border-radius: 5px;
                 }
                 #logo {
                     display: none
@@ -113,8 +124,11 @@
                     flex-direction: column;
                     align-content: center;
                 }
+                .navbar-toggler {
+                    margin-top: 3%
+                }
             }
-            
+
             @media(max-width:341px) {
                 #maintitle {
                     display: none

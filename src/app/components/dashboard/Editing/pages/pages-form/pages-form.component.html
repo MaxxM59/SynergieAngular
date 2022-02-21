@@ -116,9 +116,9 @@
         </div>
         <hr>
         <div class="buttoncontainer">
-            <button type='submit' class="btn btn-primary m-1" (click)="save(pageForm)">Enregistrer</button>
-            <button class="btn btn-success m-1" routerLink="../../pages">Retour</button>
-            <button class="btn btn-danger m-1" *ngIf="page.id !== undefined" (click)="delete()">Supprimer</button>
+            <button type='submit' class="btn btn-primary m-1 myButton" (click)="save(pageForm)">Enregistrer</button>
+            <button class="btn btn-success m-1 myButton" routerLink="../../pages">Retour</button>
+            <button class="btn btn-danger m-1 myButton" *ngIf="page.id !== undefined" (click)="delete()">Supprimer</button>
         </div>
     </form>
 </div>

@@ -20,7 +20,7 @@ export class ArticleFormComponent implements OnInit {
     image: '',
   };
   articles: any;
-  checktitre: boolean = false;
+  checktitre: boolean = true;
   constructor(
     public articleservice: ArticleService,
     private router: Router,
@@ -36,14 +36,11 @@ export class ArticleFormComponent implements OnInit {
   save(articleForm: NgForm) {
     if (articleForm.valid) {
       // VERIFICATION SI LE TITRE EXISTE DEJA
-      this.articleservice.getArticles().subscribe((a: Article[]) => {
-        this.articles = a;
-        if (this.articles.includes(articleForm.value.titre) === true) {
+      for (var i = 0; i < Object.keys(this.articles).length; i++) {
+        if (this.articles[i].titre === articleForm.value.titre) {
           this.checktitre = false;
-        } else {
-          this.checktitre = true;
         }
-      });
+      }
       if (this.checktitre === true) {
         if (this.article.id) {
           // SI L'ONGLET EXISTE DEJA
@@ -53,18 +50,18 @@ export class ArticleFormComponent implements OnInit {
         } else {
           // SI C'EST UN NOUVEL ONGLET
           this.articleservice.addArticle(articleForm.value);
-          this.admin.showNotification("L'article' a été créé");
+          this.admin.showNotification("L'article a été créé");
           this.router.navigate(['dashboard/articles']);
         }
       } else {
-        this.admin.showNotification("Ce titre d'article' est déja utilisé !");
+        this.admin.showNotification("Ce titre d'article est déja utilisé !");
       }
     } // SI ERREUR DANS LE FORM
     else {
       this.admin.showNotification('Il y a des erreurs dans le formulaire!');
     }
+    this.checktitre = true;
   }
-
   // DELETE
   delete() {
     this.articleservice.deleteArticle(this.id);
@@ -73,9 +70,15 @@ export class ArticleFormComponent implements OnInit {
   ngOnInit(): void {
     // RMPLIS LE FORMULAIRE AVEC LES DONNEES DE L'ARTICLE
     this.id = this.route.snapshot.paramMap.get('id') as string;
-    if (this.id)
+    if (this.id) {
       this.articleservice
         .getArticle(this.id)
         .subscribe((a) => (this.article = a));
+    }
+
+    // RECUPERE TOUS LES ARTICLES
+    this.articleservice.getArticles().subscribe((a: Article[]) => {
+      this.articles = a;
+    });
   }
 }

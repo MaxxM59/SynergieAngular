@@ -33,7 +33,7 @@ export class PagesFormComponent implements OnInit {
     nomlien: null,
   };
   pages: any;
-  checktitre: boolean = false;
+  checktitre: boolean = true;
   constructor(
     public pagesservice: PagesService,
     private router: Router,
@@ -45,35 +45,32 @@ export class PagesFormComponent implements OnInit {
   save(pageForm: NgForm) {
     if (pageForm.valid) {
       // VERIFICATION SI LE TITRE EXISTE DEJA
-      this.pagesservice.getPages().subscribe((p: Page[]) => {
-        this.pages = p;
-        if (this.pages.includes(pageForm.value.titre) === true) {
+      for (var i = 0; i < Object.keys(this.pages).length; i++) {
+        if (this.pages[i].titre === pageForm.value.titre) {
           this.checktitre = false;
-        } else {
-          this.checktitre = true;
         }
-      });
+      }
       if (this.checktitre === true) {
         if (this.page.id) {
           // SI L'ONGLET EXISTE DEJA
           this.pagesservice.updatePage(pageForm.value, this.id);
-          this.admin.showNotification('Dossier modifié !');
+          this.admin.showNotification('Page modifiée !');
           this.router.navigate(['dashboard/pages']);
         } else {
           // SI C'EST UN NOUVEL ONGLET
           this.pagesservice.addPage(pageForm.value);
-          this.admin.showNotification('Le dossier a été créé');
+          this.admin.showNotification('La page a été créé');
           this.router.navigate(['dashboard/pages']);
         }
       } else {
-        this.admin.showNotification('Ce titre de dossier est déja utilisé !');
+        this.admin.showNotification('Ce titre de page est déja utilisé !');
       }
     } // SI ERREUR DANS LE FORM
     else {
       this.admin.showNotification('Il y a des erreurs dans le formulaire!');
     }
+    this.checktitre = true;
   }
-
   // DELETE
   delete() {
     this.pagesservice.deletePage(this.id);
@@ -81,7 +78,12 @@ export class PagesFormComponent implements OnInit {
   ngOnInit(): void {
     // REMPLIS LE FORMULAIRE AVEC LES DONNEES DE LA PAGE SI ELLE EXISTE
     this.id = this.route.snapshot.paramMap.get('id') as string;
-    if (this.id)
+    if (this.id) {
       this.pagesservice.getPage(this.id).subscribe((p) => (this.page = p));
+    }
+    // RECUPERE TOUTES LES PAGES
+    this.pagesservice.getPages().subscribe((p: Page[]) => {
+      this.pages = p;
+    });
   }
 }

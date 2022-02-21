@@ -34,14 +34,12 @@ export class DossierFormComponent implements OnInit {
   save(dossierForm: NgForm) {
     if (dossierForm.valid) {
       // VERIFICATION SI LE TITRE EXISTE DEJA
-      this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
-        this.onglets = o;
-        if (this.onglets.includes(dossierForm.value.titre) === true) {
+      for (var i = 0; i < Object.keys(this.onglets).length; i++) {
+        if (this.onglets[i].titre === dossierForm.value.titre) {
           this.checktitre = false;
-        } else {
-          this.checktitre = true;
         }
-      });
+      }
+
       if (this.checktitre === true) {
         if (this.onglet.id) {
           // SI L'ONGLET EXISTE DEJA
@@ -61,6 +59,7 @@ export class DossierFormComponent implements OnInit {
     else {
       this.admin.showNotification('Il y a des erreurs dans le formulaire!');
     }
+    this.checktitre = true;
   }
 
   // DELETE A PARTIR DE LA PAGE D'EDIT
@@ -74,7 +73,12 @@ export class DossierFormComponent implements OnInit {
   ngOnInit(): void {
     // REMPLIS LE FORMULAIRE AVEC LES DONNES DU DOSSIER S'IL EXISTE
     this.id = this.route.snapshot.paramMap.get('id') as string;
-    if (this.id)
+    if (this.id) {
       this.ongletservice.getOnglet(this.id).subscribe((o) => (this.onglet = o));
+    }
+    // RECUPERE TOUS LES ONGLETS POUR COMPARER LE TITRE AVEC LA VALUE DU FORM
+    this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
+      this.onglets = o;
+    });
   }
 }

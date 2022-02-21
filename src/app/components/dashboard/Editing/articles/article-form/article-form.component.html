@@ -20,7 +20,7 @@
             <input #imageInput="ngModel" type="text" name="image" id="image" [ngClass]="{'is-invalid' : imageInput.invalid&&contenuInput.touched}" class="form-control" [(ngModel)]="article.image" required>
 
             <mat-error *ngIf="imageInput?.hasError('required')"><strong>Image obligatoire</strong></mat-error>
-            <div>
+            <div class="row">
                 <mat-hint>
 
                     <button type="button" class="btn btn-link" (click)="goToLink('https://postimages.org/')"> Veuillez héberger votre image (de préference au format WebP) sur ce site puis copier l'adresse 'Lien direct de votre image' dans le champ ci-dessous</button>                    </mat-hint>
@@ -28,9 +28,9 @@
         </div>
 
 
-        <button type="submit" class="btn btn-primary m-1">Enregistrer</button>
-        <button class="btn btn-success m-1" routerLink="../../articles">Retour</button>
-        <button *ngIf="article.id !== undefined" (click)="delete()" class="btn btn-danger m-1">Supprimer</button> </form>
+        <button type="submit" class="btn btn-primary m-1 myButton">Enregistrer</button>
+        <button class="btn btn-success m-1 myButton" routerLink="../../articles">Retour</button>
+        <button *ngIf="article.id !== undefined" (click)="delete()" class="btn btn-danger m-1 myButton">Supprimer</button> </form>
 
 
 </div>

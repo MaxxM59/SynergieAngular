@@ -22,7 +22,7 @@ export class OngletsFormComponent implements OnInit {
     position: 0,
   };
   onglets: any;
-  checktitre: boolean | undefined;
+  checktitre: boolean = true;
   constructor(
     public ongletservice: OngletsService,
     private router: Router,
@@ -33,14 +33,12 @@ export class OngletsFormComponent implements OnInit {
   save(ongletForm: NgForm) {
     if (ongletForm.valid) {
       // VERIFICATION SI LE TITRE EXISTE DEJA
-      this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
-        this.onglets = o;
-        if (this.onglets.includes(ongletForm.value.titre) === true) {
+      for (var i = 0; i < Object.keys(this.onglets).length; i++) {
+        if (this.onglets[i].titre === ongletForm.value.titre) {
           this.checktitre = false;
-        } else {
-          this.checktitre = true;
         }
-      });
+      }
+
       if (this.checktitre === true) {
         if (this.onglet.id) {
           // SI L'ONGLET EXISTE DEJA
@@ -60,6 +58,7 @@ export class OngletsFormComponent implements OnInit {
     else {
       this.admin.showNotification('Il y a des erreurs dans le formulaire!');
     }
+    this.checktitre = true;
   }
 
   // DELETE A PARTIR DE LA PAGE D'EDIT
@@ -73,7 +72,13 @@ export class OngletsFormComponent implements OnInit {
   ngOnInit(): void {
     // REMPLIS LE FORMULAIRE AVEC LES DONNES DE L'ONGLET S'IL EXISTE
     this.id = this.route.snapshot.paramMap.get('id') as string;
-    if (this.id)
+    if (this.id) {
       this.ongletservice.getOnglet(this.id).subscribe((o) => (this.onglet = o));
+    }
+    // RECUPERE TOUS LES ONGLETS POUR COMPARER LE TITRE AVEC LA VALUE DU FORM
+
+    this.ongletservice.getOnglets().subscribe((o: Onglet[]) => {
+      this.onglets = o;
+    });
   }
 }

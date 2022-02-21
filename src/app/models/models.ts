@@ -11,6 +11,7 @@ export interface Onglet {
   type: string;
   lien: string;
   position: number;
+  linked: any;
 }
 export interface Page {
   id: string;

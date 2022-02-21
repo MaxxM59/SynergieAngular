@@ -19,10 +19,11 @@ export class DossierFormComponent implements OnInit {
     dossier: null,
     type: '',
     lien: '',
+    linked: null,
     position: 1,
   };
   onglets: any;
-  checktitre: boolean | undefined;
+  checktitre: boolean = true;
   constructor(
     public ongletservice: OngletsService,
     private router: Router,

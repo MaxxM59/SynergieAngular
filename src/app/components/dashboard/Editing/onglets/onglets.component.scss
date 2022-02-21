@@ -20,11 +20,6 @@ a {
     min-width: 130px;
 }
 
-.dropdownlinked {
-    width: 10vw;
-    min-width: 120px;
-}
-
 .buttonsgroup {
     float: right;
     margin-right: 3vw;
@@ -36,6 +31,10 @@ a {
     margin-right: 2vw;
 }
 
+.centercolumn {
+    text-align: center;
+}
+
 .headbutton {
     background-color: #b0bec5;
     color: black;
@@ -43,7 +42,7 @@ a {
 }
 
 .linkedbuttons {
-    background-color: lightslategrey;
+    background-color: #009431;
     color: white;
 }
 

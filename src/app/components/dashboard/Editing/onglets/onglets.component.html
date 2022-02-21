@@ -28,10 +28,10 @@
                     <h2>{{d.titre}}</h2>
                 </td>
 
-                <td> <a class='linkedbuttons' mat-raised-button [matMenuTriggerFor]="menu">
+                <td class="centercolumn"> <a class='linkedbuttons' mat-raised-button [matMenuTriggerFor]="menu">
                        Afficher les onglets
                     </a></td>
-                <td>
+                <td class="centercolumn">
                     <h2 id="dossierposition">{{d.position}}</h2>
                 </td>
                 <mat-menu #menu="matMenu">
@@ -79,7 +79,7 @@
                 <td>
                     <h2>{{dd.dossier}}</h2>
                 </td>
-                <td>
+                <td class="centercolumn">
                     <h2>{{dd.position}}</h2>
                 </td>
                 <div class='buttonsgroup'>
@@ -105,7 +105,7 @@
                     <h2 class='tabletitle'>Titre</h2>
                 </th>
                 <th>
-                    <h2></h2>
+                    <h2 class='tabletitle'>Page reliée? </h2>
                 </th>
                 <th>
                     <h2 class='tabletitle'>Position</h2>
@@ -118,8 +118,10 @@
                 <td>
                     <h2>{{s.titre}}</h2>
                 </td>
-
-                <td>
+                <td class="centercolumn">
+                    <h2>{{s.linked}}</h2>
+                </td>
+                <td class="centercolumn">
                     <h2>{{s.position}}</h2>
                 </td>
                 <div class='buttonsgroup'>

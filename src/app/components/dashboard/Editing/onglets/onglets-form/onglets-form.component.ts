@@ -19,6 +19,7 @@ export class OngletsFormComponent implements OnInit {
     dossier: null,
     type: '',
     lien: '',
+    linked: null,
     position: 0,
   };
   onglets: any;

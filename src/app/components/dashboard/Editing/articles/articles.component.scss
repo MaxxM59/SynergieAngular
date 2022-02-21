@@ -1,6 +1,7 @@
 img {
-    max-width: 200px;
-    max-height: 100px;
+    margin-top: 3vh;
+    width: 12vw;
+    height: 10vh;
 }
 
 .titre {
@@ -12,8 +13,13 @@ img {
 }
 
 .buttonsgroup {
+    margin-top: 5vh;
     float: right;
-    margin-right: 3vw;
+    margin-right: 2vw;
+}
+
+.content {
+    width: 30%;
 }
 
 .buttoncontainer {
@@ -34,6 +40,10 @@ img {
 .tabletitle {
     color: blueviolet;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.centercolumn {
+    text-align: center;
 }
 
 .deletebutton {

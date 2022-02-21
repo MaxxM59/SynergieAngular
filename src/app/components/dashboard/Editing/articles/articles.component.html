@@ -26,22 +26,24 @@
                 <td>
                     <h2 class="titre"><strong>{{a.titre}}</strong></h2>
                 </td>
-                <td>
+                <td class="content">
                     <h2 class="contenu">{{a.contenu}}</h2>
                 </td>
                 <td>
                     <img src="{{a.image}}">
                 </td>
-                <div class='buttonsgroup'>
-                    <td>
+                <td class="centercolumn">
+                    <div class='buttonsgroup'>
+
                         <a mat-raised-button routerLink="../articles-form/{{a.id}}" color='primary'>
                         Modifier
                     </a>
-                    </td>
-                    <td>
+
+
                         <a mat-raised-button (click)="delete(a.id)" class='deletebutton'> Supprimer</a>
-                    </td>
-                </div>
+
+                    </div>
+                </td>
             </tr>
 
         </tbody>

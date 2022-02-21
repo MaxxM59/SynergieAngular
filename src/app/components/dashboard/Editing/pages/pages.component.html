@@ -22,17 +22,17 @@
                 <td>
                     <h2>{{p.titre}}</h2>
                 </td>
+                <td class="centercolumn">
+                    <div class='buttonsgroup'>
 
-                <div class='buttonsgroup'>
-                    <td>
                         <a mat-raised-button routerLink="../pages-form/{{p.id}}" color='primary'>
                         Modifier
                     </a>
-                    </td>
-                    <td>
+
                         <a *ngIf="p.titre!=='A propos'" mat-raised-button (click)="delete(p.id)" class='deletebutton'> Supprimer</a>
-                    </td>
-                </div>
+
+                    </div>
+                </td>
             </tr>
         </tbody>
 

@@ -26,6 +26,10 @@ a {
     min-width: 130px;
 }
 
+.cetnercolumn {
+    text-align: center;
+}
+
 .maincontainer {
     background-image: url('https://i.postimg.cc/k5vszxp5/EDsx2f-GW4-AAGEBv.jpg');
     background-repeat: no-repeat;
@@ -37,5 +41,6 @@ a {
 }
 
 .buttonscontainer {
+    float: right;
     margin-right: 2vw;
 }

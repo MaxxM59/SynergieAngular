@@ -26,16 +26,18 @@
                 <td>
                     <h2>{{c.surname}}</h2>
                 </td>
-                <div class='buttonscontainer'>
-                    <td>
+                <td class="centercolumn">
+                    <div class='buttonscontainer'>
+
                         <a mat-raised-button routerLink="../answercontacts/{{c.id}}" color='primary'>
                         Voir
                     </a>
-                    </td>
-                    <td>
+
+
                         <a mat-raised-button (click)="delete(c.id)" class='deletebutton'> Supprimer</a>
-                    </td>
-                </div>
+
+                    </div>
+                </td>
             </tr>
         </tbody>
 

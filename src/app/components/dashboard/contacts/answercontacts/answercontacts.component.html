@@ -76,7 +76,7 @@
         </table>
         <hr>
         <div class="buttoncontainer">
-            <button mat-raised-button id='sender' (click)="admin.goToLink (mailto(this.contact.mail,this.contact.subject ) ) " color="primary">Envoyer un mail</button>
+            <button mat-raised-button target="_top" id='sender' (click)='sendmail()' color="primary">Envoyer un mail</button>
 
             <button (click)="delete()" class="btn btn-danger m-1" id='deleter'>Supprimer</button>
             <button class="btn btn-success m-1 " id='return' routerLink="../../contacts">Retour</button>

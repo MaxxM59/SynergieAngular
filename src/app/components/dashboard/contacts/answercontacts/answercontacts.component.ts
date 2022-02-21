@@ -13,7 +13,7 @@ import { ContactFormService } from 'src/app/services/contactForm/contact-form.se
 export class AnswercontactsComponent implements OnInit {
   // VARIABLES
   id: string = '';
-  mailurl!: string;
+  mailurl: string = '';
   contact: Contact = {
     id: '',
     name: '',
@@ -44,6 +44,9 @@ export class AnswercontactsComponent implements OnInit {
   mailto(emailAddress: string, emailSubject: any) {
     return 'mailto:' + emailAddress + '?subject=RE: ' + emailSubject;
   }
+  sendmail() {
+    window.location.href = this.mailurl;
+  }
   ngOnInit(): void {
     // RMPLIS LE FORMULAIRE AVEC LES DONNEES DE L'ARTICLE
     this.id = this.route.snapshot.paramMap.get('id') as string;
@@ -51,6 +54,7 @@ export class AnswercontactsComponent implements OnInit {
       this.contactervice
         .getContact(this.id)
         .subscribe((c) => (this.contact = c));
+    this.mailurl = this.mailto(this.contact.mail, this.contact.subject);
     //this.mailurl = `mailto:${this.contact.mail}?Subject=RE:${this.contact.subject}`;
     //console.log(this.mailurl);
   }

@@ -9,7 +9,7 @@
                     <mat-label>Email</mat-label>
                     <input type="email" matInput formControlName="email" placeholder="Ex. example@example.com" />
                     <mat-error *ngIf="email?.hasError('email') && !email?.hasError('required')">
-                        Email invalide
+                        L'email n'est pas valide.
                     </mat-error>
                     <mat-error *ngIf="email?.hasError('required')">
                         <strong> Votre email est indispensable pour vous connecter</strong>
@@ -23,7 +23,7 @@
       <mat-icon>{{ isHide ? "visibility_off" : "visibility" }}</mat-icon>
     </button>
                     <mat-error *ngIf="password?.hasError('minlength') && !password?.hasError('required')">
-                        Le mot de passe erroné
+                        Le mot de passe n'est pas valide
                     </mat-error>
                     <mat-error *ngIf="password?.hasError('required')">
                         <strong> Votre mot de passe est indispensable pour vous connecter</strong>
@@ -31,9 +31,9 @@
                 </mat-form-field>
                 <span><img id='logo' src="../../../assets/images/nav/synergielogo.jpg"></span>
                 <div>
-                    <button class="full-width" mat-raised-button color="primary" type="submit">Connexion</button>
+                    <button class="opbutton" mat-raised-button color="primary" type="submit">Connexion</button>
 
-                    <button class="full-width" mat-raised-button id='return' routerLink="">Retour au site</button>
+                    <button class="opbutton" mat-raised-button id='return' routerLink="">Retour au site</button>
                 </div>
             </form>
         </mat-card>

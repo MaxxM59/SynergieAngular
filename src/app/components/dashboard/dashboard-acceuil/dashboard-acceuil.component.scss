@@ -12,11 +12,11 @@ h3 {
 }
 
 mat-card {
-    margin-top: 1vh;
+    margin: auto;
     border-radius: 20px;
     width: 70%;
     text-align: justify;
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: center;
     align-items: center;

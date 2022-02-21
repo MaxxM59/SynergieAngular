@@ -1,5 +1,5 @@
 <div class='maincontainer' id="navcontainer">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg row">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
@@ -10,12 +10,12 @@
                 <span><img id='logo' src="../../../assets/images/nav/synergielogo.jpg"></span>
             </a>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <!-- Onglets Dropdowns : Maximum 3-->
                 <ul>
-                    <button class='button2 collapsebutton maincontainer' id='dd1' *ngIf="ongletservice.dossiers[0]!==undefined" mat-raised-button [matMenuTriggerFor]="menu1">{{ongletservice.dossiers[0].titre}}</button>
-                    <button class='button2 collapsebutton maincontainer' id='dd2' *ngIf="ongletservice.dossiers[1]!==undefined" mat-raised-button [matMenuTriggerFor]="menu2">{{ongletservice.dossiers[1].titre}}</button>
-                    <button class='button2 collapsebutton maincontainer' id='dd3' *ngIf="ongletservice.dossiers[2]!==undefined" mat-raised-button [matMenuTriggerFor]="menu3">{{ongletservice.dossiers[2].titre}}</button>
+                    <button class='button collapsebutton maincontainer' id='dd1' *ngIf="ongletservice.dossiers[0]!==undefined" mat-raised-button [matMenuTriggerFor]="menu1">{{ongletservice.dossiers[0].titre}}</button>
+                    <button class='button collapsebutton maincontainer' id='dd2' *ngIf="ongletservice.dossiers[1]!==undefined" mat-raised-button [matMenuTriggerFor]="menu2">{{ongletservice.dossiers[1].titre}}</button>
+                    <button class='button collapsebutton maincontainer' id='dd3' *ngIf="ongletservice.dossiers[2]!==undefined" mat-raised-button [matMenuTriggerFor]="menu3">{{ongletservice.dossiers[2].titre}}</button>
 
 
                 </ul>

@@ -2,29 +2,33 @@
         background-color: rgba(211, 230, 255, 0.8);
         padding-top: 0;
         padding-bottom: 0;
-    }
-
-    .nav-section {
-        display: flex;
-        justify-content: space-between;
-        justify-content: center;
-        align-content: center;
-        width: 96vw;
-        padding-left: 0.5vw;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     button {
         text-align: center;
         margin-top: 1vw;
         background-color: #ffff;
-        align-content: center;
         font-weight: bold;
         color: #0032d6;
         border-radius: 20px;
+        padding-right: 0.3vw;
+        padding-left: 0.3vw;
     }
 
     .btn-2 {
         border-radius: 0;
+    }
+
+    #dd1 {
+        margin-right: 0.6vw;
+    }
+
+    #dd2,
+    #dd3 {
+        margin-left: 0.6vw;
     }
 
     img {
@@ -76,12 +80,6 @@
         font-size: 130%;
         color: #0032d6;
         margin-left: 1%;
-    }
-
-    @media (min-width :1260px) {
-        #dd1 {
-            margin-left: 2vw;
-        }
     }
 
     @media (min-width: 991px) {

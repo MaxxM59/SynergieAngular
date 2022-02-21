@@ -1,26 +1,31 @@
 * {
     background-color: rgba(211, 230, 255, 0.8);
-    font-size: 1em;
 }
 
 .footer-section {
     max-width: 98vw;
     height: 10vh;
-    padding-top: 1vh;
 }
 
 #img-section {
     padding-top: 1vh;
-    padding-bottom: 1vh;
+    margin-bottom: 0.5vh;
     padding-left: 0.5vw;
+    padding-right: 0.5vw;
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 98vw;
 }
 
-.col-12 {
+.col-12,
+.col-6 {
     text-align: center;
+    font-size: 120%;
+}
+
+#toprow {
+    padding-top: 10px;
 }
 
 .img {
@@ -57,6 +62,11 @@ h1 {
     padding-left: 5vw;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1vh;
+}
+
+.horaires {
+    margin-top: 10px;
 }
 
 #mail,
@@ -64,10 +74,6 @@ h1 {
 #buttoncontainer {
     padding-top: 0.5vh;
     padding-bottom: 0.5vh;
-}
-
-.textsection {
-    font-size: 130%;
 }
 
 @media (max-widht:800px) {

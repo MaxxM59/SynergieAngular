@@ -50,7 +50,10 @@ export class NavComponent implements OnInit {
     this.onglets.forEach((o) => {
       this.pages.forEach((p) => {
         if (o.titre === p.titre) {
-          if (this.router.url.startsWith('localhost:4200/page/')) {
+          if (
+            this.router.url.startsWith('localhost:4200/page/') ||
+            this.router.url.startsWith('localhost:4200/contactform')
+          ) {
             o.lien = `/${p.id}`;
             this.contact = '../contactform';
           } else {

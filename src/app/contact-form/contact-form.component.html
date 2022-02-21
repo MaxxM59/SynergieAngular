@@ -1,6 +1,7 @@
 <app-nav></app-nav>
 
 <div class='maincontainer'>
+
     <div class="container-fluid p-5" id='formcontainer'>
         <mat-card>
             <div id='formtitle'>
@@ -38,7 +39,7 @@
                 <div class="form-group">
 
                     <label for="titre"><h2>Email :</h2></label>
-                    <input type="email" name="email" email #mailInput="ngModel" type="text" name="mail" id="mail" [ngClass]="{'is-invalid' : mailInput.invalid && mailInput.touched}" class="form-control" [(ngModel)]="contact.mail" required>
+                    <input type="email" email #mailInput="ngModel" type="text" name="mail" id="mail" [ngClass]="{'is-invalid' : mailInput.invalid && mailInput.touched}" class="form-control" [(ngModel)]="contact.mail" required>
                     <mat-error *ngIf="mailInput?.hasError('required')">
                         <strong>L'email est obligatoire</strong>
                     </mat-error>

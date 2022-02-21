@@ -1,116 +1,127 @@
-        * {
-            background-color: rgba(211, 230, 255, 0.8);
-            padding-top: 0;
-            padding-bottom: 0;
-            display: block;
-            margin-right: auto;
-            margin-left: auto;
-            display: inline;
-        }
-        
-        button {
-            text-align: center;
-            background-color: #ffff;
-            font-weight: bold;
-            color: #0032d6;
-            border-radius: 20px;
-            margin-right: 0.5vw;
-            margin-left: 0.5vw;
-        }
-        
-        .btn-2 {
-            border-radius: 0;
-        }
-        
-        img {
-            max-width: 150px;
-            max-height: 100px;
-        }
-        
-        #logo {
-            min-width: 100px;
-            max-width: 8vw;
-            height: auto;
-            border-radius: 60px;
-            margin-bottom: 0.5vw;
-        }
-        
-        #companyName {
-            border-radius: 500px;
-            padding-right: 0.5%;
-        }
-        
-        #navcontainer {
-            margin-top: 5px;
-        }
-        
-        .btn-2 {
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-        
-        #logotoggle {
-            max-width: 70px;
-            height: auto;
-            border-radius: 10px;
-            margin-left: 0;
-            border-radius: 500px;
-            margin-top: 1vh;
-        }
-        
-        .navbar-toggler {
-            max-width: 100px;
-            height: auto;
-            margin-bottom: 2vw;
-            display: block;
-            margin-left: 5vw;
-            border-radius: 500px;
-        }
-        
-        #maintitle {
-            font-size: 130%;
-            color: #0032d6;
-            margin-left: 1%;
-        }
-        
-        @media (min-width: 991px) {
+            * {
+                background-color: rgba(211, 230, 255, 0.8);
+                padding-top: 0;
+                padding-bottom: 0;
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+                display: inline;
+            }
+            
+            button {
+                text-align: center;
+                background-color: #ffff;
+                font-weight: bold;
+                color: #0032d6;
+                border-radius: 20px;
+                margin-right: 0.7vw;
+                margin-left: 0.7vw;
+            }
+            
             #dd1 {
                 padding-left: 2vw;
             }
-            #logotoggle {
-                display: none
+            
+            .btn-2 {
+                border-radius: 0;
+                margin-left: 0;
             }
-            .navbar-toggler,
-            #maintitle {
-                display: none;
+            
+            img {
+                max-width: 150px;
+                max-height: 100px;
             }
-            .button2 {
-                max-width: 180px;
-            }
-        }
-        
-        @media (max-width:991px) {
-            button {
-                max-width: 240px;
-            }
+            
             #logo {
-                display: none
+                min-width: 100px;
+                max-width: 8vw;
+                height: auto;
+                border-radius: 60px;
+                margin-bottom: 0.5vw;
             }
-            .collapsebutton {
-                width: 75%;
-                display: flex;
-                flex-direction: column;
-                align-content: center;
+            
+            #companyName {
+                border-radius: 500px;
+                padding-right: 0.5%;
             }
-        }
-        
-        @media(max-width:341px) {
+            
+            #navcontainer {
+                margin-top: 5px;
+            }
+            
+            .btn-2 {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            
+            #logotoggle {
+                max-width: 70px;
+                height: auto;
+                border-radius: 10px;
+                margin-left: 0;
+                border-radius: 500px;
+                margin-top: 1vh;
+            }
+            
+            .navbar-toggler {
+                max-width: 100px;
+                height: auto;
+                margin-bottom: 2vw;
+                display: block;
+                margin-left: 5vw;
+                border-radius: 500px;
+            }
+            
             #maintitle {
-                display: none
+                font-size: 130%;
+                color: #0032d6;
+                margin-left: 1%;
             }
-            button {
-                font-size: 65%;
-                min-width: 120px;
-                max-width: 140px;
+            
+            @media (min-width: 1380px) {
+                #dd1 {
+                    margin-left: 1vw !important;
+                }
             }
-        }
+            
+            @media (min-width: 991px) {
+                #dd1 {
+                    margin-left: 5.5vw;
+                }
+                #logotoggle {
+                    display: none
+                }
+                .navbar-toggler,
+                #maintitle {
+                    display: none;
+                }
+                .button2 {
+                    max-width: 180px;
+                }
+            }
+            
+            @media (max-width:991px) {
+                button {
+                    max-width: 240px;
+                }
+                #logo {
+                    display: none
+                }
+                .collapsebutton {
+                    width: 75%;
+                    display: flex;
+                    flex-direction: column;
+                    align-content: center;
+                }
+            }
+            
+            @media(max-width:341px) {
+                #maintitle {
+                    display: none
+                }
+                button {
+                    font-size: 65%;
+                    min-width: 120px;
+                    max-width: 140px;
+                }
+            }

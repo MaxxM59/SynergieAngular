@@ -37,25 +37,25 @@ export class AnswercontactsComponent implements OnInit {
   delete() {
     this.contactervice.deleteContact(this.id);
   }
-  // OUVRE l'HEBERGEUR D'IMAGE DANS UNE NOUVELLE FENETRE
-  goToLink(url: string) {
-    window.open(url, '_blank');
-  }
   mailto(emailAddress: string, emailSubject: any) {
-    return 'mailto:' + emailAddress + '?subject=RE: ' + emailSubject;
+    return (
+      'mailto:' +
+      emailAddress +
+      '?subject=RE: ' +
+      emailSubject +
+      ' - Association Synergie '
+    );
   }
   sendmail() {
+    this.mailurl = this.mailto(this.contact.mail, this.contact.subject);
     window.location.href = this.mailurl;
   }
   ngOnInit(): void {
-    // RMPLIS LE FORMULAIRE AVEC LES DONNEES DE L'ARTICLE
+    // REMPLIS LE FORMULAIRE AVEC LES DONNEES DE L'ARTICLE
     this.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.id)
       this.contactervice
         .getContact(this.id)
         .subscribe((c) => (this.contact = c));
-    this.mailurl = this.mailto(this.contact.mail, this.contact.subject);
-    //this.mailurl = `mailto:${this.contact.mail}?Subject=RE:${this.contact.subject}`;
-    //console.log(this.mailurl);
   }
 }

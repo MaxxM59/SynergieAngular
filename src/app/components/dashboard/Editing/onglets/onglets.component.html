@@ -9,13 +9,13 @@
     <table class="table table-stripped">
         <thead>
             <tr>
-                <th>
+                <th class="leftcolumn">
                     <h2 class='tabletitle'>Titre</h2>
                 </th>
-                <th>
+                <th class="centercolumn">
                     <h2 class='tabletitle'>Onglets associés</h2>
                 </th>
-                <th>
+                <th class="centercolumn">
                     <h2 class='tabletitle'>Position</h2>
                 </th>
 
@@ -24,7 +24,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let d of ongletservice.dossiers ; let i = index ">
-                <td>
+                <td class="leftcolumn">
                     <h2>{{d.titre}}</h2>
                 </td>
 
@@ -40,16 +40,18 @@
 
 
                 </mat-menu>
-                <div class='buttonsgroup'>
+                <td class="centercolumn">
+                    <div class='buttonsgroup'>
 
-                    <a mat-raised-button routerLink="../onglets-form/{{d.id}}" color='primary'>
+                        <a mat-raised-button routerLink="../onglets-form/{{d.id}}" color='primary'>
                         Modifier
                     </a>
 
 
-                    <a mat-raised-button (click)="delete(d.id)" class='deletebutton'> Supprimer</a>
+                        <a mat-raised-button (click)="delete(d.id)" class='deletebutton'> Supprimer</a>
 
-                </div>
+                    </div>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -58,14 +60,14 @@
     <table class="table table-stripped">
         <thead>
             <tr>
-                <th>
+                <th class="leftcolumn">
                     <h2 class='tabletitle'>Titre</h2>
                 </th>
 
-                <th>
+                <th class="centercolumn">
                     <h2 class='tabletitle'>Dossier</h2>
                 </th>
-                <th>
+                <th class="centercolumn">
                     <h2 class='tabletitle'>Position</h2>
                 </th>
 
@@ -73,25 +75,27 @@
         </thead>
         <tbody>
             <tr *ngFor="let dd of ongletservice.dropdowns">
-                <td>
+                <td class="leftcolumn">
                     <h2>{{dd.titre}}</h2>
                 </td>
-                <td>
+                <td class="centercolumn">
                     <h2>{{dd.dossier}}</h2>
                 </td>
                 <td class="centercolumn">
                     <h2>{{dd.position}}</h2>
                 </td>
-                <div class='buttonsgroup'>
-                    <a mat-raised-button routerLink="../onglets-form/{{dd.id}}" color='primary'>
+                <td class="centercolumn">
+                    <div class='buttonsgroup'>
+                        <a mat-raised-button routerLink="../onglets-form/{{dd.id}}" color='primary'>
                         Modifier
                     </a>
 
 
-                    <a mat-raised-button (click)="delete(dd.id)" class='deletebutton'> Supprimer</a>
+                        <a mat-raised-button (click)="delete(dd.id)" class='deletebutton'> Supprimer</a>
 
 
-                </div>
+                    </div>
+                </td>
             </tr>
         </tbody>
 
@@ -101,13 +105,13 @@
     <table class="table table-stripped">
         <thead>
             <tr>
-                <th>
+                <th class="leftcolumn">
                     <h2 class='tabletitle'>Titre</h2>
                 </th>
-                <th>
-                    <h2 class='tabletitle'>Page reliée? </h2>
+                <th class="centercolumn">
+                    <h2 class='tabletitle'>Page associée </h2>
                 </th>
-                <th>
+                <th class="centercolumn">
                     <h2 class='tabletitle'>Position</h2>
                 </th>
 
@@ -115,7 +119,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let s of ongletservice.solo ">
-                <td>
+                <td class="leftcolumn">
                     <h2>{{s.titre}}</h2>
                 </td>
                 <td class="centercolumn">
@@ -124,16 +128,18 @@
                 <td class="centercolumn">
                     <h2>{{s.position}}</h2>
                 </td>
-                <div class='buttonsgroup'>
+                <td class="centercolumn">
+                    <div class='buttonsgroup'>
 
-                    <a mat-raised-button routerLink="../onglets-form/{{s.id}}" color='primary'>
+                        <a mat-raised-button routerLink="../onglets-form/{{s.id}}" color='primary'>
                         Modifier
                     </a>
 
 
-                    <a mat-raised-button (click)="delete(s.id)" class='deletebutton'> Supprimer</a>
+                        <a mat-raised-button (click)="delete(s.id)" class='deletebutton'> Supprimer</a>
 
-                </div>
+                    </div>
+                </td>
             </tr>
         </tbody>
     </table>

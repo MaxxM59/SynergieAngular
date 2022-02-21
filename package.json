@@ -42,7 +42,6 @@
     "firestore": "^1.1.6",
     "flash-messages-angular": "^4.0.1",
     "htmlspecialchars": "^1.0.5",
-    "lodash": "^4.17.21",
     "ngx-editor": "^11.1.1",
     "rxfire": "^6.0.0",
     "rxjs": "~7.4.0",

@@ -10,22 +10,21 @@
                 <span><img id='logo' src="../../../assets/images/nav/synergielogo.jpg"></span>
             </a>
 
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <div class="collapse navbar-collapse col" id="navbarSupportedContent">
                 <!-- Onglets Dropdowns : Maximum 3-->
-                <ul>
-                    <button class='button collapsebutton maincontainer' id='dd1' *ngIf="ongletservice.dossiers[0]!==undefined" mat-raised-button [matMenuTriggerFor]="menu1">{{ongletservice.dossiers[0].titre}}</button>
-                    <button class='button collapsebutton maincontainer' id='dd2' *ngIf="ongletservice.dossiers[1]!==undefined" mat-raised-button [matMenuTriggerFor]="menu2">{{ongletservice.dossiers[1].titre}}</button>
-                    <button class='button collapsebutton maincontainer' id='dd3' *ngIf="ongletservice.dossiers[2]!==undefined" mat-raised-button [matMenuTriggerFor]="menu3">{{ongletservice.dossiers[2].titre}}</button>
+
+                <button class='button collapsebutton maincontainer' id='dd1' *ngIf="ongletservice.dossiers[0]!==undefined" mat-raised-button [matMenuTriggerFor]="menu1">{{ongletservice.dossiers[0].titre}}</button>
+                <button class='button collapsebutton maincontainer' id='dd2' *ngIf="ongletservice.dossiers[1]!==undefined" mat-raised-button [matMenuTriggerFor]="menu2">{{ongletservice.dossiers[1].titre}}</button>
 
 
-                </ul>
+
                 <!-- Fin  Onglets Dropdowns-->
                 <!--Onglets Simples-->
-                <ul *ngFor="let s of ongletservice.solo">
+                <ng-container *ngFor="let s of ongletservice.solo">
                     <button class='collapsebutton maincontainer' mat-raised-button routerLink="/{{s.lien}}">{{s.titre}}</button>
-                </ul>
+                </ng-container>
                 <!-- Fin  Onglets Normaux-->
-                <ul> <button class='collapsebutton maincontainer' mat-raised-button routerLink="contactform">Contact</button></ul>
+                <button class='collapsebutton maincontainer' mat-raised-button routerLink="contactform">Contact</button>
 
             </div>
             <div class='menu'>

@@ -34,13 +34,13 @@
                         "production": {
                             "budgets": [{
                                     "type": "initial",
-                                    "maximumWarning": "500kb",
-                                    "maximumError": "1mb"
+                                    "maximumWarning": "5mb",
+                                    "maximumError": "10mb"
                                 },
                                 {
                                     "type": "anyComponentStyle",
-                                    "maximumWarning": "2kb",
-                                    "maximumError": "4kb"
+                                    "maximumWarning": "5mb",
+                                    "maximumError": "10mb"
                                 }
                             ],
                             "fileReplacements": [{
@@ -101,8 +101,8 @@
                         "prerender": false,
                         "ssr": false,
                         "browserTarget": "synergieangular:build:production",
-                        "firebaseProject": "blog2510",
-                        "firebaseHostingSite": "blog2510"
+                        "firebaseProject": "synergieangular",
+                        "firebaseHostingSite": "synergieangular"
                     }
                 }
             }

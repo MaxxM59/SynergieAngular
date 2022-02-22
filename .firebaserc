@@ -1,14 +1,14 @@
 {
-    "targets": {
-        "SynergieAngular": {
-            "hosting": {
-                "SynergieAngular": [
-                    "SynergieAngular"
-                ]
-            }
-        }
-    },
-    "projects": {
-        "default": "SynergieAngular"
+  "targets": {
+    "synergieangular": {
+      "hosting": {
+        "synergieangular": [
+          "synergieangular"
+        ]
+      }
     }
+  },
+  "projects": {
+    "default": "synergieangular"
+  }
 }

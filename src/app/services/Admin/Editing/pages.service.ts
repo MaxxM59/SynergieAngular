@@ -70,6 +70,7 @@ export class PagesService {
         })
       );
   }
+
   // REMPLACE LES CHAMPS UNDEFINED PAR NULL
   setNulls(page: any) {
     for (let [key, value] of Object.entries(page)) {

@@ -1,9 +1,6 @@
-Projet de site vitrine éditable par l'utilisateur utilsant Angular en front et Firebase en back.
+Angular application project for Synergie association.
 
-Pour ouvrir le projet :
-ng s -o
-
-Partie admin utilisateur :
+Admin part :
 
 http://localhost:4200/admin
 

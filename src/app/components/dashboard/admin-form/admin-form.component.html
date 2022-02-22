@@ -1,7 +1,7 @@
 <div class='maincontainer'>
     <div id="cardadmin">
         <mat-card>
-            <form class="login-form" mat-dialog-content [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <form class="login-form" mat-dialog-content [formGroup]="loginForm">
                 <h2>
                     Veuillez fournir vos logins.
                 </h2>
@@ -31,7 +31,7 @@
                 </mat-form-field>
                 <span><img id='logo' src="../../../assets/images/nav/synergielogo.jpg"></span>
                 <div>
-                    <button class="opbutton" mat-raised-button color="primary" type="submit">Connexion</button>
+                    <button class="opbutton" mat-raised-button color="primary" type="submit" (click)="Connexion()">Connexion</button>
 
                     <button class="opbutton" mat-raised-button id='return' routerLink="">Retour au site</button>
                 </div>

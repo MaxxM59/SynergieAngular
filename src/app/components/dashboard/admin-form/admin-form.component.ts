@@ -41,7 +41,7 @@ export class AdminFormComponent {
   }
 
   // FONCTION CONNEXION
-  async onSubmit(): Promise<void> {
+  async Connexion(): Promise<void> {
     if (this.loginForm.valid) {
       this.formValid = true;
       const email = this.loginForm.get('email')?.value;

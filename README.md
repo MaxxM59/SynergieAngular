@@ -15,3 +15,5 @@ https://synergieangular.firebaseapp.com/admin
 mail : synergie1synergie@gmail.com
 
 pw : Synergie59#
+
+Feel free to DM me if you have any question.

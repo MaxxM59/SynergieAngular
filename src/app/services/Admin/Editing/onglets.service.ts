@@ -6,8 +6,7 @@ import { Onglet } from '../../../models/models';
 import { Router } from '@angular/router';
 import { AdminLoginService } from '../admin-login.service';
 import * as _ from 'lodash';
-import * as firebase from 'firebase/compat';
-import { count } from 'console';
+
 @Injectable({
   providedIn: 'root',
 })

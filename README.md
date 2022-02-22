@@ -2,7 +2,7 @@ Angular application for Synergie association.
 
 Admin part :
 
-http://localhost:4200/admin
+https://synergieangular.firebaseapp.com/
 
 mail : synergie1synergie@gmail.com
 

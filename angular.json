@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "projet0711": {
+        "synergieangular": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -20,7 +20,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/projet0711",
+                        "outputPath": "dist/synergieangular",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "projet0711:build:production"
+                            "browserTarget": "synergieangular:build:production"
                         },
                         "development": {
-                            "browserTarget": "projet0711:build:development"
+                            "browserTarget": "synergieangular:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "projet0711:build"
+                        "browserTarget": "synergieangular:build"
                     }
                 },
                 "test": {
@@ -92,9 +92,7 @@
                             "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
                             "src/styles.scss"
                         ],
-                        "scripts": [
-                            "node_modules/bootstrap/dist/js/bootstrap.min.js"
-                        ]
+                        "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
                     }
                 },
                 "deploy": {
@@ -102,7 +100,7 @@
                     "options": {
                         "prerender": false,
                         "ssr": false,
-                        "browserTarget": "projet0711:build:production",
+                        "browserTarget": "synergieangular:build:production",
                         "firebaseProject": "blog2510",
                         "firebaseHostingSite": "blog2510"
                     }
@@ -110,5 +108,5 @@
             }
         }
     },
-    "defaultProject": "projet0711"
+    "defaultProject": "synergieangular"
 }

@@ -8,12 +8,5 @@ Visitor part :
 
 https://synergieangular.firebaseapp.com
 
-Admin part :
 
-https://synergieangular.firebaseapp.com/admin
-
-mail : synergie1synergie@gmail.com
-
-pw : Synergie59#
-
-Feel free to DM me if you have any question.
+Feel free to DM me for admin logins or if you have any question.

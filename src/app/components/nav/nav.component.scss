@@ -75,9 +75,10 @@
             }
 
             #maintitle {
-                font-size: 130%;
+                font-size: 150%;
                 color: #0032d6;
-                margin-left: 1%;
+                justify-content: center;
+                margin-left: 8vw;
             }
 
             @media (min-width: 1380px) {
@@ -128,10 +129,13 @@
                 }
             }
 
-            @media(max-width:341px) {
+            @media(max-width:399px) {
                 #maintitle {
                     display: none
                 }
+            }
+
+            @media(max-width:265px) {
                 button {
                     font-size: 65%;
                     min-width: 120px;

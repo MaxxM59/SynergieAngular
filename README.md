@@ -1,4 +1,4 @@
-Angular application project for Synergie association.
+Angular application for Synergie association.
 
 Admin part :
 

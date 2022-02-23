@@ -5,12 +5,15 @@
 
 <img id='logotoggle' src="../../../assets/images/nav/synergielogo.jpg">
 
-    </button><span id='maintitle'><b id="texttitle">Association Synergie</b></span>
+    </button><span id='maintitle'><b >Association Synergie</b></span>
             <a mat-button id="companyName" routerLink="/">
                 <div class="d-flex"><span><img id='logo' src="../../../assets/images/nav/synergielogo.jpg"></span></div>
             </a>
 
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <!-- Accueil mobibler-->
+                <button class='collapsebutton maincontainer' id="home" mat-raised-button routerLink="">Accueil</button>
+
                 <!-- Onglets Dropdowns : Maximum 3-->
 
                 <button class='button collapsebutton maincontainer' id='dd1' *ngIf="ongletservice.dossiers[0]!==undefined" mat-raised-button [matMenuTriggerFor]="menu1"><div class="dropdowntitle">{{ongletservice.dossiers[0].titre}}</div></button>
@@ -24,7 +27,7 @@
                     <button class='collapsebutton maincontainer' mat-raised-button routerLink="/{{s.lien}}">{{s.titre}}</button>
                 </ng-container>
                 <!-- Fin  Onglets Normaux-->
-                <button class='collapsebutton maincontainer' mat-raised-button routerLink="{{contact}}">Contact</button>
+                <button class='collapsebutton maincontainer' mat-raised-button routerLink="/{{contact}}">Contact</button>
 
             </div>
             <div class='menu'>
@@ -33,7 +36,7 @@
                     <div *ngIf='ongletservice.dossiers[0]!==undefined'>
                         <ng-container *ngFor="let dd of ongletservice.dropdowns">
 
-                            <button *ngIf="dd.dossier===ongletservice.dossiers[0].titre" class='btn-2' mat-menu-item routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
+                            <button *ngIf="dd.dossier===ongletservice.dossiers[0].titre" class='btn-2' mat-menu-item routerLink="{{dd.lien}}">{{dd.titre}}</button>
 
                         </ng-container>
                     </div>
@@ -41,14 +44,14 @@
                 <mat-menu #menu2="matMenu">
                     <div *ngIf='ongletservice.dossiers[1]!==undefined'>
                         <ng-container *ngFor="let dd of ongletservice.dropdowns">
-                            <button *ngIf="dd.dossier===ongletservice.dossiers[1].titre" class='btn-2' mat-menu-item routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
+                            <button *ngIf="dd.dossier===ongletservice.dossiers[1].titre" class='btn-2' mat-menu-item routerLink="{{dd.lien}}">{{dd.titre}}</button>
                         </ng-container>
                     </div>
                 </mat-menu>
                 <mat-menu #menu3="matMenu">
                     <div *ngIf='ongletservice.dossiers[2]!==undefined'>
                         <ng-container *ngFor="let dd of ongletservice.dropdowns">
-                            <button *ngIf="dd.dossier===ongletservice.dossiers[2].titre" class='btn-2' mat-menu-item routerLink="../../{{dd.lien}}">{{dd.titre}}</button>
+                            <button *ngIf="dd.dossier===ongletservice.dossiers[2].titre" class='btn-2' mat-menu-item routerLink="{{dd.lien}}">{{dd.titre}}</button>
                         </ng-container>
                     </div>
                 </mat-menu>

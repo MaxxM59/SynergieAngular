@@ -73,9 +73,8 @@
                 <section class="pa" *ngIf="page.lien !== '' && page.lien!==null">
                     <div>
                         <!-- BOUTON LIEN -->
-                        <a *ngIf="page.lien!==null && page.lien!== ''" mat-raised-button rel="noopener noreferrer" id='pagebtn' href="{{page.lien}}" target="_blank">
-                            <h2 color="dark">{{page.nomlien}}</h2>
-                        </a>
+
+                        <button *ngIf="page.lien!==null && page.lien!== ''" mat-raised-button rel="noopener noreferrer" id='pagebtn' routerLink="{{page.lien}}" target="_blank"><h2 color="dark" id="buttontitle">{{page.nomlien}}</h2></button>
                     </div>
                 </section>
                 <hr>

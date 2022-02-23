@@ -15,7 +15,7 @@ import { PagesFormComponent } from './components/dashboard/Editing/pages/pages-f
 import { PagesComponent } from './components/dashboard/Editing/pages/pages.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageComponent } from './components/page/page.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
 const routes: Routes = [
   // PARTIE UTILISATEUR

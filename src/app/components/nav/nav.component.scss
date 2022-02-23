@@ -78,8 +78,8 @@
             #maintitle {
                 font-size: 150%;
                 color: #0032d6;
-                justify-content: center;
-                margin-left: 8vw;
+                float: center;
+                margin-left: auto;
             }
 
             @media (min-width: 1380px) {
@@ -92,7 +92,8 @@
                 #dd1 {
                     margin-left: 5.5vw;
                 }
-                #logotoggle {
+                #logotoggle,
+                #home {
                     display: none
                 }
                 .navbar-toggler,

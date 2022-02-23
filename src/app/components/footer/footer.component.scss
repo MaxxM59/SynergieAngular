@@ -3,19 +3,16 @@
 }
 
 .footer-section {
-    max-width: 98vw;
+    max-width: 98.15vw;
     height: 10vh;
 }
 
 #img-section {
     padding-top: 1vh;
-    margin-bottom: 0.5vh;
-    padding-left: 0.5vw;
-    padding-right: 0.5vw;
-    display: block;
+    padding-bottom: 1vh;
+    width: 95vw;
     margin-left: auto;
     margin-right: auto;
-    max-width: 98vw;
 }
 
 .col-12,
@@ -28,24 +25,35 @@
     padding-top: 10px;
 }
 
+#phone,
+#mail {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .img {
     object-fit: contain;
     object-position: center;
-    width: 5.8vw;
-    height: 4vw;
+    width: 10vw;
+    height: 7vw;
     min-width: 50px;
     min-height: 50px;
-    border-radius: 20px;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 35px;
 }
 
 .button1 {
     background-color: white;
     color: #0032d6;
     font-weight: bold;
-    min-width: 45px;
+    min-width: 40px;
     min-height: 10px;
-    font-size: 1.7vw;
+    font-size: 2vw;
     border-radius: 20px;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 .text {
@@ -54,15 +62,24 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.logos {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding-left: 5vw
+}
+
 h1 {
     font-size: 150%;
 }
 
 #buttoncontainer {
-    padding-left: 5vw;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1vh;
+    display: flex;
 }
 
 .horaires {
@@ -76,8 +93,14 @@ h1 {
     padding-bottom: 0.5vh;
 }
 
-@media (max-widht:800px) {
+@media (max-width:800px) {
+    #buttoncontainer {
+        padding-left: 2vw;
+    }
     .button1 {
-        font-size: 1.8vw;
+        font-size: 2.7vw;
+    }
+    #showroom {
+        margin-top: 1vh;
     }
 }

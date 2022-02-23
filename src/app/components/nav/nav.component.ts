@@ -52,13 +52,25 @@ export class NavComponent implements OnInit {
         if (o.titre === p.titre) {
           if (
             this.router.url.startsWith('localhost:4200/page/') ||
-            this.router.url.startsWith('localhost:4200/contactform')
+            this.router.url.startsWith(
+              'https://synergieangular.firebaseapp.com/page'
+            )
           ) {
-            o.lien = `/${p.id}`;
+            o.lien = `/page/${p.id}`;
             this.contact = '../contactform';
           } else {
             o.lien = `/page/${p.id}`;
-            this.contact = '/contactform';
+          }
+          if (
+            this.router.url.startsWith('localhost:4200/contactform') ||
+            this.router.url.startsWith(
+              'https://synergieangular.firebaseapp.com/contactform'
+            )
+          ) {
+            this.contact = 'contactform';
+            o.lien = `../page/${p.id}`;
+          } else {
+            this.contact = '../contactform';
           }
         }
       });

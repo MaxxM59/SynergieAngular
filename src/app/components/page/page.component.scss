@@ -5,8 +5,9 @@
             margin-top: 1em;
             margin-bottom: 1em;
             line-height: 1.5;
-            padding-right: 10vw;
-            padding-left: 10vw;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         h1 {
@@ -14,7 +15,7 @@
             text-align: center;
             justify-content: center;
             align-items: center;
-            font-size: 400%;
+            font-size: 300%;
             font-weight: bold;
             margin-top: 0.1em;
             margin-bottom: 0.1em;
@@ -68,11 +69,28 @@
 
         #pagebtn {
             background-color: #ffff;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 20px;
         }
 
-        #txtbtn {
-            color: #0288d1;
-            border-radius: 20px;
+        #buttontitle {
+            margin-top: 0.8vh;
+            font-size: 95%;
+        }
+
+        @media (max-width:320px) {
+            #buttontitle {
+                font-size: 75%;
+            }
+            h1 {
+                font-size: 200%;
+            }
+            .pa,
+            .pres {
+                font-size: 120%
+            }
         }
         /* CSS OBJECT MISE EN PAGE */
 

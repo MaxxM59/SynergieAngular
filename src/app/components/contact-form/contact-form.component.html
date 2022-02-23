@@ -12,7 +12,7 @@
                 <div class="form-group">
 
                     <label for="titre"><h2>Nom :</h2></label>
-                    <input #nameInput="ngModel" type="text" name="name" id="name" [ngClass]="{'is-invalid' : nameInput.invalid && nameInput.touched}" class="form-control" [(ngModel)]="contact.name" required>
+                    <input #nameInput="ngModel" type="text" name="name" id="name" [ngClass]="{'is-invalid' : nameInput.invalid && nameInput.touched}" class="form-control" [(ngModel)]="contact.name">
                     <mat-error *ngIf="nameInput?.hasError('required')">
                         <strong>Le nom est obligatoire</strong>
                     </mat-error>
@@ -21,7 +21,7 @@
                 <div class="form-group">
 
                     <label for="titre"><h2>Prénom :</h2></label>
-                    <input #surnameInput="ngModel" type="text" name="surname" id="surname" [ngClass]="{'is-invalid' : surnameInput.invalid && surnameInput.touched}" class="form-control" [(ngModel)]="contact.surname" required>
+                    <input #surnameInput="ngModel" type="text" name="surname" id="surname" [ngClass]="{'is-invalid' : surnameInput.invalid && surnameInput.touched}" class="form-control" [(ngModel)]="contact.surname">
                     <mat-error *ngIf="nameInput?.hasError('required')">
                         <strong>Le prénom est obligatoire</strong>
                     </mat-error>

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Contact } from '../models/models';
-import { AdminLoginService } from '../services/Admin/admin-login.service';
-import { ContactFormService } from '../services/contactForm/contact-form.service';
+import { Contact } from '../../models/models';
+import { AdminLoginService } from '../../services/Admin/admin-login.service';
+import { ContactFormService } from '../../services/contactForm/contact-form.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -25,6 +25,7 @@ export class ContactFormComponent implements OnInit {
     private router: Router,
     public admin: AdminLoginService
   ) {}
+
   // SAUVEGARDE LES DONNEES SI LE FORMULAIRE EST VALIDE
   save(contactForm: NgForm) {
     if (contactForm.valid) {

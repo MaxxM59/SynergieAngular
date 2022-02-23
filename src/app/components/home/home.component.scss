@@ -4,16 +4,15 @@
 
 .page {
     font-size: 1.1em;
-    width: 98.9vw;
+    padding-bottom: 0;
 }
 
 #bg-img {
     padding-top: 0.5%;
-    padding-bottom: 1%
 }
 
-.rounded {
-    border-radius: 20px
+app-footer {
+    margin-right: 0
 }
 
 mat-card {
@@ -24,6 +23,7 @@ mat-card {
     margin-right: auto;
     margin-top: 0.5vh;
     border-radius: 35px;
+    margin-bottom: 0.5vh;
 }
 
 //Début Carousel
@@ -52,11 +52,6 @@ mat-card {
     margin-top: 100px;
 }
 
-.carousel-caption h5,
-p {
-    margin-left: 25px;
-}
-
 //Fin Carousel
 // Qui sommes-nous ?
 .titre {
@@ -79,21 +74,20 @@ article {
     max-height: 25vw;
     min-width: 150px;
     min-height: auto;
-}
-
-img {
-    width: 40%;
-    object-position: right;
-    vertical-align: middle;
-    border-radius: 20px;
-}
-
-.image {
     float: right;
+    border-radius: 20px
 }
 
-#bg-img {
-    margin-left: 0;
+#imgpres2 {
+    max-width: 45vw;
+    max-height: 25vw;
+    min-width: 180px;
+    min-height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    border-radius: 20px
 }
 
 .savoirplus {
@@ -133,5 +127,17 @@ img {
         margin-top: 20px;
         font-size: 0.9em;
         min-width: 25vw;
+    }
+}
+
+@media(min-width:333px) {
+    #imgpres2 {
+        display: none;
+    }
+}
+
+@media (max-width: 334px) {
+    #imgpres {
+        display: none;
     }
 }

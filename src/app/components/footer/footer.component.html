@@ -1,66 +1,77 @@
 <!-- NOUVEAU FOOTER -->
 <div class="footer-section">
     <div class="textsection">
-        <div class="row" id='toprow'>
-            <div class="col-12">Ouvert du lundi au vendredi De 9h00 à 12h00 et de 13h00 à 17h00</div>
+        <div id='toprow'>
+            <div>Ouvert du lundi au vendredi De 9h00 à 12h00 et de 13h00 à 17h00</div>
         </div>
 
-        <div class="row" id="phone">
-            <div class="col-12">Téléphone :
+        <div id="phone">
+            <div>Téléphone :
                 <a href='tel:+33327628341'>03.27.62.83.41</a>
 
             </div>
             <div class="row" id="mail">
-                <div class="col-12">Mail : <a href='mailto:contact@associationsynergie.fr'>contact@associationsynergie.fr</a></div>
+                <div>Mail : <a href='mailto:contact@associationsynergie.fr'>contact@associationsynergie.fr</a></div>
             </div>
         </div>
-        <div id="buttoncontainer">
-            <div class="col-12"> <button class='button1' mat-raised-button (click)="admin.goToLink ('https://www.facebook.com/Synergie.Association/') ">
+
+        <div class="buttonscontainer">
+            <button class='button1' mat-raised-button (click)="admin.goToLink ('https://www.facebook.com/Synergie.Association/') ">
                     <h3   class='text button1 titrefb'>Notre page Facebook</h3>
                 </button>
 
-                <button class='button1' mat-raised-button routerLink="{{contact}}">
+            <button class='button1' id="contact" mat-raised-button routerLink="{{contact}}">
                     <h3   class='text titrefb button1'>Nous envoyer un message</h3>
                 </button>
-                <button class='button1' id='showroom' mat-raised-button (click)="admin.goToLink ('https://www.google.com/maps/dir/50.1230529,3.9265889/16+Rue+Gabriel+P%C3%A9ri,+59620+Aulnoye-Aymeries/@50.160485,3.8186492,12z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x47c2641ec0e5bbb3:0xd1a8973688647890!2m2!1d3.8406638!2d50.1982418!3e0') ">
+            <button class='button1' id='showroom' mat-raised-button (click)="admin.goToLink ('https://www.google.com/maps/dir/50.1230529,3.9265889/16+Rue+Gabriel+P%C3%A9ri,+59620+Aulnoye-Aymeries/@50.160485,3.8186492,12z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x47c2641ec0e5bbb3:0xd1a8973688647890!2m2!1d3.8406638!2d50.1982418!3e0') ">
                     <h3   class='text titrefb button1'>Venir à notre showroom </h3>
                 </button>
-            </div>
         </div>
 
 
+        <br>
+        <div class="row">
+            <div id="partner">
+                <h1>Nos partenaires :</h1>
+            </div>
+        </div>
+
         <div id="img-section">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Nos partenaires</h1>
-                </div>
-            </div>
+
             <div class="row logos">
-                <div class="col-2 "> <img id='img1' class="img" src="../../../assets/images/footer/logo1.jpg">
-                </div>
-                <div class="col-2 "> <img id='img3' class="img" src="../../../assets/images/footer/logo3.png"></div>
-                <div class="col-2 "> <img id='img2' class="img" src="../../../assets/images/footer/logo2.jpg">
-                </div>
-                <div class="col-2"> <img id='img4' class="img" src="../../../assets/images/footer/logo4.png"></div>
-                <div class="col-2 "> <img id='img9' class="img" src="../../../assets/images/footer/logo9.jpg">
-                </div>
-                <div class="col-2 "> <img id='img10' class="img" src="../../../assets/images/footer/logo10.jpg">
-                </div>
+                <img id='img1' class="img" src="../../../assets/images/footer/logo1.jpg">
+
+                <img id='img3' class="img" src="../../../assets/images/footer/logo3.png">
+                <img id='img2' class="img" src="../../../assets/images/footer/logo2.jpg">
+
+                <img id='img4' class="img" src="../../../assets/images/footer/logo4.png">
+
+
 
             </div>
             <div class="row logos">
-                <div class="col-2 "> <img id='img5' class="img" src="../../../assets/images/footer/logo5.png ">
-                </div>
-                <div class="col-2 "> <img id='img6' class="img" src="../../../assets/images/footer/logo6.png "></div>
-                <div class="col-2 "> <img id='img7' class="img" src="../../../assets/images/footer/logo7.jpg">
+                <img id='img5' class="img" src="../../../assets/images/footer/logo5.png ">
 
-                </div>
-                <div class="col-2 "> <img id='img8' class="img" src="../../../assets/images/footer/logo8.jpg"></div>
-                <div class="col-2 "> <img id='img11' class="img" src="../../../assets/images/footer/logo11.jpg">
+                <img id='img6' class="img" src="../../../assets/images/footer/logo6.png ">
+                <img id='img7' class="img" src="../../../assets/images/footer/logo7.jpg">
 
-                </div>
-                <div class="col-2 "> <img id='img12' class="img" src="../../../assets/images/footer/logo12.jpg"></div>
+
+                <img id='img8' class="img" src="../../../assets/images/footer/logo8.jpg">
+
+
+
+
             </div>
+            <div class="row logos">
+                <img id='img9' class="img" src="../../../assets/images/footer/logo9.jpg">
+
+                <img id='img10' class="img" src="../../../assets/images/footer/logo10.jpg">
+                <img id='img11' class="img" src="../../../assets/images/footer/logo11.jpg">
+
+
+                <img id='img12' class="img" src="../../../assets/images/footer/logo12.jpg">
+            </div>
+
 
 
         </div>

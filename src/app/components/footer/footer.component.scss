@@ -22,13 +22,6 @@
     align-items: center;
 }
 
-#phone,
-#mail {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .img {
     object-fit: contain;
     object-position: center;
@@ -36,8 +29,8 @@
     height: 8vw;
     min-width: 70px;
     min-height: 70px;
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 180px;
+    max-height: 50px;
     margin-left: 4vw;
     margin-right: 4vw;
     border-radius: 20px;
@@ -53,12 +46,6 @@
     border-radius: 20px;
     margin-left: 1vw;
     margin-right: 1vw;
-}
-
-.text {
-    margin-top: 1vh;
-    font-size: 1em;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .logos {
@@ -90,8 +77,10 @@ h1 {
 #phone,
 #toprow,
 #partner {
+    font-weight: bold;
     text-align: center;
-    font-size: 130%;
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 @media(max-width:424px) {

@@ -85,16 +85,7 @@
                 padding-left: 6vw;
             }
 
-            @media (min-width: 1380px) {
-                #dd1 {
-                    margin-left: 1vw !important;
-                }
-            }
-
             @media (min-width: 991px) {
-                #dd1 {
-                    margin-left: 5.5vw;
-                }
                 #logotoggle,
                 #home {
                     display: none
@@ -109,6 +100,9 @@
                 .btn-2 {
                     margin-top: 0;
                     margin-bottom: 0;
+                }
+                .collapse {
+                    padding-left: 5vw;
                 }
             }
 

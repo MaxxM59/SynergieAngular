@@ -38,8 +38,8 @@ export class AdminLoginService {
   ): MatSnackBarRef<TextOnlySnackBar> {
     return this.snackBar.open(msg, btnTxt, {
       duration: 4000,
-      horizontalPosition: 'end',
-      verticalPosition: 'top',
+      horizontalPosition: 'start',
+      verticalPosition: 'bottom',
     });
   }
   escapeHtml(text: string) {

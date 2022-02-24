@@ -4,7 +4,7 @@
 }
 
 button {
-    width: 10vw;
+    width: 15vw;
     min-width: 120px;
 }
 
@@ -25,13 +25,13 @@ form {
 
 input,
 label,
-mat-error {
+mat-error,
+textarea {
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     margin-top: 2px;
-    margin-bottom: 2px;
 }
 
 #formcontainer {
@@ -58,14 +58,15 @@ mat-error {
     align-items: center;
 }
 
-hr {
-    width: 75%;
-    margin: 1em 12.5%;
-}
-
 input {
     width: 65%;
     min-width: 100px;
+}
+
+textarea {
+    width: 96%;
+    min-width: 100px;
+    text-align: justify;
 }
 
 .maincontainer {

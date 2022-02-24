@@ -1,5 +1,11 @@
-#return {
-    float: right;
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 10vw;
+    min-width: 120px;
 }
 
 mat-card {
@@ -10,15 +16,27 @@ mat-card {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    min-width: 150px;
 }
 
 form {
     border-radius: 20px;
 }
 
+input,
+label,
+mat-error {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
 #formcontainer {
     border-radius: 20px;
-    background-image: url('https://i.postimg.cc/k5vszxp5/EDsx2f-GW4-AAGEBv.jpg');
+    background-image: url('https://i.postimg.cc/ncm1whNd/EDsx2f-GW4-AAGEBv-1.webp');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -29,6 +47,8 @@ form {
     margin-left: auto;
     margin-right: auto;
     width: 90vw;
+    min-width: 120px;
+    height: 100%;
 }
 
 #formtitle {
@@ -44,13 +64,15 @@ hr {
 }
 
 input {
-    width: 55%;
-    min-width: 120px;
+    width: 65%;
+    min-width: 100px;
 }
 
 .maincontainer {
     background-color: rgba(238, 230, 234, 0.8);
     padding-top: 2vh;
     padding-bottom: 2vh;
-    background-image: url('https://i.ibb.co/fDT6g17/49948.jpg');
+    background-image: url('https://i.postimg.cc/x1SPrS29/49948-1.webp');
 }
+
+@media(max-width:100) {}

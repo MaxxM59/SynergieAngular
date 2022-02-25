@@ -17,6 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PageComponent } from './components/page/page.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
+import { NavComponent } from './components/nav/nav.component';
 const routes: Routes = [
   // PARTIE UTILISATEUR
   {
@@ -32,6 +33,7 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
   },
+
   // LOGIN ADMIN
   {
     path: 'admin',

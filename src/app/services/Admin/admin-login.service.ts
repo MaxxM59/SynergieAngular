@@ -6,6 +6,7 @@ import {
   MatSnackBarRef,
   TextOnlySnackBar,
 } from '@angular/material/snack-bar';
+
 type UserCredential = Promise<firebase.default.auth.UserCredential>;
 @Injectable({
   providedIn: 'root',
@@ -15,7 +16,7 @@ export class AdminLoginService {
   auth: any = false;
 
   // LOGIN
-  login(email: string, password: string): UserCredential {
+  async login(email: string, password: string): UserCredential {
     return this.afAuth.signInWithEmailAndPassword(email, password);
   }
 

@@ -3,38 +3,33 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { NavComponent } from './components/nav/nav.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AdminFormComponent } from './components/dashboard/admin-form/admin-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
-import { MatCommonModule, MatRipple } from '@angular/material/core';
+import { MatCommonModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTreeModule } from '@angular/material/tree';
-import { MatRippleModule } from '@angular/material/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { DashboardHomeComponent } from './components/dashboard/dashboard-home/dashboard-home.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
-import { AdminLoginService } from './services/Admin/admin-login.service';
+// COMPONENTS
+import { DashboardHomeComponent } from './components/dashboard/dashboard-home/dashboard-home.component';
+import { AdminFormComponent } from './components/dashboard/admin-form/admin-form.component';
 import { DashboardAcceuilComponent } from './components/dashboard/dashboard-acceuil/dashboard-acceuil.component';
-import { MatDialogModule } from '@angular/material/dialog';
+import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PagesComponent } from './components/dashboard/Editing/pages/pages.component';
 import { OngletsComponent } from './components/dashboard/Editing/onglets/onglets.component';
@@ -49,6 +44,9 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 import { ContactsComponent } from './components/dashboard/contacts/contacts.component';
 import { AnswercontactsComponent } from './components/dashboard/contacts/answercontacts/answercontacts.component';
 import { MiseEnPageComponent } from './components/dashboard/Editing/mise-en-page/mise-en-page.component';
+// SERVICES
+import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
+import { AdminLoginService } from './services/Admin/admin-login.service';
 
 @NgModule({
   declarations: [
@@ -73,7 +71,6 @@ import { MiseEnPageComponent } from './components/dashboard/Editing/mise-en-page
     MiseEnPageComponent,
   ],
   imports: [
-    MatDialogModule,
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
@@ -81,7 +78,6 @@ import { MiseEnPageComponent } from './components/dashboard/Editing/mise-en-page
     MatSnackBarModule,
     MatButtonToggleModule,
     MatButtonModule,
-    MatRippleModule,
     MatCommonModule,
     MatCardModule,
     FormsModule,
@@ -89,13 +85,9 @@ import { MiseEnPageComponent } from './components/dashboard/Editing/mise-en-page
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // firestore
-    AngularFireAuthModule, // auth
-    AngularFireStorageModule,
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-    provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
-
     BrowserAnimationsModule,
     MatMenuModule,
     MatIconModule,
@@ -105,6 +97,7 @@ import { MiseEnPageComponent } from './components/dashboard/Editing/mise-en-page
     MatGridListModule,
   ],
   providers: [AuthGuardService, AdminLoginService],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}

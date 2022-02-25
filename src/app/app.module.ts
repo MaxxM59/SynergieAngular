@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -21,7 +20,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -72,7 +70,7 @@ import { AdminLoginService } from './services/Admin/admin-login.service';
   ],
   imports: [
     ReactiveFormsModule,
-    MatInputModule,
+
     MatFormFieldModule,
     MatTreeModule,
     MatSnackBarModule,
@@ -96,7 +94,7 @@ import { AdminLoginService } from './services/Admin/admin-login.service';
     MatListModule,
     MatGridListModule,
   ],
-  providers: [AuthGuardService, AdminLoginService],
+  providers: [AuthGuardService],
 
   bootstrap: [AppComponent],
 })

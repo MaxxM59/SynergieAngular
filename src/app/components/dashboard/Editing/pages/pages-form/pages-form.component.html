@@ -27,8 +27,7 @@
         <!-- PRESENTATION -->
         <div class="form-group">
             <label for="contenu"><h2>Présentation</h2></label>
-            <textarea #presInput="ngModel" [ngClass]="{'is-invalid' : presInput.invalid && presInput.touched}" type="textarea" name="pres" id="pres" class="form-control" [(ngModel)]="page.pres" required cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3"
-                cdkAutosizeMaxRows="10"></textarea>
+            <textarea #presInput="ngModel" [ngClass]="{'is-invalid' : presInput.invalid && presInput.touched}" type="textarea" name="pres" id="pres" class="form-control" [(ngModel)]="page.pres" required cdkAutosizeMaxRows="10"></textarea>
             <mat-error *ngIf="presInput?.hasError('required')">
                 <strong>La présentation est obligatoire</strong>
             </mat-error>
@@ -36,13 +35,12 @@
         <!-- SOUSTITRE 1 -->
         <div class="form-group">
             <label for="contenu"><h2>Sous-titre 1</h2></label>
-            <textarea type="textarea" name="st1" id="st1" class="form-control" [(ngModel)]="page.st1" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            <textarea type="textarea" name="st1" id="st1" class="form-control" [(ngModel)]="page.st1"></textarea>
         </div>
         <!-- PARAGRAPHE 1 -->
         <div class="form-group">
             <label for="contenu"><h2>Paragraphe 1</h2></label>
-            <textarea type="textarea" name="pa1" id="pa1" class="form-control" #pa1Input="ngModel" [ngClass]="{'is-invalid' : pa1Input.invalid && pa1Input.touched}" [(ngModel)]="page.pa1" required cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3"
-                cdkAutosizeMaxRows="10"></textarea>
+            <textarea type="textarea" name="pa1" id="pa1" class="form-control" #pa1Input="ngModel" [ngClass]="{'is-invalid' : pa1Input.invalid && pa1Input.touched}" [(ngModel)]="page.pa1" required cdkAutosizeMaxRows="10"></textarea>
             <mat-error *ngIf="pa1Input?.hasError('required')">
                 <strong>Le premier paragraphe est obligatoire</strong>
             </mat-error>
@@ -50,12 +48,12 @@
         <!-- SOUSTITRE 2 -->
         <div class="form-group">
             <label for="contenu"><h2>Sous-titre 2</h2></label>
-            <textarea type="textarea" name="st2" id="st2" class="form-control" [(ngModel)]="page.st2" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            <textarea type="textarea" name="st2" id="st2" class="form-control" [(ngModel)]="page.st2"></textarea>
         </div>
         <!-- PARAGRAPHE 2 -->
         <div class="form-group">
             <label for="contenu"><h2>Paragraphe 2</h2></label>
-            <textarea type="textarea" name="pa2" id="pa2" class="form-control" [(ngModel)]="page.pa2" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea>
+            <textarea type="textarea" name="pa2" id="pa2" class="form-control" [(ngModel)]="page.pa2" cdkAutosizeMaxRows="10"></textarea>
         </div>
         <!-- IMAGE MILIEU DE PAGE -->
         <div class="form-group">
@@ -69,32 +67,32 @@
         <!-- SOUSTITRE 3 -->
         <div class="form-group">
             <label for="contenu"><h2>Sous-titre 3</h2></label>
-            <textarea type="textarea" name="st3" id="st3" class="form-control" [(ngModel)]="page.st3" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            <textarea type="textarea" name="st3" id="st3" class="form-control" [(ngModel)]="page.st3"></textarea>
         </div>
         <!-- PARAGRAPHE 3 -->
         <div class="form-group">
             <label for="contenu"><h2>Paragraphe 3</h2></label>
-            <textarea type="textarea" name="pa3" id="pa3" class="form-control" [(ngModel)]="page.pa3" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea></div>
+            <textarea type="textarea" name="pa3" id="pa3" class="form-control" [(ngModel)]="page.pa3" cdkAutosizeMaxRows="10"></textarea></div>
 
         <!-- SOUSTITRE 4 -->
         <div class="form-group">
             <label for="contenu"><h2>Sous-titre 4</h2></label>
-            <textarea type="textarea" name="st4" id="st4" class="form-control" [(ngModel)]="page.st4" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            <textarea type="textarea" name="st4" id="st4" class="form-control" [(ngModel)]="page.st4"></textarea>
         </div>
         <!-- PARAGRAPHE 4 -->
         <div class="form-group">
             <label for="contenu"><h2>Paragraphe 4</h2></label>
-            <textarea type="textarea" name="pa4" id="pa4" class="form-control" [(ngModel)]="page.pa4" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea></div>
+            <textarea type="textarea" name="pa4" id="pa4" class="form-control" [(ngModel)]="page.pa4" cdkAutosizeMaxRows="10"></textarea></div>
 
         <!-- SOUSTITRE 5 -->
         <div class="form-group">
             <label for="contenu"><h2>Sous-titre 5</h2></label>
-            <textarea type="textarea" name="st5" id="st5" class="form-control" [(ngModel)]="page.st5" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+            <textarea type="textarea" name="st5" id="st5" class="form-control" [(ngModel)]="page.st5"></textarea>
         </div>
         <!-- PARAGRAPHE 5 -->
         <div class="form-group">
             <label for="contenu"><h2>Paragraphe 5</h2></label>
-            <textarea type="textarea" name="pa5" id="pa5" class="form-control" [(ngModel)]="page.pa5" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3" cdkAutosizeMaxRows="10"></textarea></div>
+            <textarea type="textarea" name="pa5" id="pa5" class="form-control" [(ngModel)]="page.pa5"></textarea></div>
         <!-- IMAGE BAS DE PAGE -->
         <div class="form-group">
             <label for="image3"><h2>Image bas de page</h2></label>

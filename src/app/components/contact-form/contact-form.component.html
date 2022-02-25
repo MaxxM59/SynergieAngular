@@ -57,7 +57,7 @@
                 <div class="form-group">
 
                     <label for="contenu"><h2>Votre message :</h2></label>
-                    <textarea #contentInput="ngModel" type="textarea" name="content" id="content" class="form-control" [(ngModel)]="contact.content" required cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="5" cdkAutosizeMaxRows="10"></textarea></div>
+                    <textarea #contentInput="ngModel" type="textarea" name="content" id="content" class="form-control" [(ngModel)]="contact.content" required></textarea></div>
                 <mat-error *ngIf="contentInput?.hasError('required')">
                     <strong>Le message est obligatoire</strong>
                 </mat-error>

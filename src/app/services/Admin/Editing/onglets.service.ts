@@ -4,8 +4,6 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Onglet } from '../../../models/models';
 import { Router } from '@angular/router';
-
-import * as _ from 'lodash';
 import { NotificationService } from '../notification.service';
 
 @Injectable({

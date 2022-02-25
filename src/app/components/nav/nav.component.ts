@@ -35,15 +35,15 @@ export class NavComponent implements OnInit {
   };
   constructor(
     public ongletservice: OngletsService,
-    public admin: AdminLoginService,
+
     private pagesservice: PagesService,
-    private route: ActivatedRoute,
+
     private router: Router
   ) {}
 
   // VARIABLES
   onglets: Onglet[] = [];
-  auth = this.admin.auth;
+
   contact: string | undefined;
   //LIAISON DES PAGES AUX ONGLETS
   link() {

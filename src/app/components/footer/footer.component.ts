@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
+import { GotoLinkServiceService } from 'src/app/services/Admin/goto-link-service.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,10 +10,10 @@ import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 })
 export class FooterComponent implements OnInit {
   // VARIABLES
-  auth = this.admin.auth;
+
   contact: string = '';
 
-  constructor(public admin: AdminLoginService, private router: Router) {}
+  constructor(public admin: GotoLinkServiceService, private router: Router) {}
 
   ngOnInit(): void {
     if (

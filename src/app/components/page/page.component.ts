@@ -11,7 +11,7 @@ import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
 })
 export class PageComponent implements OnInit {
   //VARIABLES
-  auth = this.admin.auth;
+
   titre: string = '';
   mytitle: string = '';
   page: Page = {
@@ -81,7 +81,6 @@ export class PageComponent implements OnInit {
   constructor(
     private pagesservice: PagesService,
     private route: ActivatedRoute,
-    public admin: AdminLoginService,
     private router: Router,
     private miseenpagesservicee: MiseEnPageService
   ) {

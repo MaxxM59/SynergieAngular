@@ -23,6 +23,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+
+import { MatInputModule } from '@angular/material/input';
 // COMPONENTS
 import { DashboardHomeComponent } from './components/dashboard/dashboard-home/dashboard-home.component';
 import { AdminFormComponent } from './components/dashboard/admin-form/admin-form.component';
@@ -44,7 +46,6 @@ import { AnswercontactsComponent } from './components/dashboard/contacts/answerc
 import { MiseEnPageComponent } from './components/dashboard/Editing/mise-en-page/mise-en-page.component';
 // SERVICES
 import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
-import { AdminLoginService } from './services/Admin/admin-login.service';
 
 @NgModule({
   declarations: [
@@ -69,8 +70,8 @@ import { AdminLoginService } from './services/Admin/admin-login.service';
     MiseEnPageComponent,
   ],
   imports: [
+    MatInputModule,
     ReactiveFormsModule,
-
     MatFormFieldModule,
     MatTreeModule,
     MatSnackBarModule,

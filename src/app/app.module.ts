@@ -23,7 +23,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-
+import { MatGridList } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 // COMPONENTS
 import { DashboardHomeComponent } from './components/dashboard/dashboard-home/dashboard-home.component';

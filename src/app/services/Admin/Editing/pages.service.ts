@@ -3,8 +3,8 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Page } from '../../../models/models';
-import { AdminLoginService } from '../admin-login.service';
 import { Router } from '@angular/router';
+import { NotificationService } from '../notification.service';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class PagesService {
   constructor(
     private afs: AngularFirestore,
-    private admin: AdminLoginService,
+    public notif: NotificationService,
     private router: Router
   ) {}
   page: Page = {
@@ -93,7 +93,7 @@ export class PagesService {
   deletePage(pageId: string): void {
     if (confirm('Voulez-vous vraiment supprimer cette page?')) {
       this.afs.collection<Page>('pages').doc(pageId).delete();
-      this.admin.showNotification('Page supprimée !');
+      this.notif.showNotification('Page supprimée !');
       this.router.navigate(['dashboard/pages']);
     }
   }

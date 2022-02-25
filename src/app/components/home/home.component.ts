@@ -2,7 +2,6 @@ import { NgSwitchDefault } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Article } from 'src/app/models/models';
-import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
 
 @Component({
@@ -11,11 +10,7 @@ import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(
-    public articleService: ArticleService,
-
-    private router: Router
-  ) {}
+  constructor(public articleService: ArticleService) {}
   // VARIABLES
   articles: Article[] = [];
   active: any;

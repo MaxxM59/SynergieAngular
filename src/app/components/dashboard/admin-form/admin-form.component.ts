@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import {
   AbstractControl,
-  FormBuilder,
   Validators,
   FormGroup,
   FormControl,
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
+import { NotificationService } from 'src/app/services/Admin/notification.service';
 @Component({
   selector: 'app-admin-form',
   templateUrl: './admin-form.component.html',
@@ -18,9 +18,9 @@ export class AdminFormComponent {
   formValid = false;
 
   constructor(
-    private formBuilder: FormBuilder,
     private router: Router,
-    private authService: AdminLoginService
+    private authService: AdminLoginService,
+    private notif: NotificationService
   ) {}
 
   // FORM DE LOGIN ADMIN
@@ -54,7 +54,7 @@ export class AdminFormComponent {
       } catch (error) {
         //ERREUR
         this.formValid = false;
-        this.authService.showNotification(
+        this.notif.showNotification(
           `Une erreur s'est produite, il y a une erreur dans l'email ou le mot de passe.`
         );
       }

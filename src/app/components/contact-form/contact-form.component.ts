@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NotificationService } from 'src/app/services/Admin/notification.service';
 import { Contact } from '../../models/models';
-import { AdminLoginService } from '../../services/Admin/admin-login.service';
 import { ContactFormService } from '../../services/contactForm/contact-form.service';
 
 @Component({
@@ -23,7 +23,7 @@ export class ContactFormComponent implements OnInit {
   constructor(
     public contactform: ContactFormService,
     private router: Router,
-    public admin: AdminLoginService
+    public notif: NotificationService
   ) {}
 
   // SAUVEGARDE LES DONNEES SI LE FORMULAIRE EST VALIDE
@@ -31,13 +31,13 @@ export class ContactFormComponent implements OnInit {
     if (contactForm.valid) {
       // SI C'EST UNE NOUVELLE PAGE
       this.contactform.addContact(contactForm.value);
-      this.admin.showNotification('Message envoyé !');
+      this.notif.showNotification('Message envoyé !');
 
       // REDIRECTION VERS L'ACCEUIL
       this.router.navigate(['']);
     } else {
       // SI LE FORMULAIRE N'EST PAS VALIDE
-      this.admin.showNotification('Il y a des erreurs dans le formulaire!');
+      this.notif.showNotification('Il y a des erreurs dans le formulaire!');
     }
   }
   ngOnInit(): void {}

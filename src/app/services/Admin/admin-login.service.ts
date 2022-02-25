@@ -6,6 +6,7 @@ import {
   MatSnackBarRef,
   TextOnlySnackBar,
 } from '@angular/material/snack-bar';
+import { NotificationService } from './notification.service';
 
 type UserCredential = Promise<firebase.default.auth.UserCredential>;
 @Injectable({
@@ -25,24 +26,9 @@ export class AdminLoginService {
     this.afAuth.signOut();
     this.auth = false;
     this.router.navigate(['admin']);
-    this.showNotification(`Vous êtes déconnecté(e) ! Bonne journée !`);
-  }
-  // OUVRE lA PAGE DANS UNE NOUVELLE FENETRE
-  goToLink(url: string) {
-    window.open(url, '_blank');
+    this.notif.showNotification(`Vous êtes déconnecté(e) ! Bonne journée !`);
   }
 
-  // NOTIFICATION
-  showNotification(
-    msg: string,
-    btnTxt?: string
-  ): MatSnackBarRef<TextOnlySnackBar> {
-    return this.snackBar.open(msg, btnTxt, {
-      duration: 4000,
-      horizontalPosition: 'start',
-      verticalPosition: 'bottom',
-    });
-  }
   escapeHtml(text: string) {
     return text
       .replace(/&/g, '&amp;')
@@ -54,6 +40,6 @@ export class AdminLoginService {
   constructor(
     private afAuth: AngularFireAuth,
     private router: Router,
-    private snackBar: MatSnackBar
+    private notif: NotificationService
   ) {}
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Article } from 'src/app/models/models';
-import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
 
 @Component({
@@ -12,7 +11,7 @@ import { ArticleService } from 'src/app/services/Admin/Editing/article.service';
 export class ArticlesComponent implements OnInit {
   constructor(
     public articleservice: ArticleService,
-    private admin: AdminLoginService,
+
     private router: Router
   ) {}
   // VARIABLES

@@ -5,6 +5,7 @@ import { MiseenPage } from 'src/app/models/models';
 import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { MiseEnPageService } from 'src/app/services/Admin/Editing/mise-en-page.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NotificationService } from 'src/app/services/Admin/notification.service';
 
 @Component({
   selector: 'app-mise-en-page',
@@ -59,7 +60,7 @@ export class MiseEnPageComponent implements OnInit {
   constructor(
     private router: Router,
     private miseenpagesservice: MiseEnPageService,
-    public admin: AdminLoginService
+    public notif: NotificationService
   ) {}
   // SAUVEGARDE LES DONNEES SI LE FORMULAIRE EST VALIDE
   save(miseenpageForm: NgForm) {
@@ -68,7 +69,7 @@ export class MiseEnPageComponent implements OnInit {
         miseenpageForm.value,
         this.miseenpage.id
       );
-      this.admin.showNotification('Mise en page enregistrée !');
+      this.notif.showNotification('Mise en page enregistrée !');
     }
   }
 

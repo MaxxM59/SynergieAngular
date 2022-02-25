@@ -9,51 +9,68 @@
             </div>
             <form #pageForm="ngForm" id='contactform'>
                 <!-- Nom -->
-                <div class="form-group">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group">
 
-                    <label for="titre"><h2>Nom :</h2></label>
-                    <input #nameInput="ngModel" type="text" name="name" id="name" [ngClass]="{'is-invalid' : nameInput.invalid && nameInput.touched}" class="form-control" required [(ngModel)]="contact.name">
-                    <mat-error *ngIf="nameInput?.hasError('required')">
-                        <strong>Le nom est obligatoire</strong>
-                    </mat-error>
-                </div>
-                <!-- Prénom -->
-                <div class="form-group">
+                            <label for="titre"><h2>Nom :</h2></label>
+                            <input #nameInput="ngModel" type="text" name="name" id="name" [ngClass]="{'is-invalid' : nameInput.invalid && nameInput.touched}" class="form-control" required [(ngModel)]="contact.name">
+                            <mat-error *ngIf="nameInput?.hasError('required')">
+                                <strong>Le nom est obligatoire</strong>
+                            </mat-error>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <!-- Prénom -->
+                        <div class="form-group">
 
-                    <label for="titre"><h2>Prénom :</h2></label>
-                    <input #surnameInput="ngModel" type="text" name="surname" id="surname" [ngClass]="{'is-invalid' : surnameInput.invalid && surnameInput.touched}" class="form-control" required [(ngModel)]="contact.surname">
-                    <mat-error *ngIf="nameInput?.hasError('required')">
-                        <strong>Le prénom est obligatoire</strong>
-                    </mat-error>
-                </div>
-                <!-- Sujet -->
-                <div class="form-group">
+                            <label for="titre"><h2>Prénom :</h2></label>
+                            <input #surnameInput="ngModel" type="text" name="surname" id="surname" [ngClass]="{'is-invalid' : surnameInput.invalid && surnameInput.touched}" class="form-control" required [(ngModel)]="contact.surname">
+                            <mat-error *ngIf="nameInput?.hasError('required')">
+                                <strong>Le prénom est obligatoire</strong>
+                            </mat-error>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <!-- Sujet -->
+                        <div class="form-group">
 
-                    <label for="titre"><h2>Sujet :</h2></label>
-                    <input #subjectInput="ngModel" type="text" name="subject" id="subject" [ngClass]="{'is-invalid' : subjectInput.invalid && subjectInput.touched}" class="form-control" [(ngModel)]="contact.subject" required>
-                    <mat-error *ngIf="subjectInput?.hasError('required')">
-                        <strong>Le sujet est obligatoire</strong>
-                    </mat-error>
+                            <label for="titre"><h2>Sujet :</h2></label>
+                            <input #subjectInput="ngModel" type="text" name="subject" id="subject" [ngClass]="{'is-invalid' : subjectInput.invalid && subjectInput.touched}" class="form-control" [(ngModel)]="contact.subject" required>
+                            <mat-error *ngIf="subjectInput?.hasError('required')">
+                                <strong>Le sujet est obligatoire</strong>
+                            </mat-error>
+                        </div>
+                    </div>
                 </div>
-                <!-- MAIL -->
-                <div class="form-group">
+                <div class="row">
+                    <div class="col-6">
+                        <!-- MAIL -->
+                        <div class="form-group">
 
-                    <label for="titre"><h2>Email :</h2></label>
-                    <input type="email" email #mailInput="ngModel" type="text" name="mail" id="mail" [ngClass]="{'is-invalid' : mailInput.invalid && mailInput.touched}" class="form-control" [(ngModel)]="contact.mail" required>
-                    <mat-error *ngIf="mailInput?.hasError('required')">
-                        <strong>L'email est obligatoire</strong>
-                    </mat-error>
-                </div>
-                <!-- PHONE -->
-                <div class="form-group">
+                            <label for="titre"><h2>Email :</h2></label>
+                            <input type="email" email #mailInput="ngModel" type="text" name="mail" id="mail" [ngClass]="{'is-invalid' : mailInput.invalid && mailInput.touched}" class="form-control" [(ngModel)]="contact.mail" required>
+                            <mat-error *ngIf="mailInput?.hasError('required')">
+                                <strong>L'email est obligatoire</strong>
+                            </mat-error>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <!-- PHONE -->
+                        <div class="form-group">
 
-                    <label for="contenu"><h2>Télephone :</h2></label>
-                    <input #phoneInput="ngModel" type="text" name="phone" id="phone" [ngClass]="{'is-invalid' : phoneInput.invalid && phoneInput.touched}" class="form-control" [(ngModel)]="contact.phone" required>
-                    <mat-error *ngIf="phoneInput?.hasError('required')">
-                        <strong>Le numéro de téléphone est obligatoire</strong>
-                    </mat-error>
+                            <label for="contenu"><h2>Télephone :</h2></label>
+                            <input #phoneInput="ngModel" type="text" name="phone" id="phone" [ngClass]="{'is-invalid' : phoneInput.invalid && phoneInput.touched}" class="form-control" [(ngModel)]="contact.phone" required>
+                            <mat-error *ngIf="phoneInput?.hasError('required')">
+                                <strong>Le numéro de téléphone est obligatoire</strong>
+                            </mat-error>
+                        </div>
+                        <!-- CONTENT -->
+                    </div>
                 </div>
-                <!-- CONTENT -->
+
+
+
                 <div class="form-group">
 
                     <label for="contenu"><h2>Votre message :</h2></label>
@@ -62,12 +79,8 @@
                     <strong>Le message est obligatoire</strong>
                 </mat-error>
 
-
-                <br>
                 <div class='submit'> <button type='submit' class="btn btn-primary m-1" (click)="save(pageForm)">Envoyer</button></div>
-
             </form>
-
         </mat-card>
         <br>
         <hr>

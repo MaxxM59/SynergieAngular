@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+
 import { Router, ActivatedRoute } from '@angular/router';
 import { Contact } from 'src/app/models/models';
-import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
+
 import { ContactFormService } from 'src/app/services/contactForm/contact-form.service';
 
 @Component({
@@ -27,11 +27,8 @@ export class AnswercontactsComponent implements OnInit {
   constructor(
     public contactervice: ContactFormService,
     private router: Router,
-    private route: ActivatedRoute,
-    public admin: AdminLoginService
+    private route: ActivatedRoute
   ) {}
-
-  // gmailurl = `https://mail.google.com/mail/u/0/?fs=1&to=${this.contact.mail}&su=RE:${this.contact.subject}&tf=cm`;
 
   // DELETE
   delete() {

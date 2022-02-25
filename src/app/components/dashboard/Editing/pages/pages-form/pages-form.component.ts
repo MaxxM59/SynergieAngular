@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Page } from 'src/app/models/models';
-import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
+import { GotoLinkServiceService } from 'src/app/services/Admin/goto-link-service.service';
+import { NotificationService } from 'src/app/services/Admin/notification.service';
 @Component({
   selector: 'app-pages-form',
   templateUrl: './pages-form.component.html',
@@ -38,36 +39,37 @@ export class PagesFormComponent implements OnInit {
     public pagesservice: PagesService,
     private router: Router,
     private route: ActivatedRoute,
-    public admin: AdminLoginService
+    public notif: NotificationService,
+    public gotolink: GotoLinkServiceService
   ) {}
 
   // FONCTION LANCEE QUAND ON CLIQUE SUR ENREGISTRER
   save(pageForm: NgForm) {
     if (pageForm.valid) {
-      // VERIFICATION SI LE TITRE EXISTE DEJA
-      for (var i = 0; i < Object.keys(this.pages).length; i++) {
-        if (this.pages[i].titre === pageForm.value.titre) {
-          this.checktitre = false;
+      if (this.page.id) {
+        // SI L'ONGLET EXISTE DEJA
+        this.pagesservice.updatePage(pageForm.value, this.id);
+        this.notif.showNotification('Page modifiée !');
+        this.router.navigate(['dashboard/pages']);
+      } else {
+        // VERIFICATION SI LE TITRE EXISTE DEJA
+        for (var i = 0; i < Object.keys(this.pages).length; i++) {
+          if (this.pages[i].titre === pageForm.value.titre) {
+            this.checktitre = false;
+          }
         }
-      }
-      if (this.checktitre === true) {
-        if (this.page.id) {
-          // SI L'ONGLET EXISTE DEJA
-          this.pagesservice.updatePage(pageForm.value, this.id);
-          this.admin.showNotification('Page modifiée !');
-          this.router.navigate(['dashboard/pages']);
-        } else {
+        if (this.checktitre === true) {
           // SI C'EST UN NOUVEL ONGLET
           this.pagesservice.addPage(pageForm.value);
-          this.admin.showNotification('La page a été créé');
+          this.notif.showNotification('La page a été créé');
           this.router.navigate(['dashboard/pages']);
+        } else {
+          this.notif.showNotification('Ce titre de page est déja utilisé !');
         }
-      } else {
-        this.admin.showNotification('Ce titre de page est déja utilisé !');
       }
     } // SI ERREUR DANS LE FORM
     else {
-      this.admin.showNotification('Il y a des erreurs dans le formulaire!');
+      this.notif.showNotification('Il y a des erreurs dans le formulaire!');
     }
     this.checktitre = true;
   }

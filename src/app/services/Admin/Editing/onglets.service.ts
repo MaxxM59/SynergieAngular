@@ -4,8 +4,9 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Onglet } from '../../../models/models';
 import { Router } from '@angular/router';
-import { AdminLoginService } from '../admin-login.service';
+
 import * as _ from 'lodash';
+import { NotificationService } from '../notification.service';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class OngletsService {
   constructor(
     private afs: AngularFirestore,
     private router: Router,
-    private admin: AdminLoginService
+    private notif: NotificationService
   ) {}
   // VARIABLES
   onglet: any;

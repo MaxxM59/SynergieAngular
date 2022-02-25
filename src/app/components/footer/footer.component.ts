@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { GotoLinkServiceService } from 'src/app/services/Admin/goto-link-service.service';
 
 @Component({

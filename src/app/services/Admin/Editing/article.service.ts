@@ -3,8 +3,8 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Article } from '../../../models/models';
-import { AdminLoginService } from '../admin-login.service';
 import { Router } from '@angular/router';
+import { NotificationService } from '../notification.service';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class ArticleService {
   constructor(
     private afs: AngularFirestore,
-    private admin: AdminLoginService,
+    private notif: NotificationService,
     private router: Router
   ) {}
 
@@ -61,7 +61,7 @@ export class ArticleService {
   deleteArticle(articleId: string): void {
     if (confirm('Voulez-vous vraiment supprimer cet article?')) {
       this.afs.collection<Article>('articles').doc(articleId).delete();
-      this.admin.showNotification('Article supprimé !');
+      this.notif.showNotification('Article supprimé !');
       this.router.navigate(['dashboard/articles']);
     }
   }

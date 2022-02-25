@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MiseenPage, Page } from 'src/app/models/models';
-import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { MiseEnPageService } from 'src/app/services/Admin/Editing/mise-en-page.service';
 import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
 @Component({

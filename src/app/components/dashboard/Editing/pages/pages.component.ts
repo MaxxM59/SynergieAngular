@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Onglet, Page } from 'src/app/models/models';
-import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
+import { Page } from 'src/app/models/models';
 import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
 
 @Component({
@@ -10,10 +8,7 @@ import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
   styleUrls: ['./pages.component.scss'],
 })
 export class PagesComponent implements OnInit {
-  constructor(
-    public pageservice: PagesService,
-    public admin: AdminLoginService
-  ) {}
+  constructor(public pageservice: PagesService) {}
   page: Page = {
     id: '',
     titre: '',

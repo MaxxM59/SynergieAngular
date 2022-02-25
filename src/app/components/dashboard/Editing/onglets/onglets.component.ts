@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { OngletsService } from 'src/app/services/Admin/Editing/onglets.service';
 import { Onglet, Page } from 'src/app/models/models';
-import { AdminLoginService } from 'src/app/services/Admin/admin-login.service';
 import { Router } from '@angular/router';
 import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
+import { NotificationService } from 'src/app/services/Admin/notification.service';
 
 @Component({
   selector: 'app-dash-onglets',
@@ -14,7 +14,7 @@ export class OngletsComponent implements OnInit {
   constructor(
     public ongletservice: OngletsService,
     public pageservice: PagesService,
-    private admin: AdminLoginService,
+    private notif: NotificationService,
     private router: Router
   ) {}
 
@@ -37,10 +37,10 @@ export class OngletsComponent implements OnInit {
     if (confirm('Voulez-vous vraiment supprimer cet élément?')) {
       if (this.onglet.type === 'Normal' || this.onglet.type === '') {
         this.ongletservice.deleteOnglet($id);
-        this.admin.showNotification('Onglet supprimé !');
+        this.notif.showNotification('Onglet supprimé !');
       } else {
         this.ongletservice.deleteOnglet($id);
-        this.admin.showNotification('Dossier supprimé !');
+        this.notif.showNotification('Dossier supprimé !');
       }
       this.router.navigate(['dashboard/onglets']);
     }

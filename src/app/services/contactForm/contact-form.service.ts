@@ -3,7 +3,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 import { map, Observable } from 'rxjs';
 import { Contact } from 'src/app/models/models';
-import { AdminLoginService } from '../Admin/admin-login.service';
+import { NotificationService } from '../Admin/notification.service';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,7 @@ import { AdminLoginService } from '../Admin/admin-login.service';
 export class ContactFormService {
   constructor(
     private afs: AngularFirestore,
-    private admin: AdminLoginService,
+    private notif: NotificationService,
     private router: Router
   ) {}
 
@@ -58,7 +58,7 @@ export class ContactFormService {
   deleteContact(contactId: string): void {
     if (confirm('Voulez-vous vraiment supprimer ce message ?')) {
       this.afs.collection<Contact>('contact').doc(contactId).delete();
-      this.admin.showNotification('Message supprimé !');
+      this.notif.showNotification('Message supprimé !');
       this.router.navigate(['dashboard/contacts']);
     }
   }

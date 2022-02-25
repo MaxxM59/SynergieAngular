@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map, Observable } from 'rxjs';
 import { MiseenPage } from 'src/app/models/models';
-import { AdminLoginService } from '../admin-login.service';
 
 @Injectable({
   providedIn: 'root',

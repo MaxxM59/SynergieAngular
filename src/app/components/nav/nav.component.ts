@@ -42,7 +42,7 @@ export class NavComponent implements OnInit {
 
   // VARIABLES
   onglets: Onglet[] = [];
-
+  auth: boolean = false;
   contact: string | undefined;
   //LIAISON DES PAGES AUX ONGLETS
   link() {

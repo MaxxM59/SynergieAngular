@@ -24,8 +24,8 @@ export class OngletsService {
   solo: any;
   trionglets: any;
   onglets: any;
-  checktitre: boolean | undefined; //TRI DES ONGLETS
-
+  checktitre: boolean | undefined;
+  //TRI DES ONGLETS
   tri(tab: Onglet[]) {
     //ONGLETS DOSSIERS
     this.dossiers = tab.filter((onglet) => onglet.type === 'Dossier');
@@ -43,9 +43,21 @@ export class OngletsService {
         (onglet.dossier === '' || onglet.dossier === null)
     );
     // TRI EN FONCTION DE LA PROPRIETE 'POSITION'
-    this.dropdowns = _.sortBy(this.dropdowns, ['position']);
-    this.solo = _.sortBy(this.solo, ['position']);
-    this.dossiers = _.sortBy(this.dossiers, ['position']);
+    this.dropdowns = this.dropdowns.sort(
+      (a: { position: number }, b: { position: number }) => {
+        return a.position - b.position;
+      }
+    );
+    this.solo = this.solo.sort(
+      (a: { position: number }, b: { position: number }) => {
+        return a.position - b.position;
+      }
+    );
+    this.dossiers = this.dossiers.sort(
+      (a: { position: number }, b: { position: number }) => {
+        return a.position - b.position;
+      }
+    );
   }
 
   //RECUPERE TOUS LES ONGLETS

@@ -25,6 +25,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatGridList } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
+// LAZY LOADING
+import {
+  LazyLoadImageModule,
+  LAZYLOAD_IMAGE_HOOKS,
+  ScrollHooks,
+} from 'ng-lazyload-image';
 // COMPONENTS
 import { DashboardHomeComponent } from './components/dashboard/dashboard-home/dashboard-home.component';
 import { AdminFormComponent } from './components/dashboard/admin-form/admin-form.component';
@@ -46,6 +52,7 @@ import { AnswercontactsComponent } from './components/dashboard/contacts/answerc
 import { MiseEnPageComponent } from './components/dashboard/Editing/mise-en-page/mise-en-page.component';
 // SERVICES
 import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   declarations: [
@@ -68,8 +75,10 @@ import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
     ContactsComponent,
     AnswercontactsComponent,
     MiseEnPageComponent,
+    ImageComponent,
   ],
   imports: [
+    LazyLoadImageModule,
     MatInputModule,
     ReactiveFormsModule,
     MatFormFieldModule,
@@ -95,7 +104,10 @@ import { AuthGuardService } from './services/AuthGuard/auth-guard.service';
     MatListModule,
     MatGridListModule,
   ],
-  providers: [AuthGuardService],
+  providers: [
+    AuthGuardService,
+    { provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks },
+  ],
 
   bootstrap: [AppComponent],
 })

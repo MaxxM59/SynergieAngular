@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   auth: boolean = false;
-  ngOnInit() {}
+  isAdmin: boolean | undefined;
+  constructor(public router: Router) {}
+  ngOnInit() {
+    if (!this.router.url.includes('dashboard')) {
+      this.isAdmin = true;
+    } else {
+      this.isAdmin = false;
+    }
+  }
 }

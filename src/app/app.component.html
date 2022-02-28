@@ -1,2 +1,4 @@
+<app-nav *ngIf="router.url != '/admin' && !this.router.url.includes('dashboard')"></app-nav>
 <router-outlet>
 </router-outlet>
+<app-footer *ngIf="router.url != '/admin' && !this.router.url.includes('dashboard')"></app-footer>

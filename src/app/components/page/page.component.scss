@@ -9,7 +9,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         h1 {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
@@ -22,7 +22,7 @@
             font-style: italic;
             color: #0288d1;
         }
-        
+
         .st {
             text-align: center;
             font-size: 230%;
@@ -32,11 +32,11 @@
             font-style: italic;
             color: #1ba8c7;
         }
-        
+
         .img-section {
             text-align: center;
         }
-        
+
         mat-card {
             background-color: rgba(238, 230, 234, 0.8);
             width: 85%;
@@ -47,17 +47,17 @@
             border-radius: 35px;
             margin-bottom: 1%;
         }
-        
+
         #bg-img {
             padding-top: 0.5%;
             padding-bottom: 1%;
         }
-        
+
         hr {
             width: 50%;
             margin: 0.5em 25%;
         }
-        
+
         .img-fluid {
             border-radius: 20px;
             max-width: 80vw;
@@ -65,7 +65,7 @@
             min-width: 40vw;
             min-height: auto;
         }
-        
+
         #pagebtn {
             background-color: #ffff;
             display: block;
@@ -73,12 +73,12 @@
             margin-right: auto;
             border-radius: 20px;
         }
-        
+
         #buttontitle {
             margin-top: 0.8vh;
-            font-size: 95%;
+            font-size: 115%;
         }
-        
+
         @media (max-width:320px) {
             #buttontitle {
                 font-size: 75%;
@@ -91,7 +91,7 @@
                 font-size: 120%
             }
         }
-        
+
         @media(max-width:420px) {
             .pa,
             .pres {
@@ -99,82 +99,82 @@
             }
         }
         /* CSS OBJECT MISE EN PAGE */
-        
+
         .arial {
             font-family: Arial, Helvetica, sans-serif;
         }
-        
+
         .franklin {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
-        
+
         .lucida {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
         }
-        
+
         .courier {
             font-family: 'Courier New', Courier, monospace;
         }
-        
+
         .segoe {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
         }
-        
+
         .red {
             color: #b71c1c;
         }
-        
+
         .blue {
             color: #2962ff;
         }
-        
+
         .purple {
             color: #5e35b1;
         }
-        
+
         .grey {
             color: #607d8b;
         }
-        
+
         .orange {
             color: #ff8f00;
         }
-        
+
         .lightgrey {
             color: #b0bec5;
         }
-        
+
         .lightblue {
             color: #4fc3f7;
         }
-        
+
         .underline {
             text-decoration: underline;
         }
-        
+
         .italic {
             font-style: italic;
         }
-        
+
         .bold {
             font-weight: bold;
         }
-        
+
         .bolditalic {
             font-weight: bold;
             font-style: italic;
         }
-        
+
         .underlineitalic {
             text-decoration: underline;
             font-style: italic;
         }
-        
+
         .boldunderline {
             font-weight: bold;
             text-decoration: underline;
         }
-        
+
         .boldunderlineitalic {
             font-weight: bold;
             text-decoration: underline;

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { MiseenPage, Page } from 'src/app/models/models';
 import { MiseEnPageService } from 'src/app/services/Admin/Editing/mise-en-page.service';
 import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
+import { GotoLinkServiceService } from 'src/app/services/Admin/goto-link-service.service';
 @Component({
   selector: 'app-page',
   templateUrl: './page.component.html',
@@ -10,7 +11,7 @@ import { PagesService } from 'src/app/services/Admin/Editing/pages.service';
 })
 export class PageComponent implements OnInit {
   //VARIABLES
-
+  lien: string = '';
   titre: string = '';
   mytitle: string = '';
   page: Page = {
@@ -81,19 +82,23 @@ export class PageComponent implements OnInit {
     private pagesservice: PagesService,
     private route: ActivatedRoute,
     private router: Router,
-    private miseenpagesservicee: MiseEnPageService
+    private miseenpagesservicee: MiseEnPageService,
+    public gotolink: GotoLinkServiceService
   ) {
     // FORCE LE ngOnInit POUR POUVOIR CHANGER LE CONTENU DE LA PAGE
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
   }
+
   ngOnInit(): void {
     // RECUPERE LA PAGE CORRESPONDANT A l'ID
     this.page.id = this.route.snapshot.paramMap.get('id') as string;
     if (this.page.id) {
       this.pagesservice.getPage(this.page.id).subscribe((p) => {
         this.page = p;
+        this.lien = String(this.page.lien);
       });
     }
+
     // RECUPERE LA MISE EN FORME PERSONALISEE
     // ID Firebase du document
     this.miseenpage.id = 'c8LgrnwLYTyCdGr53PzV';

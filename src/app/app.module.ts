@@ -6,7 +6,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { initializeApp } from '@angular/fire/app';
-import { provideDatabase, getDatabase } from '@angular/fire/database';
+
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -92,7 +92,7 @@ import { ImageComponent } from './image/image.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // firestore
-    provideDatabase(() => getDatabase()),
+
     provideFirestore(() => getFirestore()),
     BrowserAnimationsModule,
     MatMenuModule,

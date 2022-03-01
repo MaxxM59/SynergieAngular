@@ -7,6 +7,9 @@ import {
   TextOnlySnackBar,
 } from '@angular/material/snack-bar';
 import { NotificationService } from './notification.service';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Admin } from 'src/app/models/models';
+import { map, Observable } from 'rxjs';
 
 type UserCredential = Promise<firebase.default.auth.UserCredential>;
 @Injectable({
@@ -20,10 +23,23 @@ export class AdminLoginService {
   async login(email: string, password: string): UserCredential {
     return this.afAuth.signInWithEmailAndPassword(email, password);
   }
-
+  // RECUPERE TOUs LES ADMINS
+  getAdmins(): Observable<Admin[]> {
+    //POUR A VOIR L'ID
+    return this.afs
+      .collection<Admin>('admins')
+      .snapshotChanges()
+      .pipe(
+        map((changes: any) =>
+          changes.map((c: any) => ({
+            id: c.payload.doc.id,
+            ...c.payload.doc.data(),
+          }))
+        )
+      );
+  }
   //LOGOUT
   logOut(): void {
-    this.afAuth.signOut();
     this.auth = false;
     this.router.navigate(['admin']);
     this.notif.showNotification(`Vous êtes déconnecté(e) ! Bonne journée !`);
@@ -40,6 +56,7 @@ export class AdminLoginService {
   constructor(
     private afAuth: AngularFireAuth,
     private router: Router,
-    private notif: NotificationService
+    private notif: NotificationService,
+    private afs: AngularFirestore
   ) {}
 }

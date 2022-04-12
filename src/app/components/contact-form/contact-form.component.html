@@ -1,4 +1,4 @@
-<app-nav></app-nav>
+
 
 <div class='maincontainer'>
 
@@ -10,7 +10,7 @@
             <form #pageForm="ngForm" id='contactform'>
                 <!-- Nom -->
                 <div class="row">
-                    <div class="col-4">
+
 
                         <div class="form-group">
 
@@ -19,10 +19,10 @@
                             <mat-error *ngIf="nameInput?.hasError('required')">
                                 <strong>Le nom est obligatoire</strong>
                             </mat-error>
-                        </div>
+
                     </div>
 
-                    <div class="col-4">
+
                         <!-- Prénom -->
                         <div class="form-group">
 
@@ -33,7 +33,7 @@
                             </mat-error>
                         </div>
                     </div>
-                    <div class="col-4">
+
                         <!-- Sujet -->
                         <div class="form-group">
 
@@ -43,8 +43,8 @@
                                 <strong>Le sujet est obligatoire</strong>
                             </mat-error>
                         </div>
-                    </div>
-                </div>
+
+
                 <div class="row">
                     <div class="col-6">
                         <!-- MAIL -->
@@ -88,4 +88,4 @@
         <hr>
     </div>
 </div>
-<app-footer></app-footer>
+

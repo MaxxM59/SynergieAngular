@@ -5,11 +5,11 @@ Main features :
 - Visitor part containing dynamic pages and a contact form
 - Admin part where the admin can edit the nav bar, home carousel cards, pages content, check messsages, edit a few css properties.
 
-=> Fully working as of 12/04/2022, not maintained anymore after this date.
-
 Link :
 
 https://synergieangular.firebaseapp.com
+
+=> Fully working as of 12/04/2022 with the link provided above. Not maintained anymore after this date.
 
 
 Feel free to DM me for admin logins or if you have any question.

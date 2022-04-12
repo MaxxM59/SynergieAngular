@@ -1,4 +1,4 @@
-Angular/Firestore single page application for Synergie association.
+Angular/Firestore CMS single page application for Synergie association.
 
 Main features : 
 - Visitor part containing dynamic pages and a  contact form

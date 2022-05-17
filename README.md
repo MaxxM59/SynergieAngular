@@ -12,7 +12,7 @@ https://synergieangular.firebaseapp.com
 Admin : 
 https://synergieangular.firebaseapp.com/admin
 
-=> Fully working as of 12/04/2022 with the link provided above. Not maintained anymore after this date.
+=> Fully working as of 17/05/2022 with the link provided above. Not maintained anymore after this date.
 
 
 Feel free to DM me for admin logins or if you have any question.

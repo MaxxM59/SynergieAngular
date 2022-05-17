@@ -12,7 +12,8 @@ https://synergieangular.firebaseapp.com
 Admin part : 
 
 https://synergieangular.firebaseapp.com/admin
-Feel free to DM me for admin logins or if you have any question.
+
+Feel free to DM me for admin logins since the hard work is the admin part.
 
 => Fully working as of 17/05/2022 with the link provided above. Not maintained anymore after this date.
 

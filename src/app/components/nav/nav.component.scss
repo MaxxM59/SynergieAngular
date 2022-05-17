@@ -1,154 +1,154 @@
-            * {
-                background-color: rgba(211, 230, 255, 0.8);
-                display: block;
-                margin-right: auto;
-                margin-left: auto;
-                display: inline;
-                text-align: center;
-            }
+* {
+    background-color: rgba(211, 230, 255, 0.8);
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    display: inline;
+    text-align: center;
+}
 
-            .navbar {
-                max-width: 90%;
-                max-height: 200px
-            }
+.navbar {
+    max-width: 90%;
+    max-height: 200px;
+}
 
-            button {
-                text-align: center;
-                background-color: #ffff;
-                font-weight: bold;
-                color: #0032d6;
-                border-radius: 20px;
-                margin-right: 0.7vw;
-                margin-left: 0.7vw;
-                min-width: 8vw;
-            }
+button {
+    text-align: center;
+    background-color: #ffff;
+    font-weight: bold;
+    color: #0032d6;
+    border-radius: 20px;
+    margin-right: 0.7vw;
+    margin-left: 0.7vw;
+    min-width: 8vw;
+}
 
-            #dd1 {
-                padding-left: 2vw;
-            }
+#dd1 {
+    padding-left: 2vw;
+}
 
-            .btn-2 {
-                border-radius: 0;
-                margin-left: 0;
-            }
+.btn-2 {
+    border-radius: 0;
+    margin-left: 0;
+}
 
-            img {
-                max-width: 150px;
-                max-height: 100px;
-            }
+img {
+    max-width: 150px;
+    max-height: 100px;
+}
 
-            #logo {
-                min-width: 100px;
-                max-width: 8vw;
-                height: auto;
-                border-radius: 60px;
-                margin-bottom: 0.5vw;
-            }
+#logo {
+    min-width: 100px;
+    max-width: 8vw;
+    height: auto;
+    border-radius: 60px;
+    margin-bottom: 0.5vw;
+}
 
-            #companyName {
-                margin-right: 1%;
-                margin-top: 0.5%;
-                margin-bottom: 0.2%;
-            }
+#companyName {
+    margin-right: 1%;
+    margin-top: 0.5%;
+    margin-bottom: 0.2%;
+}
 
-            #navcontainer {
-                margin-top: 5px;
-                margin-bottom: 0.2vh;
-                padding-bottom: 0.2vh;
-            }
+#navcontainer {
+    margin-top: 5px;
+    margin-bottom: 0.2vh;
+    padding-bottom: 0.2vh;
+}
 
-            #logotoggle {
-                max-width: 70px;
-                height: auto;
-                margin-left: 0;
-                border-radius: 60px;
-            }
+#logotoggle {
+    max-width: 70px;
+    height: auto;
+    margin-left: 0;
+    border-radius: 60px;
+}
 
-            .navbar-toggler {
-                max-width: 100px;
-                height: auto;
-                margin-bottom: 1vw;
-                display: block;
-                margin-left: 5vw;
-                border-radius: 500px;
-            }
+.navbar-toggler {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1vw;
+    display: block;
+    margin-left: 5vw;
+    border-radius: 500px;
+}
 
-            .dropdowntitle {
-                margin-right: 0.5vw;
-                margin-left: -0.5vw;
-                background-color: #ffff;
-            }
+.dropdowntitle {
+    margin-right: 0.5vw;
+    margin-left: -0.5vw;
+    background-color: #ffff;
+}
 
-            #maintitle {
-                padding-top: 0.4vh;
-                font-size: 150%;
-                color: #0032d6;
-                text-align: center;
-                padding-left: 6vw;
-            }
+#maintitle {
+    padding-top: 0.4vh;
+    font-size: 150%;
+    color: #0032d6;
+    text-align: center;
+    padding-left: 6vw;
+}
 
-            @media(min-width:1320px) {
-                #dd1 {
-                    margin-left: 20px;
-                }
-            }
+@media (min-width: 1320px) {
+    #dd1 {
+        margin-left: 20px;
+    }
+}
 
-            @media (min-width: 991px) {
-                #logotoggle,
-                #home {
-                    display: none
-                }
-                .navbar-toggler,
-                #maintitle {
-                    display: none;
-                }
-                .button2 {
-                    max-width: 180px;
-                }
-                .btn-2 {
-                    margin-top: 0;
-                    margin-bottom: 0;
-                }
-                #dd1 {
-                    margin-left: 5vw;
-                }
-                #companyName {
-                    margin-left: 1.5vw;
-                }
-            }
+@media (min-width: 991px) {
+    #logotoggle,
+    #home {
+        display: none;
+    }
+    .navbar-toggler,
+    #maintitle {
+        display: none;
+    }
+    .button2 {
+        max-width: 180px;
+    }
+    .btn-2 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    #dd1 {
+        margin-left: 5vw;
+    }
+    #companyName {
+        margin-left: 1.5vw;
+    }
+}
 
-            @media (max-width:991px) {
-                button {
-                    max-width: 240px;
-                    margin-top: 0.8vh;
-                    margin-bottom: 0.8vh;
-                    margin-left: 8vw;
-                    border-radius: 10px;
-                }
-                #logo {
-                    display: none
-                }
-                .collapsebutton {
-                    width: 75%;
-                    display: flex;
-                    flex-direction: column;
-                    align-content: center;
-                }
-                .navbar-toggler {
-                    margin-top: 3%
-                }
-            }
+@media (max-width: 991px) {
+    button {
+        max-width: 240px;
+        margin-top: 0.8vh;
+        margin-bottom: 0.8vh;
+        margin-left: 8vw;
+        border-radius: 10px;
+    }
+    #logo {
+        display: none;
+    }
+    .collapsebutton {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    .navbar-toggler {
+        margin-top: 3%;
+    }
+}
 
-            @media(max-width:399px) {
-                #maintitle {
-                    display: none
-                }
-            }
+@media (max-width: 399px) {
+    #maintitle {
+        display: none;
+    }
+}
 
-            @media(max-width:265px) {
-                button {
-                    font-size: 65%;
-                    min-width: 120px;
-                    max-width: 180px;
-                }
-            }
+@media (max-width: 265px) {
+    button {
+        font-size: 65%;
+        min-width: 120px;
+        max-width: 180px;
+    }
+}
